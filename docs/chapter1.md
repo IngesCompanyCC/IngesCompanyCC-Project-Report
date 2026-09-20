@@ -236,7 +236,7 @@ Información estadística de sustento:
 
 Características demográficas:
 
-- **Edad:** Entre 35 y 70 años.
+- **Edad:** Entre 20 y 70 años.
 - **Género:** Indistinto.
 - **Ocupación:** Profesional responsable de planificar, supervisar y controlar las operaciones de fabricación farmacéutica, asegurando el cumplimiento de los parámetros establecidos para la producción.
 - **Nivel educativo:** Ingeniería Industrial, Ingeniería Química, Ingeniería Farmacéutica o carreras afines.
