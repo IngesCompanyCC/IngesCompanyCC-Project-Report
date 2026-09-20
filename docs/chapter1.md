@@ -93,14 +93,124 @@ Las tecnologías basadas en Internet de las Cosas (IoT) permiten capturar inform
   La implementación requiere infraestructura tecnológica para el despliegue de la solución, digitalización de procesos documentales, capacitación de los usuarios e integración con fuentes de información internas y dispositivos IoT. La inversión dependerá del tamaño de la organización y del alcance de la integración requerida.
 
 ### 1.2.2. Lean UX Process
+La presente sección tiene como finalidad presentar el proceso de Lean UX aplicado para la validación de la propuesta desarrollada. En ella se describen las actividades de investigación, análisis y validación realizadas con el fin de comprender el contexto de los usuarios y verificar los supuestos que motivan la solución planteada. Asimismo, se exponen los artefactos y resultados obtenidos durante el proceso, los cuales permiten identificar necesidades, oportunidades y criterios de diseño relevantes. De esta manera, la información recopilada constituye una base para la definición y evolución de la propuesta de solución presentada en el proyecto.
 
 #### 1.2.2.1. Lean UX Problem Statements
 
+A continuación se muestra el problem statement en su idioma original:
+
+***The current state of*** pharmaceutical quality assurance and compliance management ***has focused mainly on*** quality assurance professionals and production supervisors who must maintain protocols, quality records, batch histories, and regulatory documentation across multiple disconnected sources.
+
+***What existing products and approaches fail to address is*** the need for a unified platform that simplifies the management of quality documentation while maintaining complete traceability throughout the lifecycle of pharmaceutical batches.
+
+***Our product will address this gap by*** providing a centralized quality management solution that integrates batch traceability, protocol management, quality records, and supporting operational data within a single digital environment.
+
+***Our initial focus will be*** quality assurance specialists and pharmaceutical production supervisors responsible for compliance, documentation, and batch monitoring activities.
+
+***We will know we have succeeded when we see*** users completing quality-related tasks more efficiently, relying on the platform as their primary source of batch information, and spending less time searching for documentation required for audits and compliance processes.
+
 #### 1.2.2.2. Lean UX Assumptions
+
+En esta sección se presentan las principales premisas que sustentan la propuesta de DoofPlus. Estas suposiciones han sido formuladas a partir del análisis del contexto regulatorio de la industria farmacéutica, las necesidades asociadas al control de calidad y producción, y las oportunidades que ofrecen las tecnologías IoT para fortalecer la trazabilidad y el monitoreo de los procesos. Los assumptions constituyen hipótesis iniciales que deberán validarse posteriormente mediante actividades de investigación y retroalimentación con usuarios potenciales.
+
+A continuación se muestran los Assumptions en su idioma original:
+
+**Business Assumptions:**
+
+* We believe that pharmaceutical organizations are interested in digital solutions that improve quality management and regulatory compliance processes.
+* We believe that maintaining complete and traceable quality documentation is a critical requirement for pharmaceutical organizations.
+* We believe that organizations perceive value in centralizing quality records, batch documentation, and traceability information within a single platform.
+* We believe that an open-source solution can reduce adoption barriers and facilitate digital transformation initiatives in pharmaceutical environments.
+* We believe that organizations are willing to adopt technologies that reduce administrative workloads associated with quality management activities.
+
+**Business Outcome Assumptions:**
+
+* We believe that organizations using the platform will improve the accessibility and organization of quality-related information.
+* We believe that users will spend less time searching for documentation required for audits and compliance activities.
+* We believe that the platform will contribute to improving traceability practices across pharmaceutical batches.
+* We believe that organizations will obtain greater visibility into the status and history of their quality management processes.
+* We believe that positive user experiences will encourage broader adoption of the platform within pharmaceutical organizations.
+
+**User Assumptions:**
+
+* We believe that quality assurance specialists are the primary users of the platform.
+* We believe that pharmaceutical production supervisors require access to traceable information associated with manufacturing batches.
+* We believe that quality control professionals need reliable and centralized records to support verification and compliance activities.
+* We believe that users prefer working with a single source of information rather than consulting multiple independent systems.
+* We believe that users seek to reduce the manual effort involved in managing quality documentation and batch records.
+
+**User Outcome & Benefit Assumptions:**
+
+* We believe that users want faster access to quality-related information and documentation.
+* We believe that users benefit from having complete traceability throughout the lifecycle of pharmaceutical batches.
+* We believe that users seek greater confidence in the information used for compliance and quality assurance activities.
+* We believe that users want to simplify audit preparation by having documentation readily available in a centralized environment.
+* We believe that users value having visibility into quality processes, batch status, and associated records.
+
+**Feature Assumptions:**
+
+* We believe that digital protocol management capabilities will improve the organization and accessibility of quality documentation.
+* We believe that centralized batch records will facilitate traceability and information retrieval.
+* We believe that quality event and deviation management features will support compliance and quality assurance activities.
+* We believe that dashboard functionalities will provide users with a clear view of quality-related processes and records.
+* We believe that quality-related event management capabilities will support quality assurance and compliance activities.We believe that integrating data from production processes and IoT-enabled devices will strengthen the reliability and completeness of quality records.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
+A continuación se muestran las Hypothesis Statements en su idioma original:
+
+* **Hypothesis 1:**   
+  ***We believe we will achieve*** more efficient management of pharmaceutical quality documentation.
+
+  ***If*** quality assurance specialists and quality control professionals
+
+  ***Attain*** faster access to organized and standardized quality documentation
+
+  ***With*** digital protocol management capabilities.
+
+
+* **Hypothesis 2:**  
+  ***We believe we will achieve*** improved traceability across pharmaceutical manufacturing processes.
+
+  ***If*** quality assurance specialists and production supervisors
+
+  ***Attain*** the ability to quickly retrieve and review batch-related information throughout its lifecycle
+
+  ***With*** centralized batch record management capabilities.
+
+
+* **Hypothesis 3:**  
+  ***We believe we will achieve*** greater compliance with quality management procedures and regulatory requirements.
+
+  ***If*** quality assurance specialists and quality control personnel
+
+  ***Attain*** a structured way to record, monitor, and review quality-related events
+
+  ***With*** quality event and deviation management capabilities.
+
+
+* **Hypothesis 4:**  
+  ***We believe we will achieve*** better visibility of quality-related activities and operational status.
+
+  ***If*** quality assurance specialists and pharmaceutical production supervisors
+
+  ***Attain*** a consolidated view of quality records, batch status, and compliance indicators
+
+  ***With*** dashboard and quality insights functionalities.
+
+
+* **Hypothesis 5:**  
+  ***We believe we will achieve*** more reliable and complete quality records.
+
+  ***If*** quality assurance specialists and pharmaceutical production supervisors
+
+  ***Attain*** access to automatically collected operational data associated with manufacturing processes
+
+  ***With*** IoT data integration capabilities.
+
 #### 1.2.2.4. Lean UX Canvas
+A continuación se muestra el Lean UX Canvas en su idioma original:
+![LeanUX](../assets/img/chapter1/Lean-UX-canvas.jpg)
 
 ## 1.3. Segmentos objetivo
 
