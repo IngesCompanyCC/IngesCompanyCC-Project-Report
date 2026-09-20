@@ -9,22 +9,22 @@ Facultad de Ingeniería
 
 ### 1ASI0729
 
-### Desarrollo de Aplicaciones Open Source
+### Aplicaciones Web
 
 NRC:
 
-### 7742
+### 8130
 
 ## Informe del Trabajo Final
 
 Docente
 
-### Velásquez Núñez, Ángel Augusto
+### Villafuerte Bazan, Oscar Ivan
 
 
 Equipo
 
-### IngesCompany
+### IngesCompanyCC
 
 Proyecto
 
@@ -38,8 +38,8 @@ Proyecto
 **Código** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Apellidos y Nombres**<br>
 U202321425 &nbsp; &nbsp; Angulo Ramírez, Marcelo Martín<br>
 U20231H117 &nbsp; &nbsp; Cobades Zamora, Yhoshua Hebert<br>
-U202423162 &nbsp; &nbsp; Flores Martinez, Ricardo Andres<br>
 U20241F397 &nbsp; &nbsp; Rojas Ambicho, Nestor Daniel<br>
+U20241F859 &nbsp; &nbsp; Yarleque Ruiz, Cristina Marcela<br>
 U20241F733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 
 </div>
