@@ -461,4 +461,28 @@ En este mapa se analizó a Alberto Valle, jefe de producción farmacéutica con 
 
 ## 2.4. Big Picture Event Storming
 
+
+Para comprender el dominio del negocio de DoofPlus, el equipo realizó una sesión colaborativa de **Big Picture Event Storming** en Miro. Esta dinámica permitió mapear el flujo operativo del laboratorio farmacéutico, el proceso constó de cuatro etapas:
+
+**Step 1 – Generating Domain Events**
+Cada integrante propuso eventos relevantes del negocio en tiempo pasado usando post-its naranjas.
+
+[click aqui para ver el mirro](https://miro.com/welcomeonboard/bnZYMkFJdmI5RE9HRkFuaXQzV24zSTBVWnMvNXdMRnZ3NWIyTHl3dDRnalM3MVN5RlV6S3NyK0hMTEI1bm5OdDFHeWZoM1pRMHAydU5pNUlzNjBsQ3crcFdoY0Y2ZkIxYU5GRUhsWk9keCtRVkVrV2toK2NCM3ErTTNqMEV5d21yVmtkMG5hNDA3dVlncnBvRVB2ZXBnPT0hdjE=?share_link_id=703178381974)
+
+![Step 1 - Generating Domain Events](../assets/img/chapter2/event-storming/step1-generating-domain-events.png)
+
+**Step 2 – Sorting Domain Events**
+Se ordenaron los eventos cronológicamente para reflejar las etapas operativas reales del laboratorio, visualizando el ciclo de vida completo de un lote.
+
+![Step 2 - Sorting Domain Events](../assets/img/chapter2/event-storming/step2-sorting-domain-events.png)
+
+**Step 3 – Adding Actors and External Systems**
+Se identificaron los actores (post-its azules, ej. QA/QC, Jefe de Producción) y los sistemas externos.
+
+![Step 3 - Adding Actors and External Systems](../assets/img/chapter2/event-storming/step3-adding-actors-external-systems.png)
+
+**Step 4 – Storytelling**
+Se narró la historia completa del flujo de manera secuencial. Durante este proceso no se detectaron incoherencias, lo que permitió al equipo confirmar el orden de los eventos y ratificar su comprensión sobre el funcionamiento del negocio farmacéutico.
+
+
 ## 2.5. Ubiquitous Language
