@@ -526,6 +526,42 @@ La arquitectura de Doof-Plus está diseñada bajo un patrón de microservicios c
 
 ### 4.6.4. Software Architecture Components Diagrams
 
+En esta sección, el equipo presenta los diagramas de componentes (Nivel 3 del modelo C4) correspondientes a cada uno de los microservicios (Containers) backend considerados. Estos diagramas detallan los bloques estructurales de código (Controladores, Servicios y Repositorios), sus responsabilidades de implementación y cómo interactúan para resolver la lógica de dominio antes de persistir los datos.
+
+**1. Descomposición del Container: API de IAM y Gestión de Tenants**
+![Component Diagram - IAM](../assets/img/chapter4/software-architecture/component-IAM.svg)
+- **Controlador de Autenticación:** *REST Controller* que intercepta peticiones HTTP para login y 2FA.
+- **Servicio de Validación de Tokens:** Lógica de negocio encargada de generar y firmar criptográficamente los tokens JWT.
+- **Servicio de Gestión de Tenants:** Gestiona la segregación de datos para aislar la información de cada empresa B2B.
+- **Repositorio IAM:** Componente ORM que accede a MySQL para validar credenciales.
+
+**2. Descomposición del Container: API Principal de Fabricación**
+![Component Diagram - Manufactura](../assets/img/chapter4/software-architecture/component-manufactura.svg)
+- **Controlador de Lotes:** *REST Controller* que recibe los comandos operativos (ej. Iniciar Lote, Cerrar Lote).
+- **Servicio de Dominio de Manufactura:** Clase de servicio que orquesta las reglas de negocio sobre los estados de la producción.
+- **Servicio de Inventario:** Lógica que valida y descuenta los insumos del almacén para evitar quiebres de stock.
+- **Repositorio de Lotes e Inventario:** Componente ORM que traduce las entidades a consultas transaccionales hacia MySQL.
+
+**3. Descomposición del Container: Motor de Calidad y Cumplimiento**
+![Component Diagram - Calidad](../assets/img/chapter4/software-architecture/component-calidad.svg)
+- **Controlador de Cumplimiento:** *REST Controller* para la gestión de cuarentenas y aprobaciones.
+- **Servicio de Investigación CAPA:** Bloque que controla el ciclo de vida de las desviaciones normativas y sus resoluciones.
+- **Repositorio de Trazabilidad y Auditoría:** Componente encargado de garantizar la inmutabilidad de los registros históricos en la base de datos relacional.
+
+**4. Descomposición del Container: Servicio de Suscripciones y Facturación**
+![Component Diagram - Facturación](../assets/img/chapter4/software-architecture/component-facturacion.svg)
+- **Controlador de Facturación:** Interfaz HTTP para consultar planes y realizar actualizaciones de cuenta.
+- **Gestor de Planes de Suscripción:** Servicio que valida las restricciones operativas según el límite del plan adquirido por el Tenant.
+- **Cliente de Pasarela de Pagos:** Componente de integración externa que serializa la petición hacia Niubiz para autorizar cargos.
+- **Repositorio de Facturación:** ORM responsable de guardar el historial de transacciones en MySQL.
+
+**5. Descomposición del Container: Motor de Ingesta de Telemetría IoT**
+![Component Diagram - Telemetría](../assets/img/chapter4/software-architecture/component-telemetria.svg)
+- **Receptor de Webhooks:** Controlador optimizado en Node.js para recibir flujos continuos de datos JSON desde ThingsBoard.
+- **Motor de Reglas de Alertas:** Servicio lógico que contrasta las variables operativas contra umbrales de seguridad predefinidos.
+- **Cliente de Notificaciones:** Componente disparador que emite eventos de advertencia hacia la plataforma si ocurre una anomalía en planta.
+- **Repositorio de Series Temporales:** Adaptador de datos que persiste los logs y métricas a alta velocidad en las colecciones de MongoDB.
+
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
