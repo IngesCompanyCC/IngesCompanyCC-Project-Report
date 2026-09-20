@@ -136,7 +136,13 @@ Las acciones y técnicas para guiar a los usuarios a través del ecosistema y pe
 
 ## 4.4. Web Applications UX/UI Design
 
+La presente sección describe el diseño de experiencia de usuario (UX) e interfaz de usuario (UI) desarrollado para la plataforma web DoofPlus. La propuesta fue diseñada para apoyar la gestión integral de calidad farmacéutica bajo entornos regulados GxP, facilitando la administración documental, la trazabilidad de procesos productivos, la gestión de desviaciones y el monitoreo operativo de laboratorios y líneas de manufactura.
+
+El diseño considera principios de usabilidad, accesibilidad, consistencia visual y eficiencia operativa, asegurando que los diferentes perfiles de usuario puedan ejecutar actividades críticas relacionadas con el cumplimiento normativo, la liberación de lotes y la auditoría regulatoria.
+
 ### 4.4.1. Web Applications Wireframes
+
+
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
