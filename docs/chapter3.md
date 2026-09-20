@@ -48,3 +48,39 @@ El Impact Mapping de DoofPlus conecta los objetivos estratégicos del negocio co
 ![Impact Mapping](../assets/img/chapter3/Impact-Mapping.png)
 
 ## 3.3. Product Backlog
+
+El Product Backlog de DoofPlus consolida todas las User Stories y Technical Stories identificadas, ordenadas según el valor que aportan al negocio. Las historias relacionadas con la Landing Page se posicionan al inicio dado que corresponden al primer sprint y son el primer punto de contacto con los potenciales clientes. A continuación se presentan las historias del core de calidad y producción farmacéutica, y finalmente las Technical Stories del API.
+
+| # | User Story Id | Título | Descripción | Story Points |
+|:---:|:---:|---|---|:---:|
+| 1 | US01 | Visualización de la Propuesta de Valor y Beneficios del Sistema | Como Visitante, quiero conocer los beneficios y la propuesta de valor del sistema para evaluar si se adapta a las necesidades de mi fábrica. | 2 |
+| 2 | US02 | Presentación de Características Técnicas y Módulos | Como Visitante interesado en tecnología, quiero explorar las características detalladas del sistema para entender el alcance funcional de la solución. | 2 |
+| 3 | US05 | Visualización de Planes y Tarifas de Suscripción | Como Visitante del segmento PyME o Corporativo, quiero ver los diferentes planes de precios para presupuestar la implementación del sistema. | 2 |
+| 4 | US04 | Sección de Casos de Éxito y Testimonios | Como Visitante del sector industrial, quiero revisar testimonios y casos de éxito para validar la fiabilidad y el impacto real del sistema. | 1 |
+| 5 | US06 | Sección de Preguntas Frecuentes (FAQ) | Como Visitante nuevo, quiero acceder a una sección de preguntas frecuentes para resolver dudas inmediatas sobre instalación, compatibilidad IoT y soporte. | 1 |
+| 6 | US03 | Formulario de Contacto y Solicitud de Demostración | Como Visitante de un segmento empresarial, quiero enviar mis datos de contacto para solicitar una demostración personalizada del software. | 3 |
+| 7 | US08 | Registro y Trazabilidad Centralizada de Lotes | Como Jefe de Producción, quiero centralizar el expediente y el historial de cada lote para mantener la trazabilidad completa de su ciclo de vida. | 8 |
+| 8 | US07 | Gestión y Control Digital de Protocolos de Calidad | Como Especialista QA/QC, quiero registrar y estandarizar los protocolos digitales de calidad para asegurar el cumplimiento de las normativas vigentes. | 5 |
+| 9 | US11 | Gestión y Registro de Desviaciones y Eventos de Calidad | Como Especialista QA/QC, quiero registrar y documentar cualquier desviación detectada para mitigar riesgos y cumplir con las auditorías. | 5 |
+| 10 | US09 | Muestreo Automatizado según Tabla Militar Estándar | Como Especialista QA/QC, quiero que el sistema calcule el tamaño de muestra requerido para optimizar el tiempo de auditoría según normas estadísticas. | 5 |
+| 11 | US10 | Monitoreo de Telemetría e Integración IoT en Línea | Como Jefe de Producción, quiero integrar las lecturas automáticas de los sensores de maquinaria para robustecer la integridad de los datos de fabricación. | 8 |
+| 12 | US12 | Panel de Control (Dashboard) e Indicadores de Cumplimiento | Como Supervisor de Producción, quiero visualizar gráficos unificados con el estado de los procesos y tasas de aprobación para tomar decisiones oportunas. | 5 |
+| 13 | US15 | Gestión del Catálogo de Productos y Fórmulas Maestras | Como Director de Producción, quiero registrar los productos farmacéuticos y sus fórmulas maestras para asegurar que cada lote se fabrique con las especificaciones autorizadas. | 5 |
+| 14 | US14 | Registro de Auditoría Inalterable (Audit Trail) | Como Especialista QA, quiero que el sistema registre de forma automática e irreversible cualquier cambio en los datos para asegurar la trazabilidad regulatoria. | 5 |
+| 15 | US16 | Gestión de Alertas y Calibración de Dispositivos IoT | Como Supervisor de Producción, quiero administrar el estado y la calibración de los sensores IoT para garantizar que las mediciones sean fidedignas. | 3 |
+| 16 | US13 | Gestión de Roles y Permisos basados en Firmas Electrónicas | Como Administrador del Sistema, quiero gestionar los accesos y roles del personal para garantizar la integridad de los datos y cumplir con las normativas de seguridad. | 3 |
+| 17 | TS01 | Ingesta de Telemetría IoT mediante Endpoint | Como Developer, quiero implementar un endpoint POST seguro para recibir las mediciones de los sensores IoT y registrarlas en la base de datos. | 5 |
+| 18 | TS03 | Endpoint para Trazabilidad y Audit Trail | Como Developer, quiero desarrollar un endpoint GET parametrizado que exponga el historial inmutable de un lote para el dashboard. | 3 |
+| 19 | TS04 | Endpoint para Cambio de Estado de Lote | Como Developer, quiero implementar un endpoint PATCH para actualizar el estado del ciclo de vida de un lote validando las reglas de negocio. | 3 |
+| 20 | TS02 | Autenticación y Generación de Token JWT | Como Developer, quiero implementar un servicio de autenticación para validar credenciales y emitir un token JWT que proteja las rutas privadas. | 3 |
+
+<br>
+
+**Evidencia de Product Backlog en Jira:**
+
+A continuación, se muestra la gestión del backlog en la herramienta Jira Software, evidenciando la priorización y estimación de las historias.
+
+![Evidence Product Backlog Jira](../assets/img/chapter3/backlog.png)
+*Figura: Captura del Product Backlog en Jira Software.*
+
+**Enlace al Product Backlog en Jira:** [click aquí](https://inges-company-cc.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiNzQ5MjEwOGYzMjI3NDg3OGIxNTg3MmZkNzY5ZGJmMjUiLCJwIjoiaiJ9)
