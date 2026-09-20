@@ -38,6 +38,12 @@ Convertirnos en una referencia en soluciones digitales de aseguramiento de calid
 
 #### **1. ANTECEDENTES:**
 
+La industria farmacéutica se encuentra entre los sectores más regulados debido al impacto directo que sus productos tienen sobre la salud de la población. En el Perú, la Dirección General de Medicamentos, Insumos y Drogas (DIGEMID) exige el cumplimiento de las Buenas Prácticas de Manufactura (BPM), las cuales establecen lineamientos relacionados con la producción, el control de calidad, la documentación y la gestión de los procesos involucrados en la fabricación de medicamentos. Estas normativas tienen como finalidad garantizar que los productos elaborados mantengan estándares adecuados de calidad, seguridad y eficacia durante todo su ciclo de vida.
+
+Asimismo, organismos internacionales como la Organización Mundial de la Salud (OMS) destacan que la trazabilidad y la integridad de los datos constituyen elementos fundamentales para la gestión de la calidad farmacéutica. La disponibilidad de información completa, precisa y accesible permite respaldar actividades de auditoría, validación, control de calidad y cumplimiento regulatorio, contribuyendo a la confiabilidad de los procesos y a la seguridad de los productos destinados a los pacientes.
+
+En este contexto, la transformación digital representa una oportunidad para optimizar la gestión de la información generada durante la fabricación farmacéutica. La integración de plataformas digitales con tecnologías de captura automática de datos permite fortalecer la trazabilidad de los lotes, mejorar la disponibilidad de evidencias de calidad y facilitar el acceso a información crítica para la toma de decisiones y el cumplimiento de los requisitos regulatorios.
+
 #### **2. PROBLEMATICA**
 
 ##### - **Gestión compleja de la documentación de calidad:**
@@ -57,6 +63,34 @@ La OMS destaca que la integridad de los datos es un componente esencial de los s
 Las tecnologías basadas en Internet de las Cosas (IoT) permiten capturar información directamente desde equipos, entornos y procesos mediante dispositivos conectados. Su incorporación representa una oportunidad para complementar los registros de calidad con datos obtenidos de forma automática, aumentando la confiabilidad de la información y facilitando la supervisión de variables relevantes dentro de los procesos de fabricación farmacéutica.
 
 #### **3. ANALISIS 5W & 2H:**
+
+- **What (¿Qué?):** ¿Qué es lo que se busca resolver?
+
+  Se busca resolver las limitaciones relacionadas con la gestión de documentación de calidad, la trazabilidad de los lotes farmacéuticos y la disponibilidad de información confiable para actividades de aseguramiento de calidad y cumplimiento regulatorio.
+
+- **Why (¿Por qué?):** ¿Por qué es importante resolverlo?
+
+  Porque la calidad de los medicamentos depende de procesos adecuadamente controlados, documentados y respaldados por información íntegra y trazable. Además, una gestión eficiente de los registros facilita las auditorías, fortalece la toma de decisiones y contribuye al cumplimiento de las BPM y de los requisitos regulatorios aplicables.
+
+- **Who (¿Quién?):** ¿A quién afecta?
+
+  Afecta principalmente a especialistas de aseguramiento y control de calidad (QA/QC), así como a responsables de producción farmacéutica encargados de supervisar procesos, gestionar documentación y asegurar el cumplimiento de estándares regulatorios.
+
+- **When (¿Cuándo?):** ¿Cuándo ocurre?
+
+  La necesidad se presenta durante todas las etapas del ciclo de vida de un lote farmacéutico, incluyendo la fabricación, el control de calidad, la gestión de desviaciones, la revisión documental y las actividades de auditoría.
+
+- **Where (¿Dónde?):** ¿En dónde ocurre?
+
+  Se manifiesta en laboratorios y plantas farmacéuticas donde se ejecutan actividades de producción, aseguramiento de calidad y control regulatorio.
+
+- **How (¿Cómo?):** ¿Cómo se resuelve?
+
+  Puede abordarse mediante una plataforma digital que centralice protocolos, expedientes de calidad y registros asociados a los lotes farmacéuticos, complementando la información mediante tecnologías IoT para fortalecer la trazabilidad y disponibilidad de datos.
+
+- **How much (¿Cuánto?):** ¿Cuánto cuesta resolverlo?
+
+  La implementación requiere infraestructura tecnológica para el despliegue de la solución, digitalización de procesos documentales, capacitación de los usuarios e integración con fuentes de información internas y dispositivos IoT. La inversión dependerá del tamaño de la organización y del alcance de la integración requerida.
 
 ### 1.2.2. Lean UX Process
 
