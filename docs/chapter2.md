@@ -432,6 +432,16 @@ El análisis de su mapa evidencia estos quiebres operativos y emocionales, justi
 
 ![User Journey Map - Segmento 1](../assets/img/chapter2/interview/segmento1/User-Journey-Mapping1.png)
 
+**Segmento 2 – Jefe de Producción Farmacéutica (Alberto Valle)**
+
+El User Journey Map de Alberto detalla el ciclo operativo que experimenta al liderar la fabricación diaria en la planta. El recorrido abarca desde la revisión de la planificación del turno y el arranque de las máquinas, hasta la solicitud de validaciones de calidad, la gestión de incidencias operativas y el cierre de la orden de producción.
+
+Bajo la situación actual (As-Is), el principal obstáculo en la experiencia de Alberto es la falta de visibilidad y la comunicación fragmentada. Al depender de formatos impresos y esperas presenciales para lograr la aprobación de insumos por parte de Calidad, la línea de envasado sufre paradas innecesarias. Sumado a esto, registrar desviaciones operativas a mano dificulta la trazabilidad y retrasa la toma de decisiones.
+
+Este mapa expone cómo la desconexión interdepartamental impacta negativamente en la continuidad de la producción, generando frustración en su perfil de liderazgo. A partir de la identificación de estos puntos de dolor, se establecen las bases para diseñar un sistema que ofrezca comunicación directa, validaciones ágiles y un tablero de control integrado para optimizar los tiempos de la fábrica.
+
+![User Journey Map - Segmento 2](../assets/img/chapter2/interview/segmento2/User-Journey-Mapping2.png)
+
 ### 2.3.4. Empathy Mapping
 
 ## 2.4. Big Picture Event Storming
