@@ -309,6 +309,41 @@ Entre los principales procesos modelados se encuentran:
 
 ## 4.5. Web Applications Prototyping
 
+La sección de Web Applications Prototyping presenta los prototipos interactivos desarrollados para validar los flujos operativos y regulatorios de DoofPlus antes de su implementación. Estos prototipos permiten simular la experiencia real de navegación dentro de la plataforma, evaluando la accesibilidad, usabilidad y eficiencia de las interacciones propuestas.
+
+El diseño de los prototipos fue guiado por cuatro principios fundamentales:
+
+1. Cumplimiento regulatorio por diseño
+
+Todas las interacciones fueron concebidas considerando requisitos de FDA 21 CFR Part 11, GMP y buenas prácticas de documentación, incorporando controles asociados a firmas electrónicas, auditoría de registros y segregación de funciones.
+
+2. Arquitectura basada en procesos farmacéuticos
+
+La navegación se organiza alrededor de los procesos más frecuentes dentro de la industria farmacéutica:
+
+- Gestión documental regulatoria.
+- Control y liberación de lotes.
+- Investigación de desviaciones.
+- Gestión CAPA.
+- Auditorías regulatorias.
+- Validación y control analítico.
+
+3. Consistencia visual y operativa
+
+Los prototipos mantienen una identidad visual uniforme mediante el uso consistente de colores institucionales, componentes reutilizables, tablas regulatorias y paneles de control orientados a la supervisión operativa.
+
+4. Optimización para entornos de trabajo regulados
+
+La interfaz prioriza:
+
+- Acceso rápido a información crítica.
+- Visualización inmediata del estado de cumplimiento.
+- Reducción de errores durante el ingreso de datos.
+- Navegación simplificada para procesos frecuentes.
+- Facilidad de auditoría e inspección regulatoria.
+
+Los prototipos permiten validar que las tareas principales del sistema, tales como consultar documentación aprobada, investigar desviaciones, ejecutar acciones CAPA y realizar auditorías internas, puedan completarse de forma eficiente y manteniendo la trazabilidad requerida por los estándares regulatorios del sector farmacéutico.
+
 ## 4.6. Domain-Driven Software Architecture
 
 ### 4.6.1. Design-Level Event Storming
