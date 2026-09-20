@@ -42,11 +42,19 @@ Convertirnos en una referencia en soluciones digitales de aseguramiento de calid
 
 ##### - **Gestión compleja de la documentación de calidad:**
 
+Los procesos de aseguramiento y control de calidad generan una gran cantidad de información asociada a protocolos, registros de producción, resultados de análisis, desviaciones y actividades de validación. La administración eficiente de esta documentación representa un desafío para las organizaciones farmacéuticas, especialmente cuando la información se encuentra distribuida en múltiples fuentes o sistemas independientes. Esta situación puede dificultar la búsqueda de evidencias y el seguimiento oportuno de los procesos relacionados con la calidad.
+
 ##### - **Dificultades en la trazabilidad de lotes farmacéuticos:**
+
+La trazabilidad es un requisito esencial dentro de los sistemas modernos de calidad farmacéutica, ya que permite reconstruir el historial completo de fabricación de un producto. Sin embargo, la recopilación e integración de información proveniente de distintas etapas del proceso productivo puede resultar compleja, limitando la visibilidad sobre los eventos ocurridos durante el ciclo de vida de cada lote y dificultando las actividades de seguimiento, revisión e inspección.
 
 ##### - **Necesidad de fortalecer la integridad y disponibilidad de la información:**
 
+La OMS destaca que la integridad de los datos es un componente esencial de los sistemas de calidad farmacéuticos. Los registros utilizados para actividades de producción, control de calidad y cumplimiento regulatorio deben mantenerse completos, precisos, consistentes y disponibles durante todo su ciclo de vida. La gestión inadecuada de la información puede afectar la confiabilidad de los procesos y dificultar las actividades de auditoría e inspección.
+
 ##### - **Oportunidad de utilización de tecnologías IoT:**
+
+Las tecnologías basadas en Internet de las Cosas (IoT) permiten capturar información directamente desde equipos, entornos y procesos mediante dispositivos conectados. Su incorporación representa una oportunidad para complementar los registros de calidad con datos obtenidos de forma automática, aumentando la confiabilidad de la información y facilitando la supervisión de variables relevantes dentro de los procesos de fabricación farmacéutica.
 
 #### **3. ANALISIS 5W & 2H:**
 
