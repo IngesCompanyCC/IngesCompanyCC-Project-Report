@@ -213,8 +213,38 @@ A continuación se muestra el Lean UX Canvas en su idioma original:
 ![LeanUX](../assets/img/chapter1/Lean-UX-canvas.jpg)
 
 ## 1.3. Segmentos objetivo
+La identificación de los segmentos objetivo constituye una actividad fundamental para orientar el desarrollo de DoofPlus hacia los profesionales que participan directamente en los procesos de producción y aseguramiento de la calidad dentro de la industria farmacéutica. La definición de estos perfiles permite comprender las necesidades asociadas al monitoreo de los procesos productivos, la trazabilidad de la información y el cumplimiento de los estándares regulatorios, contribuyendo a que la propuesta responda a problemáticas reales del entorno de aplicación.
 
 ### Segmento objetivo 1: Especialista de Aseguramiento y Control de Calidad (QA/QC)
 
+Características demográficas:
+
+- **Edad:** Entre 30 y 55 años.
+- **Género:** Indistinto.
+- **Ocupación:** Profesional responsable de garantizar el cumplimiento de los estándares de calidad, gestionar registros y documentación técnica, supervisar desviaciones y participar en auditorías e inspecciones regulatorias.
+- **Nivel educativo:** Químico Farmacéutico, Ingeniería Farmacéutica o carreras afines con especialización en aseguramiento de la calidad, BPM o regulación farmacéutica.
+- **Ubicación geográfica:** Lima Metropolitana, Perú.
+
+Información estadística de sustento:
+
+- Las Buenas Prácticas de Manufactura (BPM) exigen mantener registros completos, trazables y disponibles para actividades de inspección y auditoría.
+- Los sistemas de gestión de calidad farmacéutica requieren evidencia documentada para respaldar la liberación de productos y el seguimiento de desviaciones.
+- La trazabilidad y la integridad de los datos son reconocidas como elementos fundamentales para garantizar la calidad y seguridad de los medicamentos.
+- La transformación digital del sector farmacéutico ha incrementado la necesidad de plataformas capaces de centralizar información de calidad proveniente de múltiples fuentes.
+
 ### Segmento Objetivo 2: Jefe o Supervisor de Producción Farmacéutica
 
+Características demográficas:
+
+- **Edad:** Entre 35 y 70 años.
+- **Género:** Indistinto.
+- **Ocupación:** Profesional responsable de planificar, supervisar y controlar las operaciones de fabricación farmacéutica, asegurando el cumplimiento de los parámetros establecidos para la producción.
+- **Nivel educativo:** Ingeniería Industrial, Ingeniería Química, Ingeniería Farmacéutica o carreras afines.
+- **Ubicación geográfica:** Lima Metropolitana, Perú.
+
+Información estadística de sustento:
+
+- Los procesos de producción farmacéutica requieren control continuo de variables operativas para garantizar la calidad del producto final.
+- Las BPM establecen la necesidad de documentar adecuadamente las actividades productivas y mantener evidencia del cumplimiento de los procedimientos establecidos.
+- La disponibilidad de información trazable facilita la identificación y análisis de desviaciones durante la fabricación.
+- La incorporación de herramientas digitales e iniciativas de Industria 4.0 ha impulsado la adopción de tecnologías para mejorar la visibilidad de los procesos productivos.
