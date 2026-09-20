@@ -238,6 +238,38 @@ El diseño considera principios de usabilidad, accesibilidad, consistencia visua
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
+- Landing Page - DoofPlus
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe1.png)
+
+- Regulatory Identification
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe2.png)
+
+- QA & Lab Console Dashboard
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe3.png)
+
+- Document Management & Master SOPs
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe4.png)
+
+- Quality Protocols & Validation Management
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe5.png)
+
+- Critical Deviations & CAPA Actions Control
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe6.png)
+
+- Process Audit Master Plan
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe7.png)
+
+- GxP Regulatory Reports & Metrics
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe8.png)
+
 ### 4.4.3. Web Applications Mock-ups
 
 ### 4.4.4. Web Applications User Flow Diagrams
