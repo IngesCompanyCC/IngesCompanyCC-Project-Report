@@ -156,11 +156,191 @@ La prospección se enfoca directamente en especialistas de aseguramiento y contr
 
 ## 2.2. Entrevistas
 
+Las entrevistas constituyen una herramienta fundamental para obtener información cualitativa directamente de los profesionales involucrados en los procesos de aseguramiento de calidad y producción farmacéutica. A través de conversaciones estructuradas, se busca comprender sus actividades, necesidades, desafíos, comportamientos y experiencias relacionadas con la gestión de documentación, la trazabilidad de lotes y el acceso a la información. La información recopilada permitirá identificar problemáticas, oportunidades de mejora y necesidades reales del entorno de aplicación, contribuyendo a definir una propuesta de solución alineada con los requerimientos y expectativas de los segmentos objetivo.
+
 ### 2.2.1. Diseño de entrevistas
+
+Teniendo en cuenta la importancia de la información que pueden proporcionar los entrevistados, se presentan las preguntas clave para cada segmento objetivo identificado. Para ello, se consideran dos tipos de preguntas: las personales, orientadas a conocer el perfil profesional y la experiencia de los participantes dentro de la industria farmacéutica, y las específicas, enfocadas en comprender los procesos actuales relacionados con la gestión de calidad, la trazabilidad de lotes, el acceso a la información, la gestión documental y la coordinación entre las áreas de producción y aseguramiento de la calidad. Asimismo, se busca identificar las principales dificultades, necesidades y oportunidades de mejora presentes en sus actividades diarias, con el fin de obtener información relevante para la definición de la propuesta de solución.
+
+#### Segmento Objetivo: Especialista de Aseguramiento y Control de Calidad (QA/QC)
+
+##### Preguntas personales
+
+- ¿Cuál es su nombre?
+- ¿Cuál es su edad?
+- ¿Que dispositivo y buscador emplea?
+- ¿Cuál es su cargo actual dentro de la organización?
+- ¿Cuántos años de experiencia tiene trabajando en aseguramiento o control de calidad farmacéutica?
+
+##### Preguntas específicas
+
+- ¿Cómo gestiona actualmente los protocolos, registros y documentación relacionada con la calidad de los productos farmacéuticos?
+- ¿Qué tipo de información necesita consultar con mayor frecuencia para realizar sus actividades de aseguramiento o control de calidad?
+- ¿Cuáles son las principales dificultades que encuentra al buscar información o documentación relacionada con un lote específico?
+- ¿Cómo realiza el seguimiento de desviaciones, incidencias o no conformidades dentro de los procesos de calidad?
+- ¿Cuánto tiempo suele dedicar a recopilar información o evidencias para auditorías, inspecciones o revisiones internas?
+- ¿Qué problemas ha experimentado relacionados con la trazabilidad de los registros o la disponibilidad de información histórica?
+- Si pudiera mejorar una actividad relacionada con la gestión de calidad dentro de su organización, ¿cuál sería y por qué?
+
+#### Segmento Objetivo: Jefe o Supervisor de Producción Farmacéutica
+
+##### Preguntas personales
+
+- ¿Cuál es su nombre?
+- ¿Cuál es su edad?
+- ¿Que dispositivo y buscador emplea?
+- ¿Cuál es su cargo actual dentro de la organización?
+- ¿Cuántos años de experiencia tiene supervisando procesos de producción farmacéutica?
+
+##### Preguntas específicas
+
+- ¿Cómo realiza actualmente el seguimiento de los lotes durante las diferentes etapas del proceso de fabricación?
+- ¿Qué información considera más importante para supervisar el estado de la producción y tomar decisiones operativas?
+- ¿Qué herramientas o sistemas utiliza para consultar información relacionada con la producción?
+- Cuando ocurre una incidencia o desviación durante la fabricación, ¿cómo se registra y comunica dicha información?
+- ¿Cuáles son las principales dificultades que encuentra al acceder al historial de producción de un lote específico?
+- ¿Qué tan sencillo o complejo resulta coordinar el intercambio de información con las áreas de aseguramiento y control de calidad?
+- Si pudiera mejorar un aspecto relacionado con el acceso o gestión de la información de producción, ¿qué cambiaría y por qué?
 
 ### 2.2.2. Registro de entrevistas
 
+En esta sección se presentan los resultados obtenidos de las entrevistas realizadas a los segmentos objetivo identificados para DoofPlus. Para cada entrevista se incluyen los datos generales del participante, un resumen de las respuestas más relevantes, las observaciones realizadas durante la sesión y las principales conclusiones obtenidas. La información recopilada permite comprender las necesidades, dificultades y experiencias de los profesionales vinculados a los procesos de aseguramiento de calidad y producción farmacéutica, constituyendo una fuente de evidencia para la validación de los supuestos planteados y para la definición de las funcionalidades y características de la solución propuesta.
+
+**Segmento 1: Especialista de Aseguramiento y Control de Calidad (QA/QC)**
+
+| Numero | 1 |
+|---------|--------|
+| **Campo** | **Información** |
+| Nombre | Mareliena |
+| Apellido | Mexico |
+| Edad | 53 |
+| Distrito | San Juan de Lurigancho |
+| Evidencia | ![Entrevista 1 - Segmento 1](../assets/img/chapter2/interview/segmento1/entrevista1-segmento1.png) |
+| Link | https://shorturl.at/c0pBO |
+| Inicio | 00:00 min |
+| Duración | 04:38 min |
+| Resumen | María es química farmacéutica y trabaja en el área de Control de Calidad de un laboratorio, donde se encarga de las validaciones, la revisión documental, la verificación de equipos y la evaluación del personal analista. Actualmente, la gestión de la documentación combina procesos manuales y digitales, aunque la empresa busca implementar un software integral que cubra todo el proceso productivo.<br><br>Para asegurar la calidad, se revisan registros, protocolos, resultados y reportes de conformidades y no conformidades. Uno de los principales problemas es la revisión manual de cálculos e informes antes de registrar los resultados en el sistema, lo que genera demoras y representa una oportunidad de automatización.<br><br>Las desviaciones se investigan analizando posibles causas relacionadas con el personal, los equipos o el producto. Además, la empresa mantiene registros actualizados para auditorías e inspecciones y realiza evaluaciones periódicas. María considera que la generación automática de reportes reduciría significativamente la carga operativa. |
+
+| Numero | 2 |
+|---------|--------|
+| **Campo** | **Información** |
+| Nombre | Julia  |
+| Apellido | Collasos Zotelo |
+| Edad | 64 |
+| Distrito | San Miguel |
+| Evidencia | ![Entrevista 2 - Segmento 1](../assets/img/chapter2/interview/segmento1/entrevista2-segmento1.png) |
+| Link | https://shorturl.at/c0pBO |
+| Inicio | 04:39 min |
+| Duración | 04:59 min |
+| Resumen | Julia Collazo Sotelo es química farmacéutica y trabaja en el área de Aseguramiento de la Calidad de un centro de producción de productos biológicos del Instituto Nacional de Salud (INS), donde se encarga de verificar el cumplimiento de las Buenas Prácticas de Manufactura (BPM), supervisar el sistema de calidad y revisar la documentación asociada a los procesos productivos. Asimismo, participa en actividades relacionadas con auditorías, capacitación del personal, programas de limpieza, mantenimiento, calibración y calificación de equipos. Para el desarrollo de sus actividades utiliza herramientas como Microsoft Word, Excel, Google Chrome y sistemas institucionales de gestión documental y control de procesos.<br><br>Para garantizar la calidad de los productos farmacéuticos, se revisan procedimientos, instrucciones de trabajo, protocolos de validación, registros de producción y documentación técnica asociada a materias primas, materiales de empaque y productos terminados. Además, la organización mantiene un sistema de trazabilidad que permite identificar la información relacionada con proveedores, materias primas, operadores, analistas y registros de cada lote producido. Sin embargo, Julia señala que existen dificultades para acceder a determinadas fuentes de información técnica y que, en ocasiones, se presentan errores cuando el personal no sigue adecuadamente los procedimientos establecidos para el registro y seguimiento de la información.<br><br>Las desviaciones y no conformidades son registradas, investigadas mediante análisis de causa raíz y gestionadas a través de acciones correctivas y preventivas supervisadas por equipos multidisciplinarios. Aunque considera que la organización cuenta con un sistema de gestión de calidad estructurado, identifica que una de las principales oportunidades de mejora es fortalecer la capacidad del personal para analizar las causas reales de los problemas y asumir una mayor responsabilidad sobre la calidad de sus procesos. En su opinión, la calidad debe ser un compromiso compartido por todas las áreas de la organización y no únicamente una responsabilidad del departamento de Aseguramiento de la Calidad. |
+
+| Numero | 3 |
+|---------|--------|
+| **Campo** | **Información** |
+| Nombre | Edith |
+| Apellido | Espinoza |
+| Edad | 31 |
+| Distrito | Lima |
+| Evidencia | ![Entrevista 3 - Segmento 1](../assets/img/chapter2/interview/segmento1/entrevista3-segmento1.png) |
+| Link | https://shorturl.at/c0pBO |
+| Inicio | 09:37 min |
+| Duración | 04:58 min |
+| Resumen | Edith Espinoza es técnica de enfermería y cuenta con más de cinco años de experiencia en actividades relacionadas con la atención de pacientes y la gestión de información clínica. Actualmente participa en procesos asociados al control de seguros, activaciones y verificación de datos de pacientes de 0 a 11 años, especialmente en servicios vinculados a vacunas y fármacos pediátricos. Para desarrollar sus labores utiliza herramientas como computadoras, laptops, dispositivos Android y sistemas institucionales de registro, trabajando con documentación tanto física como digital.<br><br>Para garantizar la correcta atención de los pacientes, realiza la validación de información y el seguimiento de historias clínicas, las cuales aún combinan formatos físicos y digitales debido a un proceso gradual de digitalización. Asimismo, señala que una de las principales dificultades se presenta cuando los pacientes cuentan con más de un seguro o poseen información registrada en entidades externas, ya que estos datos no siempre son visibles en el sistema utilizado, lo que puede generar demoras en la verificación y consulta de información.<br><br>Las incidencias relacionadas con medicamentos, como errores en la medicación o la detección de lotes vencidos, son gestionadas mediante reportes que permiten iniciar los procesos correspondientes de devolución, reposición o seguimiento. Aunque reconoce que la organización viene avanzando en la digitalización de sus procesos, considera que una mayor integración de la información y la automatización de los registros contribuirían a mejorar la trazabilidad, reducir errores administrativos y optimizar la gestión de la atención a los pacientes. |
+
+**Segmento 2: Jefe o Supervisor de Producción Farmacéutica**
+
+| Numero | 1 |
+|---------|--------|
+| **Campo** | **Información** |
+| Nombre | Alberto |
+| Apellido | Valle Vega |
+| Edad | 68 |
+| Distrito | Arequipa |
+| Evidencia | ![Entrevista 1 - Segmento 2](../assets/img/chapter2/interview/segmento2/entrevista1-segmento2.png) |
+| Link | https://shorturl.at/c0pBO |
+| Inicio | 14:35 min |
+| Duración | 04:48 min |
+| Resumen | Alberto Valle Vera, químico farmacéutico con cerca de 40 años de experiencia en la industria farmacéutica, describe los procesos de fabricación y empaquetado de productos como jarabes, inyectables, cremas y tabletas. Explica que los componentes de empaque, como frascos, etiquetas, insertos y estuches, deben ser previamente aprobados por el área de control de calidad antes de su uso.<br><br>También señala que la industria ha evolucionado desde controles manuales basados en muestreos hacia procesos más tecnificados, orientados a garantizar la calidad y reducir errores. Antes de iniciar la producción se validan los parámetros de los materiales y, durante el proceso, se realizan muestreos periódicos para verificar el cumplimiento de los estándares establecidos.<br><br>Las desviaciones se gestionan mediante procedimientos documentados. Los problemas recurrentes requieren investigaciones más profundas y, en casos críticos, la detención de la producción y la elaboración de informes de desviación. Asimismo, la coordinación entre producción y control de calidad se basa en procedimientos que definen responsabilidades, frecuencias de muestreo y criterios de aceptación, garantizando la trazabilidad y la calidad de los productos farmacéuticos. |
+
+| Numero | 2 |
+|---------|--------|
+| **Campo** | **Información** |
+| Nombre | Mariela |
+| Apellido | Alanya Mercado |
+| Edad | 35 |
+| Distrito | Lima |
+| Evidencia | ![Entrevista 2 - Segmento 2](../assets/img/chapter2/interview/segmento2/entrevista2-segmento2.png) |
+| Link | https://shorturl.at/c0pBO |
+| Inicio | 19:23 min |
+| Duración | 04:59 min |
+| Resumen | Mariela Alanya Mercado es química farmacéutica y se desempeña como responsable del laboratorio de Control de Calidad del Centro Nacional de Productos Biológicos del Instituto Nacional de Salud (INS), donde supervisa los análisis y ensayos necesarios para verificar que sueros y antivenenos cumplan con las especificaciones de calidad establecidas. Además, participa en actividades relacionadas con la gestión de recursos, mantenimiento de equipos y adquisición de insumos necesarios para las operaciones del laboratorio.<br><br>Para garantizar la calidad de los productos, realiza el seguimiento de lotes y la revisión de resultados de control de calidad utilizando principalmente hojas de cálculo de Microsoft Excel, formularios físicos y documentación en papel. Asimismo, señala que gran parte de la información se encuentra dispersa entre archivos digitales, registros manuales, correos electrónicos y documentos físicos, dificultando el acceso oportuno a la información y aumentando el riesgo de pérdida o duplicidad de registros.<br><br>Las incidencias y desviaciones identificadas durante la producción son comunicadas a las áreas correspondientes para su evaluación y tratamiento. La coordinación entre Control de Calidad, Producción y otras áreas se realiza mediante correos electrónicos, documentación física y comunicación directa. Mariela considera que la principal oportunidad de mejora consiste en implementar una plataforma centralizada que permita gestionar documentación técnica, registros de lotes e información de seguimiento, fortaleciendo la trazabilidad, reduciendo la dependencia de procesos manuales y facilitando el acceso seguro a la información. |
+
+| Numero | 3 |
+|---------|--------|
+| **Campo** | **Información** |
+| Nombre | Rick |
+| Apellido | Correidos |
+| Edad | 26 |
+| Distrito | Lima |
+| Evidencia | ![Entrevista 3 - Segmento 2](../assets/img/chapter2/interview/segmento2/entrevista3-segmento2.png) |
+| Link | https://shorturl.at/c0pBO |
+| Inicio | 24:26 min |
+| Duración | 03:58 min |
+| Resumen | Rick Correidos se desempeña como Supervisor de Producción Farmacéutica y cuenta con más de veinte años de experiencia supervisando procesos de fabricación. Entre sus principales responsabilidades se encuentran el seguimiento de los lotes durante las diferentes etapas de producción, la verificación del cumplimiento de los parámetros establecidos y la coordinación con las áreas de calidad para asegurar la correcta ejecución de los procesos productivos. Para desarrollar sus actividades utiliza computadoras de escritorio y laptops, apoyándose principalmente en herramientas como Microsoft Excel, correos electrónicos y sistemas internos de gestión documental.<br><br>Para realizar el seguimiento de la producción, utiliza registros de fabricación, formularios físicos y hojas de cálculo donde se documentan los parámetros operativos, controles realizados y estados de cada lote. Asimismo, considera que la información más importante para la toma de decisiones incluye el estado de los lotes, los resultados de control de calidad, las desviaciones reportadas, la disponibilidad de materiales y el cumplimiento de las especificaciones de producción. Sin embargo, señala que una de las principales dificultades se presenta al consultar el historial de un lote, ya que la información suele encontrarse distribuida entre documentos físicos, correos electrónicos, registros archivados y diversas fuentes de información.<br><br>Cuando ocurre una incidencia o desviación durante la fabricación, esta es registrada y comunicada al área de Calidad para su evaluación e investigación. La coordinación entre Producción y Calidad es constante, aunque en ocasiones puede resultar lenta debido a la dependencia de documentación física, correos electrónicos y validaciones manuales. En su opinión, una de las principales oportunidades de mejora consiste en implementar una plataforma centralizada que integre la información de producción, calidad y trazabilidad de los lotes, permitiendo acceder rápidamente a los registros, fortalecer la comunicación entre áreas y facilitar las actividades de seguimiento, auditoría y toma de decisiones. |
+
 ### 2.2.3. Análisis de entrevistas
+
+En esta sección se presenta el análisis detallado de la información recolectada. Para cada segmento, se explican primero los hallazgos estadísticos objetivos y subjetivos, seguidos de la evidencia gráfica correspondiente.
+
+##### Segmento 1: Especialista de Aseguramiento y Control de Calidad (QA/QC)
+
+**Análisis de Características Objetivas y Subjetivas:** El análisis de las entrevistas evidencia que las áreas de Aseguramiento y Control de Calidad dentro de las organizaciones farmacéuticas evaluadas mantienen una fuerte dependencia de procesos documentales para garantizar el cumplimiento normativo y la trazabilidad de las operaciones. El 100% de los entrevistados desempeña funciones relacionadas con el aseguramiento de la calidad, el control de calidad, la validación de procesos o la revisión documental, lo que brinda solidez y representatividad a la información recopilada para comprender las necesidades del dominio del problema.
+
+Respecto a la gestión de información, el 100% manifestó utilizar esquemas mixtos que combinan documentación física con sistemas digitales para registrar, consultar y controlar información técnica relacionada con procedimientos, protocolos, registros de producción, resultados analíticos y actividades de calidad. Sin embargo, estos procesos continúan requiriendo revisiones manuales, verificaciones documentales y consolidación de información antes de su registro o aprobación definitiva, generando mayores tiempos operativos. Asimismo, se identificó que aproximadamente el 67% de los entrevistados presenta dificultades asociadas a la búsqueda, acceso o integración de información proveniente de diferentes fuentes, lo que afecta la eficiencia de determinadas actividades de control y seguimiento.
+
+Desde la perspectiva subjetiva, el 100% de los entrevistados manifestó una valoración positiva hacia la incorporación de soluciones digitales que permitan automatizar tareas operativas y fortalecer la trazabilidad de la información. Adicionalmente, alrededor del 67% señaló que la automatización de actividades como la generación de reportes, la consolidación de registros y la consulta de información histórica contribuiría significativamente a reducir la carga operativa y minimizar errores asociados a procesos manuales. En general, los entrevistados coinciden en que una plataforma centralizada facilitaría el acceso a la información, optimizaría la gestión documental y fortalecería los procesos de calidad dentro de sus organizaciones.
+
+***Gráficos***
+
+![Gráfico - Segmento 1](../assets/img/chapter2/interview/segmento1/analisis-segmento-1.png)
+
+##### Segmento 2: Jefe o Supervisor de Producción Farmacéutica
+
+**Análisis de Características Objetivas y Subjetivas:** El análisis de las entrevistas evidencia que las áreas de Producción Farmacéutica mantienen una elevada dependencia de registros físicos, hojas de cálculo y mecanismos manuales para realizar el seguimiento de los lotes durante las diferentes etapas de fabricación. El 100% de los entrevistados desempeña funciones relacionadas con la supervisión de procesos productivos, el monitoreo de lotes y la coordinación con las áreas de calidad, proporcionando una perspectiva representativa de las necesidades operativas asociadas a la gestión de la información de producción.
+
+Respecto al seguimiento de los lotes, el 100% manifestó utilizar esquemas basados en formularios físicos, registros de producción, hojas de cálculo y documentación complementaria para registrar estados, parámetros operativos y actividades realizadas durante la fabricación. Asimismo, el 100% señaló que información crítica como los resultados de control de calidad, las desviaciones registradas, la disponibilidad de materiales y el cumplimiento de los parámetros de producción son elementos fundamentales para la toma de decisiones. Sin embargo, se identificó que aproximadamente el 67% de los entrevistados experimenta dificultades para acceder al historial completo de un lote debido a que la información suele encontrarse distribuida entre diferentes fuentes, incluyendo documentos físicos, correos electrónicos, registros archivados y archivos digitales independientes.
+
+Desde la perspectiva subjetiva, el 100% de los entrevistados manifestó interés en la implementación de una plataforma centralizada que integre la información de producción, calidad y trazabilidad. Asimismo, todos coinciden en que la reducción de registros manuales, la mejora en la comunicación entre áreas y la disponibilidad inmediata de información histórica facilitarían significativamente las actividades de seguimiento, auditoría y toma de decisiones. En general, los participantes consideran que la centralización de la información permitiría optimizar la gestión operativa y fortalecer la trazabilidad de los procesos productivos.
+
+***Gráficos***
+
+![Gráfico - Segmento 2](../assets/img/chapter2/interview/segmento2/analisis-segmento-2.png)
+
+##### Análisis Comparativo
+
+**Contrastación de Segmentos:**  Al comparar ambos segmentos se observa una coincidencia significativa en torno a la necesidad de mejorar la trazabilidad y centralizar la información relacionada con los lotes farmacéuticos. El 100% de los entrevistados, independientemente de su área de trabajo, manifestó utilizar esquemas mixtos que combinan documentación física y herramientas digitales, así como una valoración positiva hacia la incorporación de soluciones tecnológicas orientadas a reducir la dependencia de procesos manuales.
+
+No obstante, se identifican diferencias en el enfoque de sus necesidades. Los especialistas de Aseguramiento y Control de Calidad priorizan la gestión documental, la validación de registros, el seguimiento de desviaciones, la preparación de auditorías y la generación de evidencias regulatorias. Por su parte, los Supervisores de Producción se enfocan principalmente en el monitoreo de los lotes, el control de las operaciones productivas, la gestión de incidencias y el acceso rápido a información que facilite la toma de decisiones operativas.
+
+Estas diferencias evidencian la necesidad de una plataforma que integre la información generada por ambas áreas dentro de un único entorno, permitiendo a Producción y Calidad trabajar sobre los mismos datos, fortalecer la trazabilidad de los lotes y mejorar la coordinación entre los diferentes actores involucrados en el proceso farmacéutico.
+
+![Gráfico Comparativo](../assets/img/chapter2/interview/analisis/analisis-ambos.png)
+
+#### Conclusiones y Definición de Arquetipos
+
+Basado en el análisis estadístico, se definen los siguientes perfiles para los User Personas:
+
+1.  **User Persona Especialista de Control de Calidad:**
+
+**Rasgo clave:** Busca garantizar el cumplimiento de los estándares de calidad y los requisitos regulatorios mediante una gestión eficiente de protocolos, documentación, desviaciones y evidencias asociadas a cada lote farmacéutico.
+
+**Sustento:** La totalidad de los entrevistados de este segmento manifestó realizar actividades relacionadas con la validación documental, la revisión de registros, el seguimiento de desviaciones y la preparación de información para auditorías e inspecciones. Asimismo, identificaron la automatización de tareas operativas y la centralización de la información como factores clave para mejorar la eficiencia de sus actividades y fortalecer la trazabilidad de los procesos.
+
+2.  **Jefe de Producción Farmacéutica:**
+
+**Rasgo clave:** Busca supervisar eficientemente los procesos de fabricación mediante el acceso oportuno a información de producción, estados de los lotes e incidencias operativas, facilitando la toma de decisiones y la coordinación con las áreas de calidad.
+
+**Sustento:** Los entrevistados pertenecientes a este segmento señalaron que gran parte de su trabajo depende de la consulta constante de registros de producción, parámetros operativos y resultados de calidad. Asimismo, identificaron que la dispersión de la información entre diferentes fuentes dificulta el seguimiento de los lotes y genera retrasos en la coordinación con otras áreas. Por ello, consideran prioritario contar con una plataforma centralizada que facilite la consulta histórica, fortalezca la trazabilidad y reduzca la dependencia de procesos manuales.
 
 ## 2.3. Needfinding
 
