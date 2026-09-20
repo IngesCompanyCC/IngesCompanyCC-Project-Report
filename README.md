@@ -89,33 +89,13 @@ U20241F733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 |   1.3.5   | 20/09/2026 | Rojas Ambicho, Nestor Daniel                                                                                                        | Implementacion de Software Object-Oriented Design  capitulo 4                                         |
 |   1.3.6   | 20/09/2026 | Rojas Ambicho, Nestor Daniel                                                                                                        |  Implementacion de Class Diagrams  capitulo 4                                                            |
 |   2.0.0   | 20/09/2026 | Cobades Zamora, Yhoshua Hebert                                                                                                      |                        inicio de repositorio de landing page.                                                                                  |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
-|           |            |                                                                                                                                     |                                                                                                          |
 
 ---
 
 ## Project Report Collaboration Insights
 
 **Link de los repositorios de la organización:**
-https://github.com/IngesCompany-7742
+https://github.com/IngesCompanyCC
 
 **Link del repositorio del Informe:**
-https://github.com/IngesCompany-7742/IngesCompany-Project-Report.git
+https://github.com/IngesCompanyCC/IngesCompanyCC-Project-Report.git
