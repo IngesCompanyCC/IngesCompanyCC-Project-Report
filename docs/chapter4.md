@@ -272,6 +272,25 @@ El diseño considera principios de usabilidad, accesibilidad, consistencia visua
 
 ### 4.4.3. Web Applications Mock-ups
 
+En esta sección se presentan los mock-ups desarrollados para la plataforma web DoofPlus. Estas representaciones de alta fidelidad muestran la apariencia final de la interfaz, incorporando elementos visuales, identidad corporativa, jerarquías de información y componentes interactivos diseñados para entornos farmacéuticos regulados bajo estándares GMP y FDA 21 CFR Part 11.
+
+Los mock-ups fueron elaborados considerando los requerimientos identificados durante el proceso de investigación, priorizando la trazabilidad, la integridad de los datos, la segregación de funciones y la facilidad de navegación para usuarios pertenecientes a las áreas de Quality Assurance (QA), Quality Control (QC) y Manufacturing Operations.
+
+- Landing Page - DoofPlus
+  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup1.png)
+- Regulatory Identification
+  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup2.png)
+- Environment Selection Portal
+  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup3.png)
+- QA / QC Operational Dashboard
+  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup4.png)
+- Document Management & Master SOPs
+  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup5.png)
+- Critical Deviations & CAPA Control
+  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup6.png)
+- Process Audit & Regulatory Oversight
+  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup7.png)
+
 ### 4.4.4. Web Applications User Flow Diagrams
 
 ## 4.5. Web Applications Prototyping
