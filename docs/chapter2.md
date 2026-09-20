@@ -362,6 +362,65 @@ Para este segmento se elaboró el User Persona Alberto Valle Vega. Se considerar
 ![User - Segmento 2](../assets/img/chapter2/interview/segmento2/user-persona2.png)
 
 ### 2.3.2. User Task Matrix
+En esta sección se presenta el User Task Matrix, que concentra las tareas que los User Persona realizan para cumplir sus objetivos en su día a día, independientemente de la existencia de una solución de software. Para este análisis se consideran los dos segmentos objetivo identificados: el Especialista de Aseguramiento y Control de Calidad (QA/QC), representado por María México, y el Jefe de Producción Farmacéutica, representado por Alberto Valle. Se evalúa la frecuencia y la importancia de cada tarea para cada segmento con el fin de identificar dónde aportar mayor valor.
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:100%; font-family:Arial, sans-serif; text-align:center;">
+  <thead>
+    <tr style="background-color:#eef3f7;">
+      <th rowspan="2">Tarea (Task)</th>
+      <th colspan="2">Especialista QA/QC (María México)</th>
+      <th colspan="2">Jefe de Producción (Alberto Valle)</th>
+    </tr>
+    <tr style="background-color:#eef3f7;">
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left;">Consultar el historial y trazabilidad de un lote</td>
+      <td>Often</td><td>High</td>
+      <td>Often</td><td>High</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">Registrar y dar seguimiento a desviaciones e incidencias</td>
+      <td>Occasionally</td><td>High</td>
+      <td>Occasionally</td><td>High</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">Revisar y validar cálculos analíticos e informes de calidad</td>
+      <td>Often</td><td>High</td>
+      <td>Rarely</td><td>Low</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">Gestionar protocolos, registros y documentación de calidad</td>
+      <td>Often</td><td>High</td>
+      <td>Occasionally</td><td>Medium</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">Recopilar evidencias para auditorías e inspecciones</td>
+      <td>Occasionally</td><td>High</td>
+      <td>Rarely</td><td>Medium</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">Supervisar el estado de los lotes durante la fabricación</td>
+      <td>Rarely</td><td>Low</td>
+      <td>Often</td><td>High</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">Coordinar la aprobación de insumos y materiales con Calidad</td>
+      <td>Rarely</td><td>Medium</td>
+      <td>Often</td><td>High</td>
+    </tr>
+  </tbody>
+</table>
+
+**Análisis del Task Matrix:**
+Se observa que las tareas **"Consultar el historial y trazabilidad de un lote"** y **"Registrar y dar seguimiento a desviaciones e incidencias"** presentan una Importancia **High** para ambos segmentos, confirmando que la trazabilidad centralizada y la gestión de desviaciones son las necesidades más críticas y compartidas del negocio. Las principales diferencias radican en que María México concentra su actividad diaria en tareas documentales de aseguramiento —como revisar cálculos analíticos, gestionar protocolos y recopilar evidencias para auditorías (todas con Importancia High para ella)—, mientras que Alberto Valle prioriza la supervisión operativa de la fabricación y la coordinación de aprobaciones de insumos con el área de Calidad (Often / High). Esta complementariedad evidencia que ambos perfiles dependen de información oportuna sobre los mismos lotes, pero desde perspectivas distintas, lo que valida la necesidad de una plataforma que centralice dicha información y facilite la comunicación entre las áreas de Producción y Calidad.
+
+
 
 ### 2.3.3. User Journey Mapping
 
