@@ -293,6 +293,20 @@ Los mock-ups fueron elaborados considerando los requerimientos identificados dur
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
+Los User Flow Diagrams detallan el recorrido completo que realizan los usuarios para cumplir tareas críticas dentro de DoofPlus. Estos diagramas permiten validar que la navegación propuesta sea intuitiva, eficiente y compatible con los requisitos regulatorios asociados a la gestión farmacéutica.
+
+Los flujos fueron diseñados considerando tanto escenarios exitosos (Happy Path) como situaciones excepcionales (Unhappy Path), garantizando la correcta validación de usuarios, la integridad de los registros electrónicos y la trazabilidad de las acciones ejecutadas dentro del sistema.
+
+Entre los principales procesos modelados se encuentran:
+
+- Acceso regulatorio mediante firma electrónica.
+- Selección de entorno autorizado (Quality Segment o GxP Production).
+- Consulta y aprobación de documentación regulatoria.
+- Gestión de desviaciones y seguimiento CAPA.
+- Ejecución de auditorías internas y externas.
+- Registro y validación de resultados analíticos.
+- Liberación documental de lotes farmacéuticos.
+
 ## 4.5. Web Applications Prototyping
 
 ## 4.6. Domain-Driven Software Architecture
