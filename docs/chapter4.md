@@ -564,6 +564,8 @@ En esta sección, el equipo presenta los diagramas de componentes (Nivel 3 del m
 
 ## 4.7. Software Object-Oriented Design
 
+En esta sección, el equipo presenta el diseño orientado a objetos y los diagramas de clases tácticos basados en Domain-Driven Design (DDD) para cada uno de los **6 Bounded Contexts** de la plataforma **Doof-Plus**. Esta aproximación detalla las entidades, objetos de valor, enumeraciones, multiplicidades y los miembros de cada clase, especificando atributos y métodos con sus respectivos niveles de visibilidad (`+` para public y `-` para private).
+
 ### 4.7.1. Class Diagrams
 
 ## 4.8. Database Design
