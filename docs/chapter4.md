@@ -554,13 +554,13 @@ Este flujo describe el proceso que realiza un usuario desde el ingreso a la plat
 
 Como usuario autorizado, quiero acceder a la plataforma, completar la autenticación regulatoria y seleccionar mi entorno de trabajo para comenzar a utilizar las funcionalidades correspondientes a mi perfil.
 
-[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-1.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-1.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
-**Unhappy Path**
+**Unhappy Path*
 
 Como usuario, quiero acceder a la plataforma y al entorno de manufactura para consultar indicadores regulatorios y reportes asociados al proceso productivo.
 
-[Unappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-1.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-1.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 ***User Flow 2: Gestión de muestras y consulta de trazabilidad***
 
@@ -570,13 +570,13 @@ Este flujo representa el proceso mediante el cual un especialista de calidad reg
 
 Como especialista de calidad, quiero registrar muestras y validar resultados analíticos para garantizar la trazabilidad y el cumplimiento de los procedimientos de laboratorio.
 
-[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-2.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-2.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 **Unhappy Path**
 
 Como usuario de manufactura, quiero consultar el historial de trazabilidad y auditoría de un lote para investigar eventos o situaciones excepcionales detectadas durante la producción.
 
-[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-2.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-2.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 ***User Flow 3: Registro de incidencias y gestión de desviaciones***
 
@@ -586,13 +586,13 @@ Este flujo muestra cómo una incidencia detectada durante las operaciones es reg
 
 Como especialista de calidad, quiero gestionar desviaciones y registrar acciones CAPA para corregir incumplimientos identificados y reducir riesgos regulatorios.
 
-[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-3.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-3.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 **Unhappy Path**
 
 Como operador de manufactura, quiero registrar una incidencia operativa para documentar una desviación que pueda afectar la calidad, seguridad o continuidad del proceso.
 
-[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-3.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-3.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 ***User Flow 4: Gestión documental y protocolos de validación***
 
@@ -602,13 +602,13 @@ Este flujo describe la administración de documentos regulados y protocolos de v
 
 Como especialista de calidad, quiero gestionar documentos y protocolos de validación para asegurar que los procedimientos se encuentren actualizados y correctamente controlados.
 
-[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-4.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-4.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 **Unhappy Path**
 
 Como usuario de manufactura, quiero monitorear equipos y consultar el estado de ejecución de lotes para identificar anomalías que puedan afectar la operación.
 
-[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-4.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-4.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 ***User Flow 5: Evaluación de cumplimiento regulatorio***
 
@@ -618,13 +618,13 @@ Este flujo representa el proceso de análisis del estado de cumplimiento mediant
 
 Como especialista de calidad, quiero revisar el estado del sistema de calidad y consultar métricas regulatorias para evaluar el nivel de cumplimiento de la organización.
 
-[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-5.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-5.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 **Unhappy Path**
 
 Como usuario de manufactura, quiero realizar seguimiento a la ejecución de lotes y verificar posteriormente la información de trazabilidad para investigar posibles desviaciones.
 
-[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-5.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-5.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 ***User Flow 6: Auditoría y trazabilidad de lotes***
 
@@ -634,13 +634,13 @@ Este flujo muestra cómo los usuarios acceden a la información histórica de lo
 
 Como especialista de calidad, quiero consultar la trazabilidad completa de un lote y revisar el historial de auditoría para verificar la integridad y consistencia de los registros.
 
-[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-6.png
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-6.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 **Unhappy Path**
 
 Como usuario de manufactura, quiero acceder al historial y la trazabilidad de un lote para analizar información relacionada con una situación excepcional o una observación generada durante el proceso productivo.
 
-[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-6.png)
+<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-6.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
 
 ## 4.5. Web Applications Prototyping
 
