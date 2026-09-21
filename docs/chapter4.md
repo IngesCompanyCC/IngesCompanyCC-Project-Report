@@ -232,43 +232,199 @@ El diseño considera principios de usabilidad, accesibilidad, consistencia visua
 
 ### 4.4.1. Web Applications Wireframes
 
-La presente sección describe el diseño de experiencia de usuario (UX) e interfaz de usuario (UI) desarrollado para la plataforma web DoofPlus. La propuesta fue diseñada para apoyar la gestión integral de calidad farmacéutica bajo entornos regulados GxP, facilitando la administración documental, la trazabilidad de procesos productivos, la gestión de desviaciones y el monitoreo operativo de laboratorios y líneas de manufactura.
+En esta sección se presentan los wireframes diseñados para la aplicación web de DoofPlus. Cada pantalla fue desarrollada para gestionar procesos de calidad farmacéutica, producción regulada GxP, trazabilidad de lotes, control documental y cumplimiento normativo mediante firmas electrónicas y registros auditables.
 
-El diseño considera principios de usabilidad, accesibilidad, consistencia visual y eficiencia operativa, asegurando que los diferentes perfiles de usuario puedan ejecutar actividades críticas relacionadas con el cumplimiento normativo, la liberación de lotes y la auditoría regulatoria.
+A continuación, se muestran las representaciones esquemáticas de baja fidelidad que describen la estructura, distribución de componentes y funcionalidades principales de cada módulo de la plataforma.
 
-### 4.4.2. Web Applications Wireflow Diagrams
+- **Landing Page - DoofPlus**
 
-- Landing Page - DoofPlus
+Pantalla de presentación de la plataforma que comunica la propuesta de valor de DoofPlus y permite acceder al portal especializado para gestión de calidad y producción farmacéutica bajo normativas GxP.
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe1.png)
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Landing%20Page.png)
 
-- Regulatory Identification
+- **Regulatory Identification - DoofPlus**
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe2.png)
+Pantalla de autenticación regulatoria que solicita las credenciales corporativas y la firma electrónica necesarias para acceder a funcionalidades sujetas a cumplimiento FDA 21 CFR Part 11 y normativas GxP.
 
-- QA & Lab Console Dashboard
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Selección%20de%20Espacio.png)
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe3.png)
+- **Environment Selection Portal - DoofPlus**
 
-- Document Management & Master SOPs
+Interfaz que permite seleccionar el entorno de trabajo autorizado, diferenciando entre el segmento de calidad (QA/QC) y el entorno de producción farmacéutica.
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe4.png)
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Dashboard%20Calidad.png)
 
-- Quality Protocols & Validation Management
+- **QA & Lab Console Dashboard - DoofPlus**
+
+Panel principal para usuarios de calidad que centraliza la supervisión de lotes pendientes, ensayos analíticos, desviaciones abiertas y actividades del laboratorio.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Documentación.png)
+
+- **Document Management & Master SOPs - DoofPlus**
+
+Repositorio documental diseñado para gestionar procedimientos operativos estándar (SOPs), registros electrónicos, certificados de análisis y documentación regulatoria controlada.
 
 ![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe5.png)
 
-- Critical Deviations & CAPA Actions Control
+- **Quality Protocols & Validation Management - DoofPlus**
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe6.png)
+Módulo destinado a la administración de protocolos de validación, cualificación de equipos y seguimiento de actividades relacionadas con IQ, OQ y PQ.
 
-- Process Audit Master Plan
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Protocolos.png)
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe7.png)
+- **Critical Deviations & CAPA Actions Control - DoofPlus**
 
-- GxP Regulatory Reports & Metrics
+Pantalla de seguimiento de desviaciones críticas, análisis de impacto GMP y control de acciones correctivas y preventivas (CAPA).
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe8.png)
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Desviaciones.png)
+
+- **Process Audit Master Plan - DoofPlus**
+
+Módulo para planificar, ejecutar y monitorear auditorías internas, inspecciones regulatorias y hallazgos asociados al cumplimiento GMP.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Auditorías.png)
+
+- **GxP Regulatory Reports & Metrics - DoofPlus**
+
+Panel de análisis que permite generar reportes regulatorios, revisar métricas de desempeño y exportar información validada para auditorías e inspecciones.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Reportes.png)
+
+- **Analytical Testing & Microbiology Control (QC) - DoofPlus**
+
+Pantalla de control de ensayos analíticos y microbiológicos que permite gestionar muestras, equipos de laboratorio y resultados fuera de especificación (OOS).
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Ensayos.png)
+
+- **Analytical Results Entry & Validation - DoofPlus**
+
+Interfaz destinada al registro y validación de resultados analíticos, integrando verificación de especificaciones y aprobación mediante firma electrónica.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Resultados.png)
+
+- **Pharmaceutical Batch History & Traceability - DoofPlus**
+
+Módulo de consulta histórica que permite rastrear lotes farmacéuticos, consultar estados regulatorios y acceder a certificados de análisis.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Historial%20de%20Lotes.png)
+
+- **Cross-Traceability & Audit Center - DoofPlus**
+
+Centro de trazabilidad que integra genealogía de lotes, registros de laboratorio, documentación asociada y auditoría completa de eventos regulatorios.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Centro%20de%20Trazabilidad.png)
+
+- **GxP Production Control Console - DoofPlus**
+
+Panel principal del entorno de producción que permite supervisar órdenes activas, progreso de eBR y estado de los procesos de manufactura.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Dashboard%20Producción.png)
+
+- **GxP Batch Execution & Management Console - DoofPlus**
+
+Interfaz para la gestión operativa de lotes de fabricación, incluyendo seguimiento de etapas de producción, firmas electrónicas y responsables asignados.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Gestión%20de%20Lotes.png)
+
+- **GxP Incident Registration & Deviation Management - DoofPlus**
+
+Módulo de registro de incidencias que permite documentar eventos de desviación, adjuntar evidencias y gestionar acciones de contención.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Incidencias.png)
+
+- **GxP Profile & Regulatory Credentials - DoofPlus**
+
+Pantalla de perfil regulatorio donde los usuarios administran credenciales, firmas electrónicas y permisos asociados a los distintos contextos del sistema.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Perfil.png)
+
+- **General Settings & GxP Policies - DoofPlus**
+
+Módulo de configuración orientado a la administración de políticas GxP, parámetros de seguridad, auditorías internas y canales de notificación regulatoria.
+
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Configuración.png)
+
+### 4.4.2. Web Applications Wireflow Diagrams
+
+Los Wireflow Diagrams se utilizan para representar visualmente la navegación y las interacciones que realizan los usuarios dentro de una aplicación para alcanzar un objetivo determinado. Estos diagramas combinan wireframes y flujos de usuario, permitiendo visualizar las diferentes pantallas involucradas en cada proceso y la secuencia de acciones necesarias para completar una tarea.
+
+Para DoofPlus se desarrollaron distintos Wireflow Diagrams basados en los principales objetivos de los usuarios dentro de un entorno farmacéutico regulado por normas GxP. Cada diagrama describe el flujo que siguen los usuarios para gestionar procesos de producción, control de calidad, documentación regulatoria, trazabilidad y cumplimiento normativo.
+
+**Especialista de Aseguramiento y Control de Calidad (QA/QC)**
+
+**User Goal 1:** Acceder a la plataforma y configurar el entorno regulatorio de trabajo.
+
+Como usuario, quiero ingresar a DoofPlus y configurar el entorno regulatorio correspondiente para acceder a los módulos y funciones necesarias para la gestión de calidad farmacéutica.
+
+[User 1](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-1.png)
+
+**User Goal 2:** Monitorear equipos y condiciones ambientales asociadas a la producción.
+
+Como usuario, quiero supervisar el estado de los equipos y las variables ambientales críticas para asegurar que las operaciones de manufactura cumplan con los requisitos regulatorios establecidos.
+
+[User 2](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-2.png)
+
+**User Goal 3:** Gestionar lotes de producción y garantizar su trazabilidad.
+
+Como usuario, quiero registrar y monitorear los lotes de producción para asegurar la trazabilidad completa desde su fabricación hasta su liberación.
+
+[User 3](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-3.png)
+
+**User Goal 4:** Consultar la trazabilidad histórica y el plan maestro de auditorías.
+
+Como usuario, quiero acceder al historial de lotes y a los registros de auditoría para verificar evidencias de cumplimiento y mantener la integridad de la información regulatoria.
+
+[User 4](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-4.png)
+
+User Goal 5: Gestionar protocolos de laboratorio y validar resultados de calidad.
+
+Como usuario de control de calidad, quiero administrar protocolos de laboratorio y registrar resultados analíticos para garantizar el cumplimiento de los estándares GxP y los procedimientos de validación.
+
+[User 5](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-5.png)
+
+**User Goal 6:** Supervisar desviaciones, CAPA y métricas regulatorias.
+
+Como usuario, quiero registrar desviaciones, gestionar acciones correctivas y preventivas (CAPA) y consultar métricas regulatorias para facilitar el cumplimiento normativo y la mejora continua.
+
+[User 6](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-6.png)
+
+**Jefe o Supervisor de Producción Farmacéutica**
+
+User Goal 1: Acceder al dashboard de calidad para supervisar el estado de los procesos.
+
+Como especialista de QA, quiero acceder a un dashboard centralizado que me permita monitorear indicadores de calidad, lotes en revisión y elementos pendientes de validación.
+
+[User 1](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-1.png)
+
+User Goal 2: Gestionar auditorías y evidencias de cumplimiento regulatorio.
+
+Como especialista de QA, quiero revisar auditorías y evidencias documentadas para verificar el cumplimiento de los requisitos regulatorios y de calidad.
+
+[User 2](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-2.png)
+
+User Goal 3: Registrar desviaciones e iniciar acciones CAPA.
+
+Como especialista de QA, quiero registrar incidencias y gestionar acciones correctivas y preventivas para controlar riesgos y asegurar la mejora continua de los procesos.
+
+[User 3](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-3.png)
+
+User Goal 4: Gestionar protocolos de validación y control de calidad.
+
+Como especialista de QA, quiero administrar protocolos de validación para verificar que los procesos y procedimientos cumplan con los requisitos regulatorios establecidos.
+
+[User 4](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-4.png)
+
+User Goal 5: Administrar documentación regulatoria y procedimientos operativos estándar.
+
+Como especialista de QA, quiero gestionar documentos y SOPs para mantener registros controlados, actualizados y trazables dentro del sistema.
+
+[User 5](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-5.png)
+
+User Goal 6: Consultar reportes regulatorios y métricas de desempeño.
+
+Como especialista de QA, quiero visualizar reportes regulatorios e indicadores de calidad para evaluar tendencias, identificar riesgos y respaldar la toma de decisiones.
+
+[User 6](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-6.png)
 
 ### 4.4.3. Web Applications Mock-ups
 
