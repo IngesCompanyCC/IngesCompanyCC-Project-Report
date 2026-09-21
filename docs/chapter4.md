@@ -542,19 +542,105 @@ Módulo de configuración orientado a la administración de políticas GxP, par�
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-Los User Flow Diagrams detallan el recorrido completo que realizan los usuarios para cumplir tareas críticas dentro de DoofPlus. Estos diagramas permiten validar que la navegación propuesta sea intuitiva, eficiente y compatible con los requisitos regulatorios asociados a la gestión farmacéutica.
+Los User Flow Diagrams representan la secuencia de acciones que realizan los usuarios dentro de la plataforma para alcanzar un objetivo específico. Estos diagramas permiten visualizar la navegación entre módulos, las decisiones tomadas durante el proceso y los diferentes escenarios que pueden ocurrir durante la interacción con el sistema.
 
-Los flujos fueron diseñados considerando tanto escenarios exitosos (Happy Path) como situaciones excepcionales (Unhappy Path), garantizando la correcta validación de usuarios, la integridad de los registros electrónicos y la trazabilidad de las acciones ejecutadas dentro del sistema.
+Para DoofPlus se definieron distintos flujos asociados a los procesos críticos de calidad y manufactura farmacéutica. Cada User Flow se clasifica como Happy Path, cuando el usuario completa exitosamente el objetivo planteado, o Unhappy Path, cuando el flujo se origina a partir de una incidencia, desviación o situación excepcional que requiere atención y seguimiento.
 
-Entre los principales procesos modelados se encuentran:
+***User Flow 1: Acceso a la plataforma y selección del entorno operativo***
 
-- Acceso regulatorio mediante firma electrónica.
-- Selección de entorno autorizado (Quality Segment o GxP Production).
-- Consulta y aprobación de documentación regulatoria.
-- Gestión de desviaciones y seguimiento CAPA.
-- Ejecución de auditorías internas y externas.
-- Registro y validación de resultados analíticos.
-- Liberación documental de lotes farmacéuticos.
+Este flujo describe el proceso que realiza un usuario desde el ingreso a la plataforma hasta el acceso al entorno de trabajo correspondiente según su rol y permisos regulatorios.
+
+**Happy Path**
+
+Como usuario autorizado, quiero acceder a la plataforma, completar la autenticación regulatoria y seleccionar mi entorno de trabajo para comenzar a utilizar las funcionalidades correspondientes a mi perfil.
+
+[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-1.png)
+
+**Unhappy Path**
+
+Como usuario, quiero acceder a la plataforma y al entorno de manufactura para consultar indicadores regulatorios y reportes asociados al proceso productivo.
+
+[Unappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-1.png)
+
+***User Flow 2: Gestión de muestras y consulta de trazabilidad***
+
+Este flujo representa el proceso mediante el cual un especialista de calidad registra una muestra, valida los resultados obtenidos y consulta posteriormente la trazabilidad asociada al lote analizado.
+
+**Happy Path**
+
+Como especialista de calidad, quiero registrar muestras y validar resultados analíticos para garantizar la trazabilidad y el cumplimiento de los procedimientos de laboratorio.
+
+[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-2.png)
+
+**Unhappy Path**
+
+Como usuario de manufactura, quiero consultar el historial de trazabilidad y auditoría de un lote para investigar eventos o situaciones excepcionales detectadas durante la producción.
+
+[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-2.png)
+
+***User Flow 3: Registro de incidencias y gestión de desviaciones***
+
+Este flujo muestra cómo una incidencia detectada durante las operaciones es registrada y posteriormente evaluada mediante el proceso de gestión de desviaciones y acciones correctivas.
+
+**Happy Path**
+
+Como especialista de calidad, quiero gestionar desviaciones y registrar acciones CAPA para corregir incumplimientos identificados y reducir riesgos regulatorios.
+
+[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-3.png)
+
+**Unhappy Path**
+
+Como operador de manufactura, quiero registrar una incidencia operativa para documentar una desviación que pueda afectar la calidad, seguridad o continuidad del proceso.
+
+[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-3.png)
+
+***User Flow 4: Gestión documental y protocolos de validación***
+
+Este flujo describe la administración de documentos regulados y protocolos de validación necesarios para mantener la conformidad con los estándares GMP.
+
+**Happy Path**
+
+Como especialista de calidad, quiero gestionar documentos y protocolos de validación para asegurar que los procedimientos se encuentren actualizados y correctamente controlados.
+
+[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-4.png)
+
+**Unhappy Path**
+
+Como usuario de manufactura, quiero monitorear equipos y consultar el estado de ejecución de lotes para identificar anomalías que puedan afectar la operación.
+
+[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-4.png)
+
+***User Flow 5: Evaluación de cumplimiento regulatorio***
+
+Este flujo representa el proceso de análisis del estado de cumplimiento mediante la revisión de desviaciones, validaciones y reportes regulatorios.
+
+**Happy Path**
+
+Como especialista de calidad, quiero revisar el estado del sistema de calidad y consultar métricas regulatorias para evaluar el nivel de cumplimiento de la organización.
+
+[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-5.png)
+
+**Unhappy Path**
+
+Como usuario de manufactura, quiero realizar seguimiento a la ejecución de lotes y verificar posteriormente la información de trazabilidad para investigar posibles desviaciones.
+
+[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-5.png)
+
+***User Flow 6: Auditoría y trazabilidad de lotes***
+
+Este flujo muestra cómo los usuarios acceden a la información histórica de los lotes y a los registros de auditoría para respaldar procesos de inspección y liberación farmacéutica.
+
+**Happy Path**
+
+Como especialista de calidad, quiero consultar la trazabilidad completa de un lote y revisar el historial de auditoría para verificar la integridad y consistencia de los registros.
+
+[Happy](../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-6.png
+
+**Unhappy Path**
+
+Como usuario de manufactura, quiero acceder al historial y la trazabilidad de un lote para analizar información relacionada con una situación excepcional o una observación generada durante el proceso productivo.
+
+[Unhappy](../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-6.png)
 
 ## 4.5. Web Applications Prototyping
 
