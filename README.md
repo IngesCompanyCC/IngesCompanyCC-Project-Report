@@ -88,7 +88,7 @@ U20241F733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 |   1.3.4   | 20/09/2026 | Rojas Ambicho, Nestor Daniel                                                                                                        | Implementación de Software Architecture Context Diagram, Container Diagrams y Components Diagrams        |
 |   1.3.5   | 20/09/2026 | Rojas Ambicho, Nestor Daniel                                                                                                        | Implementacion de Software Object-Oriented Design  capitulo 4                                         |
 |   1.3.6   | 20/09/2026 | Rojas Ambicho, Nestor Daniel                                                                                                        |  Implementacion de Class Diagrams  capitulo 4                                                            |
-| 1.4.0 | 20/09/2026 | Cobades Zamora, Yhoshua Hebert | Implementar los capitulos 5.1 y 5.2 |
+ | 1.4.0 | 20/09/2026 | Cobades Zamora, Yhoshua Hebert | Implementación del capitulo 5.1 y 5.2.1.8 |
 |   2.0.0   | 20/09/2026 | Cobades Zamora, Yhoshua Hebert                                                                                                      |                        inicio de repositorio de landing page.                                                                                  |
 
 ---
