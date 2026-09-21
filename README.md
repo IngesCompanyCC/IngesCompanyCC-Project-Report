@@ -8,19 +8,15 @@ Facultad de Ingeniería
 <br>
 
 ### 1ASI0729
-
 ### Aplicaciones Web
 
-NRC:
-
+NRC
 ### 8130
 
 ## Informe del Trabajo Final
-
 Docente
 
 ### Villafuerte Bazan, Oscar Ivan
-
 
 Equipo
 
@@ -29,12 +25,11 @@ Equipo
 Proyecto
 
 ### DoofPlus
-
 <br>
 
 <div style="display: inline-block; text-align: left;">
 
-**Integrantes:**<br><br>
+**Integrantes:**<br>
 **Código** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Apellidos y Nombres**<br>
 U202321425 &nbsp; &nbsp; Angulo Ramírez, Marcelo Martín<br>
 U20231H117 &nbsp; &nbsp; Cobades Zamora, Yhoshua Hebert<br>
@@ -44,7 +39,6 @@ U20241F733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 
 </div>
 
-<br>
 <br>
 
 ### Período 202620
