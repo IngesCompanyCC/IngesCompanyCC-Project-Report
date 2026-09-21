@@ -5,8 +5,6 @@ Universidad Peruana de Ciencias Aplicadas
 
 Facultad de Ingeniería
 
-<br>
-
 ### 1ASI0729
 
 ### Aplicaciones Web
@@ -21,7 +19,6 @@ Docente
 
 ### Villafuerte Bazan, Oscar Ivan
 
-
 Equipo
 
 ### IngesCompanyCC
@@ -29,8 +26,6 @@ Equipo
 Proyecto
 
 ### DoofPlus
-
-<br>
 
 <div style="display: inline-block; text-align: left;">
 
@@ -44,12 +39,7 @@ U20241F733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 
 </div>
 
-<br>
-<br>
-
 ### Período 202620
-
-<br> 
 
 ### Septiembre, 2026
 

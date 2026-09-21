@@ -51,6 +51,7 @@ El Impact Mapping de DoofPlus conecta los objetivos estratégicos del negocio co
 
 El Product Backlog de DoofPlus consolida todas las User Stories y Technical Stories identificadas, ordenadas según el valor que aportan al negocio. Las historias relacionadas con la Landing Page se posicionan al inicio dado que corresponden al primer sprint y son el primer punto de contacto con los potenciales clientes. A continuación se presentan las historias del core de calidad y producción farmacéutica, y finalmente las Technical Stories del API.
 
+
 | # | User Story Id | Título | Descripción | Story Points |
 |:---:|:---:|---|---|:---:|
 | 1 | US01 | Visualización de la Propuesta de Valor y Beneficios del Sistema | Como Visitante, quiero conocer los beneficios y la propuesta de valor del sistema para evaluar si se adapta a las necesidades de mi fábrica. | 2 |
@@ -73,8 +74,6 @@ El Product Backlog de DoofPlus consolida todas las User Stories y Technical Stor
 | 18 | TS03 | Endpoint para Trazabilidad y Audit Trail | Como Developer, quiero desarrollar un endpoint GET parametrizado que exponga el historial inmutable de un lote para el dashboard. | 3 |
 | 19 | TS04 | Endpoint para Cambio de Estado de Lote | Como Developer, quiero implementar un endpoint PATCH para actualizar el estado del ciclo de vida de un lote validando las reglas de negocio. | 3 |
 | 20 | TS02 | Autenticación y Generación de Token JWT | Como Developer, quiero implementar un servicio de autenticación para validar credenciales y emitir un token JWT que proteja las rutas privadas. | 3 |
-
-<br>
 
 **Evidencia de Product Backlog en Jira:**
 
