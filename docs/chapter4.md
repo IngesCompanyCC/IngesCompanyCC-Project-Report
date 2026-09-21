@@ -246,25 +246,25 @@ Pantalla de presentación de la plataforma que comunica la propuesta de valor de
 
 Pantalla de autenticación regulatoria que solicita las credenciales corporativas y la firma electrónica necesarias para acceder a funcionalidades sujetas a cumplimiento FDA 21 CFR Part 11 y normativas GxP.
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Selección%20de%20Espacio.png)
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Login.png)
 
 - **Environment Selection Portal - DoofPlus**
 
 Interfaz que permite seleccionar el entorno de trabajo autorizado, diferenciando entre el segmento de calidad (QA/QC) y el entorno de producción farmacéutica.
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Dashboard%20Calidad.png)
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Selección%20de%20Espacio.png)
 
 - **QA & Lab Console Dashboard - DoofPlus**
 
 Panel principal para usuarios de calidad que centraliza la supervisión de lotes pendientes, ensayos analíticos, desviaciones abiertas y actividades del laboratorio.
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Documentación.png)
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Dashboard%20Calidad.png)
 
 - **Document Management & Master SOPs - DoofPlus**
 
 Repositorio documental diseñado para gestionar procedimientos operativos estándar (SOPs), registros electrónicos, certificados de análisis y documentación regulatoria controlada.
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/wireframe5.png)
+![Wireframe](../assets/img/chapter4/prototype/wireframes/Documentación.png)
 
 - **Quality Protocols & Validation Management - DoofPlus**
 
@@ -428,24 +428,117 @@ Como especialista de QA, quiero visualizar reportes regulatorios e indicadores d
 
 ### 4.4.3. Web Applications Mock-ups
 
-En esta sección se presentan los mock-ups desarrollados para la plataforma web DoofPlus. Estas representaciones de alta fidelidad muestran la apariencia final de la interfaz, incorporando elementos visuales, identidad corporativa, jerarquías de información y componentes interactivos diseñados para entornos farmacéuticos regulados bajo estándares GMP y FDA 21 CFR Part 11.
+En esta sección se presentan los mock-ups desarrollados para la aplicación web de DoofPlus. Estas representaciones de alta fidelidad muestran la apariencia final de la plataforma, incorporando la identidad visual del producto, componentes interactivos y elementos orientados al cumplimiento regulatorio farmacéutico bajo estándares GMP y FDA 21 CFR Part 11.
 
-Los mock-ups fueron elaborados considerando los requerimientos identificados durante el proceso de investigación, priorizando la trazabilidad, la integridad de los datos, la segregación de funciones y la facilidad de navegación para usuarios pertenecientes a las áreas de Quality Assurance (QA), Quality Control (QC) y Manufacturing Operations.
+Los mock-ups fueron diseñados considerando los procesos críticos de aseguramiento y control de calidad, manufactura farmacéutica, trazabilidad de lotes y gestión documental, garantizando una experiencia de usuario intuitiva y alineada con los requisitos de integridad de datos, auditoría y firmas electrónicas.
 
-- Landing Page - DoofPlus
-  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup1.png)
-- Regulatory Identification
-  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup2.png)
-- Environment Selection Portal
-  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup3.png)
-- QA / QC Operational Dashboard
-  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup4.png)
-- Document Management & Master SOPs
-  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup5.png)
-- Critical Deviations & CAPA Control
-  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup6.png)
-- Process Audit & Regulatory Oversight
-  ![Wireframe](../assets/img/chapter4/prototype/mockup/mockup7.png)
+- **Landing Page - DoofPlus**
+
+Pantalla de presentación de la plataforma que comunica la propuesta de valor de DoofPlus y permite acceder al portal especializado para gestión de calidad y producción farmacéutica bajo normativas GxP.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Landing%20Page.png)
+
+- **Regulatory Identification - DoofPlus**
+
+Pantalla de autenticación regulatoria que solicita las credenciales corporativas y la firma electrónica necesarias para acceder a funcionalidades sujetas a cumplimiento FDA 21 CFR Part 11 y normativas GxP.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Login.png)
+
+- **Environment Selection Portal - DoofPlus**
+
+Interfaz que permite seleccionar el entorno de trabajo autorizado, diferenciando entre el segmento de calidad (QA/QC) y el entorno de producción farmacéutica.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Selección%20de%20Espacio.png)
+
+- **QA & Lab Console Dashboard - DoofPlus**
+
+Panel principal para usuarios de calidad que centraliza la supervisión de lotes pendientes, ensayos analíticos, desviaciones abiertas y actividades del laboratorio.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Dashboard%20Calidad.png)
+
+- **Document Management & Master SOPs - DoofPlus**
+
+Repositorio documental diseñado para gestionar procedimientos operativos estándar (SOPs), registros electrónicos, certificados de análisis y documentación regulatoria controlada.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Documentación.png)
+
+- **Quality Protocols & Validation Management - DoofPlus**
+
+Módulo destinado a la administración de protocolos de validación, cualificación de equipos y seguimiento de actividades relacionadas con IQ, OQ y PQ.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Protocolos.png)
+
+- **Critical Deviations & CAPA Actions Control - DoofPlus**
+
+Pantalla de seguimiento de desviaciones críticas, análisis de impacto GMP y control de acciones correctivas y preventivas (CAPA).
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Desviaciones.png)
+
+- **Process Audit Master Plan - DoofPlus**
+
+Módulo para planificar, ejecutar y monitorear auditorías internas, inspecciones regulatorias y hallazgos asociados al cumplimiento GMP.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Auditorías.png)
+
+- **GxP Regulatory Reports & Metrics - DoofPlus**
+
+Panel de análisis que permite generar reportes regulatorios, revisar métricas de desempeño y exportar información validada para auditorías e inspecciones.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Reportes.png)
+
+- **Analytical Testing & Microbiology Control (QC) - DoofPlus**
+
+Pantalla de control de ensayos analíticos y microbiológicos que permite gestionar muestras, equipos de laboratorio y resultados fuera de especificación (OOS).
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Ensayos.png)
+
+- **Analytical Results Entry & Validation - DoofPlus**
+
+Interfaz destinada al registro y validación de resultados analíticos, integrando verificación de especificaciones y aprobación mediante firma electrónica.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Resultados.png)
+
+- **Pharmaceutical Batch History & Traceability - DoofPlus**
+
+Módulo de consulta histórica que permite rastrear lotes farmacéuticos, consultar estados regulatorios y acceder a certificados de análisis.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Historial%20de%20Lotes.png)
+
+- **Cross-Traceability & Audit Center - DoofPlus**
+
+Centro de trazabilidad que integra genealogía de lotes, registros de laboratorio, documentación asociada y auditoría completa de eventos regulatorios.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Centro%20de%20Trazabilidad.png)
+
+- **GxP Production Control Console - DoofPlus**
+
+Panel principal del entorno de producción que permite supervisar órdenes activas, progreso de eBR y estado de los procesos de manufactura.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Dashboard%20Producción.png)
+
+- **GxP Batch Execution & Management Console - DoofPlus**
+
+Interfaz para la gestión operativa de lotes de fabricación, incluyendo seguimiento de etapas de producción, firmas electrónicas y responsables asignados.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Gestión%20de%20Lotes.png)
+
+- **GxP Incident Registration & Deviation Management - DoofPlus**
+
+Módulo de registro de incidencias que permite documentar eventos de desviación, adjuntar evidencias y gestionar acciones de contención.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Incidencias.png)
+
+- **GxP Profile & Regulatory Credentials - DoofPlus**
+
+Pantalla de perfil regulatorio donde los usuarios administran credenciales, firmas electrónicas y permisos asociados a los distintos contextos del sistema.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Perfil.png)
+
+- **General Settings & GxP Policies - DoofPlus**
+
+Módulo de configuración orientado a la administración de políticas GxP, parámetros de seguridad, auditorías internas y canales de notificación regulatoria.
+
+![Mockup](../assets/img/chapter4/prototype/mockup/Configuración.png)
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
