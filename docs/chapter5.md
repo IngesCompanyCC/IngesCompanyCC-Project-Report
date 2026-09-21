@@ -90,9 +90,9 @@ El Sprint Planning Meeting sirvió para definir los objetivos iniciales, asignar
 | **Time** | 10:00 AM |
 | **Location** | Reunión virtual vía Discord |
 | **Prepared By** | Cobades, Yhoshua |
-| **Attendees (to planning meeting)** | Angulo, Marcelo / Cobades, Yhoshua / Flores, Ricardo / Rojas, Nestor / Zavaleta, Rodolfo |
-| **Sprint 1 – 1 Review Summary** | (No aplica por ser el primer Sprint del proyecto). |
-| **Sprint 1 – 1 Retrospective Summary** | (No aplica por ser el primer Sprint del proyecto). |
+| **Attendees (to planning meeting)** | Angulo, Marcelo / Cobades, Yhoshua / Yarleque, Cristina / Rojas, Nestor / Zavaleta, Rodolfo |
+| **Sprint 0 Review Summary** | (No aplica por ser el primer Sprint del proyecto). |
+| **Sprint 0 Retrospective Summary** | (No aplica por ser el primer Sprint del proyecto). |
 | **Sprint Goal & User Stories** | |
 | **Sprint 1 Goal** | **Our focus is on** delivering a complete and responsive Landing Page.<br>**We believe it delivers** a clear understanding of DoofPlus' value proposition to our potential pharmaceutical clients.<br>**This will be confirmed when** visitors can navigate through the features, plans, and team information flawlessly on both desktop and mobile devices. |
 | **Sprint 1 Velocity** | 12 Story Points |
@@ -102,13 +102,13 @@ El Sprint Planning Meeting sirvió para definir los objetivos iniciales, asignar
 
 A continuación se presenta el Leadership-and-Collaboration Matrix (LACX), que indica quién es el líder (L) y quiénes son los colaboradores (C) para cada aspecto dentro del alcance del Sprint 1 (enfocado principalmente en la Landing Page y setup inicial).
 
-| Team Member | GitHub Username | Landing Page (UI/UX) | Landing Page (Code) | Deployment & Setup | Documentation |
-|-------------|-----------------|----------------------|---------------------|--------------------|---------------|
-| Angulo, Marcelo | mangulo | L | C |  | C |
-| Cobades, Yhoshua | yhocz | C | C |  | C |
-| Cristina Yarleque | Cris06luna / rflores | C | C |  | C |
-| Rojas, Nestor | nrojas | C | C |  |  |
-| Zavaleta, Rodolfo | rzavaleta | C | L |  | L |
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page UI/UX Leader (L) / Collaborator (C) | Landing Page Code Leader (L) / Collaborator (C) | Documentation Leader (L) / Collaborator (C) |
+|-------------------------------------|-----------------|--------------------------------------------------|-------------------------------------------------|---------------------------------------------|
+| Angulo, Marcelo                     | mangulo         | L                                                | C                                               | C                                           |
+| Cobades, Yhoshua                    | yhocz           | C                                                | C                                               | C                                           |
+| Yarleque, Cristina                  | Cris06luna / rflores | C                                           | C                                               | C                                           |
+| Rojas, Nestor                       | nrojas          | C                                                | C                                               |                                             |
+| Zavaleta, Rodolfo                   | rzavaleta       | C                                                | L                                               | L                                           |
 
 #### 5.2.1.3. Sprint Backlog 1
 
@@ -122,12 +122,12 @@ El objetivo principal de este Sprint fue implementar el sitio web estático (Lan
 | **Story Id** \| **Story Title** | **Task Id** \| **Task Title** | **Task Description** | **Estimation (Hours)** | **Assigned To** | **(To-do / In-Process / To-Review / Done)** |
 | US01 \| Menú de navegación | T001 \| Implementar navbar responsivo | Estructurar el menú de navegación con los enlaces a Home, Features, Benefits, Plans y Contact. | 2h | Zavaleta, Rodolfo | Done |
 | US01 \| Menú de navegación | T002 \| Estilos y hamburger menu | Aplicar estilos CSS al menú y añadir comportamiento responsive con menú hamburguesa para móvil. | 2h | Angulo, Marcelo | Done |
-| US02 \| Visualización de planes de suscripción | T003 \| Diseñar tarjetas de planes | Crear las tarjetas de los planes Standard Lab ($199/mes) y Enterprise ($599/mes) con sus características. | 3h | Flores, Ricardo | Done |
+| US02 \| Visualización de planes de suscripción | T003 \| Diseñar tarjetas de planes | Crear las tarjetas de los planes Standard Lab ($199/mes) y Enterprise ($599/mes) con sus características. | 3h | Yarleque, Cristina | Done |
 | US02 \| Visualización de planes de suscripción | T004 \| Toggle mensual/anual | Implementar el toggle de cambio entre precios mensuales y anuales con descuento del 15%. | 2h | Cobades, Yhoshua | Done |
 | US03 \| Visualización del equipo creador | T005 \| Maquetar sección Our Team | Implementar las tarjetas de los 5 integrantes del equipo Inges Company con foto, nombre y descripción. | 2h | Rojas, Nestor | Done |
 | US03 \| Visualización del equipo creador | T006 \| Correcciones sección Our Team | Corregir la estructura y contenido de la sección del equipo tras revisión de pares. | 1h | Angulo, Marcelo | Done |
 | US04 \| Formulario de contacto | T007 \| Implementar footer y formulario | Desarrollar el footer con el formulario de suscripción por email, datos de contacto y links legales. | 3h | Zavaleta, Rodolfo | Done |
-| US04 \| Formulario de contacto | T008 \| Correcciones de estructura index | Corregir la estructura general del index.html para asegurar consistencia semántica y accesibilidad. | 2h | Flores, Ricardo | Done |
+| US04 \| Formulario de contacto | T008 \| Correcciones de estructura index | Corregir la estructura general del index.html para asegurar consistencia semántica y accesibilidad. | 2h | Yarleque, Cristina | Done |
 | US05 \| Cambio de idioma | T009 \| Lógica i18n y toggle de idioma | Implementar el switcher de idioma ES/EN con archivos de traducción y lógica JavaScript de i18n. | 3h | Cobades, Yhoshua | Done |
 | — \| Documentos legales | T010 \| Agregar Terms of Service | Redactar e implementar la página de Términos de Servicio de DoofPlus. | 2h | Rojas, Nestor | Done |
 | — \| Documentos legales | T011 \| Agregar Privacy Policy | Redactar e implementar la Política de Privacidad conforme a la legislación peruana. | 2h | Angulo, Marcelo | Done |
@@ -212,9 +212,34 @@ Todos los miembros del equipo participaron activamente en la implementación de 
 # Conclusiones
 
 ## Conclusiones y recomendaciones
+* **Conclusiones:**
+  * Se logró cumplir con el Sprint Goal del Sprint 1, desarrollando y desplegando satisfactoriamente la Landing Page de DoofPlus.
+  * A través del proceso de diseño e implementación, se validó la importancia de utilizar convenciones estándar (Semantic Versioning, Conventional Commits) y un flujo de trabajo organizado (GitFlow).
+  * Los assumptions y Hypothesis Statements iniciales sobre la necesidad de una presentación clara y responsiva de los planes de suscripción han sido abordados, permitiendo que los usuarios (tanto laboratorios como empresas) comprendan rápidamente la propuesta de valor del producto.
+* **Recomendaciones:**
+  * Para los siguientes sprints, se recomienda continuar fortaleciendo la integración continua y el despliegue automático (CI/CD) para agilizar la entrega de valor, especialmente en la Web Application y los RESTful Web Services.
+  * Se sugiere realizar validaciones periódicas con usuarios reales (Validation Interviews) a medida que se implementen los features principales de la aplicación para confirmar que resuelven los Problem Statements definidos.
 
 ## Video About-the-Team
 
 # Bibliografía
 
+* Atlassian. (n.d.). *Jira Software*. Recuperado de https://www.atlassian.com/software/jira
+* GitHub. (n.d.). *GitHub Pages*. Recuperado de https://pages.github.com/
+* Google. (n.d.). *Google HTML/CSS Style Guide*. Recuperado de https://google.github.io/styleguide/htmlcssguide.html
+* JetBrains. (n.d.). *WebStorm*. Recuperado de https://www.jetbrains.com/webstorm/
+* Microsoft. (n.d.). *TypeScript*. Recuperado de https://www.typescriptlang.org/
+* O'Reilly. (n.d.). *Lean UX, 3rd Edition*. 
+* Vue.js. (n.d.). *Vue Style Guide*. Recuperado de https://vuejs.org/v2/style-guide/
+* W3Schools. (n.d.). *HTML Style Guide and Coding Conventions*. Recuperado de https://www.w3schools.com/html/html5_syntax.asp
+
 # Anexos
+
+## Anexo A. Videos de Exposiciones
+
+En este anexo se incluirán de forma progresiva los hipervínculos a los videos de exposición para cada entrega del proyecto.
+
+* **Entrega AV1 (Sprint 1):** [Video de Exposición AV1 - Microsoft Stream](https://web.microsoftstream.com/video/...) / [YouTube](https://youtube.com/...)
+* **Entrega TB1:** *(Pendiente)*
+* **Entrega AV2:** *(Pendiente)*
+* **Entrega TB2:** *(Pendiente)*
