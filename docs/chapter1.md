@@ -163,54 +163,84 @@ A continuación se muestran los Assumptions en su idioma original:
 
 A continuación se muestran las Hypothesis Statements en su idioma original:
 
-* **Hypothesis 1:**   
-  ***We believe we will achieve*** more efficient management of pharmaceutical quality documentation.
+- **Hypothesis 1:**   
+  ***We believe we will achieve*** a 50% reduction in the time QA/QC specialists spend searching for quality documentation
 
-  ***If*** quality assurance specialists and quality control professionals
+  ***If*** QA/QC specialists
 
-  ***Attain*** faster access to organized and standardized quality documentation
+  ***Attain*** fast access to current, approved and version-controlled protocols and SOPs
 
-  ***With*** digital protocol management capabilities.
-
-
-* **Hypothesis 2:**  
-  ***We believe we will achieve*** improved traceability across pharmaceutical manufacturing processes.
-
-  ***If*** quality assurance specialists and production supervisors
-
-  ***Attain*** the ability to quickly retrieve and review batch-related information throughout its lifecycle
-
-  ***With*** centralized batch record management capabilities.
+  ***With*** digital protocol and SOP management with version control and electronic approval.
 
 
-* **Hypothesis 3:**  
-  ***We believe we will achieve*** greater compliance with quality management procedures and regulatory requirements.
+- **Hypothesis 2:**  
+  ***We believe we will achieve*** a 40% reduction in the average batch release and traceability time during the first six months of use
 
-  ***If*** quality assurance specialists and quality control personnel
+  ***If*** QA/QC specialists and production supervisors
 
-  ***Attain*** a structured way to record, monitor, and review quality-related events
+  ***Attain*** the ability to reconstruct the complete lifecycle of a batch in a single view
 
-  ***With*** quality event and deviation management capabilities.
-
-
-* **Hypothesis 4:**  
-  ***We believe we will achieve*** better visibility of quality-related activities and operational status.
-
-  ***If*** quality assurance specialists and pharmaceutical production supervisors
-
-  ***Attain*** a consolidated view of quality records, batch status, and compliance indicators
-
-  ***With*** dashboard and quality insights functionalities.
+  ***With*** a centralized electronic batch record with a traceability timeline.
 
 
-* **Hypothesis 5:**  
-  ***We believe we will achieve*** more reliable and complete quality records.
+- **Hypothesis 3:**  
+  ***We believe we will achieve*** that 90% of deviations are closed with a documented root cause and CAPA within their due date
 
-  ***If*** quality assurance specialists and pharmaceutical production supervisors
+  ***If*** QA/QC specialists and production supervisors
 
-  ***Attain*** access to automatically collected operational data associated with manufacturing processes
+  ***Attain*** a structured and trackable workflow to register, investigate and close deviations
 
-  ***With*** IoT data integration capabilities.
+  ***With*** deviation and CAPA management with root-cause analysis.
+
+
+- **Hypothesis 4:**  
+  ***We believe we will achieve*** a 30% reduction in audit-preparation time
+
+  ***If*** QA/QC specialists
+
+  ***Attain*** audit evidence compiled automatically for any date range or batch
+
+  ***With*** automatic generation of audit-ready reports and evidence packages.
+
+
+- **Hypothesis 5:**  
+  ***We believe we will achieve*** daily use of the platform by at least 70% of registered users
+
+  ***If*** QA/QC specialists and production supervisors
+
+  ***Attain*** an updated view of batch status, open deviations and compliance indicators
+
+  ***With*** role-based quality and production dashboards.
+
+
+- **Hypothesis 6:**  
+  ***We believe we will achieve*** zero manual transcription errors in plant records during the first quarter of implementation
+
+  ***If*** production supervisors and QA/QC specialists
+
+  ***Attain*** critical process variables automatically linked to each batch, with early alerts
+
+  ***With*** IoT sensor data integration and alerting.
+
+
+- **Hypothesis 7:**  
+  ***We believe we will achieve*** a 40% reduction in the waiting time for quality approvals during manufacturing
+
+  ***If*** production supervisors and QA/QC specialists
+
+  ***Attain*** direct and trackable communication of approval requests between areas
+
+  ***With*** approval requests and notifications between Production and Quality.
+
+
+- **Hypothesis 8:**  
+  ***We believe we will achieve*** 100% of DIGEMID traceability audits passed without critical observations during the first year
+
+  ***If*** QA/QC specialists and internal auditors
+
+  ***Attain*** confidence that every change is recorded with who, when, what and why
+
+  ***With*** an immutable audit trail with electronic signatures.
 
 #### 1.2.2.4. Lean UX Canvas
 A continuación se muestra el Lean UX Canvas en su idioma original:
