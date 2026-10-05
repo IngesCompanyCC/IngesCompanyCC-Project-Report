@@ -99,15 +99,15 @@ La presente sección tiene como finalidad presentar el proceso de Lean UX aplica
 
 A continuación se muestra el problem statement en su idioma original:
 
-***The current state of*** pharmaceutical quality assurance and compliance management ***has focused mainly on*** quality assurance professionals and production supervisors who must maintain protocols, quality records, batch histories, and regulatory documentation across multiple disconnected sources.
+***The current state of*** pharmaceutical quality assurance in small and medium-sized Peruvian laboratories ***has focused mainly on*** quality assurance and quality control (QA/QC) specialists and production supervisors, who keep protocols, batch records, deviation reports and audit evidence in paper forms, spreadsheets and e-mail threads, while DIGEMID Good Manufacturing Practices (GMP) inspections demand complete, traceable and immediately available records.
 
-***What existing products and approaches fail to address is*** the need for a unified platform that simplifies the management of quality documentation while maintaining complete traceability throughout the lifecycle of pharmaceutical batches.
+***What existing products and approaches fail to address is*** an affordable, quality-centered platform for these laboratories: MES and OEE platforms focus on production efficiency, pharmacy ERPs focus on retail logistics, and serialization systems only cover packaging and distribution, so batch traceability, deviation and CAPA management and audit evidence remain fragmented across disconnected sources.
 
-***Our product will address this gap by*** providing a centralized quality management solution that integrates batch traceability, protocol management, quality records, and supporting operational data within a single digital environment.
+***Our product will address this gap by*** offering a bilingual (English/Spanish) SaaS web platform built on open-source technologies that centralizes quality documentation, links every batch with its records, deviations and IoT-captured process data, and generates audit-ready reports.
 
-***Our initial focus will be*** quality assurance specialists and pharmaceutical production supervisors responsible for compliance, documentation, and batch monitoring activities.
+***Our initial focus will be*** QA/QC specialists and pharmaceutical production supervisors of small and medium-sized laboratories in Lima Metropolitana that manufacture under DIGEMID GMP requirements.
 
-***We will know we have succeeded when we see*** users completing quality-related tasks more efficiently, relying on the platform as their primary source of batch information, and spending less time searching for documentation required for audits and compliance processes.
+***We’ll know we are successful when we see***, within the first six months after launch, at least 80% of the quality documentation queries of pilot laboratories resolved through the platform, a 50% reduction in the time required to retrieve a complete batch history, a 30% reduction in audit-preparation time, and at least 10 laboratories subscribed to a paid plan.
 
 #### 1.2.2.2. Lean UX Assumptions
 
@@ -117,43 +117,47 @@ A continuación se muestran los Assumptions en su idioma original:
 
 **Business Assumptions:**
 
-* We believe that pharmaceutical organizations are interested in digital solutions that improve quality management and regulatory compliance processes.
-* We believe that maintaining complete and traceable quality documentation is a critical requirement for pharmaceutical organizations.
-* We believe that organizations perceive value in centralizing quality records, batch documentation, and traceability information within a single platform.
-* We believe that an open-source solution can reduce adoption barriers and facilitate digital transformation initiatives in pharmaceutical environments.
-* We believe that organizations are willing to adopt technologies that reduce administrative workloads associated with quality management activities.
+- We believe that small and medium-sized Peruvian pharmaceutical laboratories are willing to pay a monthly subscription between US\$ 199 and US\$ 599 for a platform that reduces the risk of GMP observations during DIGEMID inspections.
+- We believe that stricter DIGEMID GMP inspections create urgency for laboratories to digitize their paper-based quality records.
+- We believe that a SaaS model built on open-source technologies allows us to offer lower prices than global MES and QMS solutions while keeping a sustainable margin.
+- We believe that heads of quality assurance are the main decision-makers or influencers in the purchase of quality-management software.
+- We believe that integrating sensor data through an external IoT platform (ThingsBoard) lets us offer IoT traceability without selling or maintaining hardware.
 
 **Business Outcome Assumptions:**
 
-* We believe that organizations using the platform will improve the accessibility and organization of quality-related information.
-* We believe that users will spend less time searching for documentation required for audits and compliance activities.
-* We believe that the platform will contribute to improving traceability practices across pharmaceutical batches.
-* We believe that organizations will obtain greater visibility into the status and history of their quality management processes.
-* We believe that positive user experiences will encourage broader adoption of the platform within pharmaceutical organizations.
+- We believe that at least 10 laboratories will subscribe to a paid plan within the first six months after launch.
+- We believe that at least 20% of the laboratories that request a demo from the landing page will become paying customers.
+- We believe that monthly churn will remain below 5% once a laboratory registers its batch records in the platform.
+- We believe that subscribed laboratories will register at least 80% of their new batches in the platform after the third month of use.
+- We believe that at least 25% of Standard Lab customers will upgrade to the Enterprise plan when they connect sensors in more than one production line.
 
 **User Assumptions:**
 
-* We believe that quality assurance specialists are the primary users of the platform.
-* We believe that pharmaceutical production supervisors require access to traceable information associated with manufacturing batches.
-* We believe that quality control professionals need reliable and centralized records to support verification and compliance activities.
-* We believe that users prefer working with a single source of information rather than consulting multiple independent systems.
-* We believe that users seek to reduce the manual effort involved in managing quality documentation and batch records.
+- We believe that QA/QC specialists are the primary users of the platform.
+- We believe that pharmaceutical production supervisors need a consolidated view of batch status and fast communication with the quality area in the plant office.
+- We believe that quality control professionals need reliable and centralized records to support verification and compliance activities.
+- We believe that users prefer working with a single source of information rather than consulting multiple independent systems.
+- We believe that users seek to reduce the manual effort involved in managing quality documentation and batch records.
 
 **User Outcome & Benefit Assumptions:**
 
-* We believe that users want faster access to quality-related information and documentation.
-* We believe that users benefit from having complete traceability throughout the lifecycle of pharmaceutical batches.
-* We believe that users seek greater confidence in the information used for compliance and quality assurance activities.
-* We believe that users want to simplify audit preparation by having documentation readily available in a centralized environment.
-* We believe that users value having visibility into quality processes, batch status, and associated records.
+* We believe that users want to find any batch record, protocol or SOP in minutes instead of searching physical files.
+* We believe that users want to prepare audit evidence without manually compiling documents.
+* We believe that users want to know the status of each batch and of pending quality approvals without walking to the quality area.
+* We believe that users want to reduce transcription and calculation errors in quality records.
+* We believe that users want confidence that every record is complete and tamper-evident.
 
 **Feature Assumptions:**
 
-* We believe that digital protocol management capabilities will improve the organization and accessibility of quality documentation.
-* We believe that centralized batch records will facilitate traceability and information retrieval.
-* We believe that quality event and deviation management features will support compliance and quality assurance activities.
-* We believe that dashboard functionalities will provide users with a clear view of quality-related processes and records.
-* We believe that quality-related event management capabilities will support quality assurance and compliance activities.We believe that integrating data from production processes and IoT-enabled devices will strengthen the reliability and completeness of quality records.
+- We believe that digital management of protocols and SOPs with version control and electronic approval will improve the organization and accessibility of quality documentation.
+- We believe that a centralized electronic batch record with a complete traceability timeline will speed up the retrieval of batch histories.
+- We believe that structured deviation and CAPA management with root-cause analysis will ensure that deviations are investigated and closed on time.
+- We believe that automatic generation of audit-ready reports and evidence packages will reduce audit-preparation effort.
+- We believe that role-based quality and production dashboards will give users a clear and updated view of batches, deviations and compliance indicators.
+- We believe that integrating IoT sensor data that is automatically linked to each batch will eliminate manual transcription of critical process variables.
+- We believe that approval requests and notifications between Production and Quality will reduce waiting times in batch manufacturing.
+- We believe that an immutable audit trail with electronic signatures will strengthen the integrity of the records reviewed by inspectors.
+
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
