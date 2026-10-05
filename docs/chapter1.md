@@ -247,13 +247,14 @@ A continuación se muestra el Lean UX Canvas en su idioma original:
 ![LeanUX](../assets/img/chapter1/Lean-UX-canvas.jpg)
 
 ## 1.3. Segmentos objetivo
+
 La identificación de los segmentos objetivo constituye una actividad fundamental para orientar el desarrollo de DoofPlus hacia los profesionales que participan directamente en los procesos de producción y aseguramiento de la calidad dentro de la industria farmacéutica. La definición de estos perfiles permite comprender las necesidades asociadas al monitoreo de los procesos productivos, la trazabilidad de la información y el cumplimiento de los estándares regulatorios, contribuyendo a que la propuesta responda a problemáticas reales del entorno de aplicación.
 
 ### Segmento objetivo 1: Especialista de Aseguramiento y Control de Calidad (QA/QC)
 
 Características demográficas:
 
-- **Edad:** Entre 30 y 55 años.
+- **Edad:** Entre 30 y 65 años.
 - **Género:** Indistinto.
 - **Ocupación:** Profesional responsable de garantizar el cumplimiento de los estándares de calidad, gestionar registros y documentación técnica, supervisar desviaciones y participar en auditorías e inspecciones regulatorias.
 - **Nivel educativo:** Químico Farmacéutico, Ingeniería Farmacéutica o carreras afines con especialización en aseguramiento de la calidad, BPM o regulación farmacéutica.
@@ -261,16 +262,17 @@ Características demográficas:
 
 Información estadística de sustento:
 
-- Las Buenas Prácticas de Manufactura (BPM) exigen mantener registros completos, trazables y disponibles para actividades de inspección y auditoría.
+- Solo 4 de cada 10 laboratorios inspeccionados por DIGEMID obtuvieron la certificación de BPM: de 51 laboratorios inspeccionados hasta mayo de 2026, 20 la obtuvieron, 21 no la lograron y 7 desistieron del proceso. Entre los aspectos evaluados figuran los controles de laboratorio y la trazabilidad de productos, actividades a cargo de QA/QC (Gestión, 2026).
+- 385 laboratorios extranjeros esperaban su certificación de BPM ante una DIGEMID desbordada por la demanda, lo que evidencia la presión regulatoria sobre la documentación de calidad (Infobae, 2025).
+- La OMS establece que los registros de calidad deben ser atribuibles, legibles, contemporáneos, originales y exactos (principios ALCOA) durante todo su ciclo de vida (World Health Organization, 2016).
 - Los sistemas de gestión de calidad farmacéutica requieren evidencia documentada para respaldar la liberación de productos y el seguimiento de desviaciones.
 - La trazabilidad y la integridad de los datos son reconocidas como elementos fundamentales para garantizar la calidad y seguridad de los medicamentos.
-- La transformación digital del sector farmacéutico ha incrementado la necesidad de plataformas capaces de centralizar información de calidad proveniente de múltiples fuentes.
 
 ### Segmento Objetivo 2: Jefe o Supervisor de Producción Farmacéutica
 
 Características demográficas:
 
-- **Edad:** Entre 20 y 70 años.
+- **Edad:** Entre 25 y 70 años.
 - **Género:** Indistinto.
 - **Ocupación:** Profesional responsable de planificar, supervisar y controlar las operaciones de fabricación farmacéutica, asegurando el cumplimiento de los parámetros establecidos para la producción.
 - **Nivel educativo:** Ingeniería Industrial, Ingeniería Química, Ingeniería Farmacéutica o carreras afines.
@@ -282,3 +284,5 @@ Información estadística de sustento:
 - Las BPM establecen la necesidad de documentar adecuadamente las actividades productivas y mantener evidencia del cumplimiento de los procedimientos establecidos.
 - La disponibilidad de información trazable facilita la identificación y análisis de desviaciones durante la fabricación.
 - La incorporación de herramientas digitales e iniciativas de Industria 4.0 ha impulsado la adopción de tecnologías para mejorar la visibilidad de los procesos productivos.
+- El sector farmacéutico peruano proyectó un crecimiento de 4% para 2025 según la Asociación Nacional de Laboratorios Farmacéuticos (Agencia Andina, 2025), lo que incrementa el volumen de lotes que los supervisores deben controlar y documentar.
+- Las BPM evaluadas por DIGEMID incluyen procesos de producción, calidad de materias primas, controles de laboratorio, condiciones de almacenamiento y trazabilidad de productos (Gestión, 2026), aspectos que dependen de los registros que genera Producción.
