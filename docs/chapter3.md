@@ -179,4 +179,4 @@ A continuación, se muestra la gestión del backlog en la herramienta Jira Softw
 ![Evidence Product Backlog Jira](../assets/img/chapter3/backlog.png)
 *Figura: Captura del Product Backlog en Jira Software.*
 
-**Enlace al Product Backlog en Jira:** [click aquí](https://inges-company-cc.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiNzQ5MjEwOGYzMjI3NDg3OGIxNTg3MmZkNzY5ZGJmMjUiLCJwIjoiaiJ9)
+**Enlace al Product Backlog en Jira:** [click aquí](https://inges-company-cc.atlassian.net/jira/software/projects/UPC/boards/1/backlog?atlOrigin=eyJpIjoiN2EwNDdhZWYwMDI1NDhmMDgxMGZiZWM1Y2Q4YTJlNGMiLCJwIjoiaiJ9)
