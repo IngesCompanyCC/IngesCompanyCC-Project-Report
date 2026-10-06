@@ -97,28 +97,78 @@ El Impact Mapping de DoofPlus conecta los objetivos estratégicos del negocio co
 
 El Product Backlog de DoofPlus consolida todas las User Stories y Technical Stories identificadas, ordenadas según el valor que aportan al negocio. Las historias relacionadas con la Landing Page se posicionan al inicio dado que corresponden al primer sprint y son el primer punto de contacto con los potenciales clientes. A continuación se presentan las historias del core de calidad y producción farmacéutica, y finalmente las Technical Stories del API.
 
-| # | User Story Id | Título | Descripción | Story Points |
-|:---:|:---:|---|---|:---:|
-| 1 | US01 | Visualización de la Propuesta de Valor y Beneficios del Sistema | Como Visitante, quiero conocer los beneficios y la propuesta de valor del sistema para evaluar si se adapta a las necesidades de mi fábrica. | 2 |
-| 2 | US02 | Presentación de Características Técnicas y Módulos | Como Visitante interesado en tecnología, quiero explorar las características detalladas del sistema para entender el alcance funcional de la solución. | 2 |
-| 3 | US05 | Visualización de Planes y Tarifas de Suscripción | Como Visitante del segmento PyME o Corporativo, quiero ver los diferentes planes de precios para presupuestar la implementación del sistema. | 2 |
-| 4 | US04 | Sección de Casos de Éxito y Testimonios | Como Visitante del sector industrial, quiero revisar testimonios y casos de éxito para validar la fiabilidad y el impacto real del sistema. | 1 |
-| 5 | US06 | Sección de Preguntas Frecuentes (FAQ) | Como Visitante nuevo, quiero acceder a una sección de preguntas frecuentes para resolver dudas inmediatas sobre instalación, compatibilidad IoT y soporte. | 1 |
-| 6 | US03 | Formulario de Contacto y Solicitud de Demostración | Como Visitante de un segmento empresarial, quiero enviar mis datos de contacto para solicitar una demostración personalizada del software. | 3 |
-| 7 | US08 | Registro y Trazabilidad Centralizada de Lotes | Como Jefe de Producción, quiero centralizar el expediente y el historial de cada lote para mantener la trazabilidad completa de su ciclo de vida. | 8 |
-| 8 | US07 | Gestión y Control Digital de Protocolos de Calidad | Como Especialista QA/QC, quiero registrar y estandarizar los protocolos digitales de calidad para asegurar el cumplimiento de las normativas vigentes. | 5 |
-| 9 | US11 | Gestión y Registro de Desviaciones y Eventos de Calidad | Como Especialista QA/QC, quiero registrar y documentar cualquier desviación detectada para mitigar riesgos y cumplir con las auditorías. | 5 |
-| 10 | US09 | Muestreo Automatizado según Tabla Militar Estándar | Como Especialista QA/QC, quiero que el sistema calcule el tamaño de muestra requerido para optimizar el tiempo de auditoría según normas estadísticas. | 5 |
-| 11 | US10 | Monitoreo de Telemetría e Integración IoT en Línea | Como Jefe de Producción, quiero integrar las lecturas automáticas de los sensores de maquinaria para robustecer la integridad de los datos de fabricación. | 8 |
-| 12 | US12 | Panel de Control (Dashboard) e Indicadores de Cumplimiento | Como Supervisor de Producción, quiero visualizar gráficos unificados con el estado de los procesos y tasas de aprobación para tomar decisiones oportunas. | 5 |
-| 13 | US15 | Gestión del Catálogo de Productos y Fórmulas Maestras | Como Director de Producción, quiero registrar los productos farmacéuticos y sus fórmulas maestras para asegurar que cada lote se fabrique con las especificaciones autorizadas. | 5 |
-| 14 | US14 | Registro de Auditoría Inalterable (Audit Trail) | Como Especialista QA, quiero que el sistema registre de forma automática e irreversible cualquier cambio en los datos para asegurar la trazabilidad regulatoria. | 5 |
-| 15 | US16 | Gestión de Alertas y Calibración de Dispositivos IoT | Como Supervisor de Producción, quiero administrar el estado y la calibración de los sensores IoT para garantizar que las mediciones sean fidedignas. | 3 |
-| 16 | US13 | Gestión de Roles y Permisos basados en Firmas Electrónicas | Como Administrador del Sistema, quiero gestionar los accesos y roles del personal para garantizar la integridad de los datos y cumplir con las normativas de seguridad. | 3 |
-| 17 | TS01 | Ingesta de Telemetría IoT mediante Endpoint | Como Developer, quiero implementar un endpoint POST seguro para recibir las mediciones de los sensores IoT y registrarlas en la base de datos. | 5 |
-| 18 | TS03 | Endpoint para Trazabilidad y Audit Trail | Como Developer, quiero desarrollar un endpoint GET parametrizado que exponga el historial inmutable de un lote para el dashboard. | 3 |
-| 19 | TS04 | Endpoint para Cambio de Estado de Lote | Como Developer, quiero implementar un endpoint PATCH para actualizar el estado del ciclo de vida de un lote validando las reglas de negocio. | 3 |
-| 20 | TS02 | Autenticación y Generación de Token JWT | Como Developer, quiero implementar un servicio de autenticación para validar credenciales y emitir un token JWT que proteja las rutas privadas. | 3 |
+| **# Orden** | **User Story Id** | **Título** | **Descripción** | **Story Points (1 / 2 / 3 / 5 / 8)** |
+| --- | --- | --- | --- | --- |
+| 1 | US01 | Visualización de la propuesta de valor | Como visitante especialista QA/QC o jefe de producción, quiero conocer la propuesta de valor de DoofPlus para evaluar si responde a las necesidades de mi laboratorio. | 2 |
+| 2 | US02 | Visualización de servicios y características | Como visitante, quiero conocer los servicios y características de DoofPlus para comprender cómo mejora la trazabilidad y la gestión de calidad. | 2 |
+| 3 | US44 | Navegación por secciones | Como visitante, quiero acceder rápidamente a cada sección de la Landing Page para encontrar la información que necesito. | 3 |
+| 4 | US03 | Visualización de planes y precios | Como visitante responsable de compras de un laboratorio, quiero consultar los planes y precios disponibles para identificar la alternativa más adecuada para mi organización. | 2 |
+| 5 | US45 | Visualización del equipo y de la startup | Como visitante, quiero conocer a IngesCompany y a su equipo para generar confianza en la solución. | 1 |
+| 6 | US04 | Formulario de contacto | Como visitante interesado, quiero dejar mi correo electrónico para recibir información y solicitar una demostración de DoofPlus. | 1 |
+| 7 | US46 | Cambio de idioma | Como visitante, quiero cambiar el idioma de la Landing Page entre inglés y español para comprender el contenido en mi idioma de preferencia. | 5 |
+| 8 | TS01 | Implementación de Landing Page responsive y accesible | Como Developer, quiero implementar la Landing Page con HTML5, CSS3 y JavaScript aplicando responsive web design y a11y para garantizar una experiencia adecuada en distintos dispositivos. | 3 |
+| 9 | US48 | Acceso por segmento a la Web Application | Como visitante especialista QA/QC o jefe de producción, quiero acceder desde la Landing Page a la vista de la Web Application de mi segmento para comenzar a usar la plataforma. | 2 |
+| 10 | US47 | Consulta de términos y política de privacidad | Como visitante, quiero consultar los términos y condiciones y la política de privacidad para conocer las condiciones del servicio y el tratamiento de mis datos. | 1 |
+| 11 | US49 | Visualización del video promocional | Como visitante, quiero ver un video sobre DoofPlus para entender rápidamente su funcionamiento. | 2 |
+| 12 | US05 | Preguntas frecuentes | Como visitante, quiero consultar preguntas frecuentes para resolver dudas comunes sobre la plataforma. | 1 |
+| 13 | US14 | Registro de lotes | Como supervisor de producción, quiero registrar lotes para iniciar su trazabilidad digital. | 3 |
+| 14 | US15 | Consulta del historial de lotes | Como especialista QA/QC, quiero consultar el historial completo de un lote para revisar sus registros y eventos asociados. | 5 |
+| 15 | US16 | Gestión de estados de lote | Como supervisor de producción, quiero actualizar el estado de los lotes durante su ciclo de vida para reflejar su avance real. | 2 |
+| 16 | US17 | Asociación de materias primas | Como supervisor de producción, quiero asociar las materias primas utilizadas a un lote para mantener su trazabilidad completa. | 3 |
+| 17 | US58 | Recepción de materias primas | Como supervisor de producción, quiero registrar la recepción de materias primas con su lote de proveedor para que queden en cuarentena hasta su aprobación por Calidad. | 3 |
+| 18 | US57 | Gestión de órdenes de producción | Como jefe de producción, quiero crear y aprobar órdenes de producción para planificar la fabricación de los lotes. | 3 |
+| 19 | US56 | Registro y escalamiento de incidencias | Como supervisor de producción, quiero registrar las incidencias de un lote y escalarlas a Calidad para que se investiguen sin detener la producción más de lo necesario. | 3 |
+| 20 | TS03 | API de trazabilidad de lotes | Como Developer, quiero exponer endpoints REST para registrar y consultar lotes y su línea de tiempo. | 5 |
+| 21 | US18 | Registro de desviaciones | Como especialista QA/QC, quiero registrar desviaciones para realizar su seguimiento y análisis. | 3 |
+| 22 | US19 | Análisis de causa raíz | Como especialista QA/QC, quiero documentar el análisis de causa raíz (RCA) para identificar el origen de las desviaciones. | 5 |
+| 23 | US20 | Gestión CAPA | Como especialista QA/QC, quiero registrar acciones correctivas y preventivas derivadas de una desviación para evitar su recurrencia. | 5 |
+| 24 | US21 | Seguimiento de acciones CAPA | Como especialista QA/QC, quiero monitorear el avance de las acciones CAPA abiertas para asegurar su cumplimiento. | 3 |
+| 25 | US22 | Notificaciones de desviación crítica | Como especialista QA/QC, quiero recibir alertas cuando se registre una desviación crítica para actuar de inmediato. | 2 |
+| 26 | TS11 | API de desviaciones y CAPA | Como Developer, quiero exponer endpoints REST para gestionar desviaciones, causas raíz y acciones CAPA. | 5 |
+| 27 | US54 | Revisión y liberación de lotes | Como especialista QA/QC, quiero poner en cuarentena, evaluar y liberar o rechazar los lotes cerrados para que solo se distribuyan productos conformes. | 5 |
+| 28 | US27 | Audit trail | Como especialista QA/QC, quiero consultar todas las modificaciones realizadas sobre los registros para demostrar la integridad de los datos. | 5 |
+| 29 | US28 | Generación automática de reportes | Como especialista QA/QC, quiero generar reportes regulatorios automáticamente para reducir el tiempo de preparación. | 5 |
+| 30 | US29 | Preparación de auditorías | Como especialista QA/QC, quiero consolidar la documentación requerida para una auditoría para responder a tiempo a los inspectores. | 5 |
+| 31 | US30 | Acceso de auditor a evidencias | Como auditor interno, quiero acceder en modo lectura a las evidencias de los lotes para verificar el cumplimiento. | 3 |
+| 32 | US59 | Registro de auditorías y hallazgos | Como especialista QA/QC, quiero programar auditorías y registrar sus hallazgos para dar seguimiento a su cierre. | 3 |
+| 33 | TS05 | API de auditoría | Como Developer, quiero exponer endpoints para consultar los eventos del audit trail. | 3 |
+| 34 | US09 | Gestión de protocolos de calidad | Como especialista QA/QC, quiero registrar protocolos digitales para estandarizar los procesos y cumplir las BPM. | 5 |
+| 35 | US10 | Repositorio de SOP | Como especialista QA/QC, quiero consultar los procedimientos operativos estándar vigentes para aplicar siempre la versión aprobada. | 3 |
+| 36 | US12 | Control de versiones documentales | Como especialista QA/QC, quiero mantener el historial de versiones de cada documento para garantizar su integridad. | 5 |
+| 37 | US13 | Aprobación documental | Como jefe de aseguramiento de calidad, quiero aprobar documentos mediante firma electrónica para asegurar la trazabilidad regulatoria. | 3 |
+| 38 | US11 | Automatización de cálculos de calidad | Como especialista QA/QC, quiero que el sistema calcule automáticamente los resultados analíticos para reducir errores manuales. | 5 |
+| 39 | TS10 | API de documentación de calidad | Como Developer, quiero exponer endpoints REST para gestionar protocolos, SOP y sus versiones. | 5 |
+| 40 | US42 | Solicitudes de aprobación | Como supervisor de producción, quiero solicitar aprobaciones a Calidad (por ejemplo, liberación de insumos) para continuar la fabricación sin demoras. | 2 |
+| 41 | US41 | Notificaciones entre áreas | Como especialista de calidad, quiero recibir las solicitudes de Producción para atenderlas a tiempo. | 3 |
+| 42 | US40 | Bandeja de tareas | Como usuario, quiero visualizar mis tareas pendientes para atenderlas oportunamente. | 3 |
+| 43 | US43 | Seguimiento de tareas | Como usuario, quiero monitorear el estado de las tareas que asigné para asegurar su cumplimiento. | 3 |
+| 44 | TS08 | Servicio de notificaciones en tiempo real | Como Developer, quiero implementar notificaciones en tiempo real con WebSocket (STOMP sobre Spring WebSocket) para distribuir eventos sin recargar la Web Application. | 5 |
+| 45 | US31 | Dashboard de calidad | Como especialista QA/QC, quiero visualizar indicadores de calidad para priorizar mis actividades. | 3 |
+| 46 | US32 | Dashboard de producción | Como supervisor de producción, quiero visualizar el estado de los lotes en curso para tomar decisiones oportunas. | 3 |
+| 47 | US33 | Indicadores de trazabilidad | Como jefe de calidad, quiero monitorear el porcentaje de lotes con trazabilidad completa para anticipar observaciones de auditoría. | 3 |
+| 48 | US34 | Indicadores de desviaciones | Como jefe de calidad, quiero identificar tendencias de desviaciones para prevenir su recurrencia. | 3 |
+| 49 | TS06 | API de KPIs | Como Developer, quiero exponer métricas consolidadas para los dashboards. | 5 |
+| 50 | US23 | Registro de dispositivos IoT | Como administrador del laboratorio, quiero registrar los sensores IoT conectados para controlar su inventario. | 3 |
+| 51 | US24 | Asociación de sensores a un lote | Como supervisor de producción, quiero asociar los sensores de un equipo a un lote en fabricación para vincular sus lecturas. | 3 |
+| 52 | US25 | Captura automática de evidencias | Como supervisor de producción, quiero que las variables críticas se registren automáticamente para evitar la transcripción manual. | 5 |
+| 53 | US26 | Consulta de registros IoT | Como especialista QA/QC, quiero consultar los datos IoT asociados a un lote para respaldar su liberación. | 3 |
+| 54 | TS04 | API de ingesta IoT | Como Developer, quiero implementar un endpoint que reciba la telemetría enviada por ThingsBoard. | 5 |
+| 55 | US35 | Catálogo de productos | Como jefe de producción, quiero administrar los productos farmacéuticos para fabricarlos en nuevos lotes. | 3 |
+| 56 | US36 | Gestión de fórmulas maestras | Como jefe de producción, quiero registrar las fórmulas maestras aprobadas para que cada lote se fabrique según la especificación autorizada. | 5 |
+| 57 | US37 | Gestión de equipos | Como supervisor de producción, quiero registrar los equipos utilizados en la fabricación para controlar su estado. | 3 |
+| 58 | US38 | Gestión de calibraciones | Como supervisor de producción, quiero controlar la calibración de equipos y sensores para asegurar mediciones válidas. | 3 |
+| 59 | US39 | Mantenimiento preventivo | Como supervisor de producción, quiero registrar los mantenimientos preventivos para evitar paradas no planificadas. | 3 |
+| 60 | TS07 | API de operaciones de laboratorio | Como Developer, quiero implementar endpoints REST para productos, fórmulas y equipos. | 5 |
+| 61 | US06 | Inicio de sesión con segundo factor | Como usuario registrado, quiero iniciar sesión con mi contraseña y un código 2FA para acceder de forma segura a las funcionalidades de mi rol. | 2 |
+| 62 | US07 | Gestión de roles | Como administrador del laboratorio, quiero asignar roles a los usuarios para controlar el acceso a funcionalidades específicas. | 3 |
+| 63 | US08 | Firmas electrónicas | Como especialista de calidad, quiero firmar electrónicamente las acciones críticas para validarlas conforme a los requisitos regulatorios. | 5 |
+| 64 | US50 | Registro de organización | Como administrador de un laboratorio, quiero registrar mi organización en DoofPlus para habilitar el acceso de mi equipo. | 3 |
+| 65 | US55 | Alta de usuarios del equipo | Como administrador del laboratorio, quiero dar de alta a los usuarios de mi equipo para que cada uno acceda con su propia cuenta y rol. | 3 |
+| 66 | TS02 | Autenticación JWT en el RESTful API | Como Developer, quiero implementar autenticación basada en JWT en el RESTful API para proteger los recursos del sistema. | 3 |
+| 67 | US51 | Selección de plan | Como administrador del laboratorio, quiero elegir un plan de suscripción para habilitar las funcionalidades de mi organización. | 3 |
+| 68 | US52 | Pago de suscripción | Como administrador del laboratorio, quiero pagar la suscripción con tarjeta para activar el servicio. | 5 |
+| 69 | US53 | Renovación y cancelación | Como administrador del laboratorio, quiero renovar o cancelar la suscripción para controlar mis costos. | 3 |
+| 70 | TS09 | API de suscripciones y pagos | Como Developer, quiero implementar endpoints de suscripciones integrados con la API de Niubiz. | 5 |
 
 <br>
 
