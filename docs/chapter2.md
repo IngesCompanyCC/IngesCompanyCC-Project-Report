@@ -437,29 +437,62 @@ En este mapa se analizó a Alberto Valle, jefe de producción farmacéutica con 
 
 ## 2.4. Big Picture Event Storming
 
+Para comprender el dominio del negocio de DoofPlus de punta a punta, el equipo realizó una sesión colaborativa de Big Picture EventStorming en Miro, siguiendo la guía paso a paso indicada en el statement (https://bit.ly/bpes-guide). El alcance de la sesión fue el ciclo de vida completo de un lote farmacéutico dentro de un laboratorio cliente: desde que la organización se registra en la plataforma hasta que el lote se libera y sus evidencias se presentan en una auditoría. Los integrantes del equipo trabajaron con la información de las entrevistas (sección 2.2) y los artefactos de needfinding (sección 2.3) como base.
 
-Para comprender el dominio del negocio de DoofPlus, el equipo realizó una sesión colaborativa de **Big Picture Event Storming** en Miro. Esta dinámica permitió mapear el flujo operativo del laboratorio farmacéutico, el proceso constó de cuatro etapas:
+Tablero de Miro: https://miro.com/app/board/uXjVHl-67N8=/
 
-**Step 1 – Generating Domain Events**
-Cada integrante propuso eventos relevantes del negocio en tiempo pasado usando post-its naranjas.
+Antes de generar eventos se cumplieron los pasos 1 a 3 de la guía: se preparó el tablero con una franja de tiempo de izquierda a derecha, se acordó la agenda y se presentó la notación:
 
-[click aqui para ver el mirro](https://miro.com/welcomeonboard/bnZYMkFJdmI5RE9HRkFuaXQzV24zSTBVWnMvNXdMRnZ3NWIyTHl3dDRnalM3MVN5RlV6S3NyK0hMTEI1bm5OdDFHeWZoM1pRMHAydU5pNUlzNjBsQ3crcFdoY0Y2ZkIxYU5GRUhsWk9keCtRVkVrV2toK2NCM3ErTTNqMEV5d21yVmtkMG5hNDA3dVlncnBvRVB2ZXBnPT0hdjE=?share_link_id=703178381974)
+| Elemento | Color | Uso en la sesión |
+| --- | --- | --- |
+| Domain event | Naranja | Hecho relevante del negocio, redactado en pasado (por ejemplo, "Lote cerrado"). |
+| Actor | Amarillo (pequeño) | Persona o rol que provoca o atiende el evento. |
+| External system | Azul | Sistema u organización externa que interviene (Niubiz, ThingsBoard, Lector RFID, DIGEMID). |
+| Problema u oportunidad (hotspot) | Rosado | Dificultad detectada en la situación actual. |
+| Pivotal event | Línea roja | Evento que cambia de fase el proceso. |
 
-![Step 1 - Generating Domain Events](../assets/img/chapter2/event-storming/step1-generating-domain-events.png)
+**Step 4 – Generating Domain Events**
 
-**Step 2 – Sorting Domain Events**
-Se ordenaron los eventos cronológicamente para reflejar las etapas operativas reales del laboratorio, visualizando el ciclo de vida completo de un lote.
+Cada integrante escribió en post-its naranjas, sin orden y en tiempo pasado, los hechos que ocurren en un laboratorio cuando se fabrica y controla un lote. Se obtuvieron 67 eventos que cubren la administración de la plataforma, la gestión documental, la producción, el monitoreo de equipos, el control de calidad, las desviaciones y la auditoría.
 
-![Step 2 - Sorting Domain Events](../assets/img/chapter2/event-storming/step2-sorting-domain-events.png)
+Frame en Miro: https://miro.com/app/board/uXjVHl-67N8=/?moveToWidget=3458764685732289571
 
-**Step 3 – Adding Actors and External Systems**
-Se identificaron los actores (post-its azules, ej. QA/QC, Jefe de Producción) y los sistemas externos.
+![Step 4 - Generating Domain Events](../assets/img/chapter2/event-storming/step4-generating-domain-events.jpg)
 
-![Step 3 - Adding Actors and External Systems](../assets/img/chapter2/event-storming/step3-adding-actors-external-systems.png)
+**Step 5 – Sorting Domain Events**
 
-**Step 4 – Storytelling**
-Se narró la historia completa del flujo de manera secuencial. Durante este proceso no se detectaron incoherencias, lo que permitió al equipo confirmar el orden de los eventos y ratificar su comprensión sobre el funcionamiento del negocio farmacéutico.
+Los eventos se ordenaron cronológicamente de izquierda a derecha. Los resultados alternativos de un mismo momento (por ejemplo, "Materia prima aprobada" o "Materia prima rechazada") se ubicaron en vertical, y los flujos que ocurren en paralelo se separaron en siete swimlanes: Plataforma y administración, Gestión documental, Producción y almacén, Monitoreo de equipos (IoT), Control de calidad y liberación, Desviaciones y CAPA, y Auditoría y cumplimiento. Al ordenar se eliminaron los eventos duplicados.
 
+Frame en Miro: https://miro.com/app/board/uXjVHl-67N8=/?moveToWidget=3458764685732347233
+
+![Step 5 - Sorting Domain Events](../assets/img/chapter2/event-storming/step5-sorting-domain-events.jpg)
+
+**Step 6 – Adding Actors and External Systems**
+
+Sobre la línea de tiempo se agregaron los actores que provocan cada grupo de eventos (Administrador del laboratorio, Especialista QA/QC y Jefe de Producción) y los sistemas externos con los que interactúa el proceso: Niubiz para el cobro de suscripciones, el Lector RFID en la recepción de insumos, los sensores IoT conectados a ThingsBoard y DIGEMID como entidad que realiza la inspección.
+
+Frame en Miro: https://miro.com/app/board/uXjVHl-67N8=/?moveToWidget=3458764685732347919
+
+![Step 6 - Adding Actors and External Systems](../assets/img/chapter2/event-storming/step6-actors-external-systems.jpg)
+
+**Step 7 – Storytelling**
+
+Un integrante narró la historia completa de inicio a fin mientras el resto validaba el orden y el significado de cada evento. Durante la narración se registraron en rosado los problemas que hoy enfrentan los laboratorios, tomados de las entrevistas, y se conectaron con flechas los eventos que disparan a otros (por ejemplo, "Parámetro fuera de rango detectado" dispara "Alerta generada", que genera una "Incidencia registrada").
+
+| Problema detectado | Evidencia en las entrevistas |
+| --- | --- |
+| Recepción de insumos registrada en papel | Mariela, que también gestiona la adquisición de insumos, y Rick registran la información en formularios físicos y hojas de cálculo. |
+| Producción espera la aprobación de insumos | Alberto explica que los materiales deben ser aprobados por Calidad antes de usarse y Rick señala que la coordinación es lenta por las validaciones manuales. |
+| Calibraciones controladas en hojas de cálculo | Julia participa en la calibración y calificación de equipos y trabaja con Word y Excel. |
+| Parámetros transcritos a mano | Rick documenta parámetros operativos en registros físicos. |
+| Historial del lote disperso en papel, Excel y correos | Mariela y Rick señalan que reconstruir el historial de un lote es la principal dificultad. |
+| Cálculos analíticos revisados a mano | María revisa cálculos e informes manualmente antes de registrarlos. |
+| Análisis de causa raíz débil | Julia identifica la falta de análisis de causas reales como oportunidad de mejora. |
+| Reunir evidencias para una auditoría toma días | María mantiene registros para auditorías y considera que la generación automática de reportes reduciría su carga; Julia participa en las auditorías. |
+
+Frame en Miro: https://miro.com/app/board/uXjVHl-67N8=/?moveToWidget=3458764685732393843
+
+![Step 7 - Storytelling](../assets/img/chapter2/event-storming/step7-storytelling.jpg)
 
 ## 2.5. Ubiquitous Language
 
