@@ -8,151 +8,127 @@ En este periodo, se analizan distintos tipos de competidores con el objetivo de 
 ### 2.1.1. Análisis competitivo
 A continuación, se presenta una tabla comparativa sobre los principales competidores, en el que se considera su propuesta de valor, mercado objetivo y características generales. Este análisis permite evidenciar que, mientras las soluciones existentes se orientan a grandes corporaciones o dependen de procesos manuales, DoofPlus podrá destacar como una alternativa specializada, accesible y centrada en la automatización del aseguramiento de la calidad mediante integración IoT y trazabilidad digital, especialmente pensada para laboratorios medianos y entidades públicas de la región.
 
-<table border="1" cellpadding="10" cellspacing="0" style="width: 100%; margin-left: auto; margin-right: auto; font-family: sans-serif; table-layout: fixed; word-wrap: break-word; text-align: left;">
-  <colgroup>
-    <col style="width: 10%;">
-    <col style="width: 10%;">
-    <col style="width: 20%;">
-    <col style="width: 20%;">
-    <col style="width: 20%;">
-    <col style="width: 20%;">
-  </colgroup>
-
+<table>
   <tr>
-    <th colspan="6" style="text-align: center;">Competitive Analysis Landscape</th>
+    <th colspan="6"><b>Competitive Analysis Landscape</b></th>
   </tr>
   <tr>
-    <td colspan="2" rowspan="2"><b>¿Por qué llevar a cabo este análisis?</b></td>
-    <td colspan="4">¿Cómo se posiciona DoofPlus frente a sus competidores en cuanto a fortalezas, debilidades, oportunidades y su propuesta de valor dentro del mercado de gestión de calidad de máquinas farmacéutica y los fármacos producidos?</td>
+    <td colspan="2">¿Por qué llevar a cabo este análisis?</td>
+    <td colspan="4">¿Cómo se posiciona DoofPlus frente a sus competidores en fortalezas, debilidades, oportunidades y propuesta de valor dentro del mercado de software de gestión de calidad y trazabilidad farmacéutica?</td>
   </tr>
   <tr>
+    <td colspan="2">Respuesta del análisis</td>
     <td colspan="4">Es una propuesta que posiciona a DoofPlus como una plataforma SaaS orientada a la gestión de calidad farmacéutica, incorporando integración IoT para automatizar la captura de datos, mejorar la trazabilidad y asegurar el cumplimiento normativo frente a otras soluciones del mercado.</td>
   </tr>
   <tr>
-    <td colspan="2" style="text-align: center;"><b>Competidores</b></td>
-    <td style="text-align: center; vertical-align: middle;">
-      <b>DoofPlus</b><br>
-      <img src="../assets/img/doofplus.png" alt="DoofPlus" style="width: 100px; height: 100px; object-fit: contain; margin-top: 10px;"/>
-    </td>
-    <td style="text-align: center; vertical-align: middle;">
-      <b>TuHub</b><br>
-      <img src="../assets/img/chapter2/competitors/tuhub.png" alt="Tuhub" style="width: 100px; height: 100px; object-fit: contain; margin-top: 10px;"/>
-    </td>
-    <td style="text-align: center; vertical-align: middle;">
-      <b>LOLFAR (Lolimsa)</b><br>
-      <img src="../assets/img/chapter2/competitors/lolfar.png" alt="LOLFAR" style="width: 100px; height: 100px; object-fit: contain; margin-top: 10px;"/>
-    </td>
-    <td style="text-align: center; vertical-align: middle;">
-      <b>DrugXafe (Tiga Health)</b><br>
-      <img src="../assets/img/chapter2/competitors/drugxafe.png" alt="DrugXafe" style="width: 100px; height: 100px; object-fit: contain; margin-top: 10px;"/>
-    </td>
+    <td colspan="2"></td>
+    <td><img src="../assets/img/doofplus.png" width="120"><br><b>DoofPlus</b></td>
+    <td><img src="../assets/img/chapter2/competitors/tuhub.png" width="120"><br><b>TuHub</b></td>
+    <td><img src="../assets/img/chapter2/competitors/lolfar.png" width="120"><br><b>LOLFAR (LOLIMSA)</b></td>
+    <td><img src="../assets/img/chapter2/competitors/drugxafe.png" width="120"><br><b>DrugXafe (Tiga Healthcare)</b></td>
   </tr>
-
   <tr>
-    <td rowspan="2"><b>Perfil</b></td>
+    <td rowspan="2">Perfil</td>
     <td>Overview</td>
-    <td>Plataforma web open source diseñada para apoyar la gestión de calidad y trazabilidad en la industria farmacéutica peruana, con integración de datos IoT para fortalecer el monitoreo de procesos productivos.</td>
-    <td>Plataforma SaaS/HaaS empresarial que integra hardware IoT nativo en maquinaria para la regulación de procesos y control digitalizado de calidad ("Cuarentena/Liberación") bajo normativas BPM de DIGEMID.</td>
-    <td>Plataforma global No-Code enfocada en operaciones farmacéuticas que permite digitalizar las guías de lotes (eBR) y flujos de trabajo en plantas de alta tecnología.</td>
-    <td>Sistema integral peruano de serialización, agregación de empaques y trazabilidad farmacéutica enfocado en la seguridad de la cadena de suministro logístico.</td>
+    <td>Plataforma SaaS bilingüe de gestión de calidad y trazabilidad de lotes para laboratorios farmacéuticos, con integración de sensores IoT.</td>
+    <td>Plataforma MES de gestión de producción que integra IoT industrial, monitoreo de OEE en tiempo real y batch record electrónico (Colombia).</td>
+    <td>Software de gestión farmacéutica para farmacias y cadenas: ventas, inventario, logística y control de vencimientos; más de 30 años en el mercado.</td>
+    <td>Sistema de track &amp; trace que serializa cada empaque con un código 2D Data Matrix y registra su recorrido del productor al paciente.</td>
   </tr>
-  <tr> 
-    <td>Ventaja competitiva</td>
-    <td>Solución open source con integración IoT nativa, enfocada específicamente en el contexto regulatorio peruano (BPM/DIGEMID), con bajo costo de adopción y capacidad de personalización.</td>
-    <td>Automatización total mediante IoT que elimina el error humano en los registros, con flujos de validación preconfigurados nativamente según la ley peruana sin costos extra de consultoría.</td>
-    <td>Flexibilidad total para crear aplicaciones de manufactura sin escribir código y una biblioteca global de plantillas validadas para laboratorios de primer nivel.</td>
-    <td>Mitigación robusta del riesgo de falsificación de medicamentos y automatización de reportes de salida logística para cumplir normativas de distribución.</td>
-  </tr>
-
   <tr>
-    <td rowspan="2"><b>Perfil de Marketing</b></td>
+    <td>Ventaja competitiva ¿Qué valor ofrece a los clientes?</td>
+    <td>Especialización en QA/QC (documentos, desviaciones, CAPA, liberación) con precio accesible y enfoque en BPM de DIGEMID: encontrar cualquier evidencia de un lote en minutos y preparar auditorías sin compilar documentos.</td>
+    <td>Captura automática de datos de planta (sensores, PLC, SCADA) y dashboards multi-planta para reducir pérdidas de producción y mejorar la eficiencia (OEE).</td>
+    <td>Trayectoria y base instalada en más de 12 países; reduce costos logísticos (10–15%) y evita quiebres de stock y mermas por vencimiento.</td>
+    <td>Prevención de falsificaciones y fraude en la cadena de suministro: garantiza que solo medicamentos auténticos lleguen al paciente.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Perfil de marketing</td>
     <td>Mercado objetivo</td>
-    <td>Laboratorios y plantas farmacéuticas medianas y pequeñas en el Perú y Latinoamérica que buscan digitalizar sus procesos de calidad y trazabilidad con bajo presupuesto.</td>
-    <td>Medianas y grandes fábricas industriales/cosméticas/farmacéuticas en Sudamérica.</td>
-    <td>Laboratorios farmacéuticos nacionales, distribuidores mayoristas y entidades reguladoras de salud.</td>
-    <td>Laboratorios, distribuidoras farmacéuticas, clínicas y farmacias en el mercado peruano y andino.</td>
+    <td>Laboratorios farmacéuticos pequeños y medianos de Lima y, luego, de la región andina.</td>
+    <td>Manufactura regulada y no regulada (alimentos, farmacéuticos, cosméticos) en Colombia y Latinoamérica.</td>
+    <td>Farmacias, boticas, cadenas, clínicas y hospitales de Latinoamérica.</td>
+    <td>Fabricantes, importadores, distribuidores y autoridades sanitarias.</td>
   </tr>
   <tr>
     <td>Estrategias de marketing</td>
-    <td>Marketing digital enfocado en contenido educativo sobre transformación digital farmacéutica, comunidad open source, y presencia en eventos del sector salud y tecnología en Perú.</td>
-    <td>Marketing B2B global mediante webinars, whitepapers, conferencias de la industria farmacéutica (ISPE, PDA), y alianzas con consultoras de cumplimiento regulatorio.</td>
-    <td>Venta corporativa directa (B2B) apoyada en consultoría técnica de eficiencia y automatización de procesos.</td>
-    <td>Marketing de reputación histórica local, venta consultiva B2B presencial en Lima e industria de la salud.</td>
-  </tr>
-
-  <tr>
-    <td rowspan="3"><b>Perfil de Producto</b></td>
-    <td>Productos & Servicios</td>
-    <td>Plataforma web de gestión de calidad farmacéutica: gestión de protocolos, expedientes de calidad, trazabilidad de lotes, gestión de desviaciones, dashboards operativos e integración con dispositivos IoT.</td>
-    <td>Software MES de monitoreo de producción, integración con sensores básicos y paneles de control analíticos.</td>
-    <td>Módulos de serialización, agregación de empaques, software de reportes regulatorios y despacho seguro.</td>
-    <td>ERP completo: Contabilidad, compras, control de almacenes, mermas farmacéuticas y facturación.</td>
+    <td>Contenido educativo sobre BPM e integridad de datos, demos desde la Landing Page y presencia en eventos del sector.</td>
+    <td>Marketing digital B2B (blog, casos de éxito) y demostraciones comerciales.</td>
+    <td>Venta consultiva B2B con implementación y soporte locales.</td>
+    <td>Venta B2B y B2G a actores de la cadena de suministro y reguladores.</td>
   </tr>
   <tr>
-    <td>Precios & Costos</td>
-    <td>Open source y gratuito con modelos de suscripción. Los costos asociados corresponden a infraestructura de despliegue (hosting) y personalización según las necesidades de la organización.</td>
-    <td>ERP completo: Contabilidad, compras, control de almacenes, mermas farmacéuticas y facturación.</td>
-    <td>Costo por volumen de lotes/códigos generados e implementación inicial de infraestructura de software.</td>
-    <td>Licenciamiento tradicional corporativo con pago inicial por servidores y contratos anuales de soporte.</td>
+    <td rowspan="3">Perfil de producto</td>
+    <td>Productos &amp; Servicios</td>
+    <td>Documentos y SOP, expediente de lote, desviaciones y CAPA, liberación, audit trail, reportes, dashboards e IoT.</td>
+    <td>MES, monitoreo OEE, batch record electrónico, IA para operaciones y mantenimiento.</td>
+    <td>Módulos de ventas, compras, almacenes, fidelización y facturación para farmacias.</td>
+    <td>Serialización, agregación de empaques y reportes de trazabilidad.</td>
   </tr>
   <tr>
-    <td>Canales de distribución</td>
-    <td>Plataforma web responsive accesible desde navegadores modernos en dispositivos de escritorio y móviles.</td>
-    <td>Plataforma Web (Dashboards en la nube o servidores locales) para la gerencia y estaciones de planta.</td>
-    <td>Web (Portales para auditoría y gestión de almacenes) junto a integración por API con sistemas logísticos.</td>
-    <td>Escritorio / Web local enfocado en estaciones de oficina y terminales de inventario administrativo.</td>
+    <td>Precios &amp; Costos</td>
+    <td>Standard Lab US$199/mes (US$1,990/año); Enterprise US$599/mes (US$5,990/año).</td>
+    <td>Suscripción e implementación cotizadas por planta (precios no publicados).</td>
+    <td>Licencia, implementación y soporte cotizados por proyecto (precios no publicados).</td>
+    <td>Costo por volumen de códigos e implementación (precios no publicados).</td>
   </tr>
-
   <tr>
-    <td rowspan="4"><b>Análisis SWOT</b></td>
+    <td>Canales de distribución (Web y/o Móvil)</td>
+    <td>Plataforma web responsive (desktop, tablet y mobile).</td>
+    <td>Plataforma web en la nube y dispositivos IoT en planta.</td>
+    <td>Aplicación de escritorio/web en las estaciones de farmacia.</td>
+    <td>Portales web e integración por API.</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Análisis SWOT</td>
     <td>Fortalezas</td>
-    <td>1. Código abierto con posibilidad de personalización total.<br>2. Integración nativa con dispositivos IoT para monitoreo en tiempo real.<br>3. Bajo costo de adopción.<br>4. Enfoque específico en el contexto regulatorio farmacéutico peruano (BPM/DIGEMID).<br>5. Trazabilidad integral del ciclo de vida de lotes.</td>
-    <td>Integración nativa de las reglas de DIGEMID, automatización IoT en tiempo real que previene fallas y un modelo HaaS accesible que reduce el CapEx inicial del cliente.</td>
-    <td>Tecnología No-Code sumamente madura, ecosistema educativo global consolidado y fuerte respaldo financiero/técnico internacional.</td>
-    <td>Especialización absoluta en seguridad de empaques, cumplimiento de normativas de serialización internacional y protección ante falsificaciones.</td>
+    <td>Especialización en calidad farmacéutica; bajo costo; bilingüe; integración IoT sin vender hardware.</td>
+    <td>Integración IoT madura; batch record electrónico; operación multi-planta.</td>
+    <td>Trayectoria; presencia internacional; ahorro logístico comprobado.</td>
+    <td>Especialización en serialización y anti-falsificación.</td>
   </tr>
   <tr>
     <td>Debilidades</td>
-    <td>1. Producto en fase temprana de desarrollo sin base instalada en producción.<br>2. Sin validación regulatoria preconfigurada (requiere validación por parte del cliente).<br>3. Comunidad open source incipiente.<br>4. Reconocimiento de marca limitado en el mercado.</td>
-    <td>Startup en etapa inicial, catálogo inicial de sensores acotado a las variables críticas y equipo de soporte técnico en proceso de consolidación.</td>
-    <td>Costos excesivamente elevados para laboratorios medianos, soporte regional limitado en español y complejidad para adaptarlo a la burocracia de DIGEMID.</td>
-    <td>Enfoque exclusivo en la fase de empaque y logística de salida, dejando de lado el monitoreo IoT en las fases críticas de mezcla y fabricación líquida/sólida.</td>
+    <td>Startup sin base instalada; marca poco conocida; requiere validación por el cliente.</td>
+    <td>Enfoque en eficiencia productiva, no en QA (CAPA, liberación, auditorías); operación centrada en Colombia.</td>
+    <td>Orientado a retail farmacéutico; no cubre manufactura, control de calidad ni IoT.</td>
+    <td>Solo cubre empaque y distribución; no monitorea la fabricación ni la gestión de calidad.</td>
   </tr>
   <tr>
     <td>Oportunidades</td>
-    <td>1. Crecimiento del mercado de soluciones digitales en la industria farmacéutica.<br>2. Aumento de la regulación y necesidad de trazabilidad en el sector.<br>3. Interés creciente por soluciones open source con enfoque regulatorio.<br>4. Posibilidad de colaboración con instituciones de investigación y desarrollo.</td>
-    <td>Fiscalizaciones más estrictas de DIGEMID en Lima y la urgencia de los laboratorios por digitalizar registros manuales para evitar el cierre o multas de plantas.</td>
-    <td>Crecimiento de la adopción de la nube y automatización digital avanzada en grandes corporativos farmacéuticos latinoamericanos.</td>
-    <td>Nuevas leyes gubernamentales y tratados en la región andina que exijan la serialización obligatoria de medicamentos para el consumidor final.</td>
+    <td>Fiscalización más estricta de DIGEMID; crecimiento del sector farmacéutico; digitalización de laboratorios.</td>
+    <td>Expansión a Perú impulsada por Industria 4.0.</td>
+    <td>Crecimiento de cadenas de farmacias.</td>
+    <td>Regulaciones de serialización obligatoria en la región.</td>
   </tr>
   <tr>
     <td>Amenazas</td>
-    <td>1. Resistencia al cambio: Rechazo de los laboratorios a abandonar sus procesos manuales o sistemas antiguos.<br>2. Competencia de gigantes: Grandes empresas (como SAP u Oracle) que podrían lanzar módulos nativos similares.<br>3. Vulnerabilidad cibernética: Riesgo de hackeos al manejar datos sensibles de salud y telemetría de máquinas.<br>4. Ciclos de venta lentos: Licitaciones largas y burocráticas, especialmente con entidades públicas.<br>5. Cambios regulatorios: Actualizaciones sorpresivas en las normativas de la DIGEMID que obliguen a reprogramar el software.<br>6. Incompatibilidad técnica: Maquinaria de laboratorio antigua o cerrada que dificulte la conexión de los sensores IoT.</td>
-    <td>Resistencia cultural de los operarios tradicionales al uso de tecnología y lentitud burocrática en la aprobación de presupuestos por directorios locales.</td>
-    <td>Consultorías locales especializadas que logren parametrizar Tulip de forma genérica para cumplir con las normas peruanas a mediano plazo.</td>
-    <td>Gigantes logísticos que incorporen herramientas de trazabilidad gratuitas o integradas nativamente en sus servicios de distribución de fármacos.</td>
+    <td>Resistencia al cambio; ciclos de venta largos; ingreso de grandes proveedores de QMS.</td>
+    <td>Competidores especializados en QMS farmacéutico.</td>
+    <td>Soluciones SaaS más modernas y económicas.</td>
+    <td>Proveedores globales de serialización.</td>
   </tr>
 </table>
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-Para posicionar a DoofPlus frente a la competencia internacional (como Tulip y DrugXafe) y a las soluciones locales de gestión tradicional (como LOLFAR), IngesCompany implementa las siguientes estrategias y tácticas competitivas:
+Para posicionar a DoofPlus frente a TuHub (MES con IoT), LOLFAR (gestión de farmacias) y DrugXafe (serialización), IngesCompany aplicará las siguientes estrategias y tácticas:
 
-#### Estrategia de Costos y Accesibilidad (Modelo HaaS/SaaS sin CapEx elevado):
+#### Estrategia de costos y accesibilidad (suscripción sin inversión inicial)
 
-A diferencia de competidores que exigen licenciamiento tradicional con pago inicial por servidores e infraestructura (LOLFAR) o suscripciones elevadas por usuario/estación (Tulip), DoofPlus ofrece un esquema flexible de licenciamiento adaptado al tamaño de la planta y al número de líneas conectadas, sin inversión inicial de capital en infraestructura de hardware. Esto elimina la barrera financiera de entrada para laboratorios farmacéuticos medianos que hoy quedan fuera del alcance de las soluciones globales.
+Frente a soluciones cotizadas por proyecto con costos de implementación elevados (TuHub, LOLFAR), DoofPlus ofrece precios públicos por suscripción (Standard Lab y Enterprise) sin inversión en servidores ni hardware propio, ya que la captura IoT se integra con ThingsBoard. Táctica: prueba piloto de 30 días para laboratorios que soliciten una demo desde la Landing Page.
 
-#### Enfoque Vertical y Regulatorio (Más allá del Monitor Genérico):
+#### Enfoque vertical en la calidad farmacéutica
 
-Mientras que los MES generalistas (Tulip) carecen de flujos especializados para el control de calidad regulado y de personalización nativa para el marco legal peruano, y las plataformas no-code (DrugXafe) requieren configuración genérica costosa para adaptarse a la burocracia de DIGEMID, DoofPlus integra reglas de cumplimiento BPM/DIGEMID preconfiguradas nativamente, con automatización IoT en tiempo real que cubre las fases críticas de fabricación (mezcla, liberación de lote) que soluciones como LOLFAR —enfocadas solo en empaque y logística de salida— dejan sin monitorear.
+Mientras TuHub se enfoca en la eficiencia productiva (OEE), LOLFAR en la gestión comercial de farmacias y DrugXafe en el empaque y la distribución, DoofPlus cubre el ciclo de calidad del lote: documentación controlada, desviaciones y CAPA, cuarentena y liberación con firma electrónica, y audit trail. Táctica: plantillas de protocolos y reportes alineadas a las BPM de DIGEMID, configurables por cada laboratorio (la validación final corresponde al cliente).
 
-#### Gestión Multi-Planta y Trazabilidad de Lotes Centralizada:
+#### Gestión multi-planta y trazabilidad centralizada de lotes
 
-Se despliega una arquitectura pensada para que laboratorios y plantas farmacéuticas gestionen múltiples líneas de producción y lotes simultáneamente desde una única cuenta centralizada, con trazabilidad completa del ciclo de vida del producto, optimizando el control que ejercen los especialistas de QA/QC y los responsables de producción.
+Se ofrece una única cuenta por organización con varias plantas y líneas de producción, de modo que QA/QC y Producción consulten la misma información del lote. Táctica: el plan Enterprise habilita sensores ilimitados y gestión multi-planta para instituciones como el INS.
 
-#### Estrategia Comercial B2B Dirigida:
+#### Estrategia comercial B2B dirigida
 
-La prospección se enfoca directamente en especialistas de aseguramiento y control de calidad (QA/QC) y responsables de producción farmacéutica, apoyándose en consultoría técnica de eficiencia y automatización de procesos, y demostrando una reducción directa en el riesgo de observaciones, cierres o multas ante fiscalizaciones de DIGEMID.
+La prospección se dirige a jefes de aseguramiento de calidad y de producción, demostrando la reducción del tiempo de preparación de auditorías y del riesgo de observaciones de DIGEMID. Tácticas: webinars sobre integridad de datos, casos de uso con laboratorios piloto y alianzas con consultores de BPM.
 
 ## 2.2. Entrevistas
 
