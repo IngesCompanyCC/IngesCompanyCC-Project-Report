@@ -9,7 +9,7 @@ En esta sección se establecen las bases visuales y de comunicación para DoofPl
 
 ### 4.1.1. General Style Guidelines
 
-Para asegurar una interfaz coherente y alineada con los estándares que exige la industria farmacéutica, el sistema de diseño de DoofPlus toma como base **Material Design**, el lenguaje de diseño indicado para el proyecto. En la Web Application se implementa con **Angular CLI** usando un tema basado en **Material Design**, y en la Landing Page con ***HTML5*** y ***CSS3*** respetando los mismos tokens de color, tipografía y espaciado.
+Para asegurar una interfaz coherente y alineada con los estándares que exige la industria farmacéutica, el sistema de diseño de DoofPlus toma como base **Material Design**, el lenguaje de diseño indicado para el proyecto. En la Web Application se implementa con **View**  y en la Landing Page con ***HTML5*** y ***CSS3*** respetando los mismos tokens de color, tipografía y espaciado.
 
 #### Branding:
 El logotipo escogido para DoofPlus comunica de forma directa y sintética la propuesta de valor del sistema: la integración de la automatización industrial con la rigurosidad del control farmacéutico. Para la sección de Branding, el análisis de los componentes de dicho logotipo se desglosa de la siguiente manera:
@@ -138,10 +138,10 @@ Para el posicionamiento y la indexación correcta de las principales páginas de
 
 Valores para la Landing Page (sitio estático indexable):
 
-| **Página** | **Title** | **Meta description** | **Meta keywords** | **Author** |
-| --- | --- | --- | --- | --- |
-| Landing Page (index.html) | DoofPlus \| Pharmaceutical Quality & Batch Traceability Platform | SaaS platform that centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories (GMP/DIGEMID). | pharmaceutical quality management, batch traceability, GMP, DIGEMID, CAPA, audit trail, IoT | IngesCompany |
-| Contact us (contact.html) | Contact us \| DoofPlus | Send your questions about DoofPlus and its plans to the IngesCompany team. | DoofPlus contact, pharmaceutical quality software, GMP software Peru | IngesCompany |
+| **Página** | **Title** | **Meta description** | **Meta keywords** | **Author**     |
+| --- | --- | --- | --- |----------------|
+| Landing Page (index.html) | DoofPlus \| Pharmaceutical Quality & Batch Traceability Platform | SaaS platform that centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories (GMP/DIGEMID). | pharmaceutical quality management, batch traceability, GMP, DIGEMID, CAPA, audit trail, IoT | IngesCompanyCC |
+| Contact us (contact.html) | Contact us \| DoofPlus | Send your questions about DoofPlus and its plans to the IngesCompany team. | DoofPlus contact, pharmaceutical quality software, GMP software Peru | IngesCompanyCC |
 
 Valores para las vistas principales de la Web Application. Al ser una SPA, el título se actualiza en cada cambio de ruta con la propiedad `title` de las rutas de Angular Router y la descripción con el servicio `Meta` de Angular; keywords y author se definen una vez en `index.html` con los mismos valores de la Landing Page:
 
@@ -181,7 +181,7 @@ Las acciones y técnicas que guían a los usuarios son:
 
 ## 4.3. Landing Page UI Design
 
-La propuesta de UI de la Landing Page traduce las decisiones de las secciones anteriores: la jerarquía visual ordena el contenido desde la propuesta de valor hasta la presentación de la startup; las etiquetas (Home, Features, Benefits, Plans, About Us) siguen el Labeling System; la barra fija con anclas, las llamadas a la acción por segmento y el enlace "Sign in" implementan el Navigation System; y el Design System de la sección 4.1 (Inter, verde azulado #0F766E, azul pizarra #0F172A y Material Symbols Rounded) se aplica de forma consistente con la Web Application. La Landing Page atiende las user stories US01 a US05 y US44 a US49.
+La propuesta de UI de la Landing Page traduce las decisiones de las secciones anteriores: la jerarquía visual ordena el contenido desde la propuesta de valor hasta la presentación de la startup; las etiquetas (Home, Features, Benefits, Plans, About Us) siguen el Labeling System; la barra fija con anclas, las llamadas a la acción por segmento y el enlace "Sign in" implementan el Navigation System; y el Design System de la sección 4.1 (Inter, verde azulado #0F766E, azul pizarra #0F172A y Material Symbols Rounded) se aplica de forma consistente con la Web Application. La Landing Page atiende las user stories US01 a US05 y US44 a US49. Los wireframes y mock-ups se elaboraron en Figma y están disponibles en el [archivo de diseño de DoofPlus](https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-813).
 
 Las secciones se presentan en el siguiente orden, que prioriza la información que el visitante necesita para decidir (qué es DoofPlus, qué ofrece y cuánto cuesta) antes que la presentación del equipo:
 
@@ -345,11 +345,11 @@ Los mock-ups aplican sobre los wireframes el Design System de la sección 4.1 y 
 
 | Contact us | Contact us · Invalid data | Message sent |
 | :---: | :---: | :---: |
-| ![Contact us](../assets/img/chapter4/landing-page/wireframes/pages/landing-desktop-contact-us.png) | ![Contact us · Invalid data](../assets/img/chapter4/landing-page/wireframes/pages/landing-desktop-contact-us-invalid-data.png) | ![Message sent](../assets/img/chapter4/landing-page/wireframes/pages/landing-desktop-message-sent.png) |
+| ![Contact us](../assets/img/chapter4/landing-page/mockups/pages/landing-desktop-contact-us.png) | ![Contact us · Invalid data](../assets/img/chapter4/landing-page/mockups/pages/landing-desktop-contact-us-invalid-data.png) | ![Message sent](../assets/img/chapter4/landing-page/mockups/pages/landing-desktop-message-sent.png) |
 
 | Terms of Service | Privacy Policy |
 | :---: | :---: |
-| ![Terms of Service](../assets/img/chapter4/landing-page/wireframes/pages/landing-desktop-terms-of-service.png) | ![Privacy Policy](../assets/img/chapter4/landing-page/wireframes/pages/landing-desktop-privacy-policy.png) |
+| ![Terms of Service](../assets/img/chapter4/landing-page/mockups/pages/landing-desktop-terms-of-service.png) | ![Privacy Policy](../assets/img/chapter4/landing-page/mockups/pages/landing-desktop-privacy-policy.png) |
 
 **Mobile Web Browser (390 px)**
 
@@ -363,128 +363,73 @@ La versión mobile mantiene el orden y el contenido de desktop en una sola colum
 
 | Menu open | Contact us | Contact us · Invalid data | Message sent |
 | :---: | :---: | :---: | :---: |
-| ![Menu open](../assets/img/chapter4/landing-page/wireframes/pages/landing-mobile-menu-open.png) | ![Contact us](../assets/img/chapter4/landing-page/wireframes/pages/landing-mobile-contact-us.png) | ![Invalid data](../assets/img/chapter4/landing-page/wireframes/pages/landing-mobile-contact-us-invalid-data.png) | ![Message sent](../assets/img/chapter4/landing-page/wireframes/pages/landing-mobile-message-sent.png) |
-
+| ![Menu open](../assets/img/chapter4/landing-page/mockups/pages/landing-mobile-menu-open.png) | ![Contact us](../assets/img/chapter4/landing-page/mockups/pages/landing-mobile-contact-us.png) | ![Invalid data](../assets/img/chapter4/landing-page/mockups/pages/landing-mobile-contact-us-invalid-data.png) | ![Message sent](../assets/img/chapter4/landing-page/mockups/pages/landing-mobile-message-sent.png) |
 
 ## 4.4. Web Applications UX/UI Design
 
-La presente sección describe el diseño de experiencia de usuario (UX) e interfaz de usuario (UI) desarrollado para la plataforma web DoofPlus. La propuesta fue diseñada para apoyar la gestión integral de calidad farmacéutica bajo entornos regulados GxP, facilitando la administración documental, la trazabilidad de procesos productivos, la gestión de desviaciones y el monitoreo operativo de laboratorios y líneas de manufactura.
+Esta sección describe el diseño de experiencia (UX) e interfaz (UI) de la Web Application de DoofPlus. La aplicación se organiza en tres entornos, cada uno con su propio inicio de sesión, color y módulos: **QA/QC** (segmento 1, especialista de aseguramiento y control de calidad, persona María México), **Production** (segmento 2, jefe o supervisor de producción, persona Alberto Valle) y **Administration** (administrador del laboratorio, que registra la organización, invita a los usuarios y gestiona la suscripción). Los datos de ejemplo corresponden a un mismo caso: Laboratorios Andinos S.A.C., el lote B-26041 de Paracetamol 500 mg y la excursión de temperatura del sensor T-204 que origina la desviación DEV-26017, de modo que las pantallas de ambos segmentos cuentan una historia coherente. Los wireframes y mock-ups de escritorio y mobile se elaboraron en Figma y están disponibles en el [archivo de diseño de DoofPlus](https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-814).
 
-El diseño considera principios de usabilidad, accesibilidad, consistencia visual y eficiencia operativa, asegurando que los diferentes perfiles de usuario puedan ejecutar actividades críticas relacionadas con el cumplimiento normativo, la liberación de lotes y la auditoría regulatoria.
+Todas las pantallas comparten la misma estructura, derivada de la arquitectura de información de la sección 4.2: un sidebar con el logotipo, el entorno activo y sus módulos (navegación global); una barra superior con la búsqueda global, el selector de idioma y el avatar del usuario; y un área de contenido que ubica arriba los indicadores y abajo las tablas de detalle. Las acciones críticas, como aprobar, liberar o rechazar, se confirman con firma electrónica (US08), y los estados se muestran con los valores del modelo de dominio.
 
 ### 4.4.1. Web Applications Wireframes
 
-En esta sección se presentan los wireframes diseñados para la aplicación web de DoofPlus. Cada pantalla fue desarrollada para gestionar procesos de calidad farmacéutica, producción regulada GxP, trazabilidad de lotes, control documental y cumplimiento normativo mediante firmas electrónicas y registros auditables.
+Los wireframes de baja fidelidad definen la distribución de cada pantalla antes del diseño visual. Se agrupan por segmento y se presentan en montajes, en el mismo orden que los mock-ups de la sección 4.4.3, donde se explica cada pantalla.
 
-A continuación, se muestran las representaciones esquemáticas de baja fidelidad que describen la estructura, distribución de componentes y funcionalidades principales de cada módulo de la plataforma.
+**Desktop Web Browser · Compartido: elección de entorno, registro de la organización y perfil**
 
-- **Landing Page - DoofPlus**
+Incluye "Sign in · Choose your environment", "Organization registration" con su estado "RUC already registered" y "Account · Profile & preferences".
 
-Pantalla de presentación de la plataforma que comunica la propuesta de valor de DoofPlus y permite acceder al portal especializado para gestión de calidad y producción farmacéutica bajo normativas GxP.
+![Web App Wireframes · Desktop · Shared](../assets/img/chapter4/web-application/wireframes/desktop-shared-environment-selection-onboarding-profile-montage-1.png)
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Landing%20Page.png)
+**Desktop Web Browser · Segmento 1: Especialista QA/QC**
 
-- **Regulatory Identification - DoofPlus**
+Incluye el inicio de sesión del entorno QA/QC con sus estados (credenciales inválidas, 2FA y acceso no autorizado) y los módulos Quality overview, Quality indicators, Quality documents, Analytical results, Deviation report & detail, CAPA plan, Batch release, Audits & findings, Audit trail, Regulatory reports y Tasks & collaboration.
 
-Pantalla de autenticación regulatoria que solicita las credenciales corporativas y la firma electrónica necesarias para acceder a funcionalidades sujetas a cumplimiento FDA 21 CFR Part 11 y normativas GxP.
+![Web App Wireframes · Desktop · QA/QC (1)](../assets/img/chapter4/web-application/wireframes/desktop-segment-1-qa-qc-specialist-montage-1.png)
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Login.png)
+![Web App Wireframes · Desktop · QA/QC (2)](../assets/img/chapter4/web-application/wireframes/desktop-segment-1-qa-qc-specialist-montage-2.png)
 
-- **Environment Selection Portal - DoofPlus**
+![Web App Wireframes · Desktop · QA/QC (3)](../assets/img/chapter4/web-application/wireframes/desktop-segment-1-qa-qc-specialist-montage-3.png)
 
-Interfaz que permite seleccionar el entorno de trabajo autorizado, diferenciando entre el segmento de calidad (QA/QC) y el entorno de producción farmacéutica.
+![Web App Wireframes · Desktop · QA/QC (4)](../assets/img/chapter4/web-application/wireframes/desktop-segment-1-qa-qc-specialist-montage-4.png)
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Selección%20de%20Espacio.png)
+![Web App Wireframes · Desktop · QA/QC (5)](../assets/img/chapter4/web-application/wireframes/desktop-segment-1-qa-qc-specialist-montage-5.png)
 
-- **QA & Lab Console Dashboard - DoofPlus**
+**Desktop Web Browser · Segmento 2: Jefe o Supervisor de Producción**
 
-Panel principal para usuarios de calidad que centraliza la supervisión de lotes pendientes, ensayos analíticos, desviaciones abiertas y actividades del laboratorio.
+Incluye el inicio de sesión del entorno de Producción con sus estados y los módulos Production overview, Products & master formulas, Production order & master formula, Batches (y su estado "Batch not created"), Batch detail & traceability, Batch IoT evidence, Raw-material receipt, Equipment & IoT devices, IoT overview y Equipment & sensor detail.
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Dashboard%20Calidad.png)
+![Web App Wireframes · Desktop · Production (1)](../assets/img/chapter4/web-application/wireframes/desktop-segment-2-production-supervisor-montage-1.png)
 
-- **Document Management & Master SOPs - DoofPlus**
+![Web App Wireframes · Desktop · Production (2)](../assets/img/chapter4/web-application/wireframes/desktop-segment-2-production-supervisor-montage-2.png)
 
-Repositorio documental diseñado para gestionar procedimientos operativos estándar (SOPs), registros electrónicos, certificados de análisis y documentación regulatoria controlada.
+![Web App Wireframes · Desktop · Production (3)](../assets/img/chapter4/web-application/wireframes/desktop-segment-2-production-supervisor-montage-3.png)
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Documentación.png)
+![Web App Wireframes · Desktop · Production (4)](../assets/img/chapter4/web-application/wireframes/desktop-segment-2-production-supervisor-montage-4.png)
 
-- **Quality Protocols & Validation Management - DoofPlus**
+**Desktop Web Browser · Administrador del laboratorio**
 
-Módulo destinado a la administración de protocolos de validación, cualificación de equipos y seguimiento de actividades relacionadas con IQ, OQ y PQ.
+Incluye el inicio de sesión del entorno de Administración y los módulos Administration overview, Users & profiles, Invite user y Subscriptions & payments.
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Protocolos.png)
+![Web App Wireframes · Desktop · Administration (1)](../assets/img/chapter4/web-application/wireframes/desktop-laboratory-administrator-montage-1.png)
 
-- **Critical Deviations & CAPA Actions Control - DoofPlus**
+![Web App Wireframes · Desktop · Administration (2)](../assets/img/chapter4/web-application/wireframes/desktop-laboratory-administrator-montage-2.png)
 
-Pantalla de seguimiento de desviaciones críticas, análisis de impacto GMP y control de acciones correctivas y preventivas (CAPA).
+**Mobile Web Browser**
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Desviaciones.png)
+En mobile se priorizan las tareas que se realizan fuera del escritorio: la elección de entorno y el inicio de sesión, la bandeja de tareas, la revisión y firma de aprobaciones y la consulta de lotes para QA/QC, y el monitoreo IoT, la consulta de lotes y el reporte de incidencias desde planta para Producción.
 
-- **Process Audit Master Plan - DoofPlus**
+![Web App Wireframes · Mobile · Shared](../assets/img/chapter4/web-application/wireframes/mobile-shared-environment-selection-montage-1.png)
 
-Módulo para planificar, ejecutar y monitorear auditorías internas, inspecciones regulatorias y hallazgos asociados al cumplimiento GMP.
+![Web App Wireframes · Mobile · QA/QC (1)](../assets/img/chapter4/web-application/wireframes/mobile-segment-1-qa-qc-specialist-montage-1.png)
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Auditorías.png)
+![Web App Wireframes · Mobile · QA/QC (2)](../assets/img/chapter4/web-application/wireframes/mobile-segment-1-qa-qc-specialist-montage-2.png)
 
-- **GxP Regulatory Reports & Metrics - DoofPlus**
+![Web App Wireframes · Mobile · Production (1)](../assets/img/chapter4/web-application/wireframes/mobile-segment-2-production-supervisor-montage-1.png)
 
-Panel de análisis que permite generar reportes regulatorios, revisar métricas de desempeño y exportar información validada para auditorías e inspecciones.
+![Web App Wireframes · Mobile · Production (2)](../assets/img/chapter4/web-application/wireframes/mobile-segment-2-production-supervisor-montage-2.png)
 
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Reportes.png)
-
-- **Analytical Testing & Microbiology Control (QC) - DoofPlus**
-
-Pantalla de control de ensayos analíticos y microbiológicos que permite gestionar muestras, equipos de laboratorio y resultados fuera de especificación (OOS).
-
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Ensayos.png)
-
-- **Analytical Results Entry & Validation - DoofPlus**
-
-Interfaz destinada al registro y validación de resultados analíticos, integrando verificación de especificaciones y aprobación mediante firma electrónica.
-
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Resultados.png)
-
-- **Pharmaceutical Batch History & Traceability - DoofPlus**
-
-Módulo de consulta histórica que permite rastrear lotes farmacéuticos, consultar estados regulatorios y acceder a certificados de análisis.
-
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Historial%20de%20Lotes.png)
-
-- **Cross-Traceability & Audit Center - DoofPlus**
-
-Centro de trazabilidad que integra genealogía de lotes, registros de laboratorio, documentación asociada y auditoría completa de eventos regulatorios.
-
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Centro%20de%20Trazabilidad.png)
-
-- **GxP Production Control Console - DoofPlus**
-
-Panel principal del entorno de producción que permite supervisar órdenes activas, progreso de eBR y estado de los procesos de manufactura.
-
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Dashboard%20Producción.png)
-
-- **GxP Batch Execution & Management Console - DoofPlus**
-
-Interfaz para la gestión operativa de lotes de fabricación, incluyendo seguimiento de etapas de producción, firmas electrónicas y responsables asignados.
-
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Gestión%20de%20Lotes.png)
-
-- **GxP Incident Registration & Deviation Management - DoofPlus**
-
-Módulo de registro de incidencias que permite documentar eventos de desviación, adjuntar evidencias y gestionar acciones de contención.
-
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Incidencias.png)
-
-- **GxP Profile & Regulatory Credentials - DoofPlus**
-
-Pantalla de perfil regulatorio donde los usuarios administran credenciales, firmas electrónicas y permisos asociados a los distintos contextos del sistema.
-
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Perfil.png)
-
-- **General Settings & GxP Policies - DoofPlus**
-
-Módulo de configuración orientado a la administración de políticas GxP, parámetros de seguridad, auditorías internas y canales de notificación regulatoria.
-
-![Wireframe](../assets/img/chapter4/prototype/wireframes/Configuración.png)
+![Web App Wireframes · Mobile · Administration](../assets/img/chapter4/web-application/wireframes/mobile-laboratory-administrator-montage-1.png)
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
