@@ -719,360 +719,147 @@ En mobile, la navegación del entorno se agrupa en una barra inferior y las pant
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-Los User Flow Diagrams representan la secuencia de acciones que realizan los usuarios dentro de la plataforma para alcanzar un objetivo específico. Estos diagramas permiten visualizar la navegación entre módulos, las decisiones tomadas durante el proceso y los diferentes escenarios que pueden ocurrir durante la interacción con el sistema.
+Los User Flow Diagrams representan, para los mismos user goals de la sección 4.4.2, la secuencia de pantallas y acciones del camino principal (happy path) y las decisiones que llevan a caminos alternativos (unhappy paths). Se elaboraron en FigJam, en el mismo [tablero](https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp) que los Wireflow Diagrams.
 
-Para DoofPlus se definieron distintos flujos asociados a los procesos críticos de calidad y manufactura farmacéutica. Cada User Flow se clasifica como Happy Path, cuando el usuario completa exitosamente el objetivo planteado, o Unhappy Path, cuando el flujo se origina a partir de una incidencia, desviación o situación excepcional que requiere atención y seguimiento.
+#### Segmento 1 – Especialista QA/QC
 
-***User Flow 1: Acceso a la plataforma y selección del entorno operativo***
+**User Goal QA-1:** Ingresar a DoofPlus y acceder al entorno QA/QC.
 
-Este flujo describe el proceso que realiza un usuario desde el ingreso a la plataforma hasta el acceso al entorno de trabajo correspondiente según su rol y permisos regulatorios.
+Happy path: Home → "Sign in" → Choose your environment → QA/QC → correo y contraseña → Two-factor authentication → Quality overview.
 
-**Happy Path**
+Unhappy paths: ¿Credenciales válidas? No → "Invalid credentials"; permanece en el formulario y, tras cinco intentos, la cuenta se bloquea quince minutos | ¿El rol autoriza el entorno QA/QC? No → "Access not authorized".
 
-Como usuario autorizado, quiero acceder a la plataforma, completar la autenticación regulatoria y seleccionar mi entorno de trabajo para comenzar a utilizar las funcionalidades correspondientes a mi perfil.
+![User Flow QA-1](../assets/img/chapter4/web-application/user-flows/user-flow-qa-1.png)
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-1.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+**User Goal QA-2:** Gestionar la documentación de calidad y sus protocolos.
 
-**Unhappy Path*
+Happy path: Quality overview → Quality documents → envía la revisión → Tasks & collaboration (tarea de aprobación).
 
-Como usuario, quiero acceder a la plataforma y al entorno de manufactura para consultar indicadores regulatorios y reportes asociados al proceso productivo.
+Unhappy path: ¿El revisor es distinto del autor? No → "Self-approval blocked"; la aprobación debe asignarse a otro revisor.
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-1.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+![User Flow QA-2](../assets/img/chapter4/web-application/user-flows/user-flow-qa-2.png)
 
-***User Flow 2: Gestión de muestras y consulta de trazabilidad***
+**User Goal QA-3:** Registrar una desviación y gestionar su CAPA.
 
-Este flujo representa el proceso mediante el cual un especialista de calidad registra una muestra, valida los resultados obtenidos y consulta posteriormente la trazabilidad asociada al lote analizado.
+Happy path: Quality overview → Deviation report & detail (DEV-26017) → registra la causa raíz → CAPA plan.
 
-**Happy Path**
+Unhappy path: ¿La causa raíz está documentada? No → "Root cause required"; el plan CAPA no avanza.
 
-Como especialista de calidad, quiero registrar muestras y validar resultados analíticos para garantizar la trazabilidad y el cumplimiento de los procedimientos de laboratorio.
+![User Flow QA-3](../assets/img/chapter4/web-application/user-flows/user-flow-qa-3.png)
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-2.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+**User Goal QA-4:** Planificar una auditoría y reunir sus evidencias.
 
-**Unhappy Path**
+Happy path: Audits & findings → Audit trail del alcance → Regulatory reports (paquete de evidencias).
 
-Como usuario de manufactura, quiero consultar el historial de trazabilidad y auditoría de un lote para investigar eventos o situaciones excepcionales detectadas durante la producción.
+Unhappy path: ¿Están todos los registros obligatorios? No → Quality indicators muestra los registros faltantes antes de la auditoría.
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-2.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+![User Flow QA-4](../assets/img/chapter4/web-application/user-flows/user-flow-qa-4.png)
 
-***User Flow 3: Registro de incidencias y gestión de desviaciones***
+**User Goal QA-5:** Registrar y validar resultados analíticos.
 
-Este flujo muestra cómo una incidencia detectada durante las operaciones es registrada y posteriormente evaluada mediante el proceso de gestión de desviaciones y acciones correctivas.
+Happy path: Quality overview → Analytical results → resultado dentro de especificación → Batch release.
 
-**Happy Path**
+Unhappy path: ¿El resultado está dentro de la especificación? No → resultado OOS; se registra una desviación en Deviation report & detail.
 
-Como especialista de calidad, quiero gestionar desviaciones y registrar acciones CAPA para corregir incumplimientos identificados y reducir riesgos regulatorios.
+![User Flow QA-5](../assets/img/chapter4/web-application/user-flows/user-flow-qa-5.png)
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-3.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+**User Goal QA-6:** Revisar la trazabilidad completa de un lote y liberarlo.
 
-**Unhappy Path**
+Happy path: Quality overview → Audit trail del lote → Batch release → firma electrónica.
 
-Como operador de manufactura, quiero registrar una incidencia operativa para documentar una desviación que pueda afectar la calidad, seguridad o continuidad del proceso.
+Unhappy path: ¿Se cumplen todos los controles de liberación? No → "Release blocked"; se listan los registros pendientes.
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-3.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+![User Flow QA-6](../assets/img/chapter4/web-application/user-flows/user-flow-qa-6.png)
 
-***User Flow 4: Gestión documental y protocolos de validación***
+#### Segmento 2 – Jefe o Supervisor de Producción
 
-Este flujo describe la administración de documentos regulados y protocolos de validación necesarios para mantener la conformidad con los estándares GMP.
+**User Goal PR-1:** Ingresar a DoofPlus y acceder al entorno de Producción.
 
-**Happy Path**
+Happy path: Home → "Sign in" → Choose your environment → Production → correo y contraseña → Two-factor authentication → Production overview.
 
-Como especialista de calidad, quiero gestionar documentos y protocolos de validación para asegurar que los procedimientos se encuentren actualizados y correctamente controlados.
+Unhappy paths: ¿Credenciales válidas? No → "Invalid credentials" | ¿El rol autoriza el entorno de Producción? No → "Access not authorized".
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-4.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+![User Flow PR-1](../assets/img/chapter4/web-application/user-flows/user-flow-pr-1.png)
 
-**Unhappy Path**
+**User Goal PR-2:** Gestionar la ejecución de un lote y consultar su historial.
 
-Como usuario de manufactura, quiero monitorear equipos y consultar el estado de ejecución de lotes para identificar anomalías que puedan afectar la operación.
+Happy path: Products & master formulas → selecciona la fórmula aprobada → Production order & master formula → Batches → Batch detail & traceability (B-26041).
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-4.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+Unhappy path: ¿El número de lote es único y la fórmula está aprobada? No → "Batch not created", con el motivo.
 
-***User Flow 5: Evaluación de cumplimiento regulatorio***
+![User Flow PR-2](../assets/img/chapter4/web-application/user-flows/user-flow-pr-2.png)
 
-Este flujo representa el proceso de análisis del estado de cumplimiento mediante la revisión de desviaciones, validaciones y reportes regulatorios.
+**User Goal PR-3:** Monitorear equipos y condiciones ambientales.
 
-**Happy Path**
+Happy path: IoT overview → alerta de EQ-COAT-02 → Equipment & sensor detail → Batch IoT evidence.
 
-Como especialista de calidad, quiero revisar el estado del sistema de calidad y consultar métricas regulatorias para evaluar el nivel de cumplimiento de la organización.
+Unhappy path: ¿El equipo está apto y el sensor libre? No → Equipment & IoT devices; la asociación no se realiza.
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-5.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+![User Flow PR-3](../assets/img/chapter4/web-application/user-flows/user-flow-pr-3.png)
 
-**Unhappy Path**
+**User Goal PR-4:** Reportar una incidencia de producción desde planta.
 
-Como usuario de manufactura, quiero realizar seguimiento a la ejecución de lotes y verificar posteriormente la información de trazabilidad para investigar posibles desviaciones.
+Happy path (Mobile): Alert details → "Report incident" → Incident reporting → Incident submitted.
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-5.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+Unhappy path: ¿Los campos obligatorios están completos? No → "Validation error"; el formulario permanece abierto con los errores resaltados.
 
-***User Flow 6: Auditoría y trazabilidad de lotes***
+![User Flow PR-4](../assets/img/chapter4/web-application/user-flows/user-flow-pr-4.png)
 
-Este flujo muestra cómo los usuarios acceden a la información histórica de los lotes y a los registros de auditoría para respaldar procesos de inspección y liberación farmacéutica.
+**User Goal PR-5:** Trazar un lote para investigar un evento.
 
-**Happy Path**
+Happy path: Batches → Batch detail & traceability → Raw-material receipt del insumo.
 
-Como especialista de calidad, quiero consultar la trazabilidad completa de un lote y revisar el historial de auditoría para verificar la integridad y consistencia de los registros.
+Unhappy path: ¿Calidad aprobó el lote del insumo? No → el insumo permanece en Quarantine y no puede usarse; la solicitud de aprobación se sigue en Tasks & collaboration.
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/happy-path-6.png" alt="Happy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+![User Flow PR-5](../assets/img/chapter4/web-application/user-flows/user-flow-pr-5.png)
 
-**Unhappy Path**
+**User Goal PR-6:** Revisar reportes e indicadores de producción.
 
-Como usuario de manufactura, quiero acceder al historial y la trazabilidad de un lote para analizar información relacionada con una situación excepcional o una observación generada durante el proceso productivo.
+Happy path: Production overview → Batches → Batch detail & traceability.
 
-<img src="../assets/img/chapter4/prototype/user-flow-diagrams/unhappy-path-6.png" alt="Unappy" style="width: auto; height: auto; border: 2px solid #00bfff;">
+Unhappy path: ¿Hay una incidencia abierta en una línea? Sí → se sigue en IoT overview.
+
+![User Flow PR-6](../assets/img/chapter4/web-application/user-flows/user-flow-pr-6.png)
 
 ## 4.5. Web Applications Prototyping
 
-La sección de Web Applications Prototyping presenta los prototipos interactivos desarrollados para validar los flujos operativos y regulatorios de DoofPlus antes de su implementación. Estos prototipos permiten simular la experiencia real de navegación dentro de la plataforma, evaluando la accesibilidad, usabilidad y eficiencia de las interacciones propuestas.
+El prototipo interactivo de DoofPlus se construyó en Figma sobre los mock-ups de las secciones 4.3.2 y 4.4.3, con el fin de validar la navegación y los flujos antes de la implementación. Sus interacciones siguen los paths de los User Flow Diagrams de la sección 4.4.4:
 
-El diseño de los prototipos fue guiado por cuatro principios fundamentales:
+- **Landing Page:** los enlaces de la barra desplazan a cada sección; "Sign in" abre la elección de entorno; las tarjetas de "Get Started" abren el inicio de sesión de su entorno; los botones de los planes y "Register your laboratory" abren el registro de la organización; "Contact us" abre el formulario de contacto, y los enlaces del footer, los términos y la política de privacidad. En mobile, el ícono de menú abre el overlay de navegación.
+- **Ingreso:** la elección de entorno abre el inicio de sesión de QA/QC, Production o Administration; "Continue" lleva al código 2FA y "Verify" a la pantalla inicial del entorno. Los estados de error se muestran como pantallas alternativas.
+- **Web Application:** el sidebar lleva a cada módulo del entorno, el avatar abre "Profile & preferences" y los botones de cada pantalla siguen los user goals QA-1 a QA-6 y PR-1 a PR-6, que se definieron como puntos de inicio del prototipo.
 
-1. Cumplimiento regulatorio por diseño
+Las interacciones aplican el Navigation System de la sección 4.2.5. En la Landing Page, la navegación global de la barra fija y los enlaces del footer usan interacciones "Scroll to" hacia cada sección; las llamadas a la acción y "Sign in" usan "Navigate to" hacia la Web Application, y en mobile el menú se abre y se cierra como overlay ("Open overlay" y "Close"). En la Web Application, el sidebar es la navegación global entre los módulos del entorno, las pestañas y los botones de cada pantalla son la navegación local, y el logotipo y "Back to DoofPlus" regresan a la Landing Page; todas estas acciones usan "Navigate to". Las etiquetas de los enlaces son las del Labeling System de la sección 4.2.2. Para navegar entre la Landing Page y la Web Application, el prototipo se armó en una página propia de Figma ("Prototype") que reúne los mock-ups de ambas.
 
-Todas las interacciones fueron concebidas considerando requisitos de FDA 21 CFR Part 11, GMP y buenas prácticas de documentación, incorporando controles asociados a firmas electrónicas, auditoría de registros y segregación de funciones.
+El diseño del prototipo se guió por cuatro criterios:
 
-2. Arquitectura basada en procesos farmacéuticos
+- **Cumplimiento regulatorio por diseño:** las acciones críticas exigen firma electrónica, quedan en el audit trail y respetan la segregación de funciones (por ejemplo, el autor de un documento no puede aprobarlo).
+- **Navegación basada en los procesos del laboratorio:** los módulos siguen el recorrido del lote, desde la fórmula maestra y la orden de producción hasta su liberación.
+- **Consistencia visual:** todos los entornos comparten componentes, tipografía y estructura, y solo cambia el color que identifica al entorno.
+- **Prevención de errores:** los estados de bloqueo explican el motivo y la acción necesaria, en lugar de permitir una operación que luego deba corregirse.
 
-La navegación se organiza alrededor de los procesos más frecuentes dentro de la industria farmacéutica:
+Prototipo navegable en Figma (página "Prototype", que une los mock-ups de la Landing Page y de la Web Application para navegar entre ambas): [abrir el prototipo](https://www.figma.com/proto/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?page-id=353%3A237&node-id=353-240&starting-point-node-id=353%3A240). Desde el selector de flujos del visor se accede a los puntos de inicio de cada user goal.
 
-- Gestión documental regulatoria.
-- Control y liberación de lotes.
-- Investigación de desviaciones.
-- Gestión CAPA.
-- Auditorías regulatorias.
-- Validación y control analítico.
+Video de navegación del prototipo: upc-pre-202620-1asi0729-7742-IngesCompany-prototypenavigation-sprint-1, [ver en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202423162_upc_edu_pe/IQC9TP0VdDx0SbIEr4nWmikhAceGoBqdZ78DiR68qJ8FV-A?e=1BIqfW) (copia en [YouTube](https://youtu.be/6PLCLqaF8Tg)). Inicio: 00:00. Duración: 06:10.
 
-3. Consistencia visual y operativa
+**Landing Page** (desde 00:00 hasta 00:24)
 
-Los prototipos mantienen una identidad visual uniforme mediante el uso consistente de colores institucionales, componentes reutilizables, tablas regulatorias y paneles de control orientados a la supervisión operativa.
+![Video de navegación del prototipo · Landing Page](../assets/img/chapter4/prototype/video-landing-page.png)
 
-4. Optimización para entornos de trabajo regulados
+**Web Application** (desde 00:24 hasta 06:10)
 
-La interfaz prioriza:
-
-- Acceso rápido a información crítica.
-- Visualización inmediata del estado de cumplimiento.
-- Reducción de errores durante el ingreso de datos.
-- Navegación simplificada para procesos frecuentes.
-- Facilidad de auditoría e inspección regulatoria.
-
-Los prototipos permiten validar que las tareas principales del sistema, tales como consultar documentación aprobada, investigar desviaciones, ejecutar acciones CAPA y realizar auditorías internas, puedan completarse de forma eficiente y manteniendo la trazabilidad requerida por los estándares regulatorios del sector farmacéutico.
+![Video de navegación del prototipo · Web Application](../assets/img/chapter4/prototype/video-web-application.png)
 
 ## 4.6. Domain-Driven Software Architecture
-La arquitectura de DoofPlus se fundamenta en Domain-Driven Design (DDD) para modelar con precisión las reglas de negocio del sector farmacéutico exigida por DIGEMID. Mediante la delimitación de bounded contexts, se separan claramente las responsabilidades de cada subsistema. En esta sección se presentan los resultados del Event Storming, así como los diagramas de contexto, contenedores y componentes que estructuran la solución.
-
-### 4.6.1. Design-Level Event Storming
-Para identificar los eventos de dominio y profundizar en la arquitectura del sistema, el equipo de IngesCompany llevó a cabo una sesión de Design-Level Event Storming. Esta técnica permitió visualizar y comprender el flujo de eventos, reglas de negocio y dependencias tecnológicas, facilitando la identificación formal de los Contextos Delimitados de DoofPlus.
-El desarrollo del proceso de Domain-Driven Design se realizó de manera colaborativa utilizando la plataforma Miro.
-Enlace al tablero: [click aquí para ver el enlace](https://miro.com/app/board/uXjVHkhKOXE=/)
-#### Paso 1: Timelines
-Organizamos los eventos (post-its naranjas) en líneas de tiempo para visualizar la secuencia lógica de las operaciones de la plataforma SaaS y farmacéutica. Identificamos los siguientes flujos principales:
-
-- Flujo B2B y Organizaciones: Registro de empresas clientes y configuración de perfiles corporativos.
-
-- Flujo de Suscripciones (SaaS): Selección de planes, procesamiento de pagos y renovación o cancelación de suscripciones.
-
-- Flujo de Identidad y Accesos: Inicio de sesión con autenticación de doble factor y cierre de sesión seguro.
-
-- Flujo de Inventario: Registro de fármacos, recepción de materias primas y asignación de ubicación en almacén.
-
-- Flujo de Fabricación: Creación de lotes, aprobación de órdenes, inicio y cierre de producción, y solicitud de liberación.
-
-- Flujo de Calidad y Cumplimiento: Creación y publicación de protocolos, investigación de desviaciones (CAPA), revisión de lotes, generación de reportes y expedientes de trazabilidad.
-
-- Flujo de Telemetría IoT: Registro automático de variables críticas, calibración de maquinaria y generación de alertas operativas o ambientales.
-
-![timeline IAM](../assets/img/chapter4/design-level-event-storming/timelines/timeline-iam.png)
-![timeline lotes](../assets/img/chapter4/design-level-event-storming/timelines/timeline-lotes.png)
-![timeline telemetria](../assets/img/chapter4/design-level-event-storming/timelines/timeline-telemetria.png)
-![timeline calidad](../assets/img/chapter4/design-level-event-storming/timelines/timeline-calidad.png)
-![timeline calidad2](../assets/img/chapter4/design-level-event-storming/timelines/timeline-calidad2.png)
-![timeline calidad3](../assets/img/chapter4/design-level-event-storming/timelines/timeline-calidad3.png)
-![timeline SaaS](../assets/img/chapter4/design-level-event-storming/timelines/timeline-saas.png)
-![timeline B2B](../assets/img/chapter4/design-level-event-storming/timelines/timeline-b2b.png)
-
-#### Paso 2: Commands
-Definimos los comandos (post-its azules, acciones en verbo imperativo) que los actores ejecutan en el sistema para mutar el estado de la aplicación:
-
-| Actor / Sistema | Comandos Principales (Intenciones de acción)                                                                                                                                                                                             |
-| :--- |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Administrador de Sistema** | Registrar empresa cliente, Asignar roles y permisos, Suspender cuenta de empresa, Seleccionar plan de suscripción, Procesar pago, Cancelar suscripción.                                                                                  |
-| **Especialista de control de calidad (QA/QC)** | Iniciar sesión, Crear protocolo, Aprobar protocolo, Publicar versión, Clasificar desviación, Registrar acción correctiva, Iniciar auditoría, Registrar hallazgo, Evaluar lote, Aprobar distribución, Generar reporte.                    |
-| **Jefe de Producción Farmacéutica** | Crear lote, Iniciar producción, Actualizar estado, Cerrar lote, Solicitar liberación, Registrar fármaco, Recibir materia prima, Calibrar maquinaria de producción, Monitorear producción.                                                |
-| **Sistemas Internos / IoT** | Renovar suscripción, Rechazar pago, Registrar variables críticas, Registrar desviaciones, Generar alertas.                                                                                                                               |
-![commands IAM](../assets/img/chapter4/design-level-event-storming/commands/commands-iam.png)
-![commands lotes](../assets/img/chapter4/design-level-event-storming/commands/commands-lotes.png)
-![commands telemetria](../assets/img/chapter4/design-level-event-storming/commands/commands-telemetria.png)
-![commands calidad](../assets/img/chapter4/design-level-event-storming/commands/commands-calidad.png)
-![commands calidad2](../assets/img/chapter4/design-level-event-storming/commands/commands-calidad2.png)
-![commads SaaS](../assets/img/chapter4/design-level-event-storming/commands/commands-saas.png)
-![commands B2B](../assets/img/chapter4/design-level-event-storming/commands/commands-b2b.png)
-
-#### Paso 3: Policies & actors
-
-Identificamos a los actores del sistema (post-its amarillos: Especialista QA/QC, Jefe de Producción, Administrador) y las reglas de negocio automáticas implícitas en el flujo para garantizar el cumplimiento de las BPM:
-
-*   **CUANDO** se intenta iniciar sesión **ENTONCES** exigir validación mediante *Google Authenticator*[cite: 4].
-*   **CUANDO** se procesa un pago a través de la pasarela **ENTONCES** renovar la suscripción y activar el panel[cite: 9].
-*   **CUANDO** se recibe materia prima **ENTONCES** actualizar el *Inventario de Materia Prima y Almacén*[cite: 5].
-*   **CUANDO** los dispositivos IoT registran desviaciones de parámetros **ENTONCES** disparar el motor de alertas y generar alerta ambiental de almacén[cite: 6].
-*   **CUANDO** se identifica una causa raíz **ENTONCES** registrar acción correctiva en el registro CAPA[cite: 7].
-*   **CUANDO** el Especialista QA aprueba la distribución **ENTONCES** generar reporte y certificado de calidad[cite: 8].
-*   **CUANDO** se cierra el lote de producción **ENTONCES** habilitar la solicitud de liberación[cite: 5].
-    ![policies lotes](../assets/img/chapter4/design-level-event-storming/policies/policy-lotes.png)
-    ![policies telemetria](../assets/img/chapter4/design-level-event-storming/policies/policy-telemetria.png)
-    ![policies calidad](../assets/img/chapter4/design-level-event-storming/policies/policy-calidad.png)
-    ![policies saas](../assets/img/chapter4/design-level-event-storming/policies/policy-saas.png)
-
-#### Paso 4: Read Models
-
-Los Modelos de Lectura (post-its verdes) representan las vistas de consulta críticas que los actores necesitan para tomar decisiones:
-
-*   **Administración B2B:** *Directorio de Empresas Clientes*, *Matriz de Roles y Permisos*, *Tabla de Planes de Suscripción*[cite: 9].
-*   **Control de Acceso:** *Pantalla de Verificación 2FA*, *Estado de Sesión*[cite: 4].
-*   **Producción y Logística:** *Panel de Control de Lote*, *Dashboard de Tendencias Operativas*, *Catálogo Maestro de Fármacos*, *Inventario de Materia Prima y Almacén*[cite: 5].
-*   **Control de Calidad (QA/QC):** *Bandeja de Solicitudes de Calidad*, *Panel de Resultados de Laboratorio*, *Agenda y Registro de Auditorías*[cite: 7, 8].
-*   **Monitoreo Industrial:** *Historial de Calibración de Maquinaria*, *Dashboard de Telemetría en Tiempo Real*, *Panel de Alertas y Desviaciones Sensoriales*[cite: 6].
-    ![rm IAM](../assets/img/chapter4/design-level-event-storming/read-models/rm-iam.png)
-    ![rm lotes](../assets/img/chapter4/design-level-event-storming/read-models/rm-lotes.png)
-    ![rm telemetria](../assets/img/chapter4/design-level-event-storming/read-models/rm-telemetria.png)
-    ![rm calidad](../assets/img/chapter4/design-level-event-storming/read-models/rm-calidad.png)
-    ![rm calidad2](../assets/img/chapter4/design-level-event-storming/read-models/rm-calidad2.png)
-    ![rm SaaS](../assets/img/chapter4/design-level-event-storming/read-models/rm-saas.png)
-    ![rm B2B](../assets/img/chapter4/design-level-event-storming/read-models/rm-b2b.png)
-
-#### Paso 5: External Systems
-
-Mapeamos los sistemas e infraestructura externos (post-its rosados) que interactúan con nuestro dominio central para delegar responsabilidades específicas:
-
-*   **Google Authenticator:** Utilizado en el proceso de inicio de sesión para el control de doble factor (2FA)[cite: 4].
-*   **Pasarela de Pago:** Sistema financiero externo para procesar renovaciones o rechazar pagos de las suscripciones SaaS[cite: 9].
-*   **Dispositivos IoT:** Hardware en planta encargado de capturar y emitir parámetros y variables críticas hacia el sistema[cite: 6].
-*   **Motor de Alertas:** Servicio externo o microservicio encargado de despachar las alertas ambientales generadas por desviaciones de la maquinaria[cite: 6].
-    ![es IAM](../assets/img/chapter4/design-level-event-storming/external-systems/es-iam.png)
-    ![es lotes](../assets/img/chapter4/design-level-event-storming/external-systems/es-lotes.png)
-    ![es telemetria](../assets/img/chapter4/design-level-event-storming/external-systems/es-telemetria.png)
-    ![es calidad](../assets/img/chapter4/design-level-event-storming/external-systems/es-calidad.png)
-    ![es calidad2](../assets/img/chapter4/design-level-event-storming/external-systems/es-calidad2.png)
-    ![es SaaS](../assets/img/chapter4/design-level-event-storming/external-systems/es-saas.png)
-    ![es B2B](../assets/img/chapter4/design-level-event-storming/external-systems/es-b2b.png)
-
-#### Paso 6: Aggregates
-
-Agrupamos los comandos y eventos en Agregados (grandes bloques amarillos centrales), los cuales actúan como las entidades transaccionales raíz que protegen la consistencia de los datos:
-
-*   **Perfil Corporativo y Tenant:** Centraliza los datos de la empresa cliente y la asignación de roles.
-*   **Motor de Facturación y Suscripción:** Gestiona el estado del plan, pagos y cuenta de la empresa[cite: 9].
-*   **Módulo de Credenciales y Sesión:** Controla el ciclo de vida de la sesión autenticada[cite: 4].
-*   **Inventario y Materia Prima:** Gestiona el catálogo de fármacos y la recepción logística[cite: 5].
-*   **Lote de Producción:** Controla las órdenes, estados e incidencias del ciclo de manufactura[cite: 5].
-*   **Registro de Maquinaria y Telemetría:** Agrupa la calibración de equipos, ingesta de parámetros y el cálculo de indicadores IoT[cite: 6].
-*   **Repositorio Documental y Protocolos:** Controla las versiones y aprobaciones de los estándares de calidad[cite: 7].
-*   **Registro de Investigación y CAPA:** Gestiona las desviaciones de calidad, análisis de causa raíz y verificaciones[cite: 7].
-*   **Expediente de Trazabilidad y Auditoría:** Consolida rastreos de lotes, auditorías, hallazgos y certificados de liberación final[cite: 7, 8].
-    ![aggregate IAM](../assets/img/chapter4/design-level-event-storming/aggregates/aggregate-iam.png)
-    ![aggregate lotes](../assets/img/chapter4/design-level-event-storming/aggregates/aggregate-lotes.png)
-    ![aggregate telemetria](../assets/img/chapter4/design-level-event-storming/aggregates/aggregate-telemetria.png)
-    ![aggregate calidad](../assets/img/chapter4/design-level-event-storming/aggregates/aggregate-calidad.png)
-    ![aggregate SaaS](../assets/img/chapter4/design-level-event-storming/aggregates/aggregate-saas.png)
-    ![aggregate B2B](../assets/img/chapter4/design-level-event-storming/aggregates/aggregate-b2b.png)
-
-#### Paso 7: Bounded Contexts
-
-Finalmente, consolidamos la arquitectura modular de DoofPlus definiendo formalmente 6 *Bounded Contexts* a partir de la agrupación de los Agregados:
-
-| Bounded Context | Agregados Core y Responsabilidad |
-| :--- | :--- |
-| **BC: Gestión de Organizaciones y Perfiles (B2B)** | Contiene *Perfil Corporativo y Tenant*. Gestiona el registro multi-tenant y la matriz de roles y permisos del sistema. |
-| **BC: Gestión de suscripciones y pagos (SaaS)** | Contiene el *Motor de Facturación y Suscripción*. Administra los planes comerciales y la integración con la pasarela de pagos[cite: 9]. |
-| **BC: Gestión de identidades y accesos (IAM)** | Contiene el *Módulo de Credenciales y Sesión*. Responsable de la seguridad, login y validación 2FA[cite: 4]. |
-| **BC: Fabricación y gestión de lotes** | Agrupa *Inventario y Materia Prima* y *Lote de Producción*. Coordina todo el flujo operativo de manufactura farmacéutica[cite: 5]. |
-| **BC: Telemetría y monitorización IoT** | Contiene el *Registro de Maquinaria y Telemetría*. Procesa la ingesta de datos industriales y el disparo del motor de alertas[cite: 6]. |
-| **BC: Gestión de calidad y cumplimiento** | Agrupa el *Repositorio Documental*, *Registro CAPA* y el *Expediente de Trazabilidad y Auditoría*. Asegura las certificaciones, auditorías y liberación de producto[cite: 7, 8]. |
-![bc IAM](../assets/img/chapter4/design-level-event-storming/bounded-contexts/bc-iam.png)
-![bc lotes](../assets/img/chapter4/design-level-event-storming/bounded-contexts/bc-lotes.png)
-![bc telemetria](../assets/img/chapter4/design-level-event-storming/bounded-contexts/bc-telemetria.png)
-![bc calidad](../assets/img/chapter4/design-level-event-storming/bounded-contexts/bc-calidad.png)
-![bc SaaS](../assets/img/chapter4/design-level-event-storming/bounded-contexts/bc-saas.png)
-![bc B2B](../assets/img/chapter4/design-level-event-storming/bounded-contexts/bc-b2b.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
-En esta sección, el equipo presenta el diagrama de contexto (Nivel 1 del modelo C4), el cual ofrece una visión general de alto nivel de la arquitectura de la plataforma **Doof-Plus**. El objetivo de este nivel es ilustrar el sistema como una "caja negra" central, delimitando claramente sus fronteras frente a los usuarios humanos que lo operan y los sistemas externos de los cuales depende para ejecutar sus flujos de negocio.
-
-![Context Level Diagram](../assets/img/chapter4/software-architecture/context-diagram.svg)
-
-**Explicación del diagrama:**
-El sistema central, **Doof-Plus**, se ubica en el centro como una plataforma SaaS farmacéutica B2B unificada. A su alrededor, interactúan dos grupos principales:
-
-1. **Usuarios (Actores):**
-    - **Jefe de Producción Farmacéutica:** Interactúa con el sistema mediante peticiones HTTPS para planificar manufactura, gestionar lotes y monitorear la telemetría operativa de la planta.
-    - **Especialista QA/QC:** Utiliza la plataforma para realizar la auditoría de procesos, gestionar normativas, aprobar acciones correctivas (CAPA) y emitir certificados de liberación.
-    - **Administrador de Sistema:** Opera la plataforma para gestionar la alta de empresas clientes (Tenants), distribuir roles globales y administrar los planes de suscripción.
-
-2. **Sistemas Externos:**
-    - **Google Authenticator:** Proveedor de identidad externo con el que Doof-Plus se comunica vía REST API para validar códigos de seguridad de doble factor (2FA).
-    - **ThingsBoard:** Plataforma externa especializada en IoT que procesa en crudo los datos de los sensores de la planta, y luego envía de forma consolidada las alertas ambientales y métricas a Doof-Plus.
-    - **Niubiz (Payment Gateway):** Pasarela de pagos externa utilizada para procesar, autorizar y tokenizar el cobro de las suscripciones del modelo SaaS.
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-En esta sección, se presenta el diagrama de contenedores (Nivel 2 del modelo C4), el cual realiza un acercamiento a la arquitectura interna de Doof-Plus. Este nivel expone las unidades de despliegue independientes, mostrando la distribución de responsabilidades, las decisiones tecnológicas clave y la comunicación entre los contenedores.
-
-![Container Level Diagram](../assets/img/chapter4/software-architecture/container-diagram.svg)
-
-**Explicación del diagrama y decisiones tecnológicas:**
-La arquitectura de Doof-Plus está diseñada bajo un patrón de microservicios con una capa de persistencia híbrida, garantizando escalabilidad y separación de responsabilidades (*Bounded Contexts*). Los contenedores y su comunicación se estructuran de la siguiente manera:
-
-1. **Capa de Presentación (Front-End):**
-    - **Aplicación Web (SPA):** Desarrollada en **TypeScript** (empleando React/Angular). Es la unidad desplegable con la que interactúan los actores a través de su navegador web. Se comunica con los microservicios backend de forma síncrona mediante peticiones HTTP/REST (JSON).
-
-2. **Capa de Microservicios Backend (APIs):**
-    - **API de IAM y Gestión de Tenants:** (Java/TypeScript). Centraliza el control de acceso, la emisión de JWT y la multitenencia.
-    - **API Principal de Fabricación:** (Java/TypeScript). Núcleo transaccional del dominio que gestiona la lógica de órdenes de producción y la actualización del inventario de materias primas.
-    - **Motor de Calidad y Cumplimiento:** (Java/TypeScript). Servicio regulatorio que administra los flujos normativos y la inmutabilidad de los reportes CAPA y de auditoría.
-    - **Servicio de Suscripciones y Facturación:** (Java/TypeScript). Gestiona la lógica comercial del SaaS y orquesta los pagos delegándolos a la API de Niubiz.
-    - **Motor de Ingesta de Telemetría IoT:** Desarrollado en **Node.js/TypeScript** por su naturaleza no bloqueante, ideal para recibir un alto volumen de Webhooks entrantes desde ThingsBoard.
-
-3. **Capa de Persistencia (Bases de Datos):**
-    - **Base de Datos Relacional (MySQL):** Seleccionada por su cumplimiento ACID. Persiste los datos transaccionales estrictos: credenciales, catálogos, trazabilidad de lotes y facturación (comunicación vía TCP/IP SQL).
-    - **Base de Datos Documental (MongoDB):** Seleccionada por su flexibilidad de esquemas y rendimiento en operaciones de escritura. Almacena las series temporales masivas generadas por el motor IoT (comunicación vía MongoDB Wire Protocol).
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-En esta sección, el equipo presenta los diagramas de componentes (Nivel 3 del modelo C4) correspondientes a cada uno de los microservicios (Containers) backend considerados. Estos diagramas detallan los bloques estructurales de código (Controladores, Servicios y Repositorios), sus responsabilidades de implementación y cómo interactúan para resolver la lógica de dominio antes de persistir los datos.
-
-**1. Descomposición del Container: API de IAM y Gestión de Tenants**
-![Component Diagram - IAM](../assets/img/chapter4/software-architecture/component-IAM.svg)
-- **Controlador de Autenticación:** *REST Controller* que intercepta peticiones HTTP para login y 2FA.
-- **Servicio de Validación de Tokens:** Lógica de negocio encargada de generar y firmar criptográficamente los tokens JWT.
-- **Servicio de Gestión de Tenants:** Gestiona la segregación de datos para aislar la información de cada empresa B2B.
-- **Repositorio IAM:** Componente ORM que accede a MySQL para validar credenciales.
-
-**2. Descomposición del Container: API Principal de Fabricación**
-![Component Diagram - Manufactura](../assets/img/chapter4/software-architecture/component-manufactura.svg)
-- **Controlador de Lotes:** *REST Controller* que recibe los comandos operativos (ej. Iniciar Lote, Cerrar Lote).
-- **Servicio de Dominio de Manufactura:** Clase de servicio que orquesta las reglas de negocio sobre los estados de la producción.
-- **Servicio de Inventario:** Lógica que valida y descuenta los insumos del almacén para evitar quiebres de stock.
-- **Repositorio de Lotes e Inventario:** Componente ORM que traduce las entidades a consultas transaccionales hacia MySQL.
-
-**3. Descomposición del Container: Motor de Calidad y Cumplimiento**
-![Component Diagram - Calidad](../assets/img/chapter4/software-architecture/component-calidad.svg)
-- **Controlador de Cumplimiento:** *REST Controller* para la gestión de cuarentenas y aprobaciones.
-- **Servicio de Investigación CAPA:** Bloque que controla el ciclo de vida de las desviaciones normativas y sus resoluciones.
-- **Repositorio de Trazabilidad y Auditoría:** Componente encargado de garantizar la inmutabilidad de los registros históricos en la base de datos relacional.
-
-**4. Descomposición del Container: Servicio de Suscripciones y Facturación**
-![Component Diagram - Facturación](../assets/img/chapter4/software-architecture/component-facturacion.svg)
-- **Controlador de Facturación:** Interfaz HTTP para consultar planes y realizar actualizaciones de cuenta.
-- **Gestor de Planes de Suscripción:** Servicio que valida las restricciones operativas según el límite del plan adquirido por el Tenant.
-- **Cliente de Pasarela de Pagos:** Componente de integración externa que serializa la petición hacia Niubiz para autorizar cargos.
-- **Repositorio de Facturación:** ORM responsable de guardar el historial de transacciones en MySQL.
-
-**5. Descomposición del Container: Motor de Ingesta de Telemetría IoT**
-![Component Diagram - Telemetría](../assets/img/chapter4/software-architecture/component-telemetria.svg)
-- **Receptor de Webhooks:** Controlador optimizado en Node.js para recibir flujos continuos de datos JSON desde ThingsBoard.
-- **Motor de Reglas de Alertas:** Servicio lógico que contrasta las variables operativas contra umbrales de seguridad predefinidos.
-- **Cliente de Notificaciones:** Componente disparador que emite eventos de advertencia hacia la plataforma si ocurre una anomalía en planta.
-- **Repositorio de Series Temporales:** Adaptador de datos que persiste los logs y métricas a alta velocidad en las colecciones de MongoDB.
 
 ## 4.7. Software Object-Oriented Design
 
