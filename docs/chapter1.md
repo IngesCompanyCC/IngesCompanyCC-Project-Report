@@ -133,7 +133,7 @@ A continuación se muestra el problem statement en su idioma original:
 
 #### 1.2.2.2. Lean UX Assumptions
 
-En esta sección se presentan las principales premisas que sustentan la propuesta de DoofPlus. Estas suposiciones han sido formuladas a partir del análisis del contexto regulatorio de la industria farmacéutica, las necesidades asociadas al control de calidad y producción, y las oportunidades que ofrecen las tecnologías IoT para fortalecer la trazabilidad y el monitoreo de los procesos. Los assumptions constituyen hipótesis iniciales que deberán validarse posteriormente mediante actividades de investigación y retroalimentación con usuarios potenciales.
+En esta sección se presentan las principales premisas que sustentan la propuesta de DoofPlus. Estas suposiciones han sido formuladas a partir del análisis del contexto regulatorio de la industria farmacéutica, las necesidades asociadas al control de calidad y producción, y las oportunidades que ofrecen las tecnologías IoT para fortalecer la trazabilidad y el monitoreo de los procesos. Los assumptions constituyen las creencias iniciales del equipo y son la base de los hypothesis statements.
 
 A continuación se muestran los Assumptions en su idioma original:
 
@@ -148,7 +148,7 @@ A continuación se muestran los Assumptions en su idioma original:
 **Business Outcome Assumptions:**
 
 - We believe that at least 10 laboratories will subscribe to a paid plan within the first six months after launch.
-- We believe that at least 20% of the laboratories that request a demo from the landing page will become paying customers.
+- We believe that at least 20% of the laboratories that register their organization from the landing page will subscribe to a paid plan.
 - We believe that monthly churn will remain below 5% once a laboratory registers its batch records in the platform.
 - We believe that subscribed laboratories will register at least 80% of their new batches in the platform after the third month of use.
 - We believe that at least 25% of Standard Lab customers will upgrade to the Enterprise plan when they connect sensors in more than one production line.
