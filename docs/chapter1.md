@@ -287,8 +287,8 @@ Información estadística de sustento:
 - Solo 4 de cada 10 laboratorios inspeccionados por DIGEMID obtuvieron la certificación de BPM: de 51 laboratorios inspeccionados hasta mayo de 2026, 20 la obtuvieron, 21 no la lograron y 7 desistieron del proceso. Entre los aspectos evaluados figuran los controles de laboratorio y la trazabilidad de productos, actividades a cargo de QA/QC (Gestión, 2026).
 - 385 laboratorios extranjeros esperaban su certificación de BPM ante una DIGEMID desbordada por la demanda, lo que evidencia la presión regulatoria sobre la documentación de calidad (Infobae, 2025).
 - La OMS establece que los registros de calidad deben ser atribuibles, legibles, contemporáneos, originales y exactos (principios ALCOA) durante todo su ciclo de vida (World Health Organization, 2016).
-- Los sistemas de gestión de calidad farmacéutica requieren evidencia documentada para respaldar la liberación de productos y el seguimiento de desviaciones.
-- La trazabilidad y la integridad de los datos son reconocidas como elementos fundamentales para garantizar la calidad y seguridad de los medicamentos.
+- Las BPM de la OMS exigen que toda desviación significativa se registre e investigue completamente para determinar su causa raíz y aplicar acciones correctivas y preventivas, tarea que recae en QA/QC (World Health Organization, 2014).
+- Las mismas BPM exigen conservar registros de fabricación y distribución que permitan rastrear la historia completa de cada lote en forma comprensible y accesible (World Health Organization, 2014).
 
 ### Segmento Objetivo 2: Jefe o Supervisor de Producción Farmacéutica
 
@@ -302,9 +302,7 @@ Características demográficas:
 
 Información estadística de sustento:
 
-- Los procesos de producción farmacéutica requieren control continuo de variables operativas para garantizar la calidad del producto final.
-- Las BPM establecen la necesidad de documentar adecuadamente las actividades productivas y mantener evidencia del cumplimiento de los procedimientos establecidos.
-- La disponibilidad de información trazable facilita la identificación y análisis de desviaciones durante la fabricación.
-- La incorporación de herramientas digitales e iniciativas de Industria 4.0 ha impulsado la adopción de tecnologías para mejorar la visibilidad de los procesos productivos.
+- Las BPM de la OMS exigen que durante la fabricación se registre, manual o automáticamente, que se cumplieron todos los pasos de los procedimientos y que la cantidad y calidad del producto son las esperadas; estos registros los genera y supervisa Producción (World Health Organization, 2014).
+- En la encuesta Pharma 4.0 de ISPE (418 profesionales de 45 países), la proporción de organizaciones que aún no iniciaban su transformación digital bajó de 31.2% en 2021 a 15.1% en 2023, y el 58.1% ya contaba con pilotos o acciones sistemáticas en curso (Minero & Kuger, 2024).
 - El sector farmacéutico peruano proyectó un crecimiento de 4% para 2025 según la Asociación Nacional de Laboratorios Farmacéuticos (Agencia Andina, 2025), lo que incrementa el volumen de lotes que los supervisores deben controlar y documentar.
 - Las BPM evaluadas por DIGEMID incluyen procesos de producción, calidad de materias primas, controles de laboratorio, condiciones de almacenamiento y trazabilidad de productos (Gestión, 2026), aspectos que dependen de los registros que genera Producción.
