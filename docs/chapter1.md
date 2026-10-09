@@ -36,61 +36,83 @@ Convertirnos en una referencia en soluciones digitales de aseguramiento de calid
 
 ### 1.2.1. Antecedentes y problemática
 
-#### **1. ANTECEDENTES:**
+#### 1. ANTECEDENTES:
 
-La industria farmacéutica se encuentra entre los sectores más regulados debido al impacto directo que sus productos tienen sobre la salud de la población. En el Perú, la Dirección General de Medicamentos, Insumos y Drogas (DIGEMID) exige el cumplimiento de las Buenas Prácticas de Manufactura (BPM), las cuales establecen lineamientos relacionados con la producción, el control de calidad, la documentación y la gestión de los procesos involucrados en la fabricación de medicamentos. Estas normativas tienen como finalidad garantizar que los productos elaborados mantengan estándares adecuados de calidad, seguridad y eficacia durante todo su ciclo de vida.
+La industria farmacéutica constituye uno de los sectores más regulados a nivel mundial debido al impacto directo que sus productos tienen sobre la salud y el bienestar de la población. En el Perú, la Dirección General de Medicamentos, Insumos y Drogas (DIGEMID) establece y supervisa el cumplimiento de las Buenas Prácticas de Manufactura (BPM), normativa que define los requisitos relacionados con la producción, el control de calidad, la documentación y la gestión de los procesos involucrados en la fabricación de medicamentos. Estas disposiciones tienen como objetivo asegurar que los productos farmacéuticos sean elaborados bajo condiciones controladas que garanticen su calidad, seguridad y eficacia durante todas las etapas de su ciclo de vida.
 
-Asimismo, organismos internacionales como la Organización Mundial de la Salud (OMS) destacan que la trazabilidad y la integridad de los datos constituyen elementos fundamentales para la gestión de la calidad farmacéutica. La disponibilidad de información completa, precisa y accesible permite respaldar actividades de auditoría, validación, control de calidad y cumplimiento regulatorio, contribuyendo a la confiabilidad de los procesos y a la seguridad de los productos destinados a los pacientes.
+De manera complementaria, organismos internacionales como la Organización Mundial de la Salud (OMS) resaltan la importancia de la trazabilidad y la integridad de los datos como pilares fundamentales de los sistemas de gestión de calidad farmacéutica. La capacidad de registrar, conservar y consultar información de manera íntegra y oportuna permite respaldar actividades críticas como auditorías, investigaciones de desviaciones, validaciones de procesos y cumplimiento regulatorio, contribuyendo a una mayor confiabilidad operativa y a la protección de la salud de los pacientes.
 
-En este contexto, la transformación digital representa una oportunidad para optimizar la gestión de la información generada durante la fabricación farmacéutica. La integración de plataformas digitales con tecnologías de captura automática de datos permite fortalecer la trazabilidad de los lotes, mejorar la disponibilidad de evidencias de calidad y facilitar el acceso a información crítica para la toma de decisiones y el cumplimiento de los requisitos regulatorios.
+En este contexto, la transformación digital se ha convertido en un factor estratégico para fortalecer la gestión de calidad dentro de las organizaciones farmacéuticas. La adopción de plataformas digitales integradas con tecnologías de captura y monitoreo de datos permite optimizar la trazabilidad de los lotes de producción, mejorar la disponibilidad y exactitud de los registros de calidad, y facilitar el acceso a información crítica para la toma de decisiones. Como resultado, estas iniciativas contribuyen a incrementar la eficiencia operativa, reducir riesgos asociados a errores manuales y fortalecer el cumplimiento de los requisitos regulatorios exigidos por las autoridades sanitarias nacionales e internacionales.
 
-#### **2. PROBLEMATICA**
+#### 2. PROBLEMÁTICA
 
-##### - **Gestión compleja de la documentación de calidad:**
+##### - Gestión compleja de la documentación de calidad:
 
 Los procesos de aseguramiento y control de calidad generan una gran cantidad de información asociada a protocolos, registros de producción, resultados de análisis, desviaciones y actividades de validación. La administración eficiente de esta documentación representa un desafío para las organizaciones farmacéuticas, especialmente cuando la información se encuentra distribuida en múltiples fuentes o sistemas independientes. Esta situación puede dificultar la búsqueda de evidencias y el seguimiento oportuno de los procesos relacionados con la calidad.
 
-##### - **Dificultades en la trazabilidad de lotes farmacéuticos:**
+##### - Dificultades en la trazabilidad de lotes farmacéuticos:
 
 La trazabilidad es un requisito esencial dentro de los sistemas modernos de calidad farmacéutica, ya que permite reconstruir el historial completo de fabricación de un producto. Sin embargo, la recopilación e integración de información proveniente de distintas etapas del proceso productivo puede resultar compleja, limitando la visibilidad sobre los eventos ocurridos durante el ciclo de vida de cada lote y dificultando las actividades de seguimiento, revisión e inspección.
 
-##### - **Necesidad de fortalecer la integridad y disponibilidad de la información:**
+##### - Necesidad de fortalecer la integridad y disponibilidad de la información:
 
 La OMS destaca que la integridad de los datos es un componente esencial de los sistemas de calidad farmacéuticos. Los registros utilizados para actividades de producción, control de calidad y cumplimiento regulatorio deben mantenerse completos, precisos, consistentes y disponibles durante todo su ciclo de vida. La gestión inadecuada de la información puede afectar la confiabilidad de los procesos y dificultar las actividades de auditoría e inspección.
 
-##### - **Oportunidad de utilización de tecnologías IoT:**
+##### - Oportunidad de utilización de tecnologías IoT:
 
 Las tecnologías basadas en Internet de las Cosas (IoT) permiten capturar información directamente desde equipos, entornos y procesos mediante dispositivos conectados. Su incorporación representa una oportunidad para complementar los registros de calidad con datos obtenidos de forma automática, aumentando la confiabilidad de la información y facilitando la supervisión de variables relevantes dentro de los procesos de fabricación farmacéutica.
 
-#### **3. ANALISIS 5W & 2H:**
+#### 3. ANÁLISIS 5W & 2H
 
-- **What (¿Qué?):** ¿Qué es lo que se busca resolver?
+- **What (¿Qué?):** *¿Qué es lo que se busca resolver?*
 
   Se busca resolver las limitaciones relacionadas con la gestión de documentación de calidad, la trazabilidad de los lotes farmacéuticos y la disponibilidad de información confiable para actividades de aseguramiento de calidad y cumplimiento regulatorio.
 
-- **Why (¿Por qué?):** ¿Por qué es importante resolverlo?
+- **Why (¿Por qué?):** *¿Por qué es importante resolverlo?*
 
   Porque la calidad de los medicamentos depende de procesos adecuadamente controlados, documentados y respaldados por información íntegra y trazable. Además, una gestión eficiente de los registros facilita las auditorías, fortalece la toma de decisiones y contribuye al cumplimiento de las BPM y de los requisitos regulatorios aplicables.
 
-- **Who (¿Quién?):** ¿A quién afecta?
+- **Who (¿Quién?):** *¿A quién afecta?*
 
   Afecta principalmente a especialistas de aseguramiento y control de calidad (QA/QC), así como a responsables de producción farmacéutica encargados de supervisar procesos, gestionar documentación y asegurar el cumplimiento de estándares regulatorios.
 
-- **When (¿Cuándo?):** ¿Cuándo ocurre?
+- **When (¿Cuándo?):** *¿Cuándo ocurre?*
 
   La necesidad se presenta durante todas las etapas del ciclo de vida de un lote farmacéutico, incluyendo la fabricación, el control de calidad, la gestión de desviaciones, la revisión documental y las actividades de auditoría.
 
-- **Where (¿Dónde?):** ¿En dónde ocurre?
+- **Where (¿Dónde?):** *¿En dónde ocurre?*
 
   Se manifiesta en laboratorios y plantas farmacéuticas donde se ejecutan actividades de producción, aseguramiento de calidad y control regulatorio.
 
-- **How (¿Cómo?):** ¿Cómo se resuelve?
+- **How (¿Cómo?):** *¿Cómo se resuelve?*
 
   Puede abordarse mediante una plataforma digital que centralice protocolos, expedientes de calidad y registros asociados a los lotes farmacéuticos, complementando la información mediante tecnologías IoT para fortalecer la trazabilidad y disponibilidad de datos.
 
-- **How much (¿Cuánto?):** ¿Cuánto cuesta resolverlo?
+- **How much (¿Cuánto?):** *¿Cuánto cuesta resolverlo?*
 
   La implementación requiere infraestructura tecnológica para el despliegue de la solución, digitalización de procesos documentales, capacitación de los usuarios e integración con fuentes de información internas y dispositivos IoT. La inversión dependerá del tamaño de la organización y del alcance de la integración requerida.
+
+#### 4. OBJETIVOS
+
+**Objetivo general:** desarrollar y desplegar DoofPlus, una solución web compuesta por una Landing Page, una Frontend Web Application y un RESTful API, que centralice la documentación de calidad, la trazabilidad de lotes y la gestión de desviaciones de laboratorios farmacéuticos pequeños y medianos de Lima Metropolitana, con el fin de reducir en 80% el tiempo de preparación de auditorías durante los primeros seis meses de uso.
+
+**Objetivos específicos:**
+
+- Identificar las necesidades de especialistas QA/QC y jefes de producción mediante entrevistas a cada segmento objetivo.
+- Publicar una Landing Page responsive y bilingüe (en-US / es-419) que comunique la propuesta de valor y dirija a cada segmento a la Web Application.
+- Implementar una Frontend Web Application con Angular y Angular Material para la gestión de lotes, desviaciones y documentación de calidad.
+- Implementar un RESTful API con Spring Boot y Spring Data JPA, documentado con OpenAPI (Swagger) e integrado con los servicios externos ThingsBoard y Niubiz.
+- Validar la solución con usuarios de ambos segmentos mediante evaluaciones heurísticas de usabilidad, arquitectura de información y diseño inclusivo.
+
+#### 5. RESTRICCIONES Y ALCANCE
+
+- **Alcance:** Landing Page, Frontend Web Application y RESTful API de elaboración interna. No incluye una aplicación móvil nativa ni la fabricación de hardware IoT: la captura de datos de sensores se integra mediante la plataforma externa ThingsBoard.
+- **Tecnológicas:** HTML5, CSS3 y JavaScript para la Landing Page; Angular con TypeScript y Angular Material (Material Design) para la Web Application; Spring Boot con Spring Data JPA (Java) para el RESTful API; MySQL como base de datos; OpenAPI (Swagger) para documentar los servicios; GitHub con GitFlow, Conventional Commits y Semantic Versioning.
+- **Regulatorias:** DoofPlus apoya el cumplimiento de las BPM de DIGEMID y de los principios de integridad de datos de la OMS, pero no reemplaza la validación de sistemas computarizados que cada laboratorio debe ejecutar; las firmas electrónicas siguen los criterios de 21 CFR Part 11 sin constituir una certificación.
+- **Datos personales:** el tratamiento de datos se rige por la Ley N.° 29733, Ley de Protección de Datos Personales.
+- **Idiomas y accesibilidad:** inglés (en-US) como idioma por defecto y español latinoamericano (es-419) en la Landing Page, la Web Application y los mensajes del RESTful API; atributos ARIA en la Landing Page y la Web Application.
+- **Tiempo:** el desarrollo se organiza en cuatro sprints dentro del ciclo académico 2026-20.
+
 
 ### 1.2.2. Lean UX Process
 La presente sección tiene como finalidad presentar el proceso de Lean UX aplicado para la validación de la propuesta desarrollada. En ella se describen las actividades de investigación, análisis y validación realizadas con el fin de comprender el contexto de los usuarios y verificar los supuestos que motivan la solución planteada. Asimismo, se exponen los artefactos y resultados obtenidos durante el proceso, los cuales permiten identificar necesidades, oportunidades y criterios de diseño relevantes. De esta manera, la información recopilada constituye una base para la definición y evolución de la propuesta de solución presentada en el proyecto.
