@@ -100,7 +100,17 @@ Los criterios de aceptación siguen la estructura de Gherkin (Dado que / Cuando 
 
 El Impact Mapping de DoofPlus conecta los objetivos estratégicos del negocio con los actores involucrados, los impactos esperados, los entregables digitales y sus respectivas User Stories. La solución busca optimizar los tiempos de liberación de lotes y erradicar los errores de transcripción manual en la planta, garantizando el estricto cumplimiento de las normativas de calidad farmacéutica (BPM) mediante trazabilidad centralizada, monitoreo automatizado vía dispositivos IoT, gestión digital de desviaciones y un registro de auditoría inalterable (Audit Trail).
 
-![Impact Mapping](../assets/img/chapter3/Impact-Mapping.png)
+![Impact Mapping - parte 1 de 5](../assets/img/chapter3/impact-mapping/Impact-Mapping-1.png)
+
+![Impact Mapping - parte 2 de 5](../assets/img/chapter3/impact-mapping/Impact-Mapping-2.png)
+
+![Impact Mapping - parte 3 de 5](../assets/img/chapter3/impact-mapping/Impact-Mapping-3.png)
+
+![Impact Mapping - parte 4 de 5](../assets/img/chapter3/impact-mapping/Impact-Mapping-4.png)
+
+![Impact Mapping - parte 5 de 5](../assets/img/chapter3/impact-mapping/Impact-Mapping-5.png)
+
+*Impact Mapping completo en una sola imagen:* [Impact-Mapping.png](../assets/img/chapter3/Impact-Mapping.png)
 
 ## 3.3. Product Backlog
 
