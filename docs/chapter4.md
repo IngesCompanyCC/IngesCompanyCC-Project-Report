@@ -433,85 +433,108 @@ En mobile se priorizan las tareas que se realizan fuera del escritorio: la elecc
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-Los Wireflow Diagrams se utilizan para representar visualmente la navegación y las interacciones que realizan los usuarios dentro de una aplicación para alcanzar un objetivo determinado. Estos diagramas combinan wireframes y flujos de usuario, permitiendo visualizar las diferentes pantallas involucradas en cada proceso y la secuencia de acciones necesarias para completar una tarea.
+Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para representar la secuencia de pantallas que lo llevan a cumplir un objetivo. Para cada segmento se definieron seis user goals, basados en sus user stories. Cada diagrama muestra el user goal, la persona, el camino principal y los puntos de decisión que desvían el flujo hacia una pantalla de error o de bloqueo. Los diagramas se elaboraron en FigJam y están disponibles en el [tablero de Wireflows y User Flows](https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp).
 
-Para DoofPlus se desarrollaron distintos Wireflow Diagrams basados en los principales objetivos de los usuarios dentro de un entorno farmacéutico regulado por normas GxP. Cada diagrama describe el flujo que siguen los usuarios para gestionar procesos de producción, control de calidad, documentación regulatoria, trazabilidad y cumplimiento normativo.
+#### Segmento 1 – Especialista de Aseguramiento y Control de Calidad (QA/QC)
 
-**Especialista de Aseguramiento y Control de Calidad (QA/QC)**
+**User Goal QA-1:** Ingresar a DoofPlus y acceder al entorno QA/QC (US06, US07).
 
-**User Goal 1:** Acceder a la plataforma y configurar el entorno regulatorio de trabajo.
+Como especialista QA/QC, quiero ingresar con mis credenciales y confirmar mi identidad para revisar mis pendientes de calidad. María México elige "Sign in" en la Landing Page, selecciona el entorno QA/QC, ingresa su correo y contraseña y confirma el código 2FA.
 
-Como usuario, quiero ingresar a DoofPlus y configurar el entorno regulatorio correspondiente para acceder a los módulos y funciones necesarias para la gestión de calidad farmacéutica.
+Flujo: Home → Choose your environment → Sign in · QA/QC → Two-factor authentication → Quality overview.
 
-[User 1](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-1.png)
+![Wireflow QA-1](../assets/img/chapter4/web-application/wireflows/wireflow-qa-1.png)
 
-**User Goal 2:** Monitorear equipos y condiciones ambientales asociadas a la producción.
+**User Goal QA-2:** Gestionar la documentación de calidad y sus protocolos (US09, US10, US12, US13, US42).
 
-Como usuario, quiero supervisar el estado de los equipos y las variables ambientales críticas para asegurar que las operaciones de manufactura cumplan con los requisitos regulatorios establecidos.
+Como especialista QA/QC, quiero enviar a aprobación la nueva revisión de un documento controlado para mantenerlo vigente. María redacta la revisión 2.4 del SOP-QA-014, la envía a aprobación y sigue la tarea, que resuelve la Quality Manager (Lucía Paredes).
 
-[User 2](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-2.png)
+Flujo: Quality overview → Quality documents → Tasks & collaboration.
 
-**User Goal 3:** Gestionar lotes de producción y garantizar su trazabilidad.
+![Wireflow QA-2](../assets/img/chapter4/web-application/wireflows/wireflow-qa-2.png)
 
-Como usuario, quiero registrar y monitorear los lotes de producción para asegurar la trazabilidad completa desde su fabricación hasta su liberación.
+**User Goal QA-3:** Registrar una desviación y gestionar su CAPA (US18, US19, US20, US21).
 
-[User 3](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-3.png)
+Como especialista QA/QC, quiero documentar la causa raíz de una desviación y crear su plan CAPA para controlar el riesgo de calidad. María abre DEV-26017, registra la causa raíz y crea el plan CAPA con responsables y fechas.
 
-**User Goal 4:** Consultar la trazabilidad histórica y el plan maestro de auditorías.
+Flujo: Quality overview → Deviation report & detail → CAPA plan.
 
-Como usuario, quiero acceder al historial de lotes y a los registros de auditoría para verificar evidencias de cumplimiento y mantener la integridad de la información regulatoria.
+![Wireflow QA-3](../assets/img/chapter4/web-application/wireflows/wireflow-qa-3.png)
 
-[User 4](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-4.png)
+**User Goal QA-4:** Planificar una auditoría y reunir sus evidencias (US27, US28, US29, US59).
 
-User Goal 5: Gestionar protocolos de laboratorio y validar resultados de calidad.
+Como especialista QA/QC, quiero planificar una auditoría y generar su paquete de evidencias para responder a los inspectores. María planifica la auditoría, revisa el audit trail del alcance y genera el paquete de evidencias.
 
-Como usuario de control de calidad, quiero administrar protocolos de laboratorio y registrar resultados analíticos para garantizar el cumplimiento de los estándares GxP y los procedimientos de validación.
+Flujo: Audits & findings → Audit trail → Regulatory reports.
 
-[User 5](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-5.png)
+![Wireflow QA-4](../assets/img/chapter4/web-application/wireflows/wireflow-qa-4.png)
 
-**User Goal 6:** Supervisar desviaciones, CAPA y métricas regulatorias.
+**User Goal QA-5:** Registrar y validar resultados analíticos (US11).
 
-Como usuario, quiero registrar desviaciones, gestionar acciones correctivas y preventivas (CAPA) y consultar métricas regulatorias para facilitar el cumplimiento normativo y la mejora continua.
+Como especialista QA/QC, quiero registrar las variables de un ensayo y que el sistema calcule el resultado para respaldar la liberación del lote. El sistema aplica la fórmula del protocolo y compara el resultado con la especificación.
 
-[User 6](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-2-user-goal-6.png)
+Flujo: Quality overview → Analytical results → Batch release.
 
-**Jefe o Supervisor de Producción Farmacéutica**
+![Wireflow QA-5](../assets/img/chapter4/web-application/wireflows/wireflow-qa-5.png)
 
-User Goal 1: Acceder al dashboard de calidad para supervisar el estado de los procesos.
+**User Goal QA-6:** Revisar la trazabilidad completa de un lote y liberarlo (US27, US54).
 
-Como especialista de QA, quiero acceder a un dashboard centralizado que me permita monitorear indicadores de calidad, lotes en revisión y elementos pendientes de validación.
+Como especialista QA/QC, quiero revisar todos los eventos atribuidos de un lote antes de firmar su liberación. María revisa el audit trail del lote B-26041 y firma la liberación.
 
-[User 1](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-1.png)
+Flujo: Quality overview → Audit trail → Batch release.
 
-User Goal 2: Gestionar auditorías y evidencias de cumplimiento regulatorio.
+![Wireflow QA-6](../assets/img/chapter4/web-application/wireflows/wireflow-qa-6.png)
 
-Como especialista de QA, quiero revisar auditorías y evidencias documentadas para verificar el cumplimiento de los requisitos regulatorios y de calidad.
+#### Segmento 2 – Jefe o Supervisor de Producción Farmacéutica
 
-[User 2](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-2.png)
+**User Goal PR-1:** Ingresar a DoofPlus y acceder al entorno de Producción (US06, US07).
 
-User Goal 3: Registrar desviaciones e iniciar acciones CAPA.
+Como jefe de producción, quiero ingresar con mis credenciales y confirmar mi identidad para supervisar las órdenes activas. Alberto Valle elige "Sign in", selecciona el entorno de Producción, ingresa sus credenciales y confirma el código 2FA.
 
-Como especialista de QA, quiero registrar incidencias y gestionar acciones correctivas y preventivas para controlar riesgos y asegurar la mejora continua de los procesos.
+Flujo: Home → Choose your environment → Sign in · Production → Two-factor authentication → Production overview.
 
-[User 3](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-3.png)
+![Wireflow PR-1](../assets/img/chapter4/web-application/wireflows/wireflow-pr-1.png)
 
-User Goal 4: Gestionar protocolos de validación y control de calidad.
+**User Goal PR-2:** Gestionar la ejecución de un lote y consultar su historial (US35, US36, US57, US14, US15, US16).
 
-Como especialista de QA, quiero administrar protocolos de validación para verificar que los procesos y procedimientos cumplan con los requisitos regulatorios establecidos.
+Como jefe de producción, quiero emitir la orden de producción de un producto con fórmula maestra aprobada y registrar su lote para seguir su ejecución.
 
-[User 4](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-4.png)
+Flujo: Products & master formulas → Production order & master formula → Batches → Batch detail & traceability.
 
-User Goal 5: Administrar documentación regulatoria y procedimientos operativos estándar.
+![Wireflow PR-2](../assets/img/chapter4/web-application/wireflows/wireflow-pr-2.png)
 
-Como especialista de QA, quiero gestionar documentos y SOPs para mantener registros controlados, actualizados y trazables dentro del sistema.
+**User Goal PR-3:** Monitorear equipos y condiciones ambientales (US23, US24, US25, US26, US37).
 
-[User 5](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-5.png)
+Como jefe de producción, quiero seguir una alerta IoT hasta el equipo y la evidencia del lote en proceso para actuar a tiempo. Alberto abre la alerta del equipo EQ-COAT-02 y luego la evidencia IoT del lote.
 
-User Goal 6: Consultar reportes regulatorios y métricas de desempeño.
+Flujo: IoT overview → Equipment & sensor detail → Batch IoT evidence.
 
-Como especialista de QA, quiero visualizar reportes regulatorios e indicadores de calidad para evaluar tendencias, identificar riesgos y respaldar la toma de decisiones.
+![Wireflow PR-3](../assets/img/chapter4/web-application/wireflows/wireflow-pr-3.png)
 
-[User 6](../assets/img/chapter4/prototype/wireflow-diagrams/segmento-1-user-goal-6.png)
+**User Goal PR-4:** Reportar una incidencia de producción desde planta (US56, US22).
+
+Como jefe de producción, quiero reportar una incidencia desde mi celular cuando recibo una alerta de equipo para que Calidad la evalúe.
+
+Flujo (Mobile): Alert details → Incident reporting → Incident submitted.
+
+![Wireflow PR-4](../assets/img/chapter4/web-application/wireflows/wireflow-pr-4.png)
+
+**User Goal PR-5:** Trazar un lote para investigar un evento (US15, US17, US58).
+
+Como jefe de producción, quiero revisar la genealogía de un lote y la recepción de sus insumos para verificar su disposición de calidad. Si el lote del insumo sigue en cuarentena, Alberto hace seguimiento a la solicitud de aprobación en Tasks & collaboration.
+
+Flujo: Batches → Batch detail & traceability → Raw-material receipt.
+
+![Wireflow PR-5](../assets/img/chapter4/web-application/wireflows/wireflow-pr-5.png)
+
+**User Goal PR-6:** Revisar reportes e indicadores de producción (US32, US33).
+
+Como jefe de producción, quiero revisar los indicadores de producción y el historial de un lote para tomar decisiones sobre la planta.
+
+Flujo: Production overview → Batches → Batch detail & traceability.
+
+![Wireflow PR-6](../assets/img/chapter4/web-application/wireflows/wireflow-pr-6.png)
+
 
 ### 4.4.3. Web Applications Mock-ups
 
