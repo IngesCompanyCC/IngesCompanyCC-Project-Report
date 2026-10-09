@@ -538,117 +538,184 @@ Flujo: Production overview → Batches → Batch detail & traceability.
 
 ### 4.4.3. Web Applications Mock-ups
 
-En esta sección se presentan los mock-ups desarrollados para la aplicación web de DoofPlus. Estas representaciones de alta fidelidad muestran la apariencia final de la plataforma, incorporando la identidad visual del producto, componentes interactivos y elementos orientados al cumplimiento regulatorio farmacéutico bajo estándares GMP y FDA 21 CFR Part 11.
+Los mock-ups aplican el Design System de la sección 4.1 sobre los wireframes y se presentan en inglés (en-US), idioma por defecto. Cada entorno se reconoce por su color: QA/QC en verde azulado (#0F766E), Production en azul (#1E40AF) y Administration en azul pizarra (#334155). A continuación se presentan las pantallas Desktop por grupo, con su propósito y las user stories que atienden.
 
-Los mock-ups fueron diseñados considerando los procesos críticos de aseguramiento y control de calidad, manufactura farmacéutica, trazabilidad de lotes y gestión documental, garantizando una experiencia de usuario intuitiva y alineada con los requisitos de integridad de datos, auditoría y firmas electrónicas.
+#### Compartido: elección de entorno, registro de la organización y perfil
 
-- **Landing Page - DoofPlus**
+**Sign in · Choose your environment:** se abre desde "Sign in" en la Landing Page. Presenta tres tarjetas, QA/QC, Production y Administration, cada una con su color, ícono y descripción; al elegir una se abre el inicio de sesión de ese entorno. Incluye el enlace "Register your laboratory" y "See plans" para quienes aún no tienen cuenta.
 
-Pantalla de presentación de la plataforma que comunica la propuesta de valor de DoofPlus y permite acceder al portal especializado para gestión de calidad y producción farmacéutica bajo normativas GxP.
+![Mock-up · Choose your environment](../assets/img/chapter4/web-application/mockups/desktop-shared-environment-selection-onboarding-profile/sign-in-choose-your-environment.png)
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Landing%20Page.png)
+**Organization registration:** el administrador registra el laboratorio con su razón social, RUC, planta y datos de contacto, y elige su plan, que aparece preseleccionado cuando llega desde la sección Plans de la Landing Page (US50, US51). Si el RUC ya pertenece a otra organización, el formulario muestra el estado "RUC already registered" y no crea un duplicado.
 
-- **Regulatory Identification - DoofPlus**
+| Organization registration | RUC already registered |
+| :---: | :---: |
+| ![Organization registration](../assets/img/chapter4/web-application/mockups/desktop-shared-environment-selection-onboarding-profile/organization-registration.png) | ![RUC already registered](../assets/img/chapter4/web-application/mockups/desktop-shared-environment-selection-onboarding-profile/organization-registration-ruc-already-registered.png) |
 
-Pantalla de autenticación regulatoria que solicita las credenciales corporativas y la firma electrónica necesarias para acceder a funcionalidades sujetas a cumplimiento FDA 21 CFR Part 11 y normativas GxP.
+**Account · Profile & preferences:** se abre desde el avatar en cualquier entorno. Muestra los datos personales y el área del usuario, sus preferencias de notificación (correo y en la aplicación) y de idioma, y el estado del segundo factor; el rol y el acceso a la planta los asigna el administrador del laboratorio.
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Login.png)
+![Mock-up · Profile & preferences](../assets/img/chapter4/web-application/mockups/desktop-shared-environment-selection-onboarding-profile/account-profile-preferences.png)
 
-- **Environment Selection Portal - DoofPlus**
+#### Segmento 1 – Especialista QA/QC
 
-Interfaz que permite seleccionar el entorno de trabajo autorizado, diferenciando entre el segmento de calidad (QA/QC) y el entorno de producción farmacéutica.
+**Sign in · QA/QC:** inicio de sesión del entorno QA/QC con correo corporativo y contraseña (US06). Si las credenciales no son válidas se muestra "Invalid credentials" (tras cinco intentos la cuenta se bloquea quince minutos); luego se solicita el código 2FA; si el rol del usuario no autoriza el entorno se muestra "Access not authorized" (US07).
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Selección%20de%20Espacio.png)
+| Sign in · QA/QC | Invalid credentials |
+| :---: | :---: |
+| ![Sign in QA/QC](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/sign-in-qa-qc.png) | ![Invalid credentials](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/sign-in-qa-qc-invalid-credentials.png) |
 
-- **QA & Lab Console Dashboard - DoofPlus**
+| Two-factor authentication | Access not authorized |
+| :---: | :---: |
+| ![2FA](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/sign-in-qa-qc-two-factor-authentication.png) | ![Access not authorized](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/sign-in-qa-qc-access-not-authorized.png) |
 
-Panel principal para usuarios de calidad que centraliza la supervisión de lotes pendientes, ensayos analíticos, desviaciones abiertas y actividades del laboratorio.
+**Quality overview:** dashboard de calidad (US31) con los lotes pendientes de liberación, las desviaciones abiertas, los planes CAPA vencidos y las alertas recientes, como la excursión de temperatura del sensor T-204.
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Dashboard%20Calidad.png)
+![Mock-up · Quality overview](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-quality-overview.png)
 
-- **Document Management & Master SOPs - DoofPlus**
+**Quality indicators:** indicadores de trazabilidad y de desviaciones (US33, US34), con los registros obligatorios faltantes por lote.
 
-Repositorio documental diseñado para gestionar procedimientos operativos estándar (SOPs), registros electrónicos, certificados de análisis y documentación regulatoria controlada.
+![Mock-up · Quality indicators](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-quality-indicators.png)
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Documentación.png)
+**Quality documents:** repositorio de SOP y protocolos con su versión y estado (Draft, In review, Approved, Obsolete), y el flujo de aprobación (US09, US10, US12, US13). La aprobación corresponde a la Quality Manager (Lucía Paredes); si la autora de la revisión, María México, intenta aprobarla, la aprobación se bloquea, porque las BPM exigen un revisor independiente.
 
-- **Quality Protocols & Validation Management - DoofPlus**
+| Quality documents | Self-approval blocked |
+| :---: | :---: |
+| ![Quality documents](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-quality-documents.png) | ![Self-approval blocked](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-quality-documents-self-approval-blocked.png) |
 
-Módulo destinado a la administración de protocolos de validación, cualificación de equipos y seguimiento de actividades relacionadas con IQ, OQ y PQ.
+**Analytical results:** registro de las variables del ensayo; el sistema calcula el resultado con la fórmula del protocolo y lo compara con la especificación (US11). Un resultado fuera de especificación (OOS) exige registrar una desviación.
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Protocolos.png)
+![Mock-up · Analytical results](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-analytical-results.png)
 
-- **Critical Deviations & CAPA Actions Control - DoofPlus**
+**Deviation report & detail:** detalle de DEV-26017 con su severidad, el lote afectado, la evidencia IoT asociada y el análisis de causa raíz (US18, US19, US22). Estados: Open, Under investigation y Closed.
 
-Pantalla de seguimiento de desviaciones críticas, análisis de impacto GMP y control de acciones correctivas y preventivas (CAPA).
+![Mock-up · Deviation report & detail](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-deviation-report-detail.png)
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Desviaciones.png)
+**CAPA plan:** acciones correctivas y preventivas con responsable, fecha límite y estado (Open, Implemented, Overdue, Verified) (US20, US21). Mientras la causa raíz esté incompleta, el plan no puede avanzar.
 
-- **Process Audit Master Plan - DoofPlus**
+| CAPA plan | Root cause required |
+| :---: | :---: |
+| ![CAPA plan](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-capa-plan.png) | ![Root cause required](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-capa-plan-root-cause-required.png) |
 
-Módulo para planificar, ejecutar y monitorear auditorías internas, inspecciones regulatorias y hallazgos asociados al cumplimiento GMP.
+**Batch release:** lista de verificación de la liberación del lote B-26041 (resultados analíticos, desviaciones cerradas, evidencia IoT y registros completos) y firma electrónica (US54, US08). Si algún control no se cumple, la liberación se bloquea y se listan los registros pendientes.
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Auditorías.png)
+| Batch release | Release blocked |
+| :---: | :---: |
+| ![Batch release](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-batch-release.png) | ![Release blocked](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-batch-release-blocked.png) |
 
-- **GxP Regulatory Reports & Metrics - DoofPlus**
+**Audits & findings:** planificación de auditorías internas y registro de sus hallazgos (US29, US59).
 
-Panel de análisis que permite generar reportes regulatorios, revisar métricas de desempeño y exportar información validada para auditorías e inspecciones.
+![Mock-up · Audits & findings](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-audits-findings.png)
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Reportes.png)
+**Audit trail:** registro inmutable de cada cambio con usuario, fecha, valor anterior, valor nuevo y motivo, filtrable por lote, usuario o fecha (US27, US30).
 
-- **Analytical Testing & Microbiology Control (QC) - DoofPlus**
+![Mock-up · Audit trail](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-audit-trail.png)
 
-Pantalla de control de ensayos analíticos y microbiológicos que permite gestionar muestras, equipos de laboratorio y resultados fuera de especificación (OOS).
+**Regulatory reports:** generación de reportes y del paquete de evidencias de una auditoría o inspección (US28).
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Ensayos.png)
+![Mock-up · Regulatory reports](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-regulatory-reports.png)
 
-- **Analytical Results Entry & Validation - DoofPlus**
+**Tasks & collaboration:** bandeja de tareas y solicitudes de aprobación entre Calidad y Producción, con su estado y responsable (US40, US41, US42, US43).
 
-Interfaz destinada al registro y validación de resultados analíticos, integrando verificación de especificaciones y aprobación mediante firma electrónica.
+![Mock-up · Tasks & collaboration](../assets/img/chapter4/web-application/mockups/desktop-segment-1-qa-qc-specialist/qa-qc-tasks-collaboration.png)
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Resultados.png)
+#### Segmento 2 – Jefe o Supervisor de Producción
 
-- **Pharmaceutical Batch History & Traceability - DoofPlus**
+**Sign in · Production:** mismo flujo de ingreso que QA/QC, con el color del entorno de Producción: credenciales, "Invalid credentials", código 2FA y "Access not authorized" (US06, US07).
 
-Módulo de consulta histórica que permite rastrear lotes farmacéuticos, consultar estados regulatorios y acceder a certificados de análisis.
+| Sign in · Production | Invalid credentials |
+| :---: | :---: |
+| ![Sign in Production](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/sign-in-production.png) | ![Invalid credentials](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/sign-in-production-invalid-credentials.png) |
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Historial%20de%20Lotes.png)
+| Two-factor authentication | Access not authorized |
+| :---: | :---: |
+| ![2FA](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/sign-in-production-two-factor-authentication.png) | ![Access not authorized](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/sign-in-production-access-not-authorized.png) |
 
-- **Cross-Traceability & Audit Center - DoofPlus**
+**Production overview:** dashboard de producción (US32) con las órdenes activas, los lotes por estado, el rendimiento y las alertas de las líneas.
 
-Centro de trazabilidad que integra genealogía de lotes, registros de laboratorio, documentación asociada y auditoría completa de eventos regulatorios.
+![Mock-up · Production overview](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/production-production-overview.png)
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Centro%20de%20Trazabilidad.png)
+**Products & master formulas:** catálogo de productos y sus fórmulas maestras con versión y estado; solo una fórmula aprobada, como MFR-AC500 v3.2, puede usarse en una orden (US35, US36).
 
-- **GxP Production Control Console - DoofPlus**
+![Mock-up · Products & master formulas](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/production-products-master-formulas.png)
 
-Panel principal del entorno de producción que permite supervisar órdenes activas, progreso de eBR y estado de los procesos de manufactura.
+**Production order & master formula:** emisión de la orden de producción a partir de la fórmula maestra aprobada, con cantidades, equipos y fechas (US57).
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Dashboard%20Producción.png)
+![Mock-up · Production order](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/production-production-order-master-formula.png)
 
-- **GxP Batch Execution & Management Console - DoofPlus**
+**Batches:** registro y lista de lotes con su estado (Planned, In progress, On hold, Finished, Release requested, Released, Rejected) (US14, US16). Si el número de lote ya existe o la fórmula no está aprobada, el lote no se crea y se explica el motivo.
 
-Interfaz para la gestión operativa de lotes de fabricación, incluyendo seguimiento de etapas de producción, firmas electrónicas y responsables asignados.
+| Batches | Batch not created |
+| :---: | :---: |
+| ![Batches](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/production-batches.png) | ![Batch not created](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/production-batches-batch-not-created.png) |
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Gestión%20de%20Lotes.png)
+**Batch detail & traceability:** historial del lote B-26041 (120,000 tabletas) con su genealogía: materias primas, equipos, etapas y eventos (US15, US17).
 
-- **GxP Incident Registration & Deviation Management - DoofPlus**
+![Mock-up · Batch detail & traceability](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/production-batch-detail-traceability.png)
 
-Módulo de registro de incidencias que permite documentar eventos de desviación, adjuntar evidencias y gestionar acciones de contención.
+**Batch IoT evidence:** lecturas de los sensores asociados al lote, capturadas automáticamente, con la excursión de 27.8 °C del sensor T-204 frente al límite de 18–25 °C (US25, US26).
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Incidencias.png)
+![Mock-up · Batch IoT evidence](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/production-batch-iot-evidence.png)
 
-- **GxP Profile & Regulatory Credentials - DoofPlus**
+**Raw-material receipt:** recepción de materias primas con su lote de proveedor y su estado de calidad (Quarantine, Approval requested, Approved, Rejected) (US58). Un insumo solo puede usarse en un lote cuando Calidad lo aprueba.
 
-Pantalla de perfil regulatorio donde los usuarios administran credenciales, firmas electrónicas y permisos asociados a los distintos contextos del sistema.
+![Mock-up · Raw-material receipt](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/production-raw-material-receipt.png)
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Perfil.png)
+**Equipment & IoT devices:** registro de equipos y sensores con su estado (Fit for use, Not fit for use, In maintenance), calibraciones y mantenimientos (US23, US37, US38, US39). Un equipo no apto o un sensor ya asociado a otro lote no puede vincularse (US24).
 
-- **General Settings & GxP Policies - DoofPlus**
+![Mock-up · Equipment & IoT devices](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/production-equipment-iot-devices.png)
 
-Módulo de configuración orientado a la administración de políticas GxP, parámetros de seguridad, auditorías internas y canales de notificación regulatoria.
+**IoT overview y Equipment & sensor detail:** monitoreo en tiempo real de los sensores de planta y detalle de un equipo con sus lecturas, límites y alertas (US26).
 
-![Mockup](../assets/img/chapter4/prototype/mockup/Configuración.png)
+| IoT overview | Equipment & sensor detail |
+| :---: | :---: |
+| ![IoT overview](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/iot-iot-overview.png) | ![Equipment & sensor detail](../assets/img/chapter4/web-application/mockups/desktop-segment-2-production-supervisor/iot-equipment-sensor-detail.png) |
+
+#### Administrador del laboratorio
+
+**Sign in · Administration:** ingreso al entorno de Administración con credenciales y código 2FA.
+
+| Sign in · Administration | Invalid credentials | Two-factor authentication |
+| :---: | :---: | :---: |
+| ![Sign in Administration](../assets/img/chapter4/web-application/mockups/desktop-laboratory-administrator/sign-in-administration.png) | ![Invalid credentials](../assets/img/chapter4/web-application/mockups/desktop-laboratory-administrator/sign-in-administration-invalid-credentials.png) | ![2FA](../assets/img/chapter4/web-application/mockups/desktop-laboratory-administrator/sign-in-administration-two-factor-authentication.png) |
+
+**Administration overview:** resumen de los usuarios activos e invitaciones pendientes, la organización y sus sedes (planta de Ate y laboratorio de Lima), el estado de la suscripción, los usuarios que requieren atención y la actividad administrativa reciente.
+
+![Mock-up · Administration overview](../assets/img/chapter4/web-application/mockups/desktop-laboratory-administrator/administration-administration-overview.png)
+
+**Users & profiles e Invite user:** lista de usuarios con su rol y estado (Invited, Active, Locked, Disabled) y el diálogo para invitar a un nuevo integrante con su rol (US07, US55).
+
+| Users & profiles | Invite user |
+| :---: | :---: |
+| ![Users & profiles](../assets/img/chapter4/web-application/mockups/desktop-laboratory-administrator/administration-users-profiles.png) | ![Invite user](../assets/img/chapter4/web-application/mockups/desktop-laboratory-administrator/administration-invite-user.png) |
+
+**Subscriptions & payments:** plan vigente, modalidad mensual o anual, historial de pagos con Niubiz y su estado (Pending, Approved, Rejected), y las opciones de renovación y cancelación (US51, US52, US53).
+
+![Mock-up · Subscriptions & payments](../assets/img/chapter4/web-application/mockups/desktop-laboratory-administrator/administration-subscriptions-payments.png)
+
+#### Mobile Web Browser
+
+En mobile, la navegación del entorno se agrupa en una barra inferior y las pantallas se reducen a las tareas de campo de cada segmento.
+
+**Compartido:** elección del entorno.
+
+![Mock-up · Mobile · Shared](../assets/img/chapter4/web-application/mockups/mobile-shared-environment-selection-montage-1.png)
+
+**Segmento 1 – QA/QC:** inicio de sesión con sus estados, Task inbox, Approval review y Approval completed, donde la Quality Manager aprueba el documento (con el estado "Record changed", que impide firmar si el registro cambió durante la revisión), Electronic signature (con el estado "Invalid password") y Signature confirmed, donde María firma la liberación del lote B-26038, y Batch detail.
+
+![Mock-up · Mobile · QA/QC (1)](../assets/img/chapter4/web-application/mockups/mobile-segment-1-qa-qc-specialist-montage-1.png)
+
+![Mock-up · Mobile · QA/QC (2)](../assets/img/chapter4/web-application/mockups/mobile-segment-1-qa-qc-specialist-montage-2.png)
+
+**Segmento 2 – Production:** inicio de sesión con sus estados, IoT monitoring, Batch lookup, Alert details, Incident reporting (con el estado "Validation error") e Incident submitted.
+
+![Mock-up · Mobile · Production (1)](../assets/img/chapter4/web-application/mockups/mobile-segment-2-production-supervisor-montage-1.png)
+
+![Mock-up · Mobile · Production (2)](../assets/img/chapter4/web-application/mockups/mobile-segment-2-production-supervisor-montage-2.png)
+
+**Administrador del laboratorio:** inicio de sesión del entorno de Administración con sus estados.
+
+![Mock-up · Mobile · Administration](../assets/img/chapter4/web-application/mockups/mobile-laboratory-administrator-montage-1.png)
+
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
