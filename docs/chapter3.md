@@ -114,7 +114,24 @@ El Impact Mapping de DoofPlus conecta los objetivos estratégicos del negocio co
 
 ## 3.3. Product Backlog
 
-El Product Backlog de DoofPlus consolida todas las User Stories y Technical Stories identificadas, ordenadas según el valor que aportan al negocio. Las historias relacionadas con la Landing Page se posicionan al inicio dado que corresponden al primer sprint y son el primer punto de contacto con los potenciales clientes. A continuación se presentan las historias del core de calidad y producción farmacéutica, y finalmente las Technical Stories del API.
+El Product Backlog de DoofPlus consolida las 59 User Stories y las 11 Technical Stories de la sección 3.1, con su estimación en Story Points, y las ordena según el valor que aportan al negocio con los siguientes criterios:
+
+1. **Landing Page primero:** sus historias se ubican al inicio porque el sitio estático es el primer punto de contacto con los laboratorios y, según el statement, se considera desde el primer sprint.
+2. **Valor de las historias de la Web Application:** se mide con el User Task Matrix de la sección 2.3.2. Cada tarea recibe un puntaje igual a la suma, para ambos User Personas, de su frecuencia (Often = 3, Occasionally = 2, Rarely = 1) multiplicada por su importancia (High = 3, Medium = 2, Low = 1), y las historias que apoyan cada tarea se ordenan de mayor a menor puntaje. Cada grupo termina con la Technical Story del API que lo soporta.
+3. **Dependencias:** cuando una historia exige otra en sus criterios de aceptación, la requerida se ubica antes. Por ejemplo, US14 requiere un producto con fórmula maestra aprobada, por lo que US35, US36 y la orden de producción (US57) la preceden.
+4. **Identidad y suscripciones al final:** las historias de autenticación y roles no se colocan al inicio, como indica el statement. Las de suscripción y pago cierran el backlog porque el cobro solo aporta valor cuando ya existen los flujos de calidad y producción que el laboratorio contrata; antes de ellas se ubica el registro de la organización (US50), que es su requisito.
+
+| Tarea del User Task Matrix | Especialista QA/QC | Jefe de Producción | Puntaje | Historias |
+| --- | --- | --- | :---: | --- |
+| Consultar el historial y trazabilidad de un lote | Often / High (9) | Often / High (9) | 18 | US35, US36, US57, US14, US15, US16, US58, US17, TS03 |
+| Gestionar protocolos, registros y documentación de calidad | Often / High (9) | Occasionally / Medium (4) | 13 | US09, US10, US12, US13, TS10 |
+| Registrar y dar seguimiento a desviaciones e incidencias | Occasionally / High (6) | Occasionally / High (6) | 12 | US56, US18, US19, US20, US21, US22, TS11 |
+| Coordinar la aprobación de insumos y materiales con Calidad | Rarely / Medium (2) | Often / High (9) | 11 | US42, US41, US40, US43, TS08 |
+| Revisar y validar cálculos analíticos e informes de calidad | Often / High (9) | Rarely / Low (1) | 10 | US11, US54 |
+| Supervisar el estado de los lotes durante la fabricación | Rarely / Low (1) | Often / High (9) | 10 | US32, US31, TS06, US23, US24, US25, US26, TS04, US37, US38, US39, TS07 |
+| Recopilar evidencias para auditorías e inspecciones | Occasionally / High (6) | Rarely / Medium (2) | 8 | US27, US28, US29, US30, US59, TS05, US33, US34 |
+
+Entre las dos tareas con puntaje 10, la liberación del lote (US54) precede a la supervisión porque cierra el ciclo de vida del lote que mide el primer business goal de la sección 3.2.
 
 | **# Orden** | **User Story Id** | **Título** | **Descripción** | **Story Points (1 / 2 / 3 / 5 / 8)** |
 | --- | --- | --- | --- | --- |
@@ -123,61 +140,61 @@ El Product Backlog de DoofPlus consolida todas las User Stories y Technical Stor
 | 3 | US44 | Navegación por secciones | Como visitante, quiero acceder rápidamente a cada sección de la Landing Page para encontrar la información que necesito. | 3 |
 | 4 | US03 | Visualización de planes y precios | Como visitante responsable de compras de un laboratorio, quiero consultar los planes y precios disponibles para identificar la alternativa más adecuada para mi organización. | 2 |
 | 5 | US45 | Visualización del equipo y de la startup | Como visitante, quiero conocer a IngesCompany y a su equipo para generar confianza en la solución. | 1 |
-| 6 | US04 | Formulario de contacto | Como visitante interesado, quiero dejar mi correo electrónico para recibir información y solicitar una demostración de DoofPlus. | 1 |
+| 6 | US04 | Formulario de contacto | Como visitante interesado, quiero enviar una consulta al equipo de DoofPlus para resolver mis dudas sobre la plataforma y sus planes. | 1 |
 | 7 | US46 | Cambio de idioma | Como visitante, quiero cambiar el idioma de la Landing Page entre inglés y español para comprender el contenido en mi idioma de preferencia. | 5 |
 | 8 | TS01 | Implementación de Landing Page responsive y accesible | Como Developer, quiero implementar la Landing Page con HTML5, CSS3 y JavaScript aplicando responsive web design y a11y para garantizar una experiencia adecuada en distintos dispositivos. | 3 |
 | 9 | US48 | Acceso por segmento a la Web Application | Como visitante especialista QA/QC o jefe de producción, quiero acceder desde la Landing Page a la vista de la Web Application de mi segmento para comenzar a usar la plataforma. | 2 |
 | 10 | US47 | Consulta de términos y política de privacidad | Como visitante, quiero consultar los términos y condiciones y la política de privacidad para conocer las condiciones del servicio y el tratamiento de mis datos. | 1 |
 | 11 | US49 | Visualización del video promocional | Como visitante, quiero ver un video sobre DoofPlus para entender rápidamente su funcionamiento. | 2 |
 | 12 | US05 | Preguntas frecuentes | Como visitante, quiero consultar preguntas frecuentes para resolver dudas comunes sobre la plataforma. | 1 |
-| 13 | US14 | Registro de lotes | Como supervisor de producción, quiero registrar lotes para iniciar su trazabilidad digital. | 3 |
-| 14 | US15 | Consulta del historial de lotes | Como especialista QA/QC, quiero consultar el historial completo de un lote para revisar sus registros y eventos asociados. | 5 |
-| 15 | US16 | Gestión de estados de lote | Como supervisor de producción, quiero actualizar el estado de los lotes durante su ciclo de vida para reflejar su avance real. | 2 |
-| 16 | US17 | Asociación de materias primas | Como supervisor de producción, quiero asociar las materias primas utilizadas a un lote para mantener su trazabilidad completa. | 3 |
-| 17 | US58 | Recepción de materias primas | Como supervisor de producción, quiero registrar la recepción de materias primas con su lote de proveedor para que queden en cuarentena hasta su aprobación por Calidad. | 3 |
-| 18 | US57 | Gestión de órdenes de producción | Como jefe de producción, quiero crear y aprobar órdenes de producción para planificar la fabricación de los lotes. | 3 |
-| 19 | US56 | Registro y escalamiento de incidencias | Como supervisor de producción, quiero registrar las incidencias de un lote y escalarlas a Calidad para que se investiguen sin detener la producción más de lo necesario. | 3 |
-| 20 | TS03 | API de trazabilidad de lotes | Como Developer, quiero exponer endpoints REST para registrar y consultar lotes y su línea de tiempo. | 5 |
-| 21 | US18 | Registro de desviaciones | Como especialista QA/QC, quiero registrar desviaciones para realizar su seguimiento y análisis. | 3 |
-| 22 | US19 | Análisis de causa raíz | Como especialista QA/QC, quiero documentar el análisis de causa raíz (RCA) para identificar el origen de las desviaciones. | 5 |
-| 23 | US20 | Gestión CAPA | Como especialista QA/QC, quiero registrar acciones correctivas y preventivas derivadas de una desviación para evitar su recurrencia. | 5 |
-| 24 | US21 | Seguimiento de acciones CAPA | Como especialista QA/QC, quiero monitorear el avance de las acciones CAPA abiertas para asegurar su cumplimiento. | 3 |
-| 25 | US22 | Notificaciones de desviación crítica | Como especialista QA/QC, quiero recibir alertas cuando se registre una desviación crítica para actuar de inmediato. | 2 |
-| 26 | TS11 | API de desviaciones y CAPA | Como Developer, quiero exponer endpoints REST para gestionar desviaciones, causas raíz y acciones CAPA. | 5 |
-| 27 | US54 | Revisión y liberación de lotes | Como especialista QA/QC, quiero poner en cuarentena, evaluar y liberar o rechazar los lotes cerrados para que solo se distribuyan productos conformes. | 5 |
-| 28 | US27 | Audit trail | Como especialista QA/QC, quiero consultar todas las modificaciones realizadas sobre los registros para demostrar la integridad de los datos. | 5 |
-| 29 | US28 | Generación automática de reportes | Como especialista QA/QC, quiero generar reportes regulatorios automáticamente para reducir el tiempo de preparación. | 5 |
-| 30 | US29 | Preparación de auditorías | Como especialista QA/QC, quiero consolidar la documentación requerida para una auditoría para responder a tiempo a los inspectores. | 5 |
-| 31 | US30 | Acceso de auditor a evidencias | Como auditor interno, quiero acceder en modo lectura a las evidencias de los lotes para verificar el cumplimiento. | 3 |
-| 32 | US59 | Registro de auditorías y hallazgos | Como especialista QA/QC, quiero programar auditorías y registrar sus hallazgos para dar seguimiento a su cierre. | 3 |
-| 33 | TS05 | API de auditoría | Como Developer, quiero exponer endpoints para consultar los eventos del audit trail. | 3 |
-| 34 | US09 | Gestión de protocolos de calidad | Como especialista QA/QC, quiero registrar protocolos digitales para estandarizar los procesos y cumplir las BPM. | 5 |
-| 35 | US10 | Repositorio de SOP | Como especialista QA/QC, quiero consultar los procedimientos operativos estándar vigentes para aplicar siempre la versión aprobada. | 3 |
-| 36 | US12 | Control de versiones documentales | Como especialista QA/QC, quiero mantener el historial de versiones de cada documento para garantizar su integridad. | 5 |
-| 37 | US13 | Aprobación documental | Como jefe de aseguramiento de calidad, quiero aprobar documentos mediante firma electrónica para asegurar la trazabilidad regulatoria. | 3 |
-| 38 | US11 | Automatización de cálculos de calidad | Como especialista QA/QC, quiero que el sistema calcule automáticamente los resultados analíticos para reducir errores manuales. | 5 |
-| 39 | TS10 | API de documentación de calidad | Como Developer, quiero exponer endpoints REST para gestionar protocolos, SOP y sus versiones. | 5 |
-| 40 | US42 | Solicitudes de aprobación | Como supervisor de producción, quiero solicitar aprobaciones a Calidad (por ejemplo, liberación de insumos) para continuar la fabricación sin demoras. | 2 |
-| 41 | US41 | Notificaciones entre áreas | Como especialista de calidad, quiero recibir las solicitudes de Producción para atenderlas a tiempo. | 3 |
-| 42 | US40 | Bandeja de tareas | Como usuario, quiero visualizar mis tareas pendientes para atenderlas oportunamente. | 3 |
-| 43 | US43 | Seguimiento de tareas | Como usuario, quiero monitorear el estado de las tareas que asigné para asegurar su cumplimiento. | 3 |
-| 44 | TS08 | Servicio de notificaciones en tiempo real | Como Developer, quiero implementar notificaciones en tiempo real con WebSocket (STOMP sobre Spring WebSocket) para distribuir eventos sin recargar la Web Application. | 5 |
-| 45 | US31 | Dashboard de calidad | Como especialista QA/QC, quiero visualizar indicadores de calidad para priorizar mis actividades. | 3 |
-| 46 | US32 | Dashboard de producción | Como supervisor de producción, quiero visualizar el estado de los lotes en curso para tomar decisiones oportunas. | 3 |
-| 47 | US33 | Indicadores de trazabilidad | Como jefe de calidad, quiero monitorear el porcentaje de lotes con trazabilidad completa para anticipar observaciones de auditoría. | 3 |
-| 48 | US34 | Indicadores de desviaciones | Como jefe de calidad, quiero identificar tendencias de desviaciones para prevenir su recurrencia. | 3 |
-| 49 | TS06 | API de KPIs | Como Developer, quiero exponer métricas consolidadas para los dashboards. | 5 |
-| 50 | US23 | Registro de dispositivos IoT | Como administrador del laboratorio, quiero registrar los sensores IoT conectados para controlar su inventario. | 3 |
-| 51 | US24 | Asociación de sensores a un lote | Como supervisor de producción, quiero asociar los sensores de un equipo a un lote en fabricación para vincular sus lecturas. | 3 |
-| 52 | US25 | Captura automática de evidencias | Como supervisor de producción, quiero que las variables críticas se registren automáticamente para evitar la transcripción manual. | 5 |
-| 53 | US26 | Consulta de registros IoT | Como especialista QA/QC, quiero consultar los datos IoT asociados a un lote para respaldar su liberación. | 3 |
-| 54 | TS04 | API de ingesta IoT | Como Developer, quiero implementar un endpoint que reciba la telemetría enviada por ThingsBoard. | 5 |
-| 55 | US35 | Catálogo de productos | Como jefe de producción, quiero administrar los productos farmacéuticos para fabricarlos en nuevos lotes. | 3 |
-| 56 | US36 | Gestión de fórmulas maestras | Como jefe de producción, quiero registrar las fórmulas maestras aprobadas para que cada lote se fabrique según la especificación autorizada. | 5 |
-| 57 | US37 | Gestión de equipos | Como supervisor de producción, quiero registrar los equipos utilizados en la fabricación para controlar su estado. | 3 |
-| 58 | US38 | Gestión de calibraciones | Como supervisor de producción, quiero controlar la calibración de equipos y sensores para asegurar mediciones válidas. | 3 |
-| 59 | US39 | Mantenimiento preventivo | Como supervisor de producción, quiero registrar los mantenimientos preventivos para evitar paradas no planificadas. | 3 |
-| 60 | TS07 | API de operaciones de laboratorio | Como Developer, quiero implementar endpoints REST para productos, fórmulas y equipos. | 5 |
+| 13 | US35 | Catálogo de productos | Como jefe de producción, quiero administrar los productos farmacéuticos para fabricarlos en nuevos lotes. | 3 |
+| 14 | US36 | Gestión de fórmulas maestras | Como jefe de producción, quiero registrar las fórmulas maestras aprobadas para que cada lote se fabrique según la especificación autorizada. | 5 |
+| 15 | US57 | Gestión de órdenes de producción | Como jefe de producción, quiero crear y aprobar órdenes de producción para planificar la fabricación de los lotes. | 3 |
+| 16 | US14 | Registro de lotes | Como supervisor de producción, quiero registrar lotes para iniciar su trazabilidad digital. | 3 |
+| 17 | US15 | Consulta del historial de lotes | Como especialista QA/QC, quiero consultar el historial completo de un lote para revisar sus registros y eventos asociados. | 5 |
+| 18 | US16 | Gestión de estados de lote | Como supervisor de producción, quiero actualizar el estado de los lotes durante su ciclo de vida para reflejar su avance real. | 2 |
+| 19 | US58 | Recepción de materias primas | Como supervisor de producción, quiero registrar la recepción de materias primas con su lote de proveedor para que queden en cuarentena hasta su aprobación por Calidad. | 3 |
+| 20 | US17 | Asociación de materias primas | Como supervisor de producción, quiero asociar las materias primas utilizadas a un lote para mantener su trazabilidad completa. | 3 |
+| 21 | TS03 | API de trazabilidad de lotes | Como Developer, quiero exponer endpoints REST para registrar y consultar lotes y su línea de tiempo. | 5 |
+| 22 | US09 | Gestión de protocolos de calidad | Como especialista QA/QC, quiero registrar protocolos digitales para estandarizar los procesos y cumplir las BPM. | 5 |
+| 23 | US10 | Repositorio de SOP | Como especialista QA/QC, quiero consultar los procedimientos operativos estándar vigentes para aplicar siempre la versión aprobada. | 3 |
+| 24 | US12 | Control de versiones documentales | Como especialista QA/QC, quiero mantener el historial de versiones de cada documento para garantizar su integridad. | 5 |
+| 25 | US13 | Aprobación documental | Como jefe de aseguramiento de calidad, quiero aprobar documentos mediante firma electrónica para asegurar la trazabilidad regulatoria. | 3 |
+| 26 | TS10 | API de documentación de calidad | Como Developer, quiero exponer endpoints REST para gestionar protocolos, SOP y sus versiones. | 5 |
+| 27 | US56 | Registro y escalamiento de incidencias | Como supervisor de producción, quiero registrar las incidencias de un lote y escalarlas a Calidad para que se investiguen sin detener la producción más de lo necesario. | 3 |
+| 28 | US18 | Registro de desviaciones | Como especialista QA/QC, quiero registrar desviaciones para realizar su seguimiento y análisis. | 3 |
+| 29 | US19 | Análisis de causa raíz | Como especialista QA/QC, quiero documentar el análisis de causa raíz (RCA) para identificar el origen de las desviaciones. | 5 |
+| 30 | US20 | Gestión CAPA | Como especialista QA/QC, quiero registrar acciones correctivas y preventivas derivadas de una desviación para evitar su recurrencia. | 5 |
+| 31 | US21 | Seguimiento de acciones CAPA | Como especialista QA/QC, quiero monitorear el avance de las acciones CAPA abiertas para asegurar su cumplimiento. | 3 |
+| 32 | US22 | Notificaciones de desviación crítica | Como especialista QA/QC, quiero recibir alertas cuando se registre una desviación crítica para actuar de inmediato. | 2 |
+| 33 | TS11 | API de desviaciones y CAPA | Como Developer, quiero exponer endpoints REST para gestionar desviaciones, causas raíz y acciones CAPA. | 5 |
+| 34 | US42 | Solicitudes de aprobación | Como supervisor de producción, quiero solicitar aprobaciones a Calidad (por ejemplo, liberación de insumos) para continuar la fabricación sin demoras. | 2 |
+| 35 | US41 | Notificaciones entre áreas | Como especialista de calidad, quiero recibir las solicitudes de Producción para atenderlas a tiempo. | 3 |
+| 36 | US40 | Bandeja de tareas | Como usuario, quiero visualizar mis tareas pendientes para atenderlas oportunamente. | 3 |
+| 37 | US43 | Seguimiento de tareas | Como usuario, quiero monitorear el estado de las tareas que asigné para asegurar su cumplimiento. | 3 |
+| 38 | TS08 | Servicio de notificaciones en tiempo real | Como Developer, quiero implementar notificaciones en tiempo real con WebSocket (STOMP sobre Spring WebSocket) para distribuir eventos sin recargar la Web Application. | 5 |
+| 39 | US11 | Automatización de cálculos de calidad | Como especialista QA/QC, quiero que el sistema calcule automáticamente los resultados analíticos para reducir errores manuales. | 5 |
+| 40 | US54 | Revisión y liberación de lotes | Como especialista QA/QC, quiero poner en cuarentena, evaluar y liberar o rechazar los lotes cerrados para que solo se distribuyan productos conformes. | 5 |
+| 41 | US32 | Dashboard de producción | Como supervisor de producción, quiero visualizar el estado de los lotes en curso para tomar decisiones oportunas. | 3 |
+| 42 | US31 | Dashboard de calidad | Como especialista QA/QC, quiero visualizar indicadores de calidad para priorizar mis actividades. | 3 |
+| 43 | TS06 | API de KPIs | Como Developer, quiero exponer métricas consolidadas para los dashboards. | 5 |
+| 44 | US23 | Registro de dispositivos IoT | Como administrador del laboratorio, quiero registrar los sensores IoT conectados para controlar su inventario. | 3 |
+| 45 | US24 | Asociación de sensores a un lote | Como supervisor de producción, quiero asociar los sensores de un equipo a un lote en fabricación para vincular sus lecturas. | 3 |
+| 46 | US25 | Captura automática de evidencias | Como supervisor de producción, quiero que las variables críticas se registren automáticamente para evitar la transcripción manual. | 5 |
+| 47 | US26 | Consulta de registros IoT | Como especialista QA/QC, quiero consultar los datos IoT asociados a un lote para respaldar su liberación. | 3 |
+| 48 | TS04 | API de ingesta IoT | Como Developer, quiero implementar un endpoint que reciba la telemetría enviada por ThingsBoard. | 5 |
+| 49 | US37 | Gestión de equipos | Como supervisor de producción, quiero registrar los equipos utilizados en la fabricación para controlar su estado. | 3 |
+| 50 | US38 | Gestión de calibraciones | Como supervisor de producción, quiero controlar la calibración de equipos y sensores para asegurar mediciones válidas. | 3 |
+| 51 | US39 | Mantenimiento preventivo | Como supervisor de producción, quiero registrar los mantenimientos preventivos para evitar paradas no planificadas. | 3 |
+| 52 | TS07 | API de operaciones de laboratorio | Como Developer, quiero implementar endpoints REST para productos, fórmulas y equipos. | 5 |
+| 53 | US27 | Audit trail | Como especialista QA/QC, quiero consultar todas las modificaciones realizadas sobre los registros para demostrar la integridad de los datos. | 5 |
+| 54 | US28 | Generación automática de reportes | Como especialista QA/QC, quiero generar reportes regulatorios automáticamente para reducir el tiempo de preparación. | 5 |
+| 55 | US29 | Preparación de auditorías | Como especialista QA/QC, quiero consolidar la documentación requerida para una auditoría para responder a tiempo a los inspectores. | 5 |
+| 56 | US30 | Acceso de auditor a evidencias | Como auditor interno, quiero acceder en modo lectura a las evidencias de los lotes para verificar el cumplimiento. | 3 |
+| 57 | US59 | Registro de auditorías y hallazgos | Como especialista QA/QC, quiero programar auditorías y registrar sus hallazgos para dar seguimiento a su cierre. | 3 |
+| 58 | TS05 | API de auditoría | Como Developer, quiero exponer endpoints para consultar los eventos del audit trail. | 3 |
+| 59 | US33 | Indicadores de trazabilidad | Como jefe de calidad, quiero monitorear el porcentaje de lotes con trazabilidad completa para anticipar observaciones de auditoría. | 3 |
+| 60 | US34 | Indicadores de desviaciones | Como jefe de calidad, quiero identificar tendencias de desviaciones para prevenir su recurrencia. | 3 |
 | 61 | US06 | Inicio de sesión con segundo factor | Como usuario registrado, quiero iniciar sesión con mi contraseña y un código 2FA para acceder de forma segura a las funcionalidades de mi rol. | 2 |
 | 62 | US07 | Gestión de roles | Como administrador del laboratorio, quiero asignar roles a los usuarios para controlar el acceso a funcionalidades específicas. | 3 |
 | 63 | US08 | Firmas electrónicas | Como especialista de calidad, quiero firmar electrónicamente las acciones críticas para validarlas conforme a los requisitos regulatorios. | 5 |
@@ -195,7 +212,7 @@ El Product Backlog de DoofPlus consolida todas las User Stories y Technical Stor
 
 A continuación, se muestra la gestión del backlog en la herramienta Jira Software, evidenciando la priorización y estimación de las historias.
 
-![Evidence Product Backlog Jira](../assets/img/chapter3/backlog.png)
+![Evidence Product Backlog Jira](../assets/img/chapter3/product-backlog-jira.png)
 *Figura: Captura del Product Backlog en Jira Software.*
 
-**Enlace al Product Backlog en Jira:** [click aquí](https://inges-company-cc.atlassian.net/jira/software/projects/UPC/boards/1/backlog?atlOrigin=eyJpIjoiN2EwNDdhZWYwMDI1NDhmMDgxMGZiZWM1Y2Q4YTJlNGMiLCJwIjoiaiJ9)
+**Enlace al Product Backlog en Jira:** [click aquí](https://inges-company-cc.atlassian.net/jira/software/projects/UPC/boards/1/backlog)
