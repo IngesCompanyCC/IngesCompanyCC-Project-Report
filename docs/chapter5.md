@@ -964,6 +964,7 @@ Los cinco integrantes participaron en ambos repositorios. La siguiente tabla res
 # Conclusiones
 
 ## Conclusiones y recomendaciones
+
 ### Conclusiones
 
 1. **Sobre los Problem Statements:** En relación a los *Problem Statements* especificados, se concluye que la falta de digitalización y la trazabilidad manual generan un riesgo regulatorio crítico y pérdidas invisibles en los laboratorios farmacéuticos. DoofPlus aborda directamente este problema centralizando la documentación de calidad y los datos de producción en una única plataforma alineada a las normativas BPM/GMP.
@@ -974,7 +975,7 @@ Los cinco integrantes participaron en ambos repositorios. La siguiente tabla res
 
 1. **Roadmap - Desarrollo Backend y Seguridad:** En relación al *Roadmap* de los productos digitales, se recomienda priorizar para el siguiente sprint o hito (AV2) la construcción de la arquitectura Backend y la base de datos relacional. Es imperativo consolidar el *Bounded Context* de IAM (Identity and Access Management) antes de avanzar, ya que el valor del sistema depende de las firmas electrónicas y la seguridad de los roles.
 2. **Roadmap - Integración de Telemetría (IoT):** Como siguiente paso en el alcance del modelo de negocio digital, se sugiere que el equipo investigue e integre simuladores de *WebSockets* o APIs en tiempo real. Esto permitirá validar técnicamente el módulo de monitoreo IoT (temperatura y humedad) establecido en el *Roadmap* sin necesidad de depender de hardware físico inmediato.
-## Video About-the-Team
+
 ## Video About-the-Team
 
 # Bibliografía
