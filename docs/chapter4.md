@@ -8,7 +8,7 @@ En esta sección se establecen las bases visuales y de comunicación para DoofPl
 
 ### 4.1.1. General Style Guidelines
 
-Para asegurar una interfaz coherente y alineada con los estándares que exige la industria farmacéutica, el sistema de diseño de DoofPlus toma como base **Material Design**, el lenguaje de diseño indicado para el proyecto. En la Web Application se implementa con **Angular CLI** usando un tema basado en **Material Design**, y en la Landing Page con ***HTML5*** y ***CSS3*** respetando los mismos tokens de color, tipografía y espaciado.
+Para asegurar una interfaz coherente y alineada con los estándares que exige la industria farmacéutica, el sistema de diseño de DoofPlus toma como base **Material Design**, el lenguaje de diseño indicado para el proyecto. En la Web Application se implementa con **Vue CLI** usando un tema basado en **Material Design**, y en la Landing Page con ***HTML5*** y ***CSS3*** respetando los mismos tokens de color, tipografía y espaciado.
 
 #### Branding:
 El logotipo escogido para DoofPlus comunica de forma directa y sintética la propuesta de valor del sistema: la integración de la automatización industrial con la rigurosidad del control farmacéutico. Para la sección de Branding, el análisis de los componentes de dicho logotipo se desglosa de la siguiente manera:
@@ -104,7 +104,7 @@ erta e inquebrantable. Posiciona a DoofPlus como el puente definitivo entre la m
 - Íconos: Se emplea la biblioteca Material Symbols (variante Rounded) para un estilo lineal y minimalista. Estos íconos ofrecen una guía visual rápida para representar servicios críticos: un microchip o antena para la telemetría, un escudo con un símbolo de check para el cumplimiento regulatorio y cápsulas o maquinaria para la gestión de producción.
 
 5. Repositorio Central
-- Organización: el proyecto de la Web Application en Angular se organiza por bounded context dentro de `src/app`: `iam`, `organizations`, `subscriptions`, `manufacturing`, `iot-monitoring` y `quality`, cada uno con las capas `domain`, `application`, `infrastructure` y `presentation`. Los elementos comunes (layout, toolbar, footer, selector de idioma y cliente REST base) se ubican en `src/app/shared`; los estilos globales y los design tokens de color, tipografía y espaciado, en `src/styles.css`; las imágenes e íconos, en `public/images`, y las traducciones, en `public/i18n` (`en.json`, idioma por defecto, y `es.json`). La Landing Page aplica los mismos tokens en su hoja de estilos.
+- Organización: el proyecto de la Web Application en Vue se organiza por bounded context dentro de `src/app`: `iam`, `organizations`, `subscriptions`, `manufacturing`, `iot-monitoring` y `quality`, cada uno con las capas `domain`, `application`, `infrastructure` y `presentation`. Los elementos comunes (layout, toolbar, footer, selector de idioma y cliente REST base) se ubican en `src/app/shared`; los estilos globales y los design tokens de color, tipografía y espaciado, en `src/styles.css`; las imágenes e íconos, en `public/images`, y las traducciones, en `public/i18n` (`en.json`, idioma por defecto, y `es.json`). La Landing Page aplica los mismos tokens en su hoja de estilos.
 - Versionado: Se utiliza Git gestionado desde GitHub como sistema de control de versiones central. El equipo aplica GitFlow y Conventional Commits para gestionar los cambios en el código, lo que ayuda a garantizar que el entorno de desarrollo mantenga una integración continua y una versión estable del producto en todo momento. Además, se aplica Semantic Versioning para darle un orden a las versiones.
 
 ## 4.2. Information Architecture
@@ -140,7 +140,7 @@ Valores para la Landing Page (sitio estático indexable):
 | Landing Page (index.html) | DoofPlus \| Pharmaceutical Quality & Batch Traceability Platform | SaaS platform that centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories (GMP/DIGEMID). | pharmaceutical quality management, batch traceability, GMP, DIGEMID, CAPA, audit trail, IoT | IngesCompany |
 | Contact us (contact.html) | Contact us \| DoofPlus | Send your questions about DoofPlus and its plans to the IngesCompany team. | DoofPlus contact, pharmaceutical quality software, GMP software Peru | IngesCompany |
 
-Valores para las vistas principales de la Web Application. Al ser una SPA, el título se actualiza en cada cambio de ruta con la propiedad `title` de las rutas de Angular Router y la descripción con el servicio `Meta` de Angular; keywords y author se definen una vez en `index.html` con los mismos valores de la Landing Page:
+Valores para las vistas principales de la Web Application. Al ser una SPA, el título se actualiza en cada cambio de ruta con la propiedad `title` de las rutas de Vue Router y la descripción con el servicio `Meta` de Vue; keywords y author se definen una vez en `index.html` con los mismos valores de la Landing Page:
 
 | **Vista de la Web Application** | **Title** | **Meta description** |
 | --- | --- | --- |
@@ -157,7 +157,7 @@ Para que los usuarios no se pierdan en el volumen de información generado por l
 
 - **Búsqueda global:** barra en el encabezado para consultar por identificador exacto (número de lote, código de documento o de sensor).
 - **Filtros combinados:** por estado del lote (Planned, In progress, On hold, Release requested, Released, Rejected), rango de fechas de fabricación, severidad de la desviación (Minor, Major, Critical) y tipo de documento.
-- **Presentación de resultados:** tabla de datos de Angular Material (`mat-table` con `MatPaginator` y `MatSort`) paginada y ordenable que resalta la coincidencia y muestra el estado actual de cada registro; si no hay resultados se muestra un mensaje con sugerencias.
+- **Presentación de resultados:** tabla de datos de Vue paginada y ordenable que resalta la coincidencia y muestra el estado actual de cada registro; si no hay resultados se muestra un mensaje con sugerencias.
 
 ### 4.2.5. Navigation Systems
 Las acciones y técnicas que guían a los usuarios son:
@@ -844,11 +844,11 @@ Video de navegación del prototipo: upc-pre-202620-1asi0729-7742-IngesCompany-pr
 ![Video de navegación del prototipo · Web Application](../assets/img/chapter4/prototype/video-web-application.png)
 
 ## 4.6. Domain-Driven Software Architecture
-La arquitectura de DoofPlus se fundamenta en Domain-Driven Design (DDD). El punto de partida es el Big Picture EventStorming (sección 2.4), que dejó una línea de tiempo de eventos organizada en siete swimlanes, con sus actores, sistemas externos y problemas. En esta sección ese conocimiento se profundiza con un Design-Level EventStorming hasta identificar los bounded contexts y obtener aggregates, commands, policies, read models y sistemas externos por contexto; luego la solución se representa con el modelo C4 (contexto, contenedores y componentes). Cada bounded context se corresponde con un módulo de la Web Application en Angular y con un paquete del RESTful API en Spring Boot.
+La arquitectura de DoofPlus se fundamenta en Domain-Driven Design (DDD). El punto de partida es el Big Picture EventStorming (sección 2.4), que dejó una línea de tiempo de eventos organizada en siete swimlanes, con sus actores, sistemas externos y problemas. En esta sección ese conocimiento se profundiza con un Design-Level EventStorming hasta identificar los bounded contexts y obtener aggregates, commands, policies, read models y sistemas externos por contexto; luego la solución se representa con el modelo C4 (contexto, contenedores y componentes). Cada bounded context se corresponde con un módulo de la Web Application en Vue y con un paquete del RESTful API en Spring Boot.
 
 La siguiente tabla resume la trazabilidad entre artefactos:
 
-| Bounded context | Tipo | Swimlanes del Big Picture | Épicas | Aggregates (DLES) | Módulo Angular / paquete Spring |
+| Bounded context | Tipo | Swimlanes del Big Picture | Épicas | Aggregates (DLES) | Módulo Vue / paquete Spring |
 | --- | --- | --- | --- | --- | --- |
 | Manufacturing & Batch Management | Core | Producción y almacén | EP04, EP09 (productos y fórmulas) | Product, MasterFormula, RawMaterialLot, ProductionOrder, ProductionBatch | `manufacturing` |
 | Quality & Compliance | Core | Gestión documental, Control de calidad y liberación, Desviaciones y CAPA, Auditoría y cumplimiento | EP03, EP05, EP07, EP08, EP10 | QualityDocument, MaterialApproval, BatchReview, AnalyticalResult, Deviation, Audit, RegulatoryReport | `quality` |
@@ -860,11 +860,11 @@ La siguiente tabla resume la trazabilidad entre artefactos:
 Los dashboards (EP08) y las notificaciones entre áreas (EP10) no forman un contexto propio: los dashboards son read models que cada contexto expone y las notificaciones son policies que reaccionan a domain events.
 
 ### 4.6.1. Design-Level Event Storming
-La arquitectura de DoofPlus se fundamenta en Domain-Driven Design (DDD). El punto de partida es el Big Picture EventStorming (sección 2.4), que dejó una línea de tiempo de eventos organizada en siete swimlanes, con sus actores, sistemas externos y problemas. En esta sección ese conocimiento se profundiza con un Design-Level EventStorming hasta identificar los bounded contexts y obtener aggregates, commands, policies, read models y sistemas externos por contexto; luego la solución se representa con el modelo C4 (contexto, contenedores y componentes). Cada bounded context se corresponde con un módulo de la Web Application en Angular y con un paquete del RESTful API en Spring Boot.
+La arquitectura de DoofPlus se fundamenta en Domain-Driven Design (DDD). El punto de partida es el Big Picture EventStorming (sección 2.4), que dejó una línea de tiempo de eventos organizada en siete swimlanes, con sus actores, sistemas externos y problemas. En esta sección ese conocimiento se profundiza con un Design-Level EventStorming hasta identificar los bounded contexts y obtener aggregates, commands, policies, read models y sistemas externos por contexto; luego la solución se representa con el modelo C4 (contexto, contenedores y componentes). Cada bounded context se corresponde con un módulo de la Web Application en Vue y con un paquete del RESTful API en Spring Boot.
 
 La siguiente tabla resume la trazabilidad entre artefactos:
 
-| Bounded context | Tipo | Swimlanes del Big Picture | Épicas | Aggregates (DLES) | Módulo Angular / paquete Spring |
+| Bounded context | Tipo | Swimlanes del Big Picture | Épicas | Aggregates (DLES) | Módulo Vue / paquete Spring |
 | --- | --- | --- | --- | --- | --- |
 | Manufacturing & Batch Management | Core | Producción y almacén | EP04, EP09 (productos y fórmulas) | Product, MasterFormula, RawMaterialLot, ProductionOrder, ProductionBatch | `manufacturing` |
 | Quality & Compliance | Core | Gestión documental, Control de calidad y liberación, Desviaciones y CAPA, Auditoría y cumplimiento | EP03, EP05, EP07, EP08, EP10 | QualityDocument, MaterialApproval, BatchReview, AnalyticalResult, Deviation, Audit, RegulatoryReport | `quality` |
@@ -1140,7 +1140,7 @@ El diagrama de contenedores (nivel 2) muestra las unidades de despliegue de la s
 | Container | Tecnología | Despliegue | Responsabilidad |
 | --- | --- | --- | --- |
 | Landing Page | HTML5, CSS3, JavaScript | GitHub Pages | Presentar la propuesta de valor, los planes y el equipo; enviar las consultas del formulario de contacto y llevar a cada usuario al inicio de sesión de su entorno o al registro de la organización. |
-| Web Application | Angular, Angular Material, TypeScript, ngx-translate | Firebase Hosting | SPA responsive con un módulo por bounded context; consume el RESTful API con un token JWT. |
+| Web Application | Vue, Vite , TypeScript, ngx-translate | Firebase Hosting | SPA responsive con un módulo por bounded context; consume el RESTful API con un token JWT. |
 | RESTful API | Spring Boot, Java 21, Spring Data JPA, Spring Security, springdoc-openapi | Render | Monolito modular con los seis bounded contexts; expone endpoints REST documentados con OpenAPI (Swagger), recibe la telemetría de ThingsBoard y publica notificaciones por WebSocket (STOMP). |
 | Database | MySQL 8 | Railway | Persistencia relacional; las tablas se agrupan por bounded context. |
 
@@ -1152,7 +1152,7 @@ Se eligió un monolito modular en lugar de microservicios porque el statement de
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-Los diagramas de componentes (nivel 3) descomponen la Web Application y el RESTful API. La Web Application sigue la estructura del proyecto en Angular: un módulo por bounded context con las capas `domain`, `application`, `infrastructure` y `presentation`, más los elementos compartidos de `shared`. El módulo `manufacturing` recibe el código leído por el Lector RFID en el registro de la recepción de insumos.
+Los diagramas de componentes (nivel 3) descomponen la Web Application y el RESTful API. La Web Application sigue la estructura del proyecto en Vite: un módulo por bounded context con las capas `domain`, `application`, `infrastructure` y `presentation`, más los elementos compartidos de `shared`. El módulo `manufacturing` recibe el código leído por el Lector RFID en el registro de la recepción de insumos.
 
 ![Component Diagram - Web Application](../assets/img/chapter4/software-architecture/c4/c4-03-webapp-components.png)
 
