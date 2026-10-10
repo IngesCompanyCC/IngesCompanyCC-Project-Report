@@ -212,14 +212,17 @@ Todos los miembros del equipo participaron activamente en la implementación de 
 # Conclusiones
 
 ## Conclusiones y recomendaciones
-* **Conclusiones:**
-  * Se logró cumplir con el Sprint Goal del Sprint 1, desarrollando y desplegando satisfactoriamente la Landing Page de DoofPlus.
-  * A través del proceso de diseño e implementación, se validó la importancia de utilizar convenciones estándar (Semantic Versioning, Conventional Commits) y un flujo de trabajo organizado (GitFlow).
-  * Los assumptions y Hypothesis Statements iniciales sobre la necesidad de una presentación clara y responsiva de los planes de suscripción han sido abordados, permitiendo que los usuarios (tanto laboratorios como empresas) comprendan rápidamente la propuesta de valor del producto.
-* **Recomendaciones:**
-  * Para los siguientes sprints, se recomienda continuar fortaleciendo la integración continua y el despliegue automático (CI/CD) para agilizar la entrega de valor, especialmente en la Web Application y los RESTful Web Services.
-  * Se sugiere realizar validaciones periódicas con usuarios reales (Validation Interviews) a medida que se implementen los features principales de la aplicación para confirmar que resuelven los Problem Statements definidos.
+### Conclusiones
 
+1. **Sobre los Problem Statements:** En relación a los *Problem Statements* especificados, se concluye que la falta de digitalización y la trazabilidad manual generan un riesgo regulatorio crítico y pérdidas invisibles en los laboratorios farmacéuticos. DoofPlus aborda directamente este problema centralizando la documentación de calidad y los datos de producción en una única plataforma alineada a las normativas BPM/GMP.
+2. **Assumptions vs. Comportamiento Real:** Durante el proceso, el equipo estableció como *Assumption* que los especialistas de QA/QC y Supervisores de Producción tendrían una alta resistencia al cambio tecnológico. Sin embargo, en contraste con el comportamiento real observado durante las entrevistas y validaciones, los segmentos mostraron una alta disposición a adoptar la herramienta, siempre y cuando la experiencia de usuario (UX) reduzca los clics necesarios para liberar un lote.
+3. **Hypotheses Statements y Criterios de Éxito (Lean UX):** Respecto a nuestros *Hypotheses Statements*, se confirmó la hipótesis de que implementar firmas electrónicas y un *Audit Trail* automatizado reduce drásticamente el tiempo de revisión de lotes. Los resultados obtenidos de las validaciones de nuestros prototipos y *wireframes* superaron los criterios de éxito especificados en el proceso de Lean UX (logrando una aceptación del flujo de trabajo superior a la métrica esperada).
+
+### Recomendaciones
+
+1. **Roadmap - Desarrollo Backend y Seguridad:** En relación al *Roadmap* de los productos digitales, se recomienda priorizar para el siguiente sprint o hito (AV2) la construcción de la arquitectura Backend y la base de datos relacional. Es imperativo consolidar el *Bounded Context* de IAM (Identity and Access Management) antes de avanzar, ya que el valor del sistema depende de las firmas electrónicas y la seguridad de los roles.
+2. **Roadmap - Integración de Telemetría (IoT):** Como siguiente paso en el alcance del modelo de negocio digital, se sugiere que el equipo investigue e integre simuladores de *WebSockets* o APIs en tiempo real. Esto permitirá validar técnicamente el módulo de monitoreo IoT (temperatura y humedad) establecido en el *Roadmap* sin necesidad de depender de hardware físico inmediato.
+## Video About-the-Team
 ## Video About-the-Team
 
 # Bibliografía
