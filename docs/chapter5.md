@@ -91,12 +91,16 @@ Los mensajes de commit siguen la especificación **Conventional Commits 1.0.0**:
 
 ### 5.1.3. Source Code Style Guide & Coding Conventions
 
-Toda la nomenclatura y lógica programática en el código fuente se desarrolla estrictamente en **inglés**, respetando el Ubiquitous Language del dominio de calidad farmacéutica. Se han adoptado las siguientes convenciones estándar oficiales para la programación:
+Toda la nomenclatura del código fuente (archivos, clases, variables, métodos y comentarios) se escribe en **inglés**, respetando el Ubiquitous Language del dominio de calidad farmacéutica (por ejemplo, `ProductionBatch`, `Deviation`, `CapaAction`). Las convenciones adoptadas por lenguaje son las siguientes:
 
-* **HTML/CSS:** *Google HTML/CSS Style Guide* y *HTML Style Guide and Coding Conventions*.
-* **JavaScript / TypeScript:** *Google JavaScript Style Guide*, *Google TypeScript Style Guide* y *Angular coding style guide*.
-* **Java / Spring Boot:** *Google Java Style Guide* y buenas prácticas de *Spring Boot Features* para controladores RESTful y abstracción JPA.
-* **BDD:** *Gherkin Conventions for Readable Specifications*.
+* **HTML:** [HTML Style Guide and Coding Conventions (W3Schools)](https://www.w3schools.com/html/html5_syntax.asp) y [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). Etiquetas y atributos en minúsculas, valores de atributos entre comillas dobles, uso de etiquetas semánticas (`header`, `main`, `section`, `footer`) y atributo `alt` en todas las imágenes.
+* **CSS:** [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). Indentación de 2 espacios, nombres de clases en kebab-case y selectores cortos; los ids no se usan para estilos.
+* **JavaScript:** [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html). Uso de `const`/`let`, lowerCamelCase para variables y funciones y punto y coma al final de cada sentencia.
+* **Vue.js:** [Vue.js Style Guide](https://vuejs.org/style-guide/). Uso de Single-File Components (`.vue`), nombres de archivos y componentes multi-palabra en kebab-case (por ejemplo, `production-overview.vue`), uso de Composition API (`<script setup>`) y organización del código por bounded context (`domain`, `infrastructure`, `application`, `presentation`).
+* **TypeScript:** [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html). UpperCamelCase para clases e interfaces, lowerCamelCase para propiedades y métodos, tipado explícito y sin uso de `any`.
+* **Java:** [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html). UpperCamelCase para clases, lowerCamelCase para métodos y variables, CONSTANT_CASE para constantes y llaves obligatorias en todas las estructuras de control.
+* **Spring Boot:** [Spring Boot Features](https://docs.spring.io/spring-boot/reference/features/index.html). Clase principal en el paquete raíz, configuración externalizada en `application.properties` y variables de entorno, y controladores RESTful con rutas en plural y kebab-case (por ejemplo, `/api/v1/production-batches`).
+* **Gherkin:** [Gherkin Conventions for Readable Specifications](https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications). Palabras clave `Feature`, `Scenario`, `Given`, `When`, `Then` en inglés, un comportamiento por escenario y uso de `Scenario Outline` con `Examples` para casos basados en datos.
 
 ### 5.1.4. Software Deployment Configuration
 
