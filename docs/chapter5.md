@@ -18,10 +18,10 @@ Se detallan las herramientas utilizadas en el ciclo de vida del producto:
     * **UXPressia:** ElaboraciÃ³n de User Personas, Empathy Maps, Journey Maps e Impact Maps. (Referencia: https://uxpressia.com)
     * **Lucidchart:** DiagramaciÃ³n tÃ©cnica y diseÃ±o de base de datos. (Referencia: https://www.lucidchart.com)
 * **Software Development**
-    * **WebStorm / IntelliJ IDEA:** Entornos de desarrollo integrados para codificaciÃ³n. (Descarga: https://www.jetbrains.com)
+    * **Visual Studio Code / WebStorm / Rider:** Entornos de desarrollo integrados para codificaciÃ³n. (Descarga: https://www.jetbrains.com)
     * **HTML5, CSS3 y JavaScript:** TecnologÃ­as core utilizadas para el desarrollo exclusivo del Landing Page.
-    * **Angular Framework:** Framework basado en TypeScript utilizado para el desarrollo de Frontend Web Applications, integrando **Angular Material** como biblioteca de componentes de interfaz basados en Material Design. (Referencia: https://angular.dev)
-    * **Spring Boot & Spring Data JPA:** Frameworks basados en Java para el desarrollo de los RESTful Web Services. (Referencia: https://spring.io)
+    * **Vue.js Framework:** Framework de JavaScript (Composition API) utilizado para el desarrollo de Frontend Web Applications, integrando **PrimeVue** como biblioteca de componentes. (Referencia: https://vuejs.org/)
+    * **ASP.NET Core & Entity Framework Core:** Frameworks basados en C# para el desarrollo de los RESTful Web Services. (Referencia: https://dotnet.microsoft.com/)
     * **PostgreSQL:** Sistema gestor de base de datos relacional. (Referencia: https://www.postgresql.org)
 * **Software Testing**
     * **Swagger UI / Chrome DevTools / pgAdmin:** EjecuciÃ³n de pruebas de APIs, inspecciÃ³n de rendimiento frontend y revisiÃ³n directa de la persistencia en bases de datos.
@@ -55,7 +55,7 @@ Todos los mensajes siguen la convenciÃ³n **Conventional Commits** (`tipo[scope
 Toda la nomenclatura y lÃ³gica programÃ¡tica en el cÃ³digo fuente se desarrolla estrictamente en **inglÃ©s**, respetando el Ubiquitous Language del dominio de calidad farmacÃ©utica. Se han adoptado las siguientes convenciones estÃ¡ndar oficiales para la programaciÃ³n:
 
 * **HTML/CSS:** *Google HTML/CSS Style Guide* y *HTML Style Guide and Coding Conventions*.
-* **JavaScript / TypeScript:** *Google JavaScript Style Guide*, *Google TypeScript Style Guide* y *Angular coding style guide*.
+* **JavaScript / TypeScript:** *Google JavaScript Style Guide*, *Google TypeScript Style Guide* y *Vue Style Guide*.
 * **Java / Spring Boot:** *Google Java Style Guide* y buenas prÃ¡cticas de *Spring Boot Features* para controladores RESTful y abstracciÃ³n JPA.
 * **BDD:** *Gherkin Conventions for Readable Specifications*.
 
@@ -243,3 +243,4 @@ En este anexo se incluirÃ¡n de forma progresiva los hipervÃ­nculos a los vid
 * **Entrega TB1:** *(Pendiente)*
 * **Entrega AV2:** *(Pendiente)*
 * **Entrega TB2:** *(Pendiente)*
+
