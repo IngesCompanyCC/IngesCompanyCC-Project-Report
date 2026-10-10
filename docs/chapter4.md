@@ -1,10 +1,10 @@
-﻿# CapÃ­tulo IV: Product Design
+﻿# Capítulo IV: Product Design
 
-En este capÃ­tulo se presenta el diseÃ±o de DoofPlus a partir de las User Stories y el Impact Map del capÃ­tulo III: las guÃ­as de estilo, la arquitectura de informaciÃ³n, el diseÃ±o de la Landing Page y de la Web Application, la arquitectura de software orientada al dominio, el diseÃ±o orientado a objetos y el diseÃ±o de la base de datos. Las decisiones responden a las exigencias de los laboratorios farmacÃ©uticos y de la DIGEMID sobre la calidad, la trazabilidad y la integridad de los registros.
+En este capítulo se presenta el diseño de DoofPlus a partir de las User Stories y el Impact Map del capítulo III: las guías de estilo, la arquitectura de información, el diseño de la Landing Page y de la Web Application, la arquitectura de software orientada al dominio, el diseño orientado a objetos y el diseño de la base de datos. Las decisiones responden a las exigencias de los laboratorios farmacéuticos y de la DIGEMID sobre la calidad, la trazabilidad y la integridad de los registros.
 
 ## 4.1. Style Guidelines
 
-En esta secciÃ³n se establecen las bases visuales y de comunicaciÃ³n para DoofPlus, centralizando los recursos que serÃ¡n de uso comÃºn para todo el equipo de desarrollo y diseÃ±o. El objetivo es garantizar una presentaciÃ³n consistente, inclusiva y enfocada a travÃ©s de todos los puntos de contacto del producto, facilitando la mantenibilidad y escalabilidad del cÃ³digo y del diseÃ±o a lo largo del ciclo de vida del proyecto.
+En esta sección se establecen las bases visuales y de comunicacián para DoofPlus, centralizando los recursos que serán de uso común para todo el equipo de desarrollo y diseño. El objetivo es garantizar una presentación consistente, inclusiva y enfocada a través de todos los puntos de contacto del producto, facilitando la mantenibilidad y escalabilidad del código y del diseño a lo largo del ciclo de vida del proyecto.
 
 ### 4.1.1. General Style Guidelines
 
@@ -34,9 +34,9 @@ La tipografÃ­a de DoofPlus es Inter, una fuente sans-serif moderna y legible c
 
 | **Elemento** | **TamaÃ±o (desktop)** | **Peso** | **Uso** |
 | --- | --- | --- | --- |
-| H1 â€“ TÃ­tulo principal | 3rem (48 px), interlineado 1.1 | Semi Bold (600) | TÃ­tulo del hero de la Landing Page |
-| H2 â€“ TÃ­tulo de secciÃ³n o pantalla | 2rem (32 px), interlineado 1.2 | Semi Bold (600) | Secciones de la Landing Page y tÃ­tulos de pantalla |
-| H3 â€“ TÃ­tulo de tarjeta | 1.5rem (24 px), interlineado 1.3 | Semi Bold (600) | Tarjetas, paneles y diÃ¡logos |
+| H1 Capitulo principal | 3rem (48 px), interlineado 1.1 | Semi Bold (600) | TÃ­tulo del hero de la Landing Page |
+| H2 Capitulo de secciÃ³n o pantalla | 2rem (32 px), interlineado 1.2 | Semi Bold (600) | Secciones de la Landing Page y tÃ­tulos de pantalla |
+| H3 Capitulo de tarjeta | 1.5rem (24 px), interlineado 1.3 | Semi Bold (600) | Tarjetas, paneles y diÃ¡logos |
 | Body | 1rem (16 px), interlineado 1.45 | Regular (400) | PÃ¡rrafos y tablas de datos |
 | Label | 0.875rem (14 px) | Medium (500) | Etiquetas de formulario, botones y estados |
 | Metadata | 0.75rem (12 px) | Regular (400) | Fechas, identificadores y notas |
@@ -44,11 +44,11 @@ La tipografÃ­a de DoofPlus es Inter, una fuente sans-serif moderna y legible c
 #### Colors
 La paleta de colores de DoofPlus estÃ¡ diseÃ±ada para evocar pulcritud clÃ­nica, seguridad tecnolÃ³gica y control sobre los procesos. Se distribuye en cuatro categorÃ­as; los colores funcionales se acompaÃ±an siempre de un Ã­cono y de un texto, de modo que el estado nunca se comunica solo con color:
 
-| **Token** | **Valor** | **CategorÃ­a** | **Uso** |
+| **Token** | **Valor** | **Categoria** | **Uso** |
 | --- | --- | --- | --- |
 | --primary-color | #0F766E (verde azulado) | Principal | Botones y acciones principales (texto blanco) |
 | --accent-color | #0D9488 (verde marino) | Principal | Hover, anillos de foco y detalles decorativos |
-| --secondary-color | #0F172A (azul pizarra oscuro) | Principal | TÃ­tulos, texto principal y barras oscuras |
+| --secondary-color | #0F172A (azul pizarra oscuro) | Principal | Titulos, texto principal y barras oscuras |
 | --tertiary-color | #64748B (gris pizarra) | Soporte | Texto secundario y placeholders |
 | --bg-light | #F8FAFC | Soporte | Fondo de la aplicaciÃ³n y de secciones |
 | --bg-highlight | #F0FDFA | Soporte | Paneles destacados |
