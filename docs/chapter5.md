@@ -91,8 +91,6 @@ Los mensajes de commit siguen la especificación **Conventional Commits 1.0.0**:
 
 ### 5.1.3. Source Code Style Guide & Coding Conventions
 
-Toda la nomenclatura del código fuente (archivos, clases, variables, métodos y comentarios) se escribe en **inglés**, respetando el Ubiquitous Language del dominio de calidad farmacéutica (por ejemplo, `ProductionBatch`, `Deviation`, `CapaAction`). Las convenciones adoptadas por lenguaje son las siguientes:
-
 * **HTML:** [HTML Style Guide and Coding Conventions (W3Schools)](https://www.w3schools.com/html/html5_syntax.asp) y [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). Etiquetas y atributos en minúsculas, valores de atributos entre comillas dobles, uso de etiquetas semánticas (`header`, `main`, `section`, `footer`) y atributo `alt` en todas las imágenes.
 * **CSS:** [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). Indentación de 2 espacios, nombres de clases en kebab-case y selectores cortos; los ids no se usan para estilos.
 * **JavaScript:** [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html). Uso de `const`/`let`, lowerCamelCase para variables y funciones y punto y coma al final de cada sentencia.
@@ -108,19 +106,20 @@ A continuación se describen los pasos para desplegar cada producto de la soluci
 
 1. **Landing Page (GitHub Pages)**
     1. Fusionar la rama en `main` y etiquetar la versión.
-    2. En el repositorio `IngesCompanyCC-LanginPage`, ingresar a *Settings > Pages* y seleccionar *Deploy from a branch* con la rama `main` y la carpeta `/ (root)`. El archivo `.nojekyll` de la raíz indica a GitHub Pages que publique los archivos estáticos sin procesarlos con Jekyll.
-    3. GitHub Pages publica el sitio en https://ingescompanycc.github.io/IngesCompanyCC-LanginPage/ y lo vuelve a publicar con cada push a `main`.
+    2. En el repositorio `IngesCompany-LandingPage`, ingresar a *Settings > Pages* y seleccionar *Deploy from a branch* con la rama `main` y la carpeta `/ (root)`. El archivo `.nojekyll` de la raíz indica a GitHub Pages que publique los archivos estáticos sin procesarlos con Jekyll.
+    3. GitHub Pages publica el sitio en https://ingescompany-7742.github.io/IngesCompany-LandingPage/ y lo vuelve a publicar con cada push a `main`.
 2. **Frontend Web Application (Firebase Hosting)**
     1. Instalar Firebase CLI (`npm install -g firebase-tools`) e iniciar sesión con `firebase login`.
-    2. Seleccionar el proyecto de Firebase con `firebase use --add`. El repositorio ya incluye `firebase.json`, que publica la carpeta `dist` (generada por Vite) como Single Page Application.
-    3. Publicar la Fake API en un Web Service de Render vinculado a la rama `main` del repositorio `IngesCompanyCC-Frontend`, con el comando de build `npm install` y el de inicio `npm run server:prod`, y registrar su URL en el archivo de variables de entorno `.env.production`.
-    4. Compilar la versión de producción ejecutando `npm run build`.
-    5. Publicar con el comando `firebase deploy`.
+    2. Seleccionar el proyecto de Firebase con `firebase use --add`. El repositorio ya incluye `firebase.json`, que publica la carpeta `dist/IngesCompanyCC-Frontend/browser` como Single Page Application.
+    3. Publicar la Fake API en un Web Service de Render vinculado a la rama `main` del repositorio `IngesCompanyCC-Frontend`, con el comando de build `npm install` y el de inicio `npm run server:prod`, y registrar su URL en `src/environments/environment.ts`.
+    4. Compilar la versión de producción con `ng build --configuration production`.
+    5. Publicar con `firebase deploy`.
 3. **RESTful Web Services (Render y Railway)**
     1. Crear la base de datos MySQL en Railway y obtener la URL de conexión y las credenciales.
     2. Crear un Web Service en Render vinculado a la rama `main` del repositorio de Web Services, con el Dockerfile del proyecto Spring Boot.
     3. Registrar en Render las variables de entorno de producción (URL y credenciales de la base de datos, secreto JWT, credenciales de la pasarela de pagos Niubiz, API key de SendGrid y API key de los dispositivos de ThingsBoard).
     4. Render compila y publica el servicio con cada push a `main`; la documentación OpenAPI queda disponible en la ruta `/swagger-ui/index.html` del servicio.
+
 ## 5.2. Landing Page, Services & Applications Implementation
 
 En esta sección se explica y evidencia el proceso de implementación, pruebas, documentación y despliegue de **DoofPlus**, incluyendo la Landing Page, Web Services y Frontend Web Applications. Se presenta el avance organizado por Sprints a partir del Product Backlog.
