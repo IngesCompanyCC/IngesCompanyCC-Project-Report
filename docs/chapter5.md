@@ -104,16 +104,23 @@ Toda la nomenclatura del código fuente (archivos, clases, variables, métodos y
 
 ### 5.1.4. Software Deployment Configuration
 
-Pasos y configuración necesarios para el despliegue de la solución en la nube a partir de los repositorios de código:
+A continuación se describen los pasos para desplegar cada producto de la solución a partir de su repositorio de código fuente:
 
-1. **Landing Page (GitHub Pages):** Se navega a la configuración del repositorio, se habilita GitHub Pages apuntando a la raíz (`/root`) de la rama `main` y el código estático es servido públicamente de manera automática por GitHub.
-2. **Frontend Web Application (Firebase Hosting):**
-    - Se ejecuta la construcción optimizada localmente (`ng build --configuration production`).
-    - Se utiliza Firebase CLI y el comando `firebase deploy --only hosting` apuntando a la carpeta de distribución para sincronizar la SPA a la nube.
-3. **Backend Web Services (Render & Railway):**
-    - Se aprovisiona la base de datos PostgreSQL en **Railway**, obteniendo la URL y credenciales.
-    - El backend se despliega como Web Service en **Render** vinculado automáticamente a la rama `main` de su repositorio. Se inyectan las variables de entorno de producción (credenciales de BBDD, JWT keys, tokens de **Niubiz** para flujos de suscripción). En cada commit a `main`, Render compila el proyecto y lo expone públicamente.
-
+1. **Landing Page (GitHub Pages)**
+    1. Fusionar la rama en `main` y etiquetar la versión.
+    2. En el repositorio `IngesCompanyCC-LanginPage`, ingresar a *Settings > Pages* y seleccionar *Deploy from a branch* con la rama `main` y la carpeta `/ (root)`. El archivo `.nojekyll` de la raíz indica a GitHub Pages que publique los archivos estáticos sin procesarlos con Jekyll.
+    3. GitHub Pages publica el sitio en https://ingescompanycc.github.io/IngesCompanyCC-LanginPage/ y lo vuelve a publicar con cada push a `main`.
+2. **Frontend Web Application (Firebase Hosting)**
+    1. Instalar Firebase CLI (`npm install -g firebase-tools`) e iniciar sesión con `firebase login`.
+    2. Seleccionar el proyecto de Firebase con `firebase use --add`. El repositorio ya incluye `firebase.json`, que publica la carpeta `dist` (generada por Vite) como Single Page Application.
+    3. Publicar la Fake API en un Web Service de Render vinculado a la rama `main` del repositorio `IngesCompanyCC-Frontend`, con el comando de build `npm install` y el de inicio `npm run server:prod`, y registrar su URL en el archivo de variables de entorno `.env.production`.
+    4. Compilar la versión de producción ejecutando `npm run build`.
+    5. Publicar con el comando `firebase deploy`.
+3. **RESTful Web Services (Render y Railway)**
+    1. Crear la base de datos MySQL en Railway y obtener la URL de conexión y las credenciales.
+    2. Crear un Web Service en Render vinculado a la rama `main` del repositorio de Web Services, con el Dockerfile del proyecto Spring Boot.
+    3. Registrar en Render las variables de entorno de producción (URL y credenciales de la base de datos, secreto JWT, credenciales de la pasarela de pagos Niubiz, API key de SendGrid y API key de los dispositivos de ThingsBoard).
+    4. Render compila y publica el servicio con cada push a `main`; la documentación OpenAPI queda disponible en la ruta `/swagger-ui/index.html` del servicio.
 ## 5.2. Landing Page, Services & Applications Implementation
 
 En esta sección se explica y evidencia el proceso de implementación, pruebas, documentación y despliegue de **DoofPlus**, incluyendo la Landing Page, Web Services y Frontend Web Applications. Se presenta el avance organizado por Sprints a partir del Product Backlog.
