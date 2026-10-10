@@ -33,22 +33,49 @@ Se detallan las herramientas utilizadas en el ciclo de vida del producto:
 
 ### 5.1.2. Source Code Management
 
-El código fuente de la solución es gestionado mediante **GitHub** como plataforma y sistema de control de versiones distribuido.
-* **Landing Page:** https://github.com/IngesCompanyCC/IngesCompanyCC-Landing-Page
-* **Frontend Web Application:** https://github.com/IngesCompany-7742/DoofPlus-Frontend
-* **Backend Web Services:** https://github.com/IngesCompany-7742/doofplus-platform
+El equipo utiliza **GitHub** como plataforma y **Git** como sistema de control de versiones. Todos los repositorios pertenecen a la organización [IngesCompanyCC](https://github.com/IngesCompanyCC): https://github.com/IngesCompanyCC
+
+| Producto | Repositorio |
+|----------|-------------|
+| Landing Page | https://github.com/IngesCompanyCC/IngesCompanyCC-LandingPage.git |
+| Frontend Web Application | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend.git |
+| RESTful Web Services | Se creará en el Sprint 3. |
+| Informe del proyecto | https://github.com/IngesCompanyCC/IngesCompanyCC-Project-Report.git |
 
 **GitFlow Workflow**
-El proyecto adopta **GitFlow** para la organización de ramas:
-* `main`: Rama principal para el código en producción estable.
-* `develop`: Rama de integración donde se consolidan las funcionalidades de todo el equipo.
-* `feature/<nombre>`: Convención para desarrollar nuevas funcionalidades (ej. `feature/auth-module`).
-* `release/v<version>`: Ramas creadas desde develop para preparar y asegurar una nueva versión.
-* `hotfix/<nombre>`: Ramas que nacen de `main` para corregir errores críticos en producción.
 
-**Semantic Versioning y Conventional Commits**
-Se aplica **Semantic Versioning 2.0.0** (`MAJOR.MINOR.PATCH`) para nombrar las releases.
-Todos los mensajes siguen la convención **Conventional Commits** (`tipo[scope opcional]: descripción`) usando prefijos como `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore` (ej. `feat(landing): add benefits section`).
+El equipo aplica el modelo GitFlow propuesto por Vincent Driessen en *A successful Git branching model*:
+
+* **`main`:** Contiene únicamente versiones estables listas para producción. Solo recibe merges desde ramas `release/*` y `hotfix/*`, y cada merge se etiqueta con su versión (por ejemplo, `v1.0.0`).
+* **`develop`:** Rama de integración. Consolida las funcionalidades terminadas antes de preparar una nueva versión.
+* **Feature branches:** Nacen de `develop` y regresan a `develop` mediante Pull Request. Convención: `feature/<nombre-en-kebab-case>`, nombrando el bounded context o la funcionalidad (por ejemplo, `feature/shared`, `feature/manufacturing`, `feature/project-configuration`). En el repositorio del informe se usa `feature/chapter<n>`.
+* **Release branches:** Nacen de `develop` cuando un incremento está listo para entregarse y se fusionan con `main` y `develop`. Convención: `release/v<MAJOR>.<MINOR>.<PATCH>`, admitiendo el sufijo de pre-release `-rc.<n>` (por ejemplo, `release/v1.0.0-rc.1`, usada en la Landing Page).
+* **Hotfix branches:** Nacen de `main` para corregir errores críticos en producción y se fusionan con `main` y `develop`. Convención: `hotfix/v<MAJOR>.<MINOR>.<PATCH>` (por ejemplo, `hotfix/v1.0.1`).
+
+**Semantic Versioning**
+
+Las releases se nombran según **Semantic Versioning 2.0.0** con el formato `MAJOR.MINOR.PATCH`:
+
+* **MAJOR:** Cambios incompatibles con versiones anteriores (por ejemplo, `v2.0.0`).
+* **MINOR:** Nuevas funcionalidades compatibles con la versión anterior (por ejemplo, `v1.1.0`).
+* **PATCH:** Correcciones de errores compatibles (por ejemplo, `v1.0.1`).
+
+**Conventional Commits**
+
+Los mensajes de commit siguen la especificación **Conventional Commits 1.0.0**:
+
+```
+<type>(<optional scope>): <description>
+
+<optional body>
+
+<optional footer(s)>
+```
+
+* **type:** `feat` (nueva funcionalidad), `fix` (corrección de errores), `docs` (documentación), `style` (formato sin cambios de lógica), `refactor` (reestructuración sin cambio de comportamiento), `test` (pruebas), `build` (sistema de build o dependencias), `ci` (integración continua), `chore` (tareas de mantenimiento).
+* **scope:** Módulo o bounded context afectado, por ejemplo `feat(lots): ...` o `docs(chapter5): ...`.
+* **description:** Resumen breve en inglés, en modo imperativo y en minúsculas.
+* **body y footer:** Detalle del cambio y referencias a tareas; los cambios incompatibles se marcan con `BREAKING CHANGE:` o con `!` después del type.
 
 ### 5.1.3. Source Code Style Guide & Coding Conventions
 
