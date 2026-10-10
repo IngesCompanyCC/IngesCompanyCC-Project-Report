@@ -65,7 +65,7 @@ Pasos y configuraciÃ³n necesarios para el despliegue de la soluciÃ³n en la n
 
 1. **Landing Page (GitHub Pages):** Se navega a la configuraciÃ³n del repositorio, se habilita GitHub Pages apuntando a la raÃ­z (`/root`) de la rama `main` y el cÃ³digo estÃ¡tico es servido pÃºblicamente de manera automÃ¡tica por GitHub.
 2. **Frontend Web Application (Firebase Hosting):**
-    - Se ejecuta la construcciÃ³n optimizada localmente (`ng build --configuration production`).
+    - Se ejecuta la construcciÃ³n optimizada localmente (`npm run build`).
     - Se utiliza Firebase CLI y el comando `firebase deploy --only hosting` apuntando a la carpeta de distribuciÃ³n para sincronizar la SPA a la nube.
 3. **Backend Web Services (Render & Railway):**
     - Se aprovisiona la base de datos PostgreSQL en **Railway**, obteniendo la URL y credenciales.
@@ -243,4 +243,5 @@ En este anexo se incluirÃ¡n de forma progresiva los hipervÃ­nculos a los vid
 * **Entrega TB1:** *(Pendiente)*
 * **Entrega AV2:** *(Pendiente)*
 * **Entrega TB2:** *(Pendiente)*
+
 
