@@ -198,7 +198,6 @@ Las secciones se presentan en el siguiente orden, que prioriza la información q
 | 13 | Footer | Logotipo blanco, enlaces, contacto, términos, privacidad y selector de idioma | US46, US47 |
 
 ### 4.3.1. Landing Page Wireframe
-
 Los wireframes son de baja fidelidad: los textos se representan con barras, las imágenes con un recuadro cruzado y los íconos con círculos; solo se conservan los títulos y las etiquetas de los botones, que definen la estructura. Así se valida la disposición y el flujo de la información sin decidir aún colores ni contenido final.
 
 **Desktop Web Browser (1440 px)**
@@ -269,11 +268,11 @@ Los wireframes son de baja fidelidad: los textos se representan con barras, las 
 
 En mobile las mismas secciones se apilan en una sola columna, en el mismo orden; las tarjetas ocupan todo el ancho y la navegación se agrupa en un menú hamburguesa que se abre como overlay.
 
-![Landing Page Wireframe · Mobile (1)](../assets/img/chapter4/landing-page/mockups/mobile/mobile-montage-1.png)
+![Landing Page Wireframe · Mobile (1)](../assets/img/chapter4/landing-page/wireframes/mobile/mobile-montage-1.png)
 
-![Landing Page Wireframe · Mobile (2)](../assets/img/chapter4/landing-page/mockups/mobile/mobile-montage-2.png)
+![Landing Page Wireframe · Mobile (2)](../assets/img/chapter4/landing-page/wireframes/mobile/mobile-montage-2.png)
 
-![Landing Page Wireframe · Mobile (3)](../assets/img/chapter4/landing-page/mockups/mobile/mobile-montage-3.png)
+![Landing Page Wireframe · Mobile (3)](../assets/img/chapter4/landing-page/wireframes/mobile/mobile-montage-3.png)
 
 | Menu open | Contact us | Contact us · Invalid data | Message sent |
 | :---: | :---: | :---: | :---: |
@@ -531,7 +530,6 @@ Flujo: Production overview → Batches → Batch detail & traceability.
 
 ![Wireflow PR-6](../assets/img/chapter4/web-application/wireflows/wireflow-pr-6.png)
 
-
 ### 4.4.3. Web Applications Mock-ups
 
 Los mock-ups aplican el Design System de la sección 4.1 sobre los wireframes y se presentan en inglés (en-US), idioma por defecto. Cada entorno se reconoce por su color: QA/QC en verde azulado (#0F766E), Production en azul (#1E40AF) y Administration en azul pizarra (#334155). A continuación se presentan las pantallas Desktop por grupo, con su propósito y las user stories que atienden.
@@ -711,7 +709,6 @@ En mobile, la navegación del entorno se agrupa en una barra inferior y las pant
 **Administrador del laboratorio:** inicio de sesión del entorno de Administración con sus estados.
 
 ![Mock-up · Mobile · Administration](../assets/img/chapter4/web-application/mockups/mobile-laboratory-administrator-montage-1.png)
-
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
