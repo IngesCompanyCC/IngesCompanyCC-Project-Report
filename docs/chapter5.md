@@ -2,7 +2,7 @@
 
 ## 5.1. Software Configuration Management
 
-En esta sección se describen las decisiones, convenciones y herramientas utilizadas por el equipo Inges Company para gestionar el ciclo de vida, implementación, validación y despliegue de **DoofPlus**. Estas decisiones permitieron mantener la trazabilidad sobre los cambios realizados en cada sprint para la Landing Page, Frontend Web Application y Backend Web Services.
+En esta sección se describen las decisiones, convenciones y herramientas utilizadas por el equipo Inges Company para gestionar el ciclo de vida, la implementación, la validación y el despliegue de **DoofPlus**. Estas decisiones permiten mantener la consistencia y la trazabilidad de los cambios realizados en cada sprint sobre la Landing Page, la Frontend Web Application y los RESTful Web Services.
 
 ### 5.1.1. Software Development Environment Configuration
 
@@ -45,14 +45,14 @@ A continuación se detallan los productos de software que los miembros del equip
 
 ### 5.1.2. Source Code Management
 
-El equipo utiliza **GitHub** como plataforma y **Git** como sistema de control de versiones. Todos los repositorios pertenecen a la organización [IngesCompanyCC](https://github.com/IngesCompanyCC): https://github.com/IngesCompanyCC
+El equipo utiliza **GitHub** como plataforma y **Git** como sistema de control de versiones. Todos los repositorios pertenecen a la organización [IngesCompany-7742](https://github.com/IngesCompany-7742):
 
 | Producto | Repositorio |
 |----------|-------------|
-| Landing Page | https://github.com/IngesCompanyCC/IngesCompanyCC-LandingPage.git |
-| Frontend Web Application | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend.git |
+| Landing Page | https://github.com/IngesCompany-7742/IngesCompany-LandingPage |
+| Frontend Web Application | https://github.com/IngesCompany-7742/IngesCompany-Frontend |
 | RESTful Web Services | Se creará en el Sprint 3. |
-| Informe del proyecto | https://github.com/IngesCompanyCC/IngesCompanyCC-Project-Report.git |
+| Informe del proyecto | https://github.com/IngesCompany-7742/IngesCompany-Project-Report |
 
 **GitFlow Workflow**
 
