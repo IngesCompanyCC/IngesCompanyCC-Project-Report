@@ -1218,7 +1218,6 @@ El diseño orientado a objetos traduce los aggregates del Design-Level EventStor
 
 ![Class Diagram - Quality & Compliance](../assets/img/chapter4/diagram-class/class-06-quality.png)
 
-
 ## 4.8. Database Design
 
 La base de datos de DoofPlus se implementa en MySQL 8 y se genera a partir de las entidades JPA del RESTful API. Sus principales características son:
