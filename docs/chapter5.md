@@ -2,7 +2,7 @@
 
 ## 5.1. Software Configuration Management
 
-En esta sección se describen las decisiones, convenciones y herramientas utilizadas por el equipo Inges Company para gestionar el ciclo de vida, la implementación, la validación y el despliegue de **DoofPlus**. Estas decisiones permiten mantener la consistencia y la trazabilidad de los cambios realizados en cada sprint sobre la Landing Page, la Frontend Web Application y los RESTful Web Services.
+En esta sección se describen las decisiones, convenciones y herramientas utilizadas por el equipo IngesCompanyCC para gestionar el ciclo de vida, la implementación, la validación y el despliegue de **DoofPlus**. Estas decisiones permiten mantener la consistencia y la trazabilidad de los cambios realizados en cada sprint sobre la Landing Page, la Frontend Web Application y los RESTful Web Services.
 
 ### 5.1.1. Software Development Environment Configuration
 
@@ -24,11 +24,11 @@ A continuación se detallan los productos de software que los miembros del equip
 * **Software Development**
     * **Git:** Sistema de control de versiones distribuido utilizado en todos los repositorios. (Descarga: https://git-scm.com/downloads)
     * **GitHub:** Plataforma de alojamiento de los repositorios de la organización y de colaboración mediante ramas y Pull Requests. (Referencia: https://github.com/IngesCompanyCC)
-    * **WebStorm:** IDE para el desarrollo de la Landing Page (HTML5, CSS3 y JavaScript) y de la Frontend Web Application en Vue.js. (Descarga: https://www.jetbrains.com/webstorm/download)
-    * **IntelliJ IDEA:** IDE para el desarrollo de los RESTful Web Services en Java con Spring Boot. (Descarga: https://www.jetbrains.com/idea/download)
-    * **Node.js y npm:** Entorno de ejecución y gestor de paquetes requeridos para el ecosistema de Vue y Vite. (Descarga: https://nodejs.org/en/download)
-    * **Vite y Vue 3:** Entorno de construcción rápido y framework progresivo para desarrollar y compilar la Frontend Web Application, integrando **PrimeVue** como biblioteca de componentes, **Pinia** para la gestión del estado global y **Vue I18n** para la internacionalización. (Referencia: https://vuejs.org y https://vitejs.dev)
-    * **Spring Boot y Spring Data JPA:** Frameworks de Java para el desarrollo de los RESTful Web Services. (Referencia: https://spring.io/projects/spring-boot)
+    * **Visual Studio Code y WebStorm:** Editores para el desarrollo de la Landing Page (HTML5, CSS3 y JavaScript) y de la Frontend Web Application en Vue 3. (Descarga: https://code.visualstudio.com/download y https://www.jetbrains.com/webstorm/download)
+    * **JetBrains Rider:** IDE para el desarrollo de los RESTful Web Services en C# con ASP.NET Core. (Descarga: https://www.jetbrains.com/rider/download)
+    * **Node.js y npm:** Entorno de ejecución y gestor de paquetes requeridos por Vite y json-server. (Descarga: https://nodejs.org/en/download)
+    * **Vite y Vue 3:** Herramienta de build y framework de JavaScript (Composition API) para la Frontend Web Application, con **PrimeVue** y **PrimeFlex** para los componentes de interfaz, **Pinia** para el estado, **Vue Router** para la navegación y **Vue I18n** para la internacionalización. (Referencia: https://vuejs.org)
+    * **ASP.NET Core y Entity Framework Core:** Framework de C# y ORM para el desarrollo de los RESTful Web Services. (Referencia: https://dotnet.microsoft.com/apps/aspnet)
     * **MySQL:** Sistema gestor de base de datos relacional (MySQL 8). (Descarga: https://dev.mysql.com/downloads)
 * **Software Testing**
     * **Chrome DevTools:** Inspección del diseño responsive y depuración de la Landing Page y la Web Application. (Referencia: https://developer.chrome.com/docs/devtools)
@@ -45,14 +45,14 @@ A continuación se detallan los productos de software que los miembros del equip
 
 ### 5.1.2. Source Code Management
 
-El equipo utiliza **GitHub** como plataforma y **Git** como sistema de control de versiones. Todos los repositorios pertenecen a la organización [IngesCompany-7742](https://github.com/IngesCompany-7742):
+El equipo utiliza **GitHub** como plataforma y **Git** como sistema de control de versiones. Todos los repositorios pertenecen a la organización [IngesCompanyCC](https://github.com/IngesCompanyCC):
 
 | Producto | Repositorio |
 |----------|-------------|
-| Landing Page | https://github.com/IngesCompany-7742/IngesCompany-LandingPage |
-| Frontend Web Application | https://github.com/IngesCompany-7742/IngesCompany-Frontend |
+| Landing Page | https://github.com/IngesCompanyCC/IngesCompanyCC-LandingPage |
+| Frontend Web Application | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend |
 | RESTful Web Services | Se creará en el Sprint 3. |
-| Informe del proyecto | https://github.com/IngesCompany-7742/IngesCompany-Project-Report |
+| Informe del proyecto | https://github.com/IngesCompanyCC/IngesCompanyCC-Project-Report |
 
 **GitFlow Workflow**
 
@@ -61,8 +61,8 @@ El equipo aplica el modelo GitFlow propuesto por Vincent Driessen en *A successf
 * **`main`:** Contiene únicamente versiones estables listas para producción. Solo recibe merges desde ramas `release/*` y `hotfix/*`, y cada merge se etiqueta con su versión (por ejemplo, `v1.0.0`).
 * **`develop`:** Rama de integración. Consolida las funcionalidades terminadas antes de preparar una nueva versión.
 * **Feature branches:** Nacen de `develop` y regresan a `develop` mediante Pull Request. Convención: `feature/<nombre-en-kebab-case>`, nombrando el bounded context o la funcionalidad (por ejemplo, `feature/shared`, `feature/manufacturing`, `feature/project-configuration`). En el repositorio del informe se usa `feature/chapter<n>`.
-* **Release branches:** Nacen de `develop` cuando un incremento está listo para entregarse y se fusionan con `main` y `develop`. Convención: `release/v<MAJOR>.<MINOR>.<PATCH>`, admitiendo el sufijo de pre-release `-rc.<n>` (por ejemplo, `release/v1.0.0-rc.1`, usada en la Landing Page).
-* **Hotfix branches:** Nacen de `main` para corregir errores críticos en producción y se fusionan con `main` y `develop`. Convención: `hotfix/v<MAJOR>.<MINOR>.<PATCH>` (por ejemplo, `hotfix/v1.0.1`).
+* **Release branches:** Nacen de `develop` cuando un incremento está listo para entregarse y se fusionan con `main` y `develop`. Convención: `release/v<MAJOR>.<MINOR>.<PATCH>`, admitiendo el sufijo de pre-release `-rc.<n>` (por ejemplo, `release/v1.0.2`, usada en la Landing Page y en la Web Application).
+* **Hotfix branches:** Nacen de `main` para corregir errores críticos en producción y se fusionan con `main` y `develop`. Convención: `hotfix/v<MAJOR>.<MINOR>.<PATCH>` (por ejemplo, `hotfix/v1.0.3`).
 
 **Semantic Versioning**
 
@@ -91,13 +91,14 @@ Los mensajes de commit siguen la especificación **Conventional Commits 1.0.0**:
 
 ### 5.1.3. Source Code Style Guide & Coding Conventions
 
+Toda la nomenclatura del código fuente (archivos, clases, variables, métodos y comentarios) se escribe en **inglés**, respetando el Ubiquitous Language del dominio de calidad farmacéutica (por ejemplo, `ProductionBatch`, `Deviation`, `CapaAction`). Las convenciones adoptadas por lenguaje son las siguientes:
+
 * **HTML:** [HTML Style Guide and Coding Conventions (W3Schools)](https://www.w3schools.com/html/html5_syntax.asp) y [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). Etiquetas y atributos en minúsculas, valores de atributos entre comillas dobles, uso de etiquetas semánticas (`header`, `main`, `section`, `footer`) y atributo `alt` en todas las imágenes.
 * **CSS:** [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). Indentación de 2 espacios, nombres de clases en kebab-case y selectores cortos; los ids no se usan para estilos.
 * **JavaScript:** [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html). Uso de `const`/`let`, lowerCamelCase para variables y funciones y punto y coma al final de cada sentencia.
-* **Vue.js:** [Vue.js Style Guide](https://vuejs.org/style-guide/). Uso de Single-File Components (`.vue`), nombres de archivos y componentes multi-palabra en kebab-case (por ejemplo, `production-overview.vue`), uso de Composition API (`<script setup>`) y organización del código por bounded context (`domain`, `infrastructure`, `application`, `presentation`).
-* **TypeScript:** [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html). UpperCamelCase para clases e interfaces, lowerCamelCase para propiedades y métodos, tipado explícito y sin uso de `any`.
-* **Java:** [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html). UpperCamelCase para clases, lowerCamelCase para métodos y variables, CONSTANT_CASE para constantes y llaves obligatorias en todas las estructuras de control.
-* **Spring Boot:** [Spring Boot Features](https://docs.spring.io/spring-boot/reference/features/index.html). Clase principal en el paquete raíz, configuración externalizada en `application.properties` y variables de entorno, y controladores RESTful con rutas en plural y kebab-case (por ejemplo, `/api/v1/production-batches`).
+* **Vue:** [Vue Style Guide](https://vuejs.org/style-guide/). Componentes de un solo archivo (`.vue`) con nombres en kebab-case, `<script setup>` con Composition API, props tipadas y organización del código por bounded context (`domain`, `infrastructure`, `application`, `presentation`).
+* **C#:** [C# Coding Conventions (Microsoft)](https://learn.microsoft.com/dotnet/csharp/fundamentals/coding-style/coding-conventions). PascalCase para clases, métodos y propiedades, camelCase para variables locales y parámetros, y prefijo `I` en las interfaces.
+* **ASP.NET Core:** [ASP.NET Core Web API (Microsoft)](https://learn.microsoft.com/aspnet/core/web-api). Configuración externalizada en `appsettings.json` y variables de entorno, y controladores RESTful con rutas en plural y kebab-case (por ejemplo, `/api/v1/production-batches`).
 * **Gherkin:** [Gherkin Conventions for Readable Specifications](https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications). Palabras clave `Feature`, `Scenario`, `Given`, `When`, `Then` en inglés, un comportamiento por escenario y uso de `Scenario Outline` con `Examples` para casos basados en datos.
 
 ### 5.1.4. Software Deployment Configuration
@@ -105,20 +106,20 @@ Los mensajes de commit siguen la especificación **Conventional Commits 1.0.0**:
 A continuación se describen los pasos para desplegar cada producto de la solución a partir de su repositorio de código fuente:
 
 1. **Landing Page (GitHub Pages)**
-    1. Fusionar la rama en `main` y etiquetar la versión.
-    2. En el repositorio `IngesCompany-LandingPage`, ingresar a *Settings > Pages* y seleccionar *Deploy from a branch* con la rama `main` y la carpeta `/ (root)`. El archivo `.nojekyll` de la raíz indica a GitHub Pages que publique los archivos estáticos sin procesarlos con Jekyll.
-    3. GitHub Pages publica el sitio en https://ingescompany-7742.github.io/IngesCompany-LandingPage/ y lo vuelve a publicar con cada push a `main`.
+    1. Fusionar la rama de release en `main` y etiquetar la versión.
+    2. En el repositorio `IngesCompanyCC-LandingPage`, ingresar a *Settings > Pages* y seleccionar *Deploy from a branch* con la rama `main` y la carpeta `/ (root)`.
+    3. GitHub Pages publica el sitio en https://ingescompanycc.github.io/IngesCompanyCC-LandingPage/ y lo vuelve a publicar con cada push a `main`.
 2. **Frontend Web Application (Firebase Hosting)**
-    1. Instalar Firebase CLI (`npm install -g firebase-tools`) e iniciar sesión con `firebase login`.
-    2. Seleccionar el proyecto de Firebase con `firebase use --add`. El repositorio ya incluye `firebase.json`, que publica la carpeta `dist/IngesCompanyCC-Frontend/browser` como Single Page Application.
-    3. Publicar la Fake API en un Web Service de Render vinculado a la rama `main` del repositorio `IngesCompanyCC-Frontend`, con el comando de build `npm install` y el de inicio `npm run server:prod`, y registrar su URL en `src/environments/environment.ts`.
-    4. Compilar la versión de producción con `ng build --configuration production`.
-    5. Publicar con `firebase deploy`.
+    1. Publicar la Fake API en un Web Service de Render vinculado a la rama `main` del repositorio `IngesCompanyCC-Frontend`, con el comando de build `npm install` y el de inicio `npm run server:prod` (json-server en el puerto 10000).
+    2. Registrar la URL de la Fake API y las rutas de cada endpoint en `.env.production` (`VITE_PLATFORM_API_URL=https://ingescompanycc-api.onrender.com/api/v1`).
+    3. Instalar Firebase CLI (`npm install -g firebase-tools`), iniciar sesión con `firebase login` y seleccionar el proyecto `ingescompanycc-frontend` con `firebase use --add`. El repositorio incluye `firebase.json`, que publica la carpeta `dist` como Single Page Application.
+    4. Compilar la versión de producción con `npm run build` (Vite).
+    5. Publicar con `firebase deploy --only hosting`.
 3. **RESTful Web Services (Render y Railway)**
-    1. Crear la base de datos MySQL en Railway y obtener la URL de conexión y las credenciales.
-    2. Crear un Web Service en Render vinculado a la rama `main` del repositorio de Web Services, con el Dockerfile del proyecto Spring Boot.
-    3. Registrar en Render las variables de entorno de producción (URL y credenciales de la base de datos, secreto JWT, credenciales de la pasarela de pagos Niubiz, API key de SendGrid y API key de los dispositivos de ThingsBoard).
-    4. Render compila y publica el servicio con cada push a `main`; la documentación OpenAPI queda disponible en la ruta `/swagger-ui/index.html` del servicio.
+    1. Crear la base de datos MySQL en Railway y obtener la cadena de conexión y las credenciales.
+    2. Crear un Web Service en Render vinculado a la rama `main` del repositorio de Web Services, con el Dockerfile del proyecto ASP.NET Core.
+    3. Registrar en Render las variables de entorno de producción (cadena de conexión de la base de datos, secreto JWT, credenciales de la pasarela de pagos Niubiz, API key de SendGrid y API key de los dispositivos de ThingsBoard).
+    4. Render compila y publica el servicio con cada push a `main`; la documentación OpenAPI queda disponible en la ruta `/swagger` del servicio.
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
@@ -126,139 +127,118 @@ En esta sección se explica y evidencia el proceso de implementación, pruebas, 
 
 ### 5.2.1. Sprint 1
 
-En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo para el **Sprint 1**, cuyo enfoque principal fue la construcción y el despliegue de la primera versión de la Landing Page de DoofPlus, así como la configuración inicial de los repositorios.
+En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo para el **Sprint 1**, cuyo enfoque fue configurar los repositorios de la organización IngesCompanyCC, construir la base de la Landing Page de DoofPlus y configurar el proyecto de la Frontend Web Application.
 
 #### 5.2.1.1. Sprint Planning 1
 
-El Sprint Planning Meeting sirvió para definir los objetivos iniciales, asignar responsabilidades y seleccionar las User Stories prioritarias orientadas a la presentación comercial de DoofPlus. A continuación, se presenta el resumen de la reunión de planificación:
+El Sprint Planning Meeting sirvió para definir los objetivos iniciales, asignar responsabilidades y seleccionar las primeras User Stories de la Landing Page y las tareas técnicas de configuración de la Web Application. A continuación, se presenta el resumen de la reunión de planificación:
 
 | Sprint # | Sprint 1 |
 |----------|----------|
 | **Sprint Planning Background** | |
-| **Date** | 2026-09-20 |
+| **Date** | 2026-09-30 |
 | **Time** | 10:00 AM |
 | **Location** | Reunión virtual vía Discord |
-| **Prepared By** | Cobades Zamora, Yhoshua Hebert |
-| **Attendees (to planning meeting)** | Angulo, Marcelo / Cobades, Yhoshua / Yarleque, Cristina / Rojas, Nestor / Zavaleta, Rodolfo |
+| **Prepared By** | Zavaleta Gutierrez, Rodolfo Martin |
+| **Attendees (to planning meeting)** | Angulo Ramírez, Marcelo Martín / Cobades Zamora, Yhoshua Hebert / Rojas Ambicho, Nestor Daniel / Yarleque Ruiz, Cristina Marcela / Zavaleta Gutierrez, Rodolfo Martin |
 | **Sprint 0 Review Summary** | No aplica por ser el primer Sprint del proyecto. |
 | **Sprint 0 Retrospective Summary** | No aplica por ser el primer Sprint del proyecto. |
 | **Sprint Goal & User Stories** | |
-| **Sprint 1 Goal** | **Our focus is on** delivering a responsive and bilingual Landing Page for DoofPlus.<br>**We believe it delivers** a clear understanding of DoofPlus' value proposition, plans and team to QA/QC specialists and production supervisors of pharmaceutical laboratories.<br>**This will be confirmed when** visitors can navigate through the features, plans and team sections, switch between Spanish and English, and reach the contact form on both desktop and mobile devices. |
-| **Sprint 1 Velocity** | 16 Story Points |
-| **Sum of Story Points** | 16 Story Points (US44: 3, US03: 2, US45: 1, US04: 1, TS01: 3, US46: 5, US47: 1) |
+| **Sprint 1 Goal** | **Our focus is on** setting up the IngesCompanyCC repositories, the base of the DoofPlus Landing Page and the configuration of the DoofPlus Web Application.<br>**We believe it delivers** a first bilingual entry point that presents DoofPlus to QA/QC specialists and production supervisors of pharmaceutical laboratories, and a ready project to build the Web Application.<br>**This will be confirmed when** visitors can use the navigation bar, read the value proposition in the hero and switch between English and Spanish, and the Web Application project runs with PrimeVue, Vue I18n and the Fake API. |
+| **Sprint 1 Velocity** | 10 Story Points |
+| **Sum of Story Points** | 10 Story Points (US44: 3, US01: 2, US46: 5) |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-En el Sprint 1 se consideraron cuatro aspectos: el diseño de la Landing Page, su implementación, la configuración de repositorios y despliegue, y la documentación del sprint. A continuación se presenta el Leadership-and-Collaboration Matrix (LACX), que indica quién es el líder (L) y quiénes son los colaboradores (C) en cada aspecto:
+En el Sprint 1 se consideraron cuatro aspectos: la base de la Landing Page, la configuración de la Web Application, los repositorios y la documentación del sprint. A continuación se presenta el Leadership-and-Collaboration Matrix (LACX), que indica quién es el líder (L) y quiénes son los colaboradores (C) en cada aspecto:
 
-
-| Team Member (Last Name, First Name) | GitHub Username | Landing Page UI/UX | Landing Page Implementation | Repositories & Deployment | Documentation |
-|-------------------------------------|-----------------|:------------------:|:---------------------------:|:-------------------------:|:-------------:|
-| Angulo, Marcelo | Zock2005 | L | C | | C |
-| Cobades, Yhoshua | YhoshuaCZ | C | C | L | C |
-| Yarleque, Cristina | ris06luna / rflores | C | C | | C |
-| Rojas, Nestor | danRO-20 | C | C | | |
-| Zavaleta, Rodolfo | gutierrezrodolfo360-bit | C | L | C | L |
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page | Web Application Setup | Repositories | Documentation |
+|-------------------------------------|-----------------|:---:|:---:|:---:|:---:|
+| Angulo Ramírez, Marcelo Martín | Zock2005 | C | | | C |
+| Cobades Zamora, Yhoshua Hebert | YhoshuaCZ | C | C | C | |
+| Rojas Ambicho, Nestor Daniel | danRO-20 | C | | | C |
+| Yarleque Ruiz, Cristina Marcela | Cris06luna | | | | L |
+| Zavaleta Gutierrez, Rodolfo Martin | gutierrezrodolfo360-bit | L | L | L | C |
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El objetivo principal de este Sprint fue implementar y publicar la Landing Page de DoofPlus para dar a conocer a Inges Company y su propuesta de valor. La siguiente imagen muestra el board del Sprint 1 en Jira:
+El objetivo de este Sprint fue construir la base de la Landing Page y dejar configurado el proyecto de la Web Application. Las tareas se registraron en el board del Sprint 1 en Jira Software.
 
-![jira](../assets/img/chapter5/jira-pb.png)
+*Pendiente: captura del board del Sprint 1 en el espacio de Jira del curso (https://inges-company-cc.atlassian.net/jira/software/projects/UPC/boards/1).*
 
-*Figura: Board del Sprint 1 en Jira Software.*
-
-**Enlace al board en Jira:** <>
+**Enlace al board en Jira:** https://inges-company-cc.atlassian.net/jira/software/projects/UPC/boards/1
 
 | Sprint # | Sprint 1 | | | | | | |
 |----------|----------|---|---|---|---|---|---|
 | **User Story** | | **Work-Item / Task** | | | | | |
 | **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status (To-do / In-Process / To-Review / Done)** |
-| US44 | Navegación por secciones | T001 | Implementar navbar responsivo | Estructurar el menú de navegación con los enlaces a Home, Features, Benefits, Plans y Contact. | 2 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| US44 | Navegación por secciones | T002 | Estilos y menú hamburguesa | Aplicar estilos CSS al menú y añadir el comportamiento responsive con menú hamburguesa para móvil. | 2 | Angulo Ramírez, Marcelo Martín | Done |
-| US03 | Visualización de planes y precios | T003 | Diseñar tarjetas de planes | Crear las tarjetas de los planes Standard Lab (US$199/mes) y Enterprise (US$599/mes) con sus características. | 3 | Flores Martinez, Ricardo Andres | Done |
-| US03 | Visualización de planes y precios | T004 | Toggle mensual/anual | Implementar el cambio entre precios mensuales y anuales con un ahorro equivalente a dos meses (≈17%). | 2 | Cobades Zamora, Yhoshua Hebert | Done |
-| US45 | Visualización del equipo y de la startup | T005 | Maquetar sección Our Team | Implementar las tarjetas de los 5 integrantes del equipo Inges Company con foto, nombre y descripción. | 2 | Rojas Ambicho, Nestor Daniel | Done |
-| US45 | Visualización del equipo y de la startup | T006 | Correcciones sección Our Team | Corregir la estructura y el contenido de la sección del equipo tras la revisión de pares. | 1 | Angulo Ramírez, Marcelo Martín | Done |
-| US04 | Formulario de contacto | T007 | Implementar footer y formulario | Desarrollar el footer con el formulario de suscripción por email, datos de contacto y enlaces legales. | 3 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| TS01 | Implementación de Landing Page responsive y accesible | T008 | Correcciones de estructura index | Corregir la estructura general de `index.html` para asegurar la consistencia semántica y la accesibilidad. | 2 | Flores Martinez, Ricardo Andres | Done |
-| US46 | Cambio de idioma | T009 | Lógica i18n y toggle de idioma | Implementar el selector de idioma ES/EN con archivos de traducción y lógica JavaScript de i18n. | 3 | Cobades Zamora, Yhoshua Hebert | Done |
-| US47 | Consulta de términos y política de privacidad | T010 | Agregar Terms of Service | Redactar e implementar la página de Términos de Servicio de DoofPlus. | 2 | Rojas Ambicho, Nestor Daniel | Done |
-| US47 | Consulta de términos y política de privacidad | T011 | Agregar Privacy Policy | Redactar e implementar la Política de Privacidad conforme a la Ley N.° 29733. | 2 | Angulo Ramírez, Marcelo Martín | Done |
+| US44 | Navegación por secciones | T001 | Navbar bilingüe | Implementar la barra de navegación con el logotipo, los enlaces a las secciones y el selector de idioma, con sus estilos. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US01 | Visualización de la propuesta de valor | T002 | Hero con propuesta de valor | Implementar el hero con el título, el subtítulo, los botones de acción y la tarjeta flotante de estado de lote. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US46 | Cambio de idioma | T003 | Archivos de traducción y cambio de idioma | Crear los archivos de traducción en inglés y español y la lógica que aplica los textos con `data-i18n`. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| TS01 | Implementación de Landing Page responsive y accesible | T004 | Configuración del repositorio de la Landing Page | Crear el repositorio con la estructura base del sitio, el `.gitignore` y las ramas `main` y `develop`. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| TS01 | Implementación de Landing Page responsive y accesible | T005 | Recursos gráficos | Agregar el logotipo de DoofPlus y las fotos de los integrantes del equipo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| — | Tareas técnicas | T006 | Configuración del proyecto Vue | Configurar Vite, PrimeVue, Vue I18n, las variables de entorno (`.env`) y json-server con las rutas `/api/v1`. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| — | Tareas técnicas | T007 | Footer de la Web Application | Implementar el componente de footer con soporte de internacionalización. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-Durante el Sprint 1 se implementó la Landing Page con HTML5, CSS3 y JavaScript: estructura semántica de las secciones, hoja de estilos responsive, recursos gráficos, footer con formulario de contacto y cambio de idioma ES/EN mediante archivos de traducción. La versión estable se integró a `main` a través de la rama `release/v1.0.0-rc.1`. La siguiente tabla presenta los commits del repositorio:
+Durante el Sprint 1 se creó el repositorio de la Landing Page con su navegación, el hero y el cambio de idioma, y se configuró el proyecto de la Web Application con Vue 3, PrimeVue, Vue I18n y la Fake API. Las tablas siguientes presentan los commits de todas las ramas de ambos repositorios en el periodo del Sprint (del 30 de setiembre al 8 de octubre de 2026); la columna *Branch* indica la rama en que se realizó cada commit.
+
+**Landing Page** (11 commits)
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |------------|--------|-----------|----------------|---------------------|---------------------|
-| IngesCompany-7742/IngesCompanyCC-LandingPage | main | `b93c547` | fix: refactor index.html | Refactorización de la estructura de `index.html`. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | main | `1f1a22f` | Merge branch 'release/v1.0.0-rc.1' into main | Integración de la rama de release a producción. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `e530153` | fix: change the defect language | Corrección del idioma predeterminado. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `7eded14` | build: add the option to change the language in main.js | Lógica para alternar idiomas en el script principal. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `432fb64` | fix: update links of the images in index.html | Actualización de las rutas de las imágenes. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `46b51b6` | build: add styles | Incorporación de la hoja de estilos CSS. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `86d4578` | chore: add images | Inclusión de los recursos gráficos del sitio. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `06bd5ef` | build: Add footer | Creación de la sección del pie de página. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `be8e428` | build: add body | Estructura y contenido del cuerpo principal. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `9b082a5` | feat: add language switching functionality in main.js | Funcionalidad de cambio de idioma. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `b9ff9e6` | ci: add translations | Archivos de traducción ES/EN. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `6a1377f` | docs: update README.md | Actualización de la documentación del repositorio. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `0de92b6` | fix: refactor README.md | Corrección del formato del README. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `6e6efc0` | docs: add README.md | Creación del README del repositorio. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `8dca66b` | Merge remote-tracking branch 'origin/develop' into develop | Sincronización de la rama `develop`. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `a8c7448` | chore: Create template | Creación de la plantilla base del proyecto. | 20/09/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `e68b54e` | feat: init commit | Commit inicial del repositorio. | 20/09/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `185d2c0` | feat(assets): add DoofPlus logo and team photos | — | 08/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `2acc88b` | Merge branch 'feature/navbar-hero' into develop | — | 07/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `2ca1c4b` | feat(translations): add hero content translations for English and Spanish | — | 07/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `996e8cd` | feat(hero): add hero section with dynamic content placeholders and styles | — | 07/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `ab9e295` | feat(nav): add navbar with language support in English and Spanish and styles | — | 07/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `c569c20` | feat(translations): add language switching functionality and update HTML structure | — | 07/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0a72a3f` | Merge branch 'feature/project-configuration' into develop | — | 07/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `dc827a9` | feat(translations): implement language switching functionality file | — | 07/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `afb534f` | feat(translations): add initial language files for English and Spanish | — | 07/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | main | `80e064f` | chore: add gitignore | — | 07/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | main | `5a5fb40` | chore: initial commit | — | 07/10/2026 |
+
+**Web Application** (7 commits)
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|---------------------|
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `1a507d6` | feat(footer-content): add footer component with internationalization support for English and Spanish | — | 30/09/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `91f10ed` | Merge branch 'feature/project-configuration' into develop | — | 30/09/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `d3fe488` | feat(i18n): add initial i18n setup with English and Spanish language files for translation support | — | 30/09/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `825d7a2` | chore: add initial db and routes configuration for json-server | — | 30/09/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `a8b15b5` | chore: update dependencies and integrate PrimeVue components | — | 30/09/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `d8c858c` | chore: add gitignore | — | 30/09/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `2e07764` | chore: initial commit | — | 30/09/2026 |
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
-![Landing Page - Parte 1](../assets/img/chapter5/screenshots/1.png)
+En este Sprint se logró la base de la Landing Page, bilingüe (inglés y español), con la barra de navegación, el hero con la propuesta de valor y la tarjeta de estado de lote. La siguiente captura muestra la Landing Page al cierre del Sprint (commit `185d2c0`):
 
-![Landing Page - Parte 2](../assets/img/chapter5/screenshots/2.png)
+![Landing Page al cierre del Sprint 1](../assets/img/chapter5/screenshots/s1-full.png)
 
-![Landing Page - Parte 3](../assets/img/chapter5/screenshots/3.png)
-
-![Landing Page - Parte 4](../assets/img/chapter5/screenshots/4.png)
-
-![Landing Page - Parte 5](../assets/img/chapter5/screenshots/5.png)
-
-![Landing Page - Parte 6](../assets/img/chapter5/screenshots/6.png)
-
-![Landing Page - Parte 7](../assets/img/chapter5/screenshots/7.png)
-
-![Landing Page - Parte 8](../assets/img/chapter5/screenshots/8.png)
-
-![Landing Page - Parte 9](../assets/img/chapter5/screenshots/9.png)
-
-![Landing Page - Parte 10](../assets/img/chapter5/screenshots/10.png)
-
-![Landing Page - Parte 11](../assets/img/chapter5/screenshots/11.png)
-
-**Landing Page desplegada:** https://ingescompany-7742.github.io/IngesCompany-LandingPage/
+*Figura: Landing Page al cierre del Sprint 1: navegación, hero y selector de idioma.*
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
-El alcance del Sprint 1 se limitó a la Landing Page, por lo que no se implementaron ni documentaron endpoints. La documentación de los RESTful Web Services con OpenAPI se elaborará en el sprint en que se implementen dichos servicios.
+El alcance del Sprint 1 no incluyó endpoints propios. La Web Application quedó configurada con json-server y las rutas `/api/v1`, cuyos endpoints se documentan en el Sprint 2. La documentación de los RESTful Web Services con OpenAPI se elaborará en el sprint en que se implementen dichos servicios.
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-Durante este Sprint, el equipo publicó la Landing Page en **GitHub Pages**. Para ello se configuró, en *Settings > Pages* del repositorio `IngesCompany-LandingPage`, la publicación desde la rama `main` y la carpeta raíz, de modo que cada cambio integrado en `main` se publica automáticamente.
-
-![Configuración de GitHub Pages](../assets/img/chapter5/evidencia/github-pages.png)
-
-*Figura: Configuración de GitHub Pages en el repositorio de la Landing Page.*
-
-![Landing Page publicada](../assets/img/chapter5/evidencia/pages.png)
-
-*Figura: Landing Page publicada en GitHub Pages.*
+En el Sprint 1 los productos se mantuvieron en los repositorios de la organización IngesCompanyCC, con las ramas `main` y `develop` de GitFlow. La publicación de la Landing Page en GitHub Pages, de la Web Application en Firebase Hosting y de la Fake API en Render se realizó en el Sprint 2 (sección 5.2.2.7).
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-Todos los miembros del equipo participaron en la implementación de la Landing Page. Los cambios se integraron en la rama `develop` y, desde ella, se preparó la rama `release/v1.0.0-rc.1`, que se fusionó con `main` para su publicación. La siguiente imagen muestra los analíticos de commits del repositorio en GitHub:
+En el Sprint 1 la configuración inicial de ambos repositorios estuvo a cargo de Zavaleta Gutierrez, Rodolfo Martin, con el aporte de Cobades Zamora, Yhoshua Hebert en los recursos gráficos. La siguiente tabla resume los commits de cada integrante en ambos repositorios durante el Sprint (sin contar los commits de merge):
 
-![Insights del repositorio de la Landing Page](../assets/img/chapter5/evidencia/evidencia.png)
-
-*Figura: Analíticos de colaboración del repositorio de la Landing Page en GitHub.*
+| Team Member | GitHub Username | Landing Page | Web Application | Total |
+|---|---|:---:|:---:|:---:|
+| Zavaleta Gutierrez, Rodolfo Martin | gutierrezrodolfo360-bit | 8 | 6 | 14 |
+| Cobades Zamora, Yhoshua Hebert | YhoshuaCZ | 1 | 0 | 1 |
+| Angulo Ramírez, Marcelo Martín | Zock2005 | 0 | 0 | 0 |
+| Rojas Ambicho, Nestor Daniel | danRO-20 | 0 | 0 | 0 |
+| Yarleque Ruiz, Cristina Marcela | Cris06luna | 0 | 0 | 0 |
 
 ### 5.2.2. Sprint 2
 
@@ -271,393 +251,323 @@ El Sprint Planning Meeting sirvió para definir los objetivos del Sprint, asigna
 | Sprint # | Sprint 2 |
 |----------|----------|
 | **Sprint Planning Background** | |
-| **Date** | 2026-10-02 |
+| **Date** | 2026-10-09 |
 | **Time** | 09:00 AM |
 | **Location** | Reunión virtual vía Discord |
 | **Prepared By** | Cobades Zamora, Yhoshua Hebert |
-| **Attendees (to planning meeting)** | Angulo Ramírez, Marcelo Martín / Cobades Zamora, Yhoshua Hebert / Flores Martinez, Ricardo Andres / Rojas Ambicho, Nestor Daniel / Zavaleta Gutierrez, Rodolfo Martin |
-| **Sprint 1 Review Summary** | Se entregó la primera versión de la Landing Page de DoofPlus publicada en GitHub Pages, con navegación por secciones, planes y precios, sección del equipo, formulario de contacto, cambio de idioma ES/EN y páginas legales. Como feedback, se pidió que el formulario de contacto sirva para enviar consultas sobre la plataforma y sus planes, y alinear la Landing Page con los mock-ups del capítulo 4. |
-| **Sprint 1 Retrospective Summary** | Como acierto, el equipo integró la versión estable mediante una rama de release siguiendo GitFlow. Como oportunidades de mejora, se acordó trabajar en feature branches que nazcan de `develop`, una por sección o bounded context, distribuir los commits a lo largo del sprint y usar los types de Conventional Commits según su significado. |
+| **Attendees (to planning meeting)** | Angulo Ramírez, Marcelo Martín / Cobades Zamora, Yhoshua Hebert / Rojas Ambicho, Nestor Daniel / Yarleque Ruiz, Cristina Marcela / Zavaleta Gutierrez, Rodolfo Martin |
+| **Sprint 1 Review Summary** | Se entregó la base de la Landing Page (navegación, hero y cambio de idioma) y el proyecto de la Web Application configurado con Vue 3, PrimeVue, Vue I18n y la Fake API. Como feedback, se pidió completar las secciones de la Landing Page según los mock-ups del capítulo 4, agregar el acceso por segmento a la Web Application y publicar ambos productos. |
+| **Sprint 1 Retrospective Summary** | Como acierto, los repositorios se crearon desde el inicio con las ramas `main` y `develop` de GitFlow. Como oportunidades de mejora, se acordó repartir el trabajo entre todos los integrantes, usar una feature branch por sección o bounded context, distribuir los commits a lo largo del sprint y usar los types de Conventional Commits según su significado. |
 | **Sprint Goal & User Stories** | |
 | **Sprint 2 Goal** | **Our focus is on** delivering the complete DoofPlus Landing Page and the first version of the DoofPlus Web Application for the QA/QC, Production and Administration environments.<br>**We believe it delivers** a single place to register batches, follow deviations and CAPA, release batches with electronic signature and monitor IoT equipment to QA/QC specialists and production supervisors of pharmaceutical laboratories.<br>**This will be confirmed when** each segment signs in to its own environment with two-factor authentication and completes its user goals (QA-1 to QA-6 and PR-1 to PR-6) on the published Web Application. |
-| **Sprint 2 Velocity** | 177 Story Points |
-| **Sum of Story Points** | 177 Story Points (US01: 2, US02: 2, US48: 2, US49: 2, US05: 1, US06: 2, US07: 3, US08: 5, US55: 3, US50: 3, US51: 3, US52: 5, US53: 3, US35: 3, US36: 5, US57: 3, US14: 3, US15: 5, US16: 2, US58: 3, US17: 3, US32: 3, US23: 3, US24: 3, US25: 5, US26: 3, US37: 3, US38: 3, US39: 3, US56: 3, US22: 2, US09: 5, US10: 3, US12: 5, US13: 3, US18: 3, US19: 5, US20: 5, US21: 3, US11: 5, US54: 5, US31: 3, US27: 5, US28: 5, US29: 5, US30: 3, US59: 3, US33: 3, US34: 3, US40: 3, US41: 3, US42: 2, US43: 3) |
+| **Sprint 2 Velocity** | 182 Story Points |
+| **Sum of Story Points** | 182 Story Points (US03: 2, US45: 1, US04: 1, US47: 1, US01: 2, US02: 2, US48: 2, US49: 2, US05: 1, US06: 2, US07: 3, US08: 5, US55: 3, US50: 3, US51: 3, US52: 5, US53: 3, US35: 3, US36: 5, US57: 3, US14: 3, US15: 5, US16: 2, US58: 3, US17: 3, US32: 3, US23: 3, US24: 3, US25: 5, US26: 3, US37: 3, US38: 3, US39: 3, US56: 3, US22: 2, US09: 5, US10: 3, US12: 5, US13: 3, US18: 3, US19: 5, US20: 5, US21: 3, US11: 5, US54: 5, US31: 3, US27: 5, US28: 5, US29: 5, US30: 3, US59: 3, US33: 3, US34: 3, US40: 3, US41: 3, US42: 2, US43: 3) |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
-En el Sprint 2 se consideraron ocho aspectos: la Landing Page y, en la Web Application, los bounded contexts (Shared e IAM; Organizations y Subscriptions; Manufacturing; IoT Monitoring; Quality & Compliance), las releases y el despliegue, y la documentación. El líder (L) de cada aspecto es el integrante con más commits en él, según el historial de los repositorios.
+En el Sprint 2 se consideraron ocho aspectos: la Landing Page y, en la Web Application, los bounded contexts (Shared e IAM; Organizations y Subscriptions; Manufacturing; IoT Monitoring; Quality & Compliance), las releases y el despliegue, y la documentación. El líder (L) de cada aspecto es el integrante con más commits en él, según el historial de los repositorios de la organización IngesCompanyCC.
 
 | Team Member (Last Name, First Name) | GitHub Username | Landing Page | Shared & IAM | Organizations & Subscriptions | Manufacturing | IoT Monitoring | Quality & Compliance | Releases & Deployment | Documentation |
 |-------------------------------------|-----------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Angulo, Marcelo | Zock2005 | C | C | | | L | | | C |
-| Cobades, Yhoshua | YhoshuaCZ | C | L | | L | | L | C | C |
-| Yarleque, Cristina | ris06luna / rflores | C | | | C | | C | | |
-| Rojas, Nestor | danRO-20 | L | | L | | C | | L | C |
-| Zavaleta, Rodolfo | gutierrezrodolfo360-bit | C | C | | C | | C | C | L |
+| Angulo Ramírez, Marcelo Martín | Zock2005 | C | C | | | | | L | C |
+| Cobades Zamora, Yhoshua Hebert | YhoshuaCZ | | L | L | C | L | L | | |
+| Rojas Ambicho, Nestor Daniel | danRO-20 | L | | | | | | C | C |
+| Yarleque Ruiz, Cristina Marcela | Cris06luna | | | | | | | | L |
+| Zavaleta Gutierrez, Rodolfo Martin | gutierrezrodolfo360-bit | C | | | L | | | | C |
 
 #### 5.2.2.3. Sprint Backlog 2
 
-El objetivo del Sprint fue completar la Landing Page y entregar la primera versión de la Web Application. Las tareas se organizaron por User Story; las de la Landing Page incluyen la reimplementación de las secciones del Sprint 1 sobre el diseño del capítulo 4. La siguiente imagen muestra el board del Sprint 2 en Jira:
+El objetivo del Sprint fue completar la Landing Page y entregar la primera versión de la Web Application. Las tareas se organizaron por User Story; las de la Landing Page incluyen la reimplementación de las secciones del Sprint 1 sobre el diseño del capítulo 4. Las tareas se registraron en el board del Sprint 2 en Jira Software.
 
-![Sprint Backlog 2 en Jira](../assets/img/chapter5/evidencia/jira-pb2.png)
+*Pendiente: captura del board del Sprint 2 en el espacio de Jira del curso (https://inges-company-cc.atlassian.net/jira/software/projects/UPC/boards/1).*
 
-*Figura: Board del Sprint 2 en Jira Software.*
-
-**Enlace al board en Jira:** <>
+**Enlace al board en Jira:** https://inges-company-cc.atlassian.net/jira/software/projects/UPC/boards/1
 
 | Sprint # | Sprint 2 | | | | | | |
 |----------|----------|---|---|---|---|---|---|
 | **User Story** | | **Work-Item / Task** | | | | | |
 | **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status (To-do / In-Process / To-Review / Done)** |
-| US01 | Visualización de la propuesta de valor | T012 | Hero con propuesta de valor | Implementar el hero con el título, el subtítulo, los indicadores de confianza y los botones Get Started y View plans. | 3 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| US02 | Visualización de servicios y características | T013 | Secciones Services y Features | Implementar las tarjetas de servicios y el acordeón de características con su panel de vista previa. | 3 | Flores Martinez, Ricardo Andres | Done |
-| US48 | Acceso por segmento a la Web Application | T014 | Acceso por segmento | Implementar la sección Choose your workspace y los enlaces con data-app-segment hacia el inicio de sesión de cada entorno. | 3 | Rojas Ambicho, Nestor Daniel | Done |
-| US49 | Visualización del video promocional | T015 | Video About the Product y About the Team | Implementar el reproductor que carga el video de YouTube al pulsar play y muestra un aviso mientras el video no está publicado. | 3 | Angulo Ramírez, Marcelo Martín | Done |
-| US05 | Preguntas frecuentes | T016 | Sección FAQ | Implementar las preguntas frecuentes con acordeón accesible y el enlace al formulario de contacto. | 2 | Rojas Ambicho, Nestor Daniel | Done |
-| US44 | Navegación por secciones | T017 | Navbar con menú móvil | Reimplementar la barra de navegación con anclas reales, Sign in y Get Started con destino propio y el menú overlay en mobile. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US03 | Visualización de planes y precios | T018 | Planes con toggle mensual/anual | Reimplementar las tarjetas de planes con el cambio de precio mensual/anual y su nota de precios. | 3 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| US45 | Visualización del equipo y de la startup | T019 | Secciones About us y Our Team | Implementar la misión, la visión y las tarjetas de los integrantes con su foto y rol. | 2 | Rojas Ambicho, Nestor Daniel | Done |
-| US04 | Formulario de contacto | T020 | Formulario Contact us | Implementar el formulario de consulta con validación de campos y el estado de mensaje enviado. | 2 | Cobades Zamora, Yhoshua Hebert | Done |
-| US47 | Consulta de términos y política de privacidad | T021 | Términos y política de privacidad | Implementar las páginas terms.html y privacy.html con sus estilos y traducciones. | 2 | Angulo Ramírez, Marcelo Martín | Done |
-| US06 | Inicio de sesión con segundo factor | T022 | Inicio de sesión con 2FA | Implementar la elección de entorno, el inicio de sesión por entorno y la verificación con código de seis dígitos. | 3 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| US07 | Gestión de roles | T023 | Acceso por rol | Implementar el guard de IAM y el estado Access not authorized cuando el rol no corresponde al entorno. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US08 | Firmas electrónicas | T024 | Firma electrónica | Implementar la confirmación con contraseña en las aprobaciones, liberaciones y cierres críticos. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US55 | Alta de usuarios del equipo | T025 | Usuarios e invitaciones | Implementar el directorio de usuarios y perfiles y el formulario para invitar usuarios. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US50 | Registro de organización | T026 | Registro de organización | Implementar el registro con razón social, RUC, planta, plan y primer administrador, y el resumen de administración. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US51 | Selección de plan | T027 | Selección de plan | Implementar la revisión del cambio de plan en la página de suscripción. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US52 | Pago de suscripción | T028 | Pago de suscripción | Implementar el historial de facturación y el reintento de un pago rechazado. | 6 | Rojas Ambicho, Nestor Daniel | Done |
-| US53 | Renovación y cancelación | T029 | Renovación de la suscripción | Mostrar la fecha de renovación y el estado de la suscripción en la página de suscripción y pagos. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US35 | Catálogo de productos | T030 | Catálogo de productos | Implementar el catálogo de productos con su fórmula maestra vigente. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US36 | Gestión de fórmulas maestras | T031 | Fórmulas maestras | Mostrar los componentes y la versión aprobada de la fórmula maestra de cada producto. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US57 | Gestión de órdenes de producción | T032 | Órdenes de producción | Implementar la lista y la ejecución de órdenes de producción contra la fórmula maestra. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US14 | Registro de lotes | T033 | Registro de lotes | Implementar el diálogo Create batch con el estado de lote rechazado por fórmula no aprobada. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| US15 | Consulta del historial de lotes | T034 | Historial de lotes | Implementar la lista de lotes con filtros y la genealogía y el historial de estados de cada lote. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US16 | Gestión de estados de lote | T035 | Estados de lote | Implementar el cambio de estado de los lotes y sus conteos por estado. | 3 | Cobades Zamora, Yhoshua Hebert | Done |
-| US58 | Recepción de materias primas | T036 | Recepción de materias primas | Implementar la recepción de materias primas con cuarentena e inspección. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US17 | Asociación de materias primas | T037 | Asociación de materias primas | Asignar lotes de materia prima aprobados a un lote de producción. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US32 | Dashboard de producción | T038 | Resumen de producción | Implementar el resumen de producción con el programa del día, la disponibilidad de equipos y las incidencias. | 4 | Flores Martinez, Ricardo Andres | Done |
-| US23 | Registro de dispositivos IoT | T039 | Inventario de equipos y sensores | Implementar el inventario de equipos con sus sensores IoT y el registro de un sensor. | 4 | Angulo Ramírez, Marcelo Martín | Done |
-| US24 | Asociación de sensores a un lote | T040 | Asociación de sensores a lotes | Implementar la evidencia IoT del lote con la asociación de equipos y sensores. | 4 | Angulo Ramírez, Marcelo Martín | Done |
-| US25 | Captura automática de evidencias | T041 | Telemetría | Implementar el gráfico de telemetría con límites y lectura pico. | 6 | Angulo Ramírez, Marcelo Martín | Done |
-| US26 | Consulta de registros IoT | T042 | Consulta de registros IoT | Implementar el resumen IoT con la salud de los equipos y la cola de alertas. | 4 | Angulo Ramírez, Marcelo Martín | Done |
-| US37 | Gestión de equipos | T043 | Gestión de equipos | Mostrar el estado operativo de cada equipo en el inventario. | 4 | Angulo Ramírez, Marcelo Martín | Done |
-| US38 | Gestión de calibraciones | T044 | Calibraciones | Mostrar el estado de calibración (apto, por vencer, no apto) de equipos y sensores. | 4 | Angulo Ramírez, Marcelo Martín | Done |
-| US39 | Mantenimiento preventivo | T045 | Mantenimiento preventivo | Mostrar el próximo mantenimiento y su responsable en el detalle del equipo. | 4 | Angulo Ramírez, Marcelo Martín | Done |
-| US56 | Registro y escalamiento de incidencias | T046 | Incidentes | Implementar la lista de incidentes con su severidad y el reconocimiento de alertas. | 4 | Angulo Ramírez, Marcelo Martín | Done |
-| US22 | Notificaciones de desviación crítica | T047 | Alertas críticas | Implementar el detalle del sensor con la alerta activa y la regla de reconocimiento. | 3 | Angulo Ramírez, Marcelo Martín | Done |
-| US09 | Gestión de protocolos de calidad | T048 | Documentos de calidad | Implementar el repositorio de documentos controlados con su flujo de aprobación. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US10 | Repositorio de SOP | T049 | Repositorio de SOP | Filtrar los documentos por tipo y estado para consultar la versión vigente. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US12 | Control de versiones documentales | T050 | Versiones de documentos | Implementar el historial de versiones de cada documento. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US13 | Aprobación documental | T051 | Aprobación documental | Implementar la aprobación con firma y el bloqueo de autoaprobación (segregación de funciones). | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US18 | Registro de desviaciones | T052 | Registro de desviaciones | Implementar el reporte de desviación con su evaluación de riesgo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US19 | Análisis de causa raíz | T053 | Análisis de causa raíz | Implementar el registro de la causa raíz como requisito del plan CAPA. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US20 | Gestión CAPA | T054 | Plan CAPA | Implementar el plan CAPA con sus acciones, responsables y fechas. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US21 | Seguimiento de acciones CAPA | T055 | Seguimiento de CAPA | Mostrar el avance de las acciones CAPA y bloquear el cierre sin evidencia de eficacia. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US11 | Automatización de cálculos de calidad | T056 | Resultados analíticos | Implementar los resultados analíticos con su conformidad respecto de la especificación. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US54 | Revisión y liberación de lotes | T057 | Liberación de lotes | Implementar la liberación de lotes con requisitos previos, firma electrónica y estado bloqueado. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US31 | Dashboard de calidad | T058 | Resumen de calidad | Implementar el resumen de calidad con la cola de prioridades y las próximas decisiones. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US27 | Audit trail | T059 | Audit trail | Implementar el registro de eventos con filtros por registro y actor, compartido por los tres entornos. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US28 | Generación automática de reportes | T060 | Reportes regulatorios | Implementar la lista y generación de reportes regulatorios. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US29 | Preparación de auditorías | T061 | Preparación de auditorías | Implementar el registro de auditorías y su estado de preparación. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US30 | Acceso de auditor a evidencias | T062 | Evidencias para auditor | Mostrar las evidencias vinculadas a cada hallazgo de auditoría. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US59 | Registro de auditorías y hallazgos | T063 | Hallazgos de auditoría | Implementar el registro de hallazgos con su severidad y acción asignada. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US33 | Indicadores de trazabilidad | T064 | Indicadores de trazabilidad | Implementar los indicadores de brechas de trazabilidad. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US34 | Indicadores de desviaciones | T065 | Indicadores de desviaciones | Implementar la tendencia de desviaciones por periodo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US40 | Bandeja de tareas | T066 | Bandeja de tareas | Implementar la lista de tareas pendientes vinculadas a registros. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US41 | Notificaciones entre áreas | T067 | Comunicación entre áreas | Implementar los comentarios de cada tarea para la coordinación entre Producción y Calidad. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US42 | Solicitudes de aprobación | T068 | Solicitudes de aprobación | Crear tareas de aprobación dirigidas a Calidad desde un registro. | 3 | Cobades Zamora, Yhoshua Hebert | Done |
-| US43 | Seguimiento de tareas | T069 | Seguimiento de tareas | Mostrar el estado de las tareas asignadas por el usuario. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| — | Tareas técnicas | T070 | Configuración del proyecto Angular | Configurar Angular Material, ngx-translate, environments y json-server con las rutas /api/v1. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| — | Tareas técnicas | T071 | Capa shared | Implementar las clases base de la API, el layout público, el workspace shell, el page header y el selector de idioma. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| — | Tareas técnicas | T072 | Traducciones de IoT Monitoring | Agregar las 121 claves de la sección monitoring en inglés y español. | 3 | Rojas Ambicho, Nestor Daniel | Done |
-| — | Tareas técnicas | T073 | Documentación del repositorio | Redactar el README, el CHANGELOG, la guía de contribución, las ADRs y el diagrama de clases. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| — | Tareas técnicas | T074 | Releases v1.0.0 | Preparar release/v1.0.0 en la Landing Page y en la Web Application, con merge a main y tag SemVer. | 2 | Rojas Ambicho, Nestor Daniel | Done |
-| — | Tareas técnicas | T075 | Configuración de despliegue | Agregar firebase.json para Firebase Hosting y el script server:prod para publicar la Fake API. | 2 | Rojas Ambicho, Nestor Daniel | Done |
+| US01 | Visualización de la propuesta de valor | T008 | Hero con propuesta de valor | Implementar el hero con el título, el subtítulo, los indicadores de confianza y los botones Get Started y View plans. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US02 | Visualización de servicios y características | T009 | Secciones Services y Features | Implementar las tarjetas de servicios y el acordeón de características con su panel de vista previa. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US48 | Acceso por segmento a la Web Application | T010 | Acceso por segmento | Implementar la sección Choose your workspace y los enlaces con data-app-segment hacia el inicio de sesión de cada entorno. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US49 | Visualización del video promocional | T011 | Video About the Product y About the Team | Implementar el reproductor que carga el video de YouTube al pulsar play y muestra un aviso mientras el video no está publicado. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US05 | Preguntas frecuentes | T012 | Sección FAQ | Implementar las preguntas frecuentes con acordeón accesible y el enlace al formulario de contacto. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US44 | Navegación por secciones | T013 | Navbar con menú móvil | Reimplementar la barra de navegación con anclas reales, Sign in y Get Started con destino propio y el menú overlay en mobile. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US03 | Visualización de planes y precios | T014 | Planes con toggle mensual/anual | Reimplementar las tarjetas de planes con el cambio de precio mensual/anual y su nota de precios. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US45 | Visualización del equipo y de la startup | T015 | Secciones About us y Our Team | Implementar la misión, la visión y las tarjetas de los integrantes con su foto y rol. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US04 | Formulario de contacto | T016 | Formulario Contact us | Implementar el formulario de consulta con validación de campos y el estado de mensaje enviado. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US47 | Consulta de términos y política de privacidad | T017 | Términos y política de privacidad | Implementar las páginas terms.html y privacy.html con sus estilos y traducciones. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US06 | Inicio de sesión con segundo factor | T018 | Inicio de sesión con 2FA | Implementar la elección de entorno, el inicio de sesión por entorno y la verificación con código de seis dígitos. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US07 | Gestión de roles | T019 | Acceso por rol | Implementar el guard de IAM y el estado Access not authorized cuando el rol no corresponde al entorno. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US08 | Firmas electrónicas | T020 | Firma electrónica | Implementar la confirmación con contraseña en las aprobaciones, liberaciones y cierres críticos. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US55 | Alta de usuarios del equipo | T021 | Usuarios e invitaciones | Implementar el directorio de usuarios y perfiles y el formulario para invitar usuarios. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US50 | Registro de organización | T022 | Registro de organización | Implementar el registro con razón social, RUC, planta, plan y primer administrador, y el resumen de administración. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US51 | Selección de plan | T023 | Selección de plan | Implementar la revisión del cambio de plan en la página de suscripción. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US52 | Pago de suscripción | T024 | Pago de suscripción | Implementar el historial de facturación y el reintento de un pago rechazado. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US53 | Renovación y cancelación | T025 | Renovación de la suscripción | Mostrar la fecha de renovación y el estado de la suscripción en la página de suscripción y pagos. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US35 | Catálogo de productos | T026 | Catálogo de productos | Implementar el catálogo de productos con su fórmula maestra vigente. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US36 | Gestión de fórmulas maestras | T027 | Fórmulas maestras | Mostrar los componentes y la versión aprobada de la fórmula maestra de cada producto. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US57 | Gestión de órdenes de producción | T028 | Órdenes de producción | Implementar la lista y la ejecución de órdenes de producción contra la fórmula maestra. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US14 | Registro de lotes | T029 | Registro de lotes | Implementar el diálogo Create batch con el estado de lote rechazado por fórmula no aprobada. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US15 | Consulta del historial de lotes | T030 | Historial de lotes | Implementar la lista de lotes con filtros y la genealogía y el historial de estados de cada lote. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US16 | Gestión de estados de lote | T031 | Estados de lote | Implementar el cambio de estado de los lotes y sus conteos por estado. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US58 | Recepción de materias primas | T032 | Recepción de materias primas | Implementar la recepción de materias primas con cuarentena e inspección. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US17 | Asociación de materias primas | T033 | Asociación de materias primas | Asignar lotes de materia prima aprobados a un lote de producción. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US32 | Dashboard de producción | T034 | Resumen de producción | Implementar el resumen de producción con el programa del día, la disponibilidad de equipos y las incidencias. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US23 | Registro de dispositivos IoT | T035 | Inventario de equipos y sensores | Implementar el inventario de equipos con sus sensores IoT y el registro de un sensor. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US24 | Asociación de sensores a un lote | T036 | Asociación de sensores a lotes | Implementar la evidencia IoT del lote con la asociación de equipos y sensores. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US25 | Captura automática de evidencias | T037 | Telemetría | Implementar el gráfico de telemetría con límites y lectura pico. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US26 | Consulta de registros IoT | T038 | Consulta de registros IoT | Implementar el resumen IoT con la salud de los equipos y la cola de alertas. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US37 | Gestión de equipos | T039 | Gestión de equipos | Mostrar el estado operativo de cada equipo en el inventario. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US38 | Gestión de calibraciones | T040 | Calibraciones | Mostrar el estado de calibración (apto, por vencer, no apto) de equipos y sensores. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US39 | Mantenimiento preventivo | T041 | Mantenimiento preventivo | Mostrar el próximo mantenimiento y su responsable en el detalle del equipo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US56 | Registro y escalamiento de incidencias | T042 | Incidentes | Implementar la lista de incidentes con su severidad y el reconocimiento de alertas. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US22 | Notificaciones de desviación crítica | T043 | Alertas críticas | Implementar el detalle del sensor con la alerta activa y la regla de reconocimiento. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US09 | Gestión de protocolos de calidad | T044 | Documentos de calidad | Implementar el repositorio de documentos controlados con su flujo de aprobación. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US10 | Repositorio de SOP | T045 | Repositorio de SOP | Filtrar los documentos por tipo y estado para consultar la versión vigente. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US12 | Control de versiones documentales | T046 | Versiones de documentos | Implementar el historial de versiones de cada documento. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US13 | Aprobación documental | T047 | Aprobación documental | Implementar la aprobación con firma y el bloqueo de autoaprobación (segregación de funciones). | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US18 | Registro de desviaciones | T048 | Registro de desviaciones | Implementar el reporte de desviación con su evaluación de riesgo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US19 | Análisis de causa raíz | T049 | Análisis de causa raíz | Implementar el registro de la causa raíz como requisito del plan CAPA. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US20 | Gestión CAPA | T050 | Plan CAPA | Implementar el plan CAPA con sus acciones, responsables y fechas. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US21 | Seguimiento de acciones CAPA | T051 | Seguimiento de CAPA | Mostrar el avance de las acciones CAPA y bloquear el cierre sin evidencia de eficacia. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US11 | Automatización de cálculos de calidad | T052 | Resultados analíticos | Implementar los resultados analíticos con su conformidad respecto de la especificación. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US54 | Revisión y liberación de lotes | T053 | Liberación de lotes | Implementar la liberación de lotes con requisitos previos, firma electrónica y estado bloqueado. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US31 | Dashboard de calidad | T054 | Resumen de calidad | Implementar el resumen de calidad con la cola de prioridades y las próximas decisiones. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US27 | Audit trail | T055 | Audit trail | Implementar el registro de eventos con filtros por registro y actor, compartido por los tres entornos. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US28 | Generación automática de reportes | T056 | Reportes regulatorios | Implementar la lista y generación de reportes regulatorios. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US29 | Preparación de auditorías | T057 | Preparación de auditorías | Implementar el registro de auditorías y su estado de preparación. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US30 | Acceso de auditor a evidencias | T058 | Evidencias para auditor | Mostrar las evidencias vinculadas a cada hallazgo de auditoría. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US59 | Registro de auditorías y hallazgos | T059 | Hallazgos de auditoría | Implementar el registro de hallazgos con su severidad y acción asignada. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US33 | Indicadores de trazabilidad | T060 | Indicadores de trazabilidad | Implementar los indicadores de brechas de trazabilidad. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US34 | Indicadores de desviaciones | T061 | Indicadores de desviaciones | Implementar la tendencia de desviaciones por periodo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US40 | Bandeja de tareas | T062 | Bandeja de tareas | Implementar la lista de tareas pendientes vinculadas a registros. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US41 | Notificaciones entre áreas | T063 | Comunicación entre áreas | Implementar los comentarios de cada tarea para la coordinación entre Producción y Calidad. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US42 | Solicitudes de aprobación | T064 | Solicitudes de aprobación | Crear tareas de aprobación dirigidas a Calidad desde un registro. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US43 | Seguimiento de tareas | T065 | Seguimiento de tareas | Mostrar el estado de las tareas asignadas por el usuario. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| — | Tareas técnicas | T066 | Capa shared | Implementar las clases base de la API, el layout público, el workspace shell, el page header y el selector de idioma. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| — | Tareas técnicas | T067 | Accesibilidad del layout público | Mejorar el layout público, el footer y la página 404 con atributos de accesibilidad y textos traducidos. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| — | Tareas técnicas | T068 | Traducciones de IoT Monitoring | Agregar las 121 claves de la sección monitoring en inglés y español. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| — | Tareas técnicas | T069 | Documentación del repositorio | Redactar la estructura base de la documentación, las user stories, las ADRs y el diagrama de clases del proyecto. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
+| — | Tareas técnicas | T070 | Releases v1.0.2 | Preparar release/v1.0.2 en la Landing Page y en la Web Application, con merge a main y tag SemVer. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| — | Tareas técnicas | T071 | Configuración de despliegue | Agregar firebase.json para Firebase Hosting y el script server:prod para publicar la Fake API. | 4 | Rojas Ambicho, Nestor Daniel | Done |
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-En el Sprint 2 se trabajó en dos repositorios siguiendo GitFlow: una feature branch por sección de la Landing Page o por bounded context de la Web Application, integradas en `develop` con merges `--no-ff`, y una rama `release/v1.0.0` fusionada en `main` con el tag `v1.0.0` en ambos repositorios. La Landing Page recibió además el hotfix `v1.0.1`. Las tablas siguientes presentan todos los commits de `main`; la columna *Branch* indica la rama en que se realizó cada commit.
+En el Sprint 2 se trabajó en dos repositorios siguiendo GitFlow: una feature branch por sección de la Landing Page o por bounded context de la Web Application, integradas en `develop` con merges `--no-ff`, y una rama `release/v1.0.2` fusionada en `main` con el tag `v1.0.2` en ambos repositorios. Las tablas siguientes presentan los commits de todas las ramas de ambos repositorios en el periodo del Sprint (9 y 10 de octubre de 2026); la columna *Branch* indica la rama en que se realizó cada commit.
 
-**Landing Page** (92 commits)
-
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
-|------------|--------|-----------|----------------|---------------------|---------------------|
-| IngesCompanyCC/IngesCompanyCC-LandingPage | main | `5a5fb40` | chore: initial commit | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | main | `80e064f` | chore: add gitignore | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/project-configuration | `afb534f` | feat(translations): add initial language files for English and Spanish | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/project-configuration | `dc827a9` | feat(translations): implement language switching functionality file | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0a72a3f` | Merge branch 'feature/project-configuration' into develop | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/navbar-hero | `c569c20` | feat(translations): add language switching functionality and update HTML structure | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/navbar-hero | `ab9e295` | feat(nav): add navbar with language support in English and Spanish and styles | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/navbar-hero | `996e8cd` | feat(hero): add hero section with dynamic content placeholders and styles | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/navbar-hero | `2ca1c4b` | feat(translations): add hero content translations for English and Spanish | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `2acc88b` | Merge branch 'feature/navbar-hero' into develop | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0d68dcf` | feat(styles): add modular styles with the 12-column fluid grid | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `a79fefb` | feat(i18n): load English and Spanish texts from JSON files | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `b31ee03` | feat(layout): add navbar with mobile menu, footer and segment access | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `85932c9` | feat(cursor): add custom cursors in the DoofPlus colors | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/plans-section | `cc97535` | feat(i18n): add translation of plans | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/plans-section | `690e9a9` | feat(components): add billing-toggle | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/plans-section | `f3838e1` | feat(styles): add section of plan styles | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/plans-section | `b527590` | feat(scripts): add import of sections | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/plans-section | `8bfd189` | feat(index):  add monthly and yearly plans | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `cdd7304` | Merge branch 'feature/plans-section' into develop | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/restore-hero | `59d793c` | feat(home): restore hero section | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `f886259` | Merge branch 'feature/restore-hero' into develop | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/workspace-section | `c10ba0b` | feat(i18n): add workspace content translations for English and Spanish | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/workspace-section | `3cc963b` | feat(workspace): add process flow bar and section workspace | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/workspace-section | `b8b9428` | feat(workspace): add workspace cards with dynamic content and translation | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `06b0bfe` | Merge branch 'feature/workspace-section' into develop | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/services | `504205f` | feat(services) : add services cards | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/services | `ca857c3` | feat(i18n) : add services content translations for english and spanish | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/services | `78ab06b` | feat(services) : add services styles | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0b48370` | Merge branch 'feature/services' into develop | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0d2bd78` | fix(navbar): skip placeholder links when highlighting sections | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `666d9cd` | feat(i18n): add features content translations for english and spanish | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `c8ffc51` | feat(features): add features section with accordion and preview panels | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `70c9db1` | feat(features): add features styles | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `fbf3b79` | fix(plans): load billing toggle script so the annual option works | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `beb359f` | style(form): add textarea and confirmation styles and remove unused demo styles | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `72c978b` | feat(i18n): add contact inquiry translations for english and spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/contact-section | `3a58827` | feat(contact): add contact inquiry form section | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `d296d28` | Merge remote-tracking branch 'origin/feature/contact-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/benefits-section | `103c355` | feat(i18n): add benefits content translations for english and spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/benefits-section | `6e38531` | feat(benefits): add benefits section with key result cards | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/benefits-section | `f043190` | feat(benefits): add benefits styles | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `9b49664` | Merge branch 'feature/benefits-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/testimonials-section | `e8b7970` | feat(i18n): add testimonials content translations for english and spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/about-product-section | `f14e0b9` | feat(i18n): add product section content translations for english and spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/about-product-section | `7fd893b` | feat(video): add styles for product video section | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/about-product-section | `145acdf` | feat(video): add product video section with player and details | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `989262c` | Merge branch 'feature/about-product-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/testimonials-section | `cbfe7b1` | feat(testimonials): add testimonials section with client quotes and ratings | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/testimonials-section | `26f6288` | feat(testimonials): add testimonials styles | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `f3a3a1e` | Merge branch 'feature/testimonials-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/faq-section | `7833057` | feat(i18n): add faq content translations for english and spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/faq-section | `9599b92` | feat(faq): add faq section with accordion and contact link | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/faq-section | `ff8e68a` | feat(faq): add faq styles | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `20a0012` | Merge branch 'feature/faq-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/about-section | `f43c313` | feat(i18n): add about content translations for english and spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/about-section | `58d8b38` | feat(about): add about section with mission, vision and principles | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/about-section | `ed983a7` | feat(about): add about styles | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `e0235c1` | Merge branch 'feature/about-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/team-section | `bdeab66` | feat(i18n): add team content translations for english and spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/team-section | `65de15e` | feat(team): add team member photos | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/team-section | `25f6c2b` | feat(team): add team section with member cards | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/team-section | `e40431d` | feat(team): add team styles | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `217aa55` | Merge branch 'feature/team-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | fix/landing-links | `5e7e811` | fix(landing): replace demo links, fix hero buttons and wrap sections in main | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/navbar | `f5754c1` | feat(navbar): add section links, segment access and mobile menu | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `8236269` | Merge branch 'fix/landing-links' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `b9e41f1` | Merge branch 'feature/navbar' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | fix/hero-section | `ab053c9` | fix(i18n): update hero content translations | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | fix/hero-section | `ab59881` | fix(hero): update hero call to action buttons | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `2b51732` | Merge branch 'fix/hero-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | fix/workspace-section | `25c1931` | fix(i18n): update workspace content translations | — | 09/10/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | fix/workspace-section | `486687f` | style(workspace): replace workspace styles with card and banner styles | — | 09/10/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | fix/workspace-section | `4e471af` | fix(workspace): simplify segment cards and add new customer banner | — | 09/10/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | develop | `0af9d9e` | Merge branch 'fix/workspace-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/footer-privacy-section | `483ab70` | fix(i18n): update Spanish translations for product video section producing error | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/footer-privacy-section | `f0d25a0` | feat(terms): add Terms of Service page with legal content and multilingual support | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/footer-privacy-section | `cf1c8a3` | feat(privacy): add Privacy Policy page with legal content and multilingual support | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/footer-privacy-section | `670ebff` | feat(styles): add styles for secondary pages including terms of service and privacy policy | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/footer-privacy-section | `7d42d1c` | feat(legal): add Terms of Service and Privacy Policy sections in English and Spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `6f34ece` | Merge branch 'feature/footer-privacy-section' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | fix/legal-pages | `acda06d` | fix(styles): import the secondary page styles used by the terms and privacy pages | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | fix/legal-pages | `6f465cd` | fix(i18n): add the page titles and back link translations of the terms and privacy pages | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `f8a1b3d` | Merge branch 'fix/legal-pages' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/videos | `2bd55e5` | feat(video): add the video player that loads the YouTube embed on play | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/videos | `d742662` | feat(team): add the about the team video below the member cards | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `1163cea` | Merge branch 'feature/videos' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-LandingPage | feature/seo | `f3e1c5b` | feat(seo): add meta tags for SEO and social media sharing | — | 09/10/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | main | `1acb96b` | Merge branch 'release/v1.0.0' | — | 09/10/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | hotfix/v1.0.1 | `7a2de04` | fix(deploy): publish the static site on GitHub Pages without the Jekyll build | — | 09/10/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | hotfix/v1.0.1 | `d4efb41` | chore(release): set the landing page version to 1.0.1 | — | 09/10/2026 |
-| IngesCompany-7742/IngesCompanyCC-LandingPage | main | `61326ed` | Merge branch 'hotfix/v1.0.1' | — | 09/10/2026 |
-
-**Frontend Web Application** (173 commits)
+**Landing Page** (104 commits)
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |------------|--------|-----------|----------------|---------------------|---------------------|
-| IngesCompanyCC/IngesCompanyCC-Frontend | main | `16247a9` | chore: initial commit | — | 28/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | main | `58f3404` | chore: add git ignore | — | 28/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `89336d3` | feat(i18n): add i18n support for English and Spanish translation | — | 28/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `84282bf` | feat(ui): add Material Design UI Library | — | 28/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `cb6376e` | feat(environment): add Environment configuration for development and production modes | — | 28/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `3ea5890` | Merge branch 'feature/project-configuration' into develop | — | 28/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `b066a80` | feat(home): add Home view with title and content, including route definition and style | — | 28/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `6d386d5` | feat(home): add DateTime and URL value objects for handing dates and URLs | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `574db0d` | feat(base-entity): add BaseEntity interface for domain entities with UUID identifier | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `b1906c4` | feat(toolbar): add responsive toolbar component | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `c701062` | feat(layout): add layout component | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `f5ed375` | feat(language-switcher): add language switcher component for UI language selection | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `c0bcedc` | feat(about): add About page with layout, styles, and content for product overview | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `78a850c` | feat(page-not-found): add Page Not Found component with template and navigation | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `9df65b3` | chore(index): update index.html structure for semantic consistency | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `8ebbec3` | style(layout): add tittle | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `067727c` | feat(about): add the route definition of the view About | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `9840b0b` | feat(routes): add the route definition of the view About and PageNotFound	| —	| 29/09/2026	|
-| IngesCompanyCC/IngesCompanyCC-Frontend	| feature/shared	| `f4f9185`	| Merge remote-tracking branch 'origin/feature/shared' into feature/shared	| # Conflicts: # src/app/app.routes.ts	| 29/09/2026	|
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `a270b2f` | feat(footer): add footer component and translation | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `485f392` | feat(footer): add footer component and translation | — | 29/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `46a135e` | fix(layout): render toolbar globally across public views and add translations | — | 30/09/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `e7ec1ba` | Merge branch 'feature/shared' into develop | — | 05/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `c5951a6` | feat(database): add initial db.json with vaccine batch data | — | 05/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `dd30869` | feat(batch): add Batch entity to represent product batches | — | 05/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/share-fixes | `a09dd57` | fix(shared): add missing DoofPlus logo asset | — | 06/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/share-fixes | `6f4ce9c` | fix(i18n): add missing translations for home, about and page not found views | — | 06/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `23e6e5a` | Merge branch 'feature/share-fixes' into develop | — | 06/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `5f53fd7` | feat(server): add JSON server setup to run the locale database | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `43b4302` | feat(manufacturing): add infrastructure layer in manufacturing for batch operations | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `98bd8a3` | feat(database): add db.json with initial posts and comments data | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `ae368f6` | feat(manufacturing): implement ManufacturingStore for batch state management in application layer | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `353c95b` | feat(batch): add BatchList component with support in English and Spanish and routing for batch management | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `07e9dc2` | feat(batch): add BatchForm component with support in English and Spanish and routing | — | 07/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `2092428` | Merge branch 'develop' into feature/manufacturing | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `f8184a4` | Merge branch 'feature/manufacturing' into develop | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `9ab2fae` | fix(routes): integrate manufacturing routes into main app routing | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `0e9ba1a` | fix(manufacturing): add ChangeDetectorRef to batch list to trigger zoneless rendering | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `767e6a2` | test(mock): update mock database with testing records | — | 08/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `00c63c2` | feat(iam): add domain models for user authentication and authorization | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `96c30c7` | feat(iam): add data transfer objects and assembler for sign-in flow | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `3aa4550` | feat(iam): add data transfer objects and assembler for sign-up flow | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `f6b50bc` | feat(iam): implement IamApi for user sign-up and sign-in functionality | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `f28cca2` | feat(store): add application store to manage authentication state | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `68ed25a` | feat(guard): add route guard to protect authenticated views | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `41b15e9` | feat(interceptor): add interceptor to attach bearer tokens | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `bf9e497` | feat(sign-in-view): add user interface component for sign in | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `1da2e62` | feat(sign-up-view): add user interface component for sign up | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `0d905de` | feat(routing): integrate iam views and configure loading for authentication | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `c59594f` | Merge branch 'feature/iam' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `8aab2ab` | chore(server): add documents, deviations, CAPA, results, audits, reports and tasks to the fake API | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `493c0ec` | feat(environment): add the fake API base URL and the quality endpoint paths | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `863f2c8` | feat(quality): model documents, deviations, CAPA, analytical results, audits, reports and tasks | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `de4c4f6` | feat(quality): read and write the quality collections through the fake API | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `141ea68` | feat(quality): enforce release, signature, segregation of duties and CAPA closure rules in the store | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `a26fb2d` | feat(quality-view): add the quality overview and the traceability and deviation indicators | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `f0ec8e2` | feat(document-view): add controlled documents with approval workflow and version history | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `83b92e7` | feat(release-view): add batch release with electronic signature and the analytical results | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `46ea7c9` | feat(task-view): add tasks and discussions linked to records | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `d0bd0c5` | feat(i18n): add the quality and compliance translations in English and Spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `e91dbb4` | feat(routing): add the routes of the quality bounded context | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `ee75ac9` | fix(config): complete the index.html head with viewport, fonts, icons and SEO meta tags | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `28b167d` | feat(environment): add the landing page URL and the fake API base URL | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `fca883b` | style(theme): apply DoofPlus colors and shapes to the Material theme | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `5c6559e` | style(shared): add layout, status and accessibility helpers for the Figma views | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `0ac965e` | feat(shared): add base API, endpoint, assembler and form classes from the course base project | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `7657404` | feat(language-switcher): show the EN/ES pill of the mock-ups and remember the chosen language | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `939f04d` | feat(alert): add Alert entity to represent system alerts | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `3798e78` | feat(layout): turn the toolbar, footer and layout into the public frame of the mock-ups | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `9f900a0` | feat(equipment): add Equipment entity to represent equipment details and maintenance | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `33cd8ca` | feat(page-header): add breadcrumb, title and actions header for workspace pages | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `1d274fd` | feat(reading): add Reading entity to represent telemetry readings | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `1286b97` | feat(config): use outlined Material icons, bind route parameters to inputs and announce the page language | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `28f0f89` | feat(sensor): add Sensor entity to represent IoT sensors and their properties | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `8b345e2` | refactor(shared): replace home and about with the sign-in entry point | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `9ca0dea` | test(app): check that the root component hosts the routed views | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `7aa3999` | Merge branch 'feature/shared' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `30ebe27` | chore(server): add users, role profiles and invitations to the fake API | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `5c45a1a` | feat(environment): add the endpoint paths of the IAM collections | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `bf84897` | feat(monitoring-api): add monitoring api service for iot endpoints management | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `fbe4243` | feat(iam): model users with environment and organization, role profiles and invitations | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `a66ff4c` | feat(alert): add alert API endpoint and assembler for CRUD operations | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `e3c2e89` | feat(iam): read users, role profiles and invitations from the fake API | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `cb30ca9` | feat(equipment): add API endpoint, assembler, and response models for equipment CRUD operations | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `271285c` | feat(iam): sign in by environment with a two-factor code and role-based access | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `b2c9c9d` | feat(reading): add Reading API endpoint, assembler, and response models for CRUD operations | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `496cd7a` | feat(layout): add the workspace shell with sidebar, top bar and user menu | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `e60fbcd` | feat(sensor): add Sensor API endpoint, assembler, and response models for CRUD operations | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `31c5208` | feat(sign-in-view): add environment selection, sign-in, two-factor and not-authorized views | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `042b8fe` | feat(users-view): add users and profiles directory and the invite user form | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `73b7b53` | feat(monitoring-store): add monitoringstore for managing equipment, sensors, readings, and alerts | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `d304131` | feat(i18n): add the IAM and workspace translations in English and Spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `4a3f0b6` | feat(routing): route the sign-in and the three environments protected by the IAM guard | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `9a91e9d` | refactor(iam): remove the token sign-in, sign-up and interceptor that the fake API cannot serve | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `9ca9813` | Merge remote-tracking branch 'origin/feature/iam' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `5aa36c1` | chore(server): add json-server as a development dependency | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `bae6ffe` | chore(config): raise the component style budget for the Figma layouts | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `092339a` | feat(telemetry-chart): add telemetry chart component for visualizing sensor readings | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `e457c8a` | chore(server): replace the sample production batches with the manufacturing collections | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `dd7b09f` | feat(environment): add the endpoint paths of the manufacturing collections | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `fe885b3` | feat(manufacturing): model products, master formulas, orders, operations, batches and material lots | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `1b415ea` | feat(manufacturing): read and write the manufacturing collections through the fake API | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `33eebd2` | feat(manufacturing): validate batches, record operations and receive materials in the store with signals | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `67542b0` | feat(alert-list): add alert list component for displaying IoT incidents with severity and status | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `ded2019` | feat(batch-view): turn the batch form into the create batch dialog with the rejection state | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `519b1cd` | feat(batch-iot-evidence): add component for displaying IoT evidence with equipment association and readings | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `8a49239` | feat(equipment-inventory): add equipment inventory component for managing sensors and maintenance | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `b4190b2` | feat(iot-overview): add IoT overview component for monitoring sensor and equipment health, telemetry, and alerts | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `d85d8bf` | feat(sensor-detail): add sensor detail component for displaying telemetry, alerts, and equipment calibration | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `448e9de` | feat(routes): add monitoring routes for IoT overview, equipment inventory, sensor detail, alert list, and batch IoT evidence | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `037a753` | feat(batch-view): show batches with status counts, filters, lookup and the selected batch | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/subscriptions | `4ca6f73` | chore(server): add plans, the organization subscription and invoices to the fake API | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `58d11c5` | feat(batch-view): add batch genealogy and status history | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/subscriptions | `7903c15` | feat(environment): add the endpoint paths of the subscription collections | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `1d252d1` | feat(order-view): add production orders and the order execution against the master formula | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `ba60036` | feat(product-view): add the product catalog and the effective master formula | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `ea09f17` | feat(receipt-view): add the raw-material receipt with quarantine inspection | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/subscriptions | `af07149` | feat(subscriptions): model plans, subscriptions and invoices | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `7646e4c` | feat(i18n): replace the batch translations with the manufacturing translations and add shared labels | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `223e7ca` | feat(routing): route the manufacturing views in the production environment | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/subscriptions | `5d3118b` | feat(subscriptions): read plans, subscriptions and invoices from the fake API | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/subscriptions | `c6a4fda` | feat(subscriptions): manage the plan change and the payment retry in the subscriptions store | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/subscriptions | `01e3922` | feat(subscription-view): add the subscriptions and payments page with billing history and plan change review | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `3f183b2` | Merge branch 'develop' into feature/monitoring | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `b9a862a` | feat(db): add equipment and sensor data with calibration and maintenance details | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/subscriptions | `9dc488c` | feat(i18n): add the subscriptions translations in English and Spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `9383633` | chore(db): remove unnecessary whitespace and trailing braces from db.json | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `b104c03` | feat(environment): add new endpoint paths for equipment, sensors, readings, and alerts | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/subscriptions | `23c8b4e` | feat(routing): route the subscriptions page in the administration environment | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `1481052` | Merge branch 'feature/subscriptions' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `d05ab97` | Merge branch 'develop' into feature/monitoring | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `e78965d` | chore(server): add the organization, facilities, user profiles and administrative activity to the fake API | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `0737256` | feat(environment): add the endpoint paths of the organization collections | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `63f97ed` | feat(organizations): model organizations, facilities, user profiles and administrative activity | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `6a75732` | feat(routes): add monitoring routes to production environment | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `eace210` | feat(organizations): read and register organizations through the fake API | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `f3e103f` | chore(routes): clean up import statements in app.routes.ts | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `378c1a7` | feat(organizations): register organizations and update user profiles in the organizations store | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `14b745a` | Merge branch 'feature/monitoring' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `028ab75` | feat(registration-view): add the organization registration with plan and first administrator | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `9646143` | feat(overview-view): add the administration overview with users, facilities and account health | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `0c0d6bd` | feat(profile-view): add profile and notification preferences for every environment | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `d03f0bc` | Merge branch 'develop' into feature/organizations | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `222adee` | feat(i18n): add the organizations translations in English and Spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `3bb4348` | feat(routing): route the registration, the administration overview and the profile | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `0d4cdb9` | feat(overview): add the production overview with schedule readiness and incident priorities | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `6f3053b` | feat(routing): route the production overview as the production home | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `be5d92b` | Merge branch 'feature/organizations' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `6e3273e` | fix(i18n): use shared cancel and status labels instead of keys from other bounded context | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `a5ffaaa` | fix(routing): route the quality view and share the audit trail and task with every environment | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `0446f56` | Merge branch 'feature/manufacturing' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `05fae7c` | Merge branch 'develop' into feature/quality | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `f53fbe1` | fix(i18n): use the shared status label in the remaining quality views | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `7de536e` | fix(routing): add the quality routes to the qa, production and administration environments | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `4132182` | Merge branch 'feature/quality' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | docs/repository-setup | `1864b3b` | docs(readme): add project documentation, run instructions and bounded contexts | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | docs/repository-setup | `f791346` | chore(license): add MIT license | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | docs/repository-setup | `abb5afc` | docs(repository): add changelog and contributing guidelines | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | docs/repository-setup | `60145ed` | docs(architecture): create docs directory with user stories and diagrams placeholders | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `158f838` | Merge branch 'docs/repository-setup' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | docs/expanded-readme | `0b2a174` | docs(readme): expand documentation with badges, architecture and tech stack details | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `8c47f21` | Merge branch 'docs/expanded-readme' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `3a87aa1` | docs(architecture): fix readme markdown, add ADRs and mermaid diagrams | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `1298689` | docs(architecture): add domain model class diagram | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `39b250c` | docs(architecture): align docs structure with learning-center (PlantUML and single adrs file) | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `785fda4` | feat(i18n): add the IoT monitoring translations in English and Spanish | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `efa7877` | Merge branch 'feature/monitoring' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `c96bd29` | docs(readme): rename the demo accounts section to test accounts | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `317784a` | chore(server): add a start script to publish the fake API on a hosting service | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | feature/project-configuration | `a258f40` | chore(deploy): add the Firebase Hosting configuration for the single page application | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `eab64e9` | Merge branch 'feature/project-configuration' into develop | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | release/v1.0.0 | `700dcb1` | chore(release): set the web application version to 1.0.0 and update the changelog | — | 09/10/2026 |
-| IngesCompanyCC/IngesCompanyCC-Frontend | main | `d63b938` | Merge branch 'release/v1.0.0' | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | main | `18317a7` | Merge branch 'develop' into main | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `f3cc1fb` | Merge branch 'fix/sign-in-environment-selection' into develop | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `ff1b2c2` | fix(config): add the sign-in route of the web application | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `639b29d` | fix(navbar): open the environment selection of the web application from sign in | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | main | `a1f0b37` | Merge branch 'release/v1.0.2' into main | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `bde1114` | Merge branch 'feature/documents' into develop | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `da0a3d4` | feat(user-stories): add user stories for DoofPlus Landing Page application | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | main | `7ec9099` | Merge branch 'develop' into main | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `558394a` | Merge branch 'refactor/align-with-reference-landing' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `bcf6dc9` | docs(readme): describe the modular structure aligned with the reference landing | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `ddef20a` | feat(pages): align toolbar, hero, sections and footer with the reference landing | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `f3521e5` | refactor(scripts): split behavior into ES modules and point segment access to the web application | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `d6a0fae` | refactor(i18n): move translations to JSON files with IngesCompanyCC and Cristina Yarleque | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `6a5c2a5` | refactor(styles): split the stylesheet into modules matching the reference landing design | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | main | `77b8d41` | Merge branch 'develop' into main | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `a7abbd0` | Merge branch 'fix/landing-parity' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `9c36f51` | style(ui): style link buttons and highlight the active navigation link | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0455622` | feat(scripts): remember language, translate page language and alt, add magnetic buttons and active section link | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0a94eee` | feat(i18n): add page titles and hero image alt translations | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `150a5ba` | fix(pages): link hero and navbar access buttons and mark translatable title and image alt | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | main | `20435d4` | Merge branch 'develop' into main | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `798bef3` | Merge branch 'chore/release-prep' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `5ecf1f5` | docs(readme): add links to the published landing page and web application | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `e9e3fd0` | docs(changelog): add release 1.0.0 with every landing section | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `86c3a9d` | perf(assets): resize and compress team photo of Cristina | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `34eb8b5` | Merge branch 'fix/web-app-url' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `ca5f4a6` | fix(scripts): set the deployed firebase url of the web application | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `92108e8` | fix(routing): update web app URL and access routes for Vue migration | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `9b4a5b7` | Merge branch 'feature/layout-structure' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `8480ad1` | style(variables): add design tokens for colors, radius, shadows, and layout width | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `a04da5d` | style(variables): add new CSS variables for consistent theming | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `126ca09` | style(pages): add styles for terms of service and privacy policy pages | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `d8fcc2a` | style(grid): add footer grid layout for brand and link groups | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0c2e9e1` | style(grid): add contact grid layout for intro, info, and form display | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `d3c4b2a` | style(grid): add team grid layout for three cards with centered alignment | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `eb4489b` | style(grid): add about grid layout for mission and vision sections | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `a146009` | style(grid): add product grid layout for intro, details, and video display | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `1334b0d` | style(grid): add features grid layout for preview panel and accordion | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `2e77a4f` | style(grid): add hero grid layout for balanced text and image display | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `c70045e` | style(grid): add 12-column fluid grid layout for responsive design | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `ae41643` | style(layout): add footer styles for improved layout structure | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `777e2db` | style(layout): add section styles and overline for improved layout structure | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `e0ff9c5` | style(layout): define container styles for layout structure | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `9dbdf27` | style(layout): define container styles for layout structure | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `e14ef68` | style(layout): add layout.css for styling structure | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `7c34004` | Merge branch 'feature/accessibility-seo' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `edbc6d9` | docs(readme): add cursors folder to the structure | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `3b64e2e` | feat(cursor): add custom cursors in the DoofPlus colors | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `597ce5b` | feat(seo): add description, keywords, author and favicon to every page | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `091720c` | feat(a11y): add skip link to the main content | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `5db5a3d` | Merge branch 'feature/mobile-layout' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `c30f05a` | feat(mobile): add responsive breakpoints for tablet and mobile | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `e1b8d67` | feat(navbar): add full-screen mobile menu | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `33a8fd6` | Merge branch 'feature/legal-pages' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `f363df0` | feat(pages): add privacy policy page | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `c782b12` | feat(pages): add terms of service page | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `cee3eb6` | Merge branch 'fix/faq-styles' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `08995d8` | fix(faq): close faq-more rule and remove stray declarations | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `98d3c28` | Merge branch 'fix/footer-styles' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `b4d515e` | fix(footer): close unterminated footer actions rule | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `dfa48b5` | Merge branch 'feature/footer' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `1d9b665` | feat(scripts): route segment access buttons to the web application | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `523df3f` | feat(footer): add footer with link groups and segment access | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `f72e319` | Merge branch 'feature/contact-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `948e196` | feat(scripts): add contact form validation and confirmation | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `441c93f` | feat(contact): add contact section with inquiry form | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `af63084` | Merge branch 'feature/faq-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `c1581e5` | feat(faq): add faq section reusing the accordion | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `deca300` | Merge branch 'feature/testimonials-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `c051a03` | feat(testimonials): add testimonials section | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `9200684` | Merge branch 'feature/team-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `741a34e` | docs(readme): fix team member surname | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `b4bae28` | feat(team): add team section with Cristina Yarleque and team video | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0ddf58b` | Merge branch 'fix/company-name' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `16be82e` | fix(about): use the IngesCompanyCC company name | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `1b86c4d` | Merge branch 'feature/about-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `bc4cb8b` | feat(about): add about us section | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `dfdf035` | Merge branch 'feature/plans-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `77de141` | feat(scripts): add monthly/yearly billing toggle | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `158df16` | feat(plans): add pricing plans section | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `ae1f0f1` | Merge branch 'feature/benefits-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `e86c584` | feat(benefits): add benefits section | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `93a7730` | Merge branch 'feature/product-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `fa20991` | feat(product): add about-the-product section with video player | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `0a9dba5` | Merge branch 'feature/features-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `9e781e6` | feat(scripts): add accordion behavior | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `b6b86ce` | feat(features): add features section with accordion and preview panel | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `2cb9b42` | Merge branch 'feature/services-section' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `8db6b27` | feat(services): add services section | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `9a26a0a` | Merge branch 'feature/navbar-sections' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `dedd837` | feat(navbar): add logo image and anchor links to landing sections | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `6c53f8d` | Merge branch 'docs/readme-course-info' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `8f84a9c` | docs(readme): fix broken formatting and set the Aplicaciones Web course | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `c96d62e` | Merge branch 'fix/workspace-layout-grid' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `e1a56a3` | fix(ui): add missing grid layout and container boundaries | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `7bc81fa` | Merge branch 'fix/workspace-colors' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `900aa4d` | fix(ui): inject missing css variables and color overrides for the workspace section | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `4b646fc` | Merge branch 'fix/workspace-styles' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `59e9b67` | fix(ui): add missing layout and grid styles for workspace section | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `334cf9c` | Merge branch 'docs/repository-setup' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `cb0a751` | docs(repository): add readme, license, changelog and contributing files | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `7a16201` | fix(ui): remove duplicated workspace section | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `af05340` | feat(i18n): add workspace translations | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-LandingPage | develop | `6b83cbe` | feat(ui): add workspace section and translations | — | 09/10/2026 |
+
+**Web Application** (93 commits)
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|------------|--------|-----------|----------------|---------------------|---------------------|
+| IngesCompanyCC/IngesCompanyCC-Frontend | main | `44f4f8c` | Merge branch 'release/v1.0.2' into main | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `abf2d33` | Merge branch 'feature/aclaration' into develop | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `d4b0868` | feat(public-layout): enhance layout with accessibility features and improved structure | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `73ee894` | feat(footer): enhance footer with internationalization and dynamic legal links | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `8ee0ceb` | feat(page-not-found): enhance 404 page with improved accessibility and dynamic content | — | 10/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/setup-docs | `3080340` | docs(setup): update adrs.md and information | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/setup-docs | `dc21772` | docs(setup): update adrs.md | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/setup-docs | `ba56b54` | docs(setup): add adrs.md | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/setup-docs | `9625c29` | docs(setup): add class-diagram.puml | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/setup-docs | `1cda8fa` | docs(setup): add user-stories.md | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | main | `e2ba8bc` | Merge branch 'develop' into main | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | develop | `2e478b9` | Merge branch 'fix/landing-page-url' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | fix/landing-page-url | `0139e73` | fix(env): point to the renamed landing page repository | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | main | `8d04860` | Merge branch 'develop' into main | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | fix/landing-page-url | `6a4c208` | Merge branch 'build/firebase-project' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | build/firebase-project | `830efe0` | build(firebase): add firebase project alias | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | build/firebase-project | `c6488a7` | chore(gitignore): ignore firebase deploy cache | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/setup-docs | `982805e` | docs(setup):  add base project report structure and root files | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | main | `988d770` | Merge branch 'develop' into main | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | build/firebase-project | `ed8774f` | Merge branch 'fix/production-env' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | fix/production-env | `0aca34c` | fix(env): add every endpoint path and the Render API to the production environment | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | main | `43aa77b` | Merge branch 'develop' into main | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | fix/production-env | `b3814e3` | Merge branch 'feature/shared' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `50ba279` | docs: upgrade README.md | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | fix/production-env | `27957e1` | fix(build): remove BOM from config files causing Vite crash | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | fix/production-env | `249e5df` | build: add server:prod script and firebase hosting configuration | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `0ce28f7` | feat(trail-view): add the audit trail and tasks and collaboration to every environment | The audit trail filters the attributed events by record and actor, shows the selected change and its provenance, and exports the events as CSV, recording the export. Tasks and collaboration shows the team inbox, assigns tasks and keeps the discussion of a record. QA/QC and administration list both pages, and production lists the tasks. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `a01bbbc` | feat(reports-view): add the regulatory reports library with the batch dossier of each report | Lists the reports, shows the configuration of the selected one and derives its batch dossier from the genealogy, analytical results and deviations of the batch, and creates batch dossier drafts. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `c3054f4` | feat(audit-view): add the audit with its findings register, the new finding form and the evidence package | Shows the findings, the closed and pending evidence and the audit progress, opens the selected finding with its observation, response and closure requirement, and adds findings to the audit. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `32df7cc` | feat(results-view): add the analytical results with the protocol assay calculation and the OOS deviation | Lists the results of a batch, calculates the assay with the formula of PRT-QC-012, saves it as within specification or out of specification, and registers the deviation an out-of-specification result requires, linked from the page. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `e18209a` | feat(release-view): add the batch release with the six readiness checks and the QA electronic signature | Checks the manufacturing record, analytical results, materials, deviations, packaging and documents of a batch, and signs its release only when every check passes, the user has the QA release privilege and re-enters the password. The release is recorded in the audit trail. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `625b636` | feat(capa-view): add the CAPA plan with actions, evidence, root cause and routing to an independent reviewer | Attaches the evidence of each action, adds actions, saves the root cause and routes the plan for approval only when the root cause is documented, every action has evidence and the reviewer is not the owner. Adds the shared info and danger alert styles. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `7e9687a` | feat(deviation-view): add the deviation investigation with risk priority number, evidence and disposition | Edits the summary, classification and containment, calculates the RPN from severity, likelihood and detectability, reviews and attaches evidence and submits the risk assessment only when the evidence is reviewed. Other pages can open a deviation with ?code=. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `86be3b6` | feat(document-view): add controlled documents with the approval workflow and the version history | Shows the version in review and the effective version, blocks the author from approving their own version (separation of duties), publishes the approved version and makes the previous one obsolete. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `55f3a50` | feat(quality-view): add the quality overview and the quality indicators as the QA/QC home | The overview shows open deviations and CAPA actions, audits, the release queue with blocked batches, the priority queue of the signed-in user, quality operations and upcoming decisions. The indicators show complete batch records, traceability gaps and closed deviations by root cause, with a CSV export. Adds the QA/QC routes and sidebar, the shared stat card styles and the Quality translations. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `e0cd861` | feat(quality): apply separation of duties, CAPA approval, release readiness and the audit trail in a Pinia store | The store loads the quality records, approves document versions only when the approver is not the author, registers deviations and submits risk assessments with reviewed evidence, routes complete CAPA plans to an independent reviewer, records analytical results, findings, reports, tasks and comments, checks the release readiness of a batch and signs its release after re-authentication. Every change adds an attributed event to the audit trail. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `ed14ce0` | feat(iam): re-authenticate the signed-in user before an electronic signature | The IAM store checks the password of the signed-in user again, as the batch release requires before the QA electronic signature. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/quality | `4b52fc3` | feat(quality): model documents, deviations, CAPA, analytical results, audits, reports and tasks and read them through the fake API | Adds the fourteen JavaScript entities of Quality & Compliance, their assemblers and QualityApi over BaseApi, the quality collections of Laboratorios Andinos to the fake API, and the endpoint paths. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `45d7be2` | feat(overview-view): add the production overview with schedule, readiness and incident priorities as the production home | Shows the orders of today, the output and batches in progress, the open IoT incidents, the batch on hold with its IoT evidence, the readiness of equipment and raw materials and the shift handover. The overview returns to the production routes and sidebar now that IoT Monitoring is in place. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `1bc4bc0` | feat(evidence-view): add the IoT evidence of a batch with equipment association and the readings recorded during the batch | Associates fit equipment whose sensors are not feeding another batch and explains the rejections, draws the critical variable of the batch and lists the readings captured by ThingsBoard with their result. The batch detail links to its IoT evidence. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `84b80ff` | feat(incidents-view): add the IoT incidents with their acknowledgment and linked records | Lists the active alerts, or every alert, with the sensor and equipment, the acknowledgment, the severity, the status and the linked deviation or incident. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `56bbb1d` | feat(equipment-view): add the equipment and sensor inventory, sensor registration and the sensor detail with alert acknowledgment | The inventory shows the calibration and maintenance of each piece of equipment and its sensors, registers sensors with a unique ThingsBoard device ID and records calibration and maintenance. The sensor detail shows the telemetry, acknowledges the open alert with a response note and follows the alert workflow. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `34fd3e7` | feat(iot-view): add the IoT overview with the live sensor chart, the alert queue and equipment health | Adds the telemetry chart as an SVG component with the acceptable range and the out-of-range readings, the IoT overview in the production routes and sidebar, and the IoT Monitoring translations. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `ea053d5` | feat(monitoring): associate equipment, register sensors and acknowledge alerts in a Pinia store | The store loads the equipment, sensors, readings and alerts, checks out-of-range readings, links the sensors of fit equipment to one batch at a time, registers sensors with a unique ThingsBoard device ID, records calibration and maintenance, acknowledges alerts without closing them and links them to deviations. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/monitoring | `b0ba763` | feat(monitoring): model equipment, sensors, readings and alerts and read them through the fake API | Adds the JavaScript entities, the assemblers and MonitoringApi over BaseApi, the equipment, sensors, readings and alerts of the Ate plant to the fake API, and the endpoint paths. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `5a7b211` | feat(profile-view): add profile and notification preferences for every environment | Each environment opens the profile from the user menu. The page edits the personal data, the email and in-app notifications and the preferred language, which applies right away. The language chosen in the profile or in the top bar is remembered between visits. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `fe1d22b` | feat(overview-view): add the administration overview with users, facilities and account health | Shows the active users and invited accounts, the organization with its facilities, the subscription and its declined payment, the account health and the administrative activity. The overview becomes the home of the administration environment. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `86dd55c` | feat(registration-view): add the organization registration with plan and first administrator | Public page at /register with the organization details, the plan and billing cycle, the administrator account with the password rule and strength meter, the acceptance of the terms and the email verification step. The sign-in environment selection links to it, and the Organizations translations are added. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `990b3cb` | feat(organizations): register organizations and update user profiles in a Pinia store | The store loads the organization of the signed-in user, its facilities, the user profiles and the administrative activity. The registration rejects a RUC that is already registered and creates the organization, its primary plant, the pending subscription and the first administrator. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `03cd705` | feat(iam): create the first administrator of a newly registered organization | The account stays invited until the administrator verifies the email. The fake API keeps the password with the user until the RESTful API exposes a sign-up endpoint. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `b632cc6` | feat(organizations): model organizations, facilities, user profiles and administrative activity and read them through the fake API | Adds the JavaScript entities, the registration command, the assemblers and OrganizationsApi over BaseApi, with the lookup of an organization by RUC. Adds Laboratorios Andinos, its facilities, the user profiles and the administrative activity to the fake API, and the endpoint paths. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `7ded46d` | feat(subscription-view): add the subscriptions and payments page in the administration environment | Shows the plan, the active users, the amount and the next invoice, the declined payment with its retry, the billing history, the plan change review, the payment method and the payment states. Adds the subscription page to the administration routes and sidebar, the US dollar format and the subscriptions translations. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `719f1b2` | feat(iam): load the users of the organization for the administration pages | The IAM store keeps the users of the organization of the signed-in user and its active accounts, used by the subscription and administration pages. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `fe01a88` | feat(subscriptions): manage the plan change and the payment retry in a Pinia store | The store loads the public plans, the subscription of an organization and its invoices, creates the pending subscription of a new organization, changes the plan or billing cycle, and retries a declined charge by issuing an approved invoice and activating the subscription. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/organizations | `0b5589c` | feat(subscriptions): model plans, subscriptions and invoices and read them through the fake API | Adds the JavaScript entities, the assemblers and SubscriptionsApi over BaseApi, the plans, the subscription of Laboratorios Andinos and its invoices to the fake API, and the endpoint paths. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `86168aa` | refactor(routing): open the production orders as the production home until the overview arrives with IoT monitoring | The production overview shows the open IoT incidents, so its placeholder leaves the routes and the sidebar; Alberto Valle now lands on the production orders after signing in. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `b657401` | feat(product-view): add the product catalog with master formulas and the raw-material receipt with quarantine inspection | The catalog registers products with a unique code and shows the components of the effective master formula. The receipt validates the internal lot, attaches the certificate of analysis, moves the new lot to sampling and requests the QC inspection. Alerts and form fields move to the global styles. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `dfd11eb` | feat(order-view): add the production orders and the order execution against the master formula | The order list links each order to its detail. The detail records the next operation in sequence, blocks recording while an operation is on hold, and shows the effective master formula and the order context. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `ca9fc44` | feat(batch-view): add the batch list, the create batch dialog and the batch genealogy with PrimeVue | The batch list shows the status counts, the filters, the selected batch and the lookup; the dialog rejects duplicate batch numbers and products without an approved master formula; the detail shows the input lots, the production order, the operations and the status history. Adds the shared page header, the number and UTC date formats, the workspace table and chip styles, and the Manufacturing translations. The sidebar keeps a page selected on its detail pages. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `34ff6a7` | fix(manufacturing): restore the store and API built on the assemblers after the merge with develop | The merge of origin/develop kept a second store and API that call the endpoints without the assemblers or the env paths, and a production overview written in TypeScript with PrimeFlex 2 classes that do not exist in PrimeFlex 4. Restores the Pinia store and the ManufacturingApi of the Manufacturing rewrite; the production overview returns to a placeholder until IoT Monitoring is in place. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `3600d94` | Merge remote-tracking branch 'origin/develop' into develop | # Conflicts: | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `a9353c8` | refactor(manufacturing): manage batches, orders and material lots in a Pinia store | The store loads the eight collections, validates batches (unique code and approved master formula), creates the batch with its production order and history entry, records operations in sequence, releases batches and receives raw materials. json-server runs without --watch: it restarted after its own writes and refused the request that adds the batch history entry. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `692a7f7` | refactor(manufacturing): rewrite the domain and infrastructure in JavaScript over the base API | The entities and assemblers were TypeScript and Angular code pasted in .js files, so they could not run in Vue. Each entity is now a JavaScript class with public fields, each assembler maps axios responses, and ManufacturingApi extends BaseApi with one BaseEndpoint per collection. Adds the eight manufacturing collections to the fake API and their endpoint paths. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `d395dbe` | feat(manufacturing): implement production overview UI using PrimeVue | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `bfa8488` | feat(manufacturing): implement state management using Pinia | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/manufacturing | `27ebb20` | feat(manufacturing): implement API client using Axios and BaseApi pattern | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `856a84d` | feat(iam): guard each workspace by environment and add the user menu with sign out | Without a session the guard opens the sign-in of the environment, and a user of another environment goes back to their own home. The sidebar shows the organization and the navigation of the environment. Pinia is installed before the router so the guard can read the IAM store on the first navigation. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `dfe47f8` | feat(iam): sign in to an environment with the two-factor code and keep the session | Add the environment selection and the sign-in form with PrimeVue, the IAM store in Pinia, the public layout for sign-in and page not found, and the IAM translations. The session opens only when the role of the user belongs to the requested environment. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/iam | `0c82ab8` | feat(iam): model users and the sign-in command and query them through the fake API | Add the six demo users of Laboratorios Andinos to the fake API and the users endpoint path. The fake API filters users by credentials and by two-factor code until the RESTful API exposes a sign-in endpoint. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `4eebc75` | feat(shared): add the workspace layout with navigation, language switcher and legal footer | The sidebar becomes a drawer on small screens, the language switcher keeps the document language in sync, the page not found view links back home and PrimeVue uses the Material preset with the DoofPlus teal as primary color. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `5eb161b` | feat(shared): add the base API and base endpoint over the platform API | Configure axios with VITE_PLATFORM_API_URL, rewrite the env files in UTF-8 so Vite can read them, point production to the published fake API and add the server script for json-server. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `1844bfd` | chore(core): replace the Vite starter with the DoofPlus title, favicon and base styles | Remove the HelloWorld component and the Vite assets, rename App.vue to app.vue so the import in main.js also resolves on case-sensitive systems, and set the page title from the route meta. | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `e6a14b9` | fix(views): enable typescript parsing for ported logic | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `35d77f5` | feat(presentation): scaffold Vue components for manufacturing views | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `1e708fe` | Merge branch 'feature/manufacturing' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `6d9cc34` | fix(routing): properly map the manufacturing routes and root redirect | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `54c2a72` | Merge branch 'develop' into feature/manufacturing | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `065fe8d` | fix(core): remove vite default screen and add missing primevue license key env files | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `c8a6765` | feat(i18n): replace the batch translations with the manufacturing translations and add shared labels | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `c68c840` | feat(routing): route the production overview as the production home | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `5c6909c` | feat(overview): add the production overview with schedule readiness and incident priorities | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `3b83b15` | feat(routing): route the manufacturing views in the production environment | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `e1394c7` | feat(receipt-view): add the raw-material receipt with quarantine inspection | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `15931e1` | feat(product-view): add the product catalog and the effective master formula | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `8ac9b15` | feat(order-view): add production orders and the order execution against the master formula | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `85d87b5` | feat(batch-view): add batch genealogy and status history | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `584d398` | feat(batch-view): show batches with status counts, filters, lookup and the selected batch | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `a52cba6` | feat(batch-view): turn the batch form into the create batch dialog with the rejection state | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `0bc9e6e` | feat(manufacturing): validate batches, record operations and receive materials in the store with signals | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `d2066c2` | feat(manufacturing): read and write the manufacturing collections through the fake API | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `8a34c52` | feat(manufacturing): model products, master formulas, orders, operations, batches and material lots | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `6adaa6b` | Merge branch 'feature/shared' into develop | — | 09/10/2026 |
+| IngesCompanyCC/IngesCompanyCC-Frontend | feature/shared | `edd6de1` | fix(core): add missing pinia and router setup | — | 09/10/2026 |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
 En este Sprint se completó la Landing Page, publicada en GitHub Pages, y se implementó la Web Application con sus tres entornos. En la Landing Page se agregaron el hero, el acceso por segmento, los servicios y características, el video About the Product, los beneficios, About us, el equipo con su video, los testimonios y las preguntas frecuentes, y se reimplementaron la navegación con menú mobile, los planes, el formulario de consulta y las páginas legales. La Web Application permite elegir el entorno, iniciar sesión con segundo factor y recorrer todos los módulos de QA/QC (documentos, desviaciones y CAPA, resultados analíticos, liberación de lotes, auditorías, audit trail, reportes y tareas), Production (órdenes, productos y fórmulas, lotes, materias primas, equipos e IoT, incidentes) y Administration (usuarios, organización y suscripción), en inglés y español, con datos servidos por una Fake API.
 
-**Landing Page:** https://ingescompany-7742.github.io/IngesCompany-LandingPage/
+**Landing Page:** https://ingescompanycc.github.io/IngesCompanyCC-LandingPage/
 
 ![Hero con la propuesta de valor (US01)](../assets/img/chapter5/sprint2/landing/01-home.png)
 
@@ -723,7 +633,7 @@ En este Sprint se completó la Landing Page, publicada en GitHub Pages, y se imp
 
 *Figura: Menú de navegación en mobile (US44).*
 
-**Web Application:** https://doofplus-webapp.web.app (cuentas de prueba en el README del repositorio; contraseña `DoofPlus2026!` y código 2FA `482106`).
+**Web Application:** https://ingescompanycc-frontend.web.app (cuentas de prueba en el README del repositorio; contraseña `DoofPlus2026!` y código 2FA `482106`).
 
 ![Elección de entorno (US06)](../assets/img/chapter5/sprint2/web-app/01-sign-in.png)
 
@@ -785,9 +695,9 @@ En este Sprint se completó la Landing Page, publicada en GitHub Pages, y se imp
 
 *Figura: Administration · Resumen de administración (US50).*
 
-![Administration · Usuarios y perfiles (US55, US07)](../assets/img/chapter5/sprint2/web-app/16-admin-users.png)
+![Administration · Tareas y colaboración (US40, US41)](../assets/img/chapter5/sprint2/web-app/16-admin-users.png)
 
-*Figura: Administration · Usuarios y perfiles (US55, US07).*
+*Figura: Administration · Tareas y colaboración (US40, US41).*
 
 ![Administration · Suscripción y pagos (US51, US52, US53)](../assets/img/chapter5/sprint2/web-app/17-admin-subscription.png)
 
@@ -805,135 +715,121 @@ En este Sprint se completó la Landing Page, publicada en GitHub Pages, y se imp
 
 *Figura: Inicio de sesión en mobile.*
 
-Videos de navegación del producto (upc-pre-202620-1asi0729-7742-IngesCompany-productnavigation-sprint-2):
+Videos de navegación del producto (upc-pre-202620-1asi0730-8130-IngesCompanyCC-productnavigation-sprint-2):
 
-- **Landing Page:** [ver en Microsoft Stream](https://shorturl.at/cI09z).
-- **Web Application:** [ver en Microsoft Stream](https://shorturl.at/rqzbT).
+- **Landing Page:** *pendiente de publicar en Microsoft Stream.*
+- **Web Application:** *pendiente de publicar en Microsoft Stream.*
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-En el Sprint 2 todavía no se implementaron los RESTful Web Services, por lo que no hay documentación OpenAPI. Mientras tanto, la Web Application consume una Fake API con json-server (`server/db.json`), cuyas rutas se exponen bajo el prefijo `/api/v1` mediante `server/routes.json`, el mismo que tendrán los Web Services. La siguiente tabla documenta los endpoints que usa la Web Application; la URL base local es `http://localhost:3000/api/v1` y la publicada en Render es `https://ingescompany-frontend.onrender.com/api/v1` (por ejemplo, [`/plans`](https://ingescompany-frontend.onrender.com/api/v1/plans)).
+En el Sprint 2 todavía no se implementaron los RESTful Web Services, por lo que no hay documentación OpenAPI. Mientras tanto, la Web Application consume una Fake API con json-server (`server/db.json`), cuyas rutas se exponen bajo el prefijo `/api/v1` mediante `server/routes.json`, el mismo que tendrán los Web Services. La siguiente tabla documenta los endpoints que usa la Web Application; la URL base local es `http://localhost:3000/api/v1` y la publicada en Render es `https://ingescompanycc-api.onrender.com/api/v1` (por ejemplo, [`/plans`](https://ingescompanycc-api.onrender.com/api/v1/plans)).
 
 | Endpoint | Verbo HTTP | Sintaxis | Parámetros | Response | URL documentación |
 |---|---|---|---|---|---|
-| `/invitations` | GET | `/api/v1/invitations` | — | 200 OK con la lista de `invitations` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/invitations` | POST | `/api/v1/invitations` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/role-profiles` | GET | `/api/v1/role-profiles` | — | 200 OK con la lista de `role-profiles` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/users` | GET | `/api/v1/users` | — | 200 OK con la lista de `users` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/users` | GET | `/api/v1/users?email={email}&password={password}` | `email`, `password` (query) | 200 OK con el usuario cuyas credenciales coinciden (inicio de sesión) | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/users` | GET | `/api/v1/users?id={id}&twoFactorCode={code}` | `id`, `twoFactorCode` (query) | 200 OK con el usuario si el código 2FA es válido | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/users` | POST | `/api/v1/users` | Usuario en el body (JSON) | 201 Created con el usuario invitado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/batch-events` | GET | `/api/v1/batch-events` | — | 200 OK con la lista de `batch-events` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/batch-events` | POST | `/api/v1/batch-events` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/batches` | GET | `/api/v1/batches` | — | 200 OK con la lista de `batches` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/batches` | POST | `/api/v1/batches` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/batches` | PUT | `/api/v1/batches/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/formula-items` | GET | `/api/v1/formula-items` | — | 200 OK con la lista de `formula-items` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/master-formulas` | GET | `/api/v1/master-formulas` | — | 200 OK con la lista de `master-formulas` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/material-lots` | GET | `/api/v1/material-lots` | — | 200 OK con la lista de `material-lots` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/material-lots` | POST | `/api/v1/material-lots` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/material-lots` | PUT | `/api/v1/material-lots/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/operations` | GET | `/api/v1/operations` | — | 200 OK con la lista de `operations` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/operations` | PUT | `/api/v1/operations/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/production-orders` | GET | `/api/v1/production-orders` | — | 200 OK con la lista de `production-orders` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/production-orders` | POST | `/api/v1/production-orders` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/products` | GET | `/api/v1/products` | — | 200 OK con la lista de `products` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/products` | POST | `/api/v1/products` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/alerts` | GET | `/api/v1/alerts` | — | 200 OK con la lista de `alerts` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/alerts` | PUT | `/api/v1/alerts/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/equipment` | GET | `/api/v1/equipment` | — | 200 OK con la lista de `equipment` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/equipment` | PUT | `/api/v1/equipment/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/readings` | GET | `/api/v1/readings` | — | 200 OK con la lista de `readings` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/sensors` | GET | `/api/v1/sensors` | — | 200 OK con la lista de `sensors` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/sensors` | POST | `/api/v1/sensors` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/sensors` | PUT | `/api/v1/sensors/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/administrative-activities` | GET | `/api/v1/administrative-activities` | — | 200 OK con la lista de `administrative-activities` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/facilities` | GET | `/api/v1/facilities` | — | 200 OK con la lista de `facilities` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/facilities` | POST | `/api/v1/facilities` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/organizations` | GET | `/api/v1/organizations/{id}` | `id` (path) | 200 OK con el recurso de `organizations` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/organizations` | POST | `/api/v1/organizations` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/organizations` | GET | `/api/v1/organizations?ruc={ruc}` | `ruc` (query) | 200 OK con la organización que ya usa ese RUC | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/user-profiles` | GET | `/api/v1/user-profiles` | — | 200 OK con la lista de `user-profiles` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/user-profiles` | PUT | `/api/v1/user-profiles/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/analytical-results` | GET | `/api/v1/analytical-results` | — | 200 OK con la lista de `analytical-results` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/analytical-results` | POST | `/api/v1/analytical-results` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/analytical-results` | PUT | `/api/v1/analytical-results/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/audit-events` | GET | `/api/v1/audit-events` | — | 200 OK con la lista de `audit-events` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/audit-events` | POST | `/api/v1/audit-events` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/audit-events` | PUT | `/api/v1/audit-events/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/audit-findings` | GET | `/api/v1/audit-findings` | — | 200 OK con la lista de `audit-findings` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/audit-findings` | POST | `/api/v1/audit-findings` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/audit-findings` | PUT | `/api/v1/audit-findings/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/audits` | GET | `/api/v1/audits` | — | 200 OK con la lista de `audits` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/audits` | POST | `/api/v1/audits` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/audits` | PUT | `/api/v1/audits/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/capa-actions` | GET | `/api/v1/capa-actions` | — | 200 OK con la lista de `capa-actions` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/capa-actions` | POST | `/api/v1/capa-actions` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/capa-actions` | PUT | `/api/v1/capa-actions/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/capa-plans` | GET | `/api/v1/capa-plans` | — | 200 OK con la lista de `capa-plans` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/capa-plans` | POST | `/api/v1/capa-plans` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/capa-plans` | PUT | `/api/v1/capa-plans/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/collaboration-tasks` | GET | `/api/v1/collaboration-tasks` | — | 200 OK con la lista de `collaboration-tasks` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/collaboration-tasks` | POST | `/api/v1/collaboration-tasks` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/collaboration-tasks` | PUT | `/api/v1/collaboration-tasks/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/deviation-trends` | GET | `/api/v1/deviation-trends` | — | 200 OK con la lista de `deviation-trends` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/deviation-trends` | POST | `/api/v1/deviation-trends` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/deviation-trends` | PUT | `/api/v1/deviation-trends/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/deviations` | GET | `/api/v1/deviations` | — | 200 OK con la lista de `deviations` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/deviations` | POST | `/api/v1/deviations` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/deviations` | PUT | `/api/v1/deviations/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/evidence` | GET | `/api/v1/evidence` | — | 200 OK con la lista de `evidence` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/evidence` | POST | `/api/v1/evidence` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/evidence` | PUT | `/api/v1/evidence/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/quality-documents` | GET | `/api/v1/quality-documents` | — | 200 OK con la lista de `quality-documents` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/quality-documents` | POST | `/api/v1/quality-documents` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/quality-documents` | PUT | `/api/v1/quality-documents/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/regulatory-reports` | GET | `/api/v1/regulatory-reports` | — | 200 OK con la lista de `regulatory-reports` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/regulatory-reports` | POST | `/api/v1/regulatory-reports` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/regulatory-reports` | PUT | `/api/v1/regulatory-reports/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/task-comments` | GET | `/api/v1/task-comments` | — | 200 OK con la lista de `task-comments` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/task-comments` | POST | `/api/v1/task-comments` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/task-comments` | PUT | `/api/v1/task-comments/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/traceability-gaps` | GET | `/api/v1/traceability-gaps` | — | 200 OK con la lista de `traceability-gaps` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/traceability-gaps` | POST | `/api/v1/traceability-gaps` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/traceability-gaps` | PUT | `/api/v1/traceability-gaps/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/invoices` | GET | `/api/v1/invoices` | — | 200 OK con la lista de `invoices` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/invoices` | POST | `/api/v1/invoices` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/plans` | GET | `/api/v1/plans` | — | 200 OK con la lista de `plans` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/subscriptions` | GET | `/api/v1/subscriptions` | — | 200 OK con la lista de `subscriptions` | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/subscriptions` | POST | `/api/v1/subscriptions` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
-| `/subscriptions` | PUT | `/api/v1/subscriptions/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompany-7742/IngesCompany-Frontend#readme) |
+| `/users` | GET | `/api/v1/users` | — | 200 OK con la lista de `users` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/users` | POST | `/api/v1/users` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/users` | GET | `/api/v1/users?email={email}&password={password}` | `email`, `password` (query) | 200 OK con el usuario cuyas credenciales coinciden (inicio de sesión) | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/users` | GET | `/api/v1/users?id={id}&twoFactorCode={code}` | `id`, `twoFactorCode` (query) | 200 OK con el usuario si el código 2FA es válido | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/organizations` | GET | `/api/v1/organizations` | — | 200 OK con la lista de `organizations` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/organizations` | GET | `/api/v1/organizations/{id}` | `id` (path) | 200 OK con el recurso de `organizations` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/organizations` | POST | `/api/v1/organizations` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/organizations` | GET | `/api/v1/organizations?ruc={ruc}` | `ruc` (query) | 200 OK con la organización que ya usa ese RUC | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/facilities` | GET | `/api/v1/facilities` | — | 200 OK con la lista de `facilities` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/facilities` | POST | `/api/v1/facilities` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/user-profiles` | GET | `/api/v1/user-profiles` | — | 200 OK con la lista de `user-profiles` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/user-profiles` | POST | `/api/v1/user-profiles` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/user-profiles` | PUT | `/api/v1/user-profiles/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/administrative-activities` | GET | `/api/v1/administrative-activities` | — | 200 OK con la lista de `administrative-activities` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/administrative-activities` | POST | `/api/v1/administrative-activities` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/plans` | GET | `/api/v1/plans` | — | 200 OK con la lista de `plans` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/subscriptions` | GET | `/api/v1/subscriptions` | — | 200 OK con la lista de `subscriptions` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/subscriptions` | POST | `/api/v1/subscriptions` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/subscriptions` | PUT | `/api/v1/subscriptions/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/invoices` | GET | `/api/v1/invoices` | — | 200 OK con la lista de `invoices` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/invoices` | POST | `/api/v1/invoices` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/products` | GET | `/api/v1/products` | — | 200 OK con la lista de `products` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/products` | POST | `/api/v1/products` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/master-formulas` | GET | `/api/v1/master-formulas` | — | 200 OK con la lista de `master-formulas` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/formula-items` | GET | `/api/v1/formula-items` | — | 200 OK con la lista de `formula-items` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/production-orders` | GET | `/api/v1/production-orders` | — | 200 OK con la lista de `production-orders` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/production-orders` | POST | `/api/v1/production-orders` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/operations` | GET | `/api/v1/operations` | — | 200 OK con la lista de `operations` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/operations` | PUT | `/api/v1/operations/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/batches` | GET | `/api/v1/batches` | — | 200 OK con la lista de `batches` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/batches` | POST | `/api/v1/batches` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/batches` | PUT | `/api/v1/batches/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/batch-events` | GET | `/api/v1/batch-events` | — | 200 OK con la lista de `batch-events` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/batch-events` | POST | `/api/v1/batch-events` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/material-lots` | GET | `/api/v1/material-lots` | — | 200 OK con la lista de `material-lots` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/material-lots` | POST | `/api/v1/material-lots` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/material-lots` | PUT | `/api/v1/material-lots/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/equipment` | GET | `/api/v1/equipment` | — | 200 OK con la lista de `equipment` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/equipment` | PUT | `/api/v1/equipment/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/sensors` | GET | `/api/v1/sensors` | — | 200 OK con la lista de `sensors` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/sensors` | POST | `/api/v1/sensors` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/sensors` | PUT | `/api/v1/sensors/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/readings` | GET | `/api/v1/readings` | — | 200 OK con la lista de `readings` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/alerts` | GET | `/api/v1/alerts` | — | 200 OK con la lista de `alerts` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/alerts` | PUT | `/api/v1/alerts/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/quality-documents` | GET | `/api/v1/quality-documents` | — | 200 OK con la lista de `quality-documents` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/quality-documents` | PUT | `/api/v1/quality-documents/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/deviations` | GET | `/api/v1/deviations` | — | 200 OK con la lista de `deviations` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/deviations` | POST | `/api/v1/deviations` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/deviations` | PUT | `/api/v1/deviations/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/evidence` | GET | `/api/v1/evidence` | — | 200 OK con la lista de `evidence` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/evidence` | POST | `/api/v1/evidence` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/evidence` | PUT | `/api/v1/evidence/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/capa-plans` | GET | `/api/v1/capa-plans` | — | 200 OK con la lista de `capa-plans` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/capa-plans` | PUT | `/api/v1/capa-plans/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/capa-actions` | GET | `/api/v1/capa-actions` | — | 200 OK con la lista de `capa-actions` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/capa-actions` | POST | `/api/v1/capa-actions` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/capa-actions` | PUT | `/api/v1/capa-actions/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/analytical-results` | GET | `/api/v1/analytical-results` | — | 200 OK con la lista de `analytical-results` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/analytical-results` | PUT | `/api/v1/analytical-results/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/audits` | GET | `/api/v1/audits` | — | 200 OK con la lista de `audits` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/audit-findings` | GET | `/api/v1/audit-findings` | — | 200 OK con la lista de `audit-findings` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/audit-findings` | POST | `/api/v1/audit-findings` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/audit-events` | GET | `/api/v1/audit-events` | — | 200 OK con la lista de `audit-events` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/audit-events` | POST | `/api/v1/audit-events` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/regulatory-reports` | GET | `/api/v1/regulatory-reports` | — | 200 OK con la lista de `regulatory-reports` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/regulatory-reports` | POST | `/api/v1/regulatory-reports` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/collaboration-tasks` | GET | `/api/v1/collaboration-tasks` | — | 200 OK con la lista de `collaboration-tasks` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/collaboration-tasks` | POST | `/api/v1/collaboration-tasks` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/task-comments` | GET | `/api/v1/task-comments` | — | 200 OK con la lista de `task-comments` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/task-comments` | POST | `/api/v1/task-comments` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/traceability-gaps` | GET | `/api/v1/traceability-gaps` | — | 200 OK con la lista de `traceability-gaps` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/deviation-trends` | GET | `/api/v1/deviation-trends` | — | 200 OK con la lista de `deviation-trends` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-En este Sprint se prepararon las versiones estables de ambos productos siguiendo GitFlow:
+En este Sprint se prepararon y publicaron las versiones estables de ambos productos siguiendo GitFlow:
 
-- **Landing Page:** la rama `release/v1.0.0` se fusionó en `main` con el tag `v1.0.0`, y luego se publicó el hotfix `v1.0.1`, que agrega el archivo `.nojekyll` para que GitHub Pages publique los archivos estáticos sin procesarlos con Jekyll. La Landing Page se publica en GitHub Pages desde `main` en https://ingescompany-7742.github.io/IngesCompany-LandingPage/.
-- **Web Application:** la rama `release/v1.0.0` se fusionó en `main` con el tag `v1.0.0` y su CHANGELOG. El repositorio incluye `firebase.json`, que configura Firebase Hosting como Single Page Application, y el script `npm run server:prod`, que publica la Fake API en un Web Service de Render. La Web Application está publicada en Firebase Hosting en https://doofplus-webapp.web.app y la Fake API en Render en https://ingescompany-frontend.onrender.com/api/v1.
+- **Landing Page:** la rama `release/v1.0.2` se fusionó en `main` con el tag `v1.0.2`. La Landing Page se publica en GitHub Pages desde `main` en https://ingescompanycc.github.io/IngesCompanyCC-LandingPage/.
+- **Web Application:** la rama `release/v1.0.2` se fusionó en `main` con el tag `v1.0.2`. El repositorio incluye `firebase.json`, que configura Firebase Hosting como Single Page Application, y el script `npm run server:prod`, que publica la Fake API en un Web Service de Render. La Web Application está publicada en Firebase Hosting en https://ingescompanycc-frontend.web.app y la Fake API en Render en https://ingescompanycc-api.onrender.com/api/v1.
 
-![Tag v1.0.0 de la Landing Page](../assets/img/chapter5/sprint2/github/release-landing-v1.0.0.png)
+![Tag v1.0.2 de la Landing Page](../assets/img/chapter5/sprint2/github/release-landing-v1.0.2.png)
 
-*Figura: Tag v1.0.0 del repositorio de la Landing Page.*
+*Figura: Tag v1.0.2 del repositorio de la Landing Page.*
 
-![Tag v1.0.0 de la Web Application](../assets/img/chapter5/sprint2/github/release-frontend-v1.0.0.png)
+![Tag v1.0.2 de la Web Application](../assets/img/chapter5/sprint2/github/release-frontend-v1.0.2.png)
 
-*Figura: Tag v1.0.0 del repositorio de la Web Application.*
+*Figura: Tag v1.0.2 del repositorio de la Web Application.*
 
-![Landing Page publicada](../assets/img/chapter5/sprint2/landing/01-home.png)
+![Landing Page publicada](../assets/img/chapter5/evidencia/pages.png)
 
 *Figura: Landing Page publicada en GitHub Pages.*
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
-Los cinco integrantes participaron en ambos repositorios. La siguiente tabla resume los commits de cada integrante en `main` (sin contar los commits de merge), seguida de los analíticos de GitHub: *Contributors*, que muestra los commits por integrante, y *Network*, que muestra las ramas de GitFlow y sus merges.
+Los cinco integrantes participaron en el Sprint: en la Landing Page, en la Web Application y en su documentación. La siguiente tabla resume los commits de cada integrante en todas las ramas de ambos repositorios (sin contar los commits de merge), seguida de los analíticos de GitHub: *Contributors*, que muestra los commits por integrante, y *Network*, que muestra las ramas de GitFlow y sus merges.
 
 | Team Member | GitHub Username | Landing Page | Web Application | Total |
 |---|---|:---:|:---:|:---:|
-| Rojas, Nestor | danRO-20 | 23 | 23 | 46 |
-| Zavaleta, Rodolfo | gutierrezrodolfo360-bit | 17 | 44 | 61 |
-| Cobades, Yhoshua | YhoshuaCZ | 12 | 51 | 63 |
-| Angulo, Marcelo | Zock2005 | 8 | 28 | 36 |
-| Yarleque, Cristina | ris06luna / rflores | 8 | 4 | 12 |
+| Rojas Ambicho, Nestor Daniel | danRO-20 | 44 | 4 | 48 |
+| Cobades Zamora, Yhoshua Hebert | YhoshuaCZ | 0 | 43 | 43 |
+| Zavaleta Gutierrez, Rodolfo Martin | gutierrezrodolfo360-bit | 8 | 23 | 31 |
+| Angulo Ramírez, Marcelo Martín | Zock2005 | 17 | 3 | 20 |
+| Yarleque Ruiz, Cristina Marcela | Cris06luna | 0 | 6 | 6 |
 
 ![Contributors de la Landing Page](../assets/img/chapter5/sprint2/github/insights-landing-contributors.png)
 
@@ -975,7 +871,6 @@ Los cinco integrantes participaron en ambos repositorios. La siguiente tabla res
 
 1. **Roadmap - Desarrollo Backend y Seguridad:** En relación al *Roadmap* de los productos digitales, se recomienda priorizar para el siguiente sprint o hito (AV2) la construcción de la arquitectura Backend y la base de datos relacional. Es imperativo consolidar el *Bounded Context* de IAM (Identity and Access Management) antes de avanzar, ya que el valor del sistema depende de las firmas electrónicas y la seguridad de los roles.
 2. **Roadmap - Integración de Telemetría (IoT):** Como siguiente paso en el alcance del modelo de negocio digital, se sugiere que el equipo investigue e integre simuladores de *WebSockets* o APIs en tiempo real. Esto permitirá validar técnicamente el módulo de monitoreo IoT (temperatura y humedad) establecido en el *Roadmap* sin necesidad de depender de hardware físico inmediato.
-
 ## Video About-the-Team
 
 # Bibliografía
@@ -994,10 +889,6 @@ DrugXafe. (2025). <em>DrugXafe: Sistema de Seguimiento y Rastreo Farmacéutico</
 
 <div style="padding-left: 40px; text-indent: -40px; margin-bottom: 15px;">
 Evans, E. (2004). <em>Domain-driven design: Tackling complexity in the heart of software</em>. Addison-Wesley Professional.
-</div>
-
-<div style="padding-left: 40px; text-indent: -40px; margin-bottom: 15px;">
-Google. (2024). <em>Angular Documentation: The modern web developer's platform</em>. https://angular.dev/
 </div>
 
 <div style="padding-left: 40px; text-indent: -40px; margin-bottom: 15px;">
@@ -1049,15 +940,16 @@ Veeva Systems. (2024). <em>Veeva Vault Quality: Modernizing Quality Management</
 </div>
 
 <div style="padding-left: 40px; text-indent: -40px; margin-bottom: 15px;">
+Vue.js. (2024). <em>Vue.js: The Progressive JavaScript Framework</em>. https://vuejs.org/
+</div>
+
+<div style="padding-left: 40px; text-indent: -40px; margin-bottom: 15px;">
 Vernon, V. (2013). <em>Implementing Domain-Driven Design</em>. Addison-Wesley Professional.
 </div>
 # Anexos
 
 ## Anexo A. Videos de Exposiciones
 
-En este anexo se incluirán de forma progresiva los hipervínculos a los videos de exposición para cada entrega del proyecto.
+En este anexo se incluyen los hipervínculos a los videos de exposición de cada entrega:
 
-* **Entrega AV1 (Sprint 1):** [Video de Exposición AV1 - Microsoft Stream](https://web.microsoftstream.com/video/...) / [YouTube](https://youtube.com/...)
-* **Entrega TB1:** *(Pendiente)*
-* **Entrega AV2:** *(Pendiente)*
-* **Entrega TB2:** *(Pendiente)*
+* **Entrega TB1 (Sprints 1 y 2):** Video de exposición upc-pre-202620-1asi0730-8130-IngesCompanyCC-exposition-tb1, *pendiente de registrar el enlace de Microsoft Stream.*
