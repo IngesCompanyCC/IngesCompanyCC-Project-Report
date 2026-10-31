@@ -613,9 +613,9 @@ En este Sprint se completó la Landing Page, publicada en GitHub Pages, y se imp
 
 *Figura: Preguntas frecuentes (US05).*
 
-![Formulario Contact us y footer (US04)](../assets/img/chapter5/sprint2/landing/12-contact.png)
+![Llamada a la acción final y footer con datos de contacto y redes sociales (US04)](../assets/img/chapter5/sprint2/landing/12-contact.png)
 
-*Figura: Formulario Contact us y footer (US04).*
+*Figura: Llamada a la acción final y footer con datos de contacto y redes sociales (US04).*
 
 ![Landing Page en español (US46)](../assets/img/chapter5/sprint2/landing/13-home-es.png)
 
@@ -695,7 +695,15 @@ En este Sprint se completó la Landing Page, publicada en GitHub Pages, y se imp
 
 *Figura: Administration · Resumen de administración (US50).*
 
-![Administration · Tareas y colaboración (US40, US41)](../assets/img/chapter5/sprint2/web-app/16-admin-users.png)
+![Administration · Usuarios y perfiles (US07, US55)](../assets/img/chapter5/sprint2/web-app/16-admin-users.png)
+
+*Figura: Administration · Usuarios y perfiles (US07, US55).*
+
+![Administration · Invitación de usuarios (US55)](../assets/img/chapter5/sprint2/web-app/21-admin-invite.png)
+
+*Figura: Administration · Invitación de usuarios (US55).*
+
+![Administration · Tareas y colaboración (US40, US41)](../assets/img/chapter5/sprint2/web-app/22-admin-tasks.png)
 
 *Figura: Administration · Tareas y colaboración (US40, US41).*
 
