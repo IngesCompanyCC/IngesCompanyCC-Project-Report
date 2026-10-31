@@ -180,7 +180,7 @@ Las acciones y técnicas que guían a los usuarios son:
 
 ## 4.3. Landing Page UI Design
 
-La propuesta de UI de la Landing Page traduce las decisiones de las secciones anteriores: la jerarquía visual ordena el contenido desde la propuesta de valor hasta la presentación de la startup; las etiquetas (Home, Features, Benefits, Plans, About Us) siguen el Labeling System; la barra fija con anclas, las llamadas a la acción por segmento y el enlace "Sign in" implementan el Navigation System; y el Design System de la sección 4.1 (Inter, verde azulado #0F766E, azul pizarra #0F172A y Material Symbols Rounded) se aplica de forma consistente con la Web Application. La Landing Page atiende las user stories US01 a US05 y US44 a US49. Los wireframes y mock-ups se elaboraron en Figma y están disponibles en el [archivo de diseño de DoofPlus](https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-813).
+La propuesta de UI de la Landing Page traduce las decisiones de las secciones anteriores: la jerarquía visual ordena el contenido desde la propuesta de valor hasta la presentación de la startup; las etiquetas (Home, Features, Benefits, Plans, About Us) siguen el Labeling System; la barra fija con anclas, las llamadas a la acción por segmento y el enlace "Sign in" implementan el Navigation System; y el Design System de la sección 4.1 (Inter, verde azulado #0F766E, azul pizarra #0F172A y Material Symbols Rounded) se aplica de forma consistente con la Web Application. La Landing Page atiende las user stories US01 a US05 y US44 a US49. Los wireframes y mock-ups se elaboraron en Figma y están disponibles en el archivo de diseño de DoofPlus: https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-813.
 
 Las secciones se presentan en el siguiente orden, que prioriza la información que el visitante necesita para decidir (qué es DoofPlus, qué ofrece y cuánto cuesta) antes que la presentación del equipo:
 
@@ -366,7 +366,7 @@ La versión mobile mantiene el orden y el contenido de desktop en una sola colum
 
 ## 4.4. Web Applications UX/UI Design
 
-Esta sección describe el diseño de experiencia (UX) e interfaz (UI) de la Web Application de DoofPlus. La aplicación se organiza en tres entornos, cada uno con su propio inicio de sesión, color y módulos: **QA/QC** (segmento 1, especialista de aseguramiento y control de calidad, persona María México), **Production** (segmento 2, jefe o supervisor de producción, persona Alberto Valle) y **Administration** (administrador del laboratorio, que registra la organización, invita a los usuarios y gestiona la suscripción). Los datos de ejemplo corresponden a un mismo caso: Laboratorios Andinos S.A.C., el lote B-26041 de Paracetamol 500 mg y la excursión de temperatura del sensor T-204 que origina la desviación DEV-26017, de modo que las pantallas de ambos segmentos cuentan una historia coherente. Los wireframes y mock-ups de escritorio y mobile se elaboraron en Figma y están disponibles en el [archivo de diseño de DoofPlus](https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-814).
+Esta sección describe el diseño de experiencia (UX) e interfaz (UI) de la Web Application de DoofPlus. La aplicación se organiza en tres entornos, cada uno con su propio inicio de sesión, color y módulos: **QA/QC** (segmento 1, especialista de aseguramiento y control de calidad, persona María México), **Production** (segmento 2, jefe o supervisor de producción, persona Alberto Valle) y **Administration** (administrador del laboratorio, que registra la organización, invita a los usuarios y gestiona la suscripción). Los datos de ejemplo corresponden a un mismo caso: Laboratorios Andinos S.A.C., el lote B-26041 de Paracetamol 500 mg y la excursión de temperatura del sensor T-204 que origina la desviación DEV-26017, de modo que las pantallas de ambos segmentos cuentan una historia coherente. Los wireframes y mock-ups de escritorio y mobile se elaboraron en Figma y están disponibles en el archivo de diseño de DoofPlus: https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-814.
 
 Todas las pantallas comparten la misma estructura, derivada de la arquitectura de información de la sección 4.2: un sidebar con el logotipo, el entorno activo y sus módulos (navegación global); una barra superior con la búsqueda global, el selector de idioma y el avatar del usuario; y un área de contenido que ubica arriba los indicadores y abajo las tablas de detalle. Las acciones críticas, como aprobar, liberar o rechazar, se confirman con firma electrónica (US08), y los estados se muestran con los valores del modelo de dominio.
 
@@ -432,7 +432,7 @@ En mobile se priorizan las tareas que se realizan fuera del escritorio: la elecc
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para representar la secuencia de pantallas que lo llevan a cumplir un objetivo. Para cada segmento se definieron seis user goals, basados en sus user stories. Cada diagrama muestra el user goal, la persona, el camino principal y los puntos de decisión que desvían el flujo hacia una pantalla de error o de bloqueo. Los diagramas se elaboraron en FigJam y están disponibles en el [tablero de Wireflows y User Flows](https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp).
+Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para representar la secuencia de pantallas que lo llevan a cumplir un objetivo. Para cada segmento se definieron seis user goals, basados en sus user stories. Cada diagrama muestra el user goal, la persona, el camino principal y los puntos de decisión que desvían el flujo hacia una pantalla de error o de bloqueo. Los diagramas se elaboraron en FigJam y están disponibles en el tablero de Wireflows y User Flows: https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp.
 
 #### Segmento 1 – Especialista de Aseguramiento y Control de Calidad (QA/QC)
 
@@ -716,7 +716,7 @@ En mobile, la navegación del entorno se agrupa en una barra inferior y las pant
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-Los User Flow Diagrams representan, para los mismos user goals de la sección 4.4.2, la secuencia de pantallas y acciones del camino principal (happy path) y las decisiones que llevan a caminos alternativos (unhappy paths). Se elaboraron en FigJam, en el mismo [tablero](https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp) que los Wireflow Diagrams.
+Los User Flow Diagrams representan, para los mismos user goals de la sección 4.4.2, la secuencia de pantallas y acciones del camino principal (happy path) y las decisiones que llevan a caminos alternativos (unhappy paths). Se elaboraron en FigJam, en el mismo tablero: https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp que los Wireflow Diagrams.
 
 #### Segmento 1 – Especialista QA/QC
 
@@ -835,9 +835,9 @@ El diseño del prototipo se guió por cuatro criterios:
 - **Consistencia visual:** todos los entornos comparten componentes, tipografía y estructura, y solo cambia el color que identifica al entorno.
 - **Prevención de errores:** los estados de bloqueo explican el motivo y la acción necesaria, en lugar de permitir una operación que luego deba corregirse.
 
-Prototipo navegable en Figma (página "Prototype", que une los mock-ups de la Landing Page y de la Web Application para navegar entre ambas): [abrir el prototipo](https://www.figma.com/proto/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?page-id=353%3A237&node-id=353-240&starting-point-node-id=353%3A240). Desde el selector de flujos del visor se accede a los puntos de inicio de cada user goal.
+Prototipo navegable en Figma (página "Prototype", que une los mock-ups de la Landing Page y de la Web Application para navegar entre ambas): abrir el prototipo: https://www.figma.com/proto/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?page-id=353%3A237&node-id=353-240&starting-point-node-id=353%3A240. Desde el selector de flujos del visor se accede a los puntos de inicio de cada user goal.
 
-Video de navegación del prototipo (Sprint 1): [ver en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202423162_upc_edu_pe/IQC9TP0VdDx0SbIEr4nWmikhAceGoBqdZ78DiR68qJ8FV-A?e=1BIqfW) (copia en [YouTube](https://youtu.be/6PLCLqaF8Tg)). Inicio: 00:00. Duración: 06:10.
+Video de navegación del prototipo (Sprint 1): ver en Microsoft Stream: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202423162_upc_edu_pe/IQC9TP0VdDx0SbIEr4nWmikhAceGoBqdZ78DiR68qJ8FV-A?e=1BIqfW (copia en YouTube: https://youtu.be/6PLCLqaF8Tg). Inicio: 00:00. Duración: 06:10.
 
 **Landing Page** (desde 00:00 hasta 00:24)
 
@@ -894,7 +894,7 @@ Frame en Miro: https://miro.com/app/board/uXjVHkhKOXE=/?moveToWidget=34587646857
 
 #### Paso 1: Timelines
 
-Se organizaron en una línea de tiempo vertical los eventos de cada contexto, con los resultados alternativos en la columna "Alternativa" (por ejemplo, "Documento aprobado" o "Documento rechazado"). Al revisar qué dispara cada evento, en este nivel se agregaron eventos que faltaban en el Big Picture: "Consulta recibida", "Plan de suscripción seleccionado", "Firma electrónica registrada", "Equipo registrado", "Sensor IoT registrado", "Aprobación de insumos solicitada a Calidad", "Mantenimiento preventivo realizado", "Lote puesto en espera" y "Acción CAPA vencida"; además, "Usuario registrado" se renombró como "Usuario dado de alta en la organización". También aparecen eventos de detalle que no eran relevantes en la vista general, como "Usuario autenticado", "Inicio de sesión fallido", "Cuenta bloqueada", "Planta agregada", "Perfil actualizado" y "Alerta reconocida".
+Se organizaron en una línea de tiempo vertical los eventos de cada contexto, con los resultados alternativos en la columna "Alternative" (por ejemplo, "Document approved" o "Document rejected"). Al revisar qué dispara cada evento, en este nivel se agregaron eventos que faltaban en el Big Picture: "Inquiry received", "Subscription plan selected", "Electronic signature recorded", "Equipment registered", "IoT sensor registered", "Raw material approval requested from Quality", "Preventive maintenance performed", "Batch put on hold" y "CAPA action overdue"; además, "User signed up" se renombró como "User registered in the organization". También aparecen eventos de detalle que no eran relevantes en la vista general, como "User authenticated", "Sign-in failed", "Account locked", "Facility added", "Profile updated" y "Alert acknowledged".
 
 **Identity & Access Management**
 
@@ -922,7 +922,7 @@ Se organizaron en una línea de tiempo vertical los eventos de cada contexto, co
 
 #### Paso 2: Commands
 
-Cada evento se antecedió por el command que lo provoca, redactado en imperativo (por ejemplo, "Crear lote" produce "Lote creado"). Un mismo command puede terminar en dos eventos alternativos, como "Aprobar orden de producción", que produce "Orden de producción aprobada" u "Orden de producción rechazada".
+Cada evento se antecedió por el command que lo provoca, redactado en imperativo (por ejemplo, "Create batch" produce "Batch created"). Un mismo command puede terminar en dos eventos alternativos, como "Approve production order", que produce "Production order approved" o "Production order rejected".
 
 **Identity & Access Management**
 
@@ -950,7 +950,7 @@ Cada evento se antecedió por el command que lo provoca, redactado en imperativo
 
 #### Paso 3: Actors and policies
 
-Se identificó quién ejecuta cada command: Administrador del laboratorio, Especialista QA/QC, Jefe de Calidad, Jefe de Producción, Auditor interno, Responsable de la acción CAPA y, para las tareas programadas, el sistema. Cuando un command se ejecuta automáticamente, el actor se reemplazó por una policy. Las principales policies son:
+Se identificó quién ejecuta cada command: Laboratory Administrator, QA/QC Specialist, Quality Manager, Production Supervisor, Internal Auditor, Action Owner y, para las tareas programadas, el sistema (System, scheduler). Cuando un command se ejecuta automáticamente, el actor se reemplazó por una policy. Las principales policies son:
 
 | Bounded context | Policy (cuando ocurre…, entonces…) |
 | --- | --- |
@@ -993,7 +993,7 @@ Se identificó quién ejecuta cada command: Administrador del laboratorio, Espec
 
 #### Paso 4: Read models
 
-Se registró la información que cada actor consulta antes de decidir. Estos read models son la base de las vistas de la Web Application y de los dashboards: por ejemplo, "Panel de control del lote" (GxP Batch Execution & Management Console), "Tablero de desviaciones y CAPA" (Critical Deviations & CAPA Actions Control), "Panel de resultados de laboratorio" (Analytical Results Entry & Validation), "Panel de alertas" (Environmental & Equipment Monitoring) y "Audit trail" (Cross-Traceability & Audit Center). Cada read model se obtiene con una query del contexto, atendida por su query service: por ejemplo, el panel de control del lote se arma con la consulta del lote y su línea de tiempo, y el tablero de desviaciones, con la consulta de las desviaciones abiertas por severidad.
+Se registró la información que cada actor consulta antes de decidir. Estos read models son la base de las vistas de la Web Application y de los dashboards: por ejemplo, "Batch dashboard" (GxP Batch Execution & Management Console), "Deviations and CAPA board" (Critical Deviations & CAPA Actions Control), "Laboratory results dashboard" (Analytical Results Entry & Validation), "Alerts dashboard" (Environmental & Equipment Monitoring) y "Audit trail" (Cross-Traceability & Audit Center). Cada read model se obtiene con una query del contexto, atendida por su query service: por ejemplo, el panel de control del lote se arma con la consulta del lote y su línea de tiempo, y el tablero de desviaciones, con la consulta de las desviaciones abiertas por severidad.
 
 **Identity & Access Management**
 
@@ -1021,7 +1021,7 @@ Se registró la información que cada actor consulta antes de decidir. Estos rea
 
 #### Paso 5: External systems
 
-Se ubicaron los sistemas externos en el punto donde intervienen: Niubiz (pago y renovación de suscripciones), ThingsBoard (registro de sensores e ingesta de lecturas), SendGrid (invitaciones, alertas y notificaciones por correo), el Lector RFID (recepción de materias primas), la app autenticadora del usuario (códigos TOTP) y DIGEMID (inspección). Respecto del tablero original se corrigieron tres elementos: "Registro en la base de datos" no es un sistema externo (la base de datos es parte de la solución), el "Motor de alertas" es lógica propia del contexto IoT Monitoring y Google Authenticator no expone un API: solo genera el código que el usuario ingresa.
+Se ubicaron los sistemas externos en el punto donde intervienen: Niubiz (pago y renovación de suscripciones), ThingsBoard (registro de sensores e ingesta de lecturas), SendGrid (invitaciones, alertas y notificaciones por correo), el RFID Reader (recepción de materias primas), la Authenticator App (TOTP) del usuario (códigos de 2FA) y DIGEMID (inspección). Respecto del tablero original se corrigieron tres elementos: "Registro en la base de datos" no es un sistema externo (la base de datos es parte de la solución), el "Motor de alertas" es lógica propia del contexto IoT Monitoring y Google Authenticator no expone un API: solo genera el código que el usuario ingresa.
 
 **Identity & Access Management**
 
@@ -1049,7 +1049,7 @@ Se ubicaron los sistemas externos en el punto donde intervienen: Niubiz (pago y 
 
 #### Paso 6: Business rules y aggregates
 
-Donde no interviene un sistema externo se escribió la business rule que el command debe cumplir. Las reglas se tomaron de los criterios de aceptación de las User Stories (el identificador aparece en el post-it), por ejemplo "Número de lote único (US14)", "Solo materia prima aprobada (US17)" o "Requiere causa raíz y CAPA verificadas (US19)". Las reglas que protegen los mismos datos se apilaron y cada grupo recibió el nombre de su aggregate:
+Donde no interviene un sistema externo se escribió la business rule que el command debe cumplir. Las reglas se tomaron de los criterios de aceptación de las User Stories (el identificador aparece en el post-it), por ejemplo "Unique batch number (US14)", "Approved raw material only (US17)" o "Requires a root cause and verified CAPA (US19)". Las reglas que protegen los mismos datos se apilaron y cada grupo recibió el nombre de su aggregate:
 
 | Bounded context | Aggregates | Ejemplo de invariante |
 | --- | --- | --- |
@@ -1060,7 +1060,7 @@ Donde no interviene un sistema externo se escribió la business rule que el comm
 | IoT Monitoring | Equipment, IoTDevice, TelemetryReading, Alert | Un equipo con calibración vencida no puede asignarse a un lote. |
 | Quality & Compliance | QualityDocument, MaterialApproval, BatchReview, AnalyticalResult, Deviation, Audit, RegulatoryReport | Un lote con un resultado OOS sin desviación cerrada no puede liberarse. |
 
-Frames en Miro por bounded context. Debajo de los frames finales, el tablero tiene la sección "DLES paso a paso por bounded context", con una fila por contexto y un frame por paso (Pasos 1 a 6); el enlace lleva al Paso 1 de cada fila:
+Frames en Miro por bounded context. Debajo de los frames finales, el tablero tiene la sección "DLES step by step per bounded context", con una fila por contexto y un frame por paso (Pasos 1 a 6); el enlace lleva al Paso 1 de cada fila:
 
 | Bounded context | Frame final | Pasos 1 a 6 |
 | --- | --- | --- |
@@ -1117,22 +1117,48 @@ Frame en Miro: https://miro.com/app/board/uXjVHkhKOXE=/?moveToWidget=34587646857
 
 ### 4.6.2. Software Architecture Context Diagram
 
-El diagrama de contexto (nivel 1 del modelo C4) muestra a DoofPlus como un único sistema rodeado por sus usuarios y los sistemas externos identificados en el EventStorming. Los usuarios son el visitante de un laboratorio (Landing Page), el Especialista QA/QC y el Jefe de Producción (segmentos objetivo) y el Administrador del laboratorio. Los sistemas externos son ThingsBoard, que envía la telemetría de los sensores; Niubiz, que autoriza los cobros de las suscripciones; SendGrid, que entrega correos; y el Lector RFID del almacén, con el que el Jefe de Producción lee la etiqueta del insumo recibido y que envía ese código a DoofPlus. La app autenticadora del usuario genera los códigos TOTP del segundo factor sin integración por API, por eso se muestra con línea punteada. DIGEMID, identificada como sistema externo en el EventStorming, no forma parte del diagrama porque inspecciona al laboratorio sin intercambiar datos con DoofPlus: el modelo C4 solo incluye las personas y los sistemas conectados directamente con el sistema. Los diagramas C4 se elaboraron con Structurizr DSL (Diagram-as-Code) y se renderizaron con Structurizr, la herramienta de referencia del modelo C4; todas las vistas salen de un único modelo (`assets/diagrams/structurizr/workspace.dsl`), y la disposición de los elementos de cada vista se guarda en `workspace.json`, ordenada en capas de arriba hacia abajo para que las relaciones no se crucen ni atraviesen otros elementos.
+El diagrama de contexto (nivel 1 del modelo C4) presenta a DoofPlus como una "caja negra": el foco está en el sistema y en las personas y sistemas externos con los que interactúa, sin detallar cómo está construido por dentro. Los diagramas C4 se elaboraron con Structurizr DSL (Diagram-as-Code) y se renderizaron con Structurizr; todas las vistas salen de un único modelo (`assets/diagrams/structurizr/workspace.dsl`), la posición de cada elemento se guarda en `workspace.json` y los textos de los diagramas están en inglés, al igual que el resto de artefactos.
+
+Personas que usan DoofPlus:
+
+- **Laboratory Visitor:** representante de un laboratorio que conoce DoofPlus desde la Landing Page, revisa los planes y registra su laboratorio.
+- **QA/QC Specialist** (segmento objetivo 1): gestiona documentos, dictamen de insumos, desviaciones, CAPA, auditorías y la liberación de lotes.
+- **Pharmaceutical Production Supervisor** (segmento objetivo 2): gestiona órdenes y lotes, monitorea los equipos y solicita aprobaciones a Calidad.
+- **Laboratory Administrator:** registra la organización, los usuarios, los roles, los sensores y la suscripción.
+
+Sistemas externos:
+
+- **ThingsBoard:** plataforma IoT que recibe las lecturas de los sensores de planta y las reenvía a DoofPlus.
+- **Niubiz:** pasarela de pagos que autoriza los cobros de las suscripciones.
+- **SendGrid:** servicio de correo para invitaciones, alertas y notificaciones.
+- **RFID Reader:** lector del almacén con el que el Jefe de Producción lee la etiqueta del insumo recibido; envía ese código a DoofPlus.
+- **Authenticator App (TOTP):** aplicación móvil del usuario que genera los códigos del segundo factor. No se integra por API con DoofPlus, por eso su relación se dibuja con línea punteada.
+
+En el diagrama se observa que las cuatro personas usan DoofPlus mediante HTTPS, que ThingsBoard envía la telemetría al sistema mediante un webhook y que DoofPlus se integra con Niubiz y SendGrid a través de sus API REST. DIGEMID, identificada en el EventStorming, no forma parte del diagrama porque inspecciona al laboratorio sin intercambiar datos con DoofPlus: el modelo C4 solo incluye a las personas y los sistemas conectados directamente con el sistema.
 
 ![Context Level Diagram](../assets/img/chapter4/software-architecture/c4/c4-01-context.png)
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-El diagrama de contenedores (nivel 2) muestra las unidades de despliegue de la solución y cómo se comunican:
+En el nivel de contenedores, la atención pasa de "quién usa el sistema" a "cómo se organiza el sistema en aplicaciones y almacenes de datos". El diagrama muestra los contenedores de DoofPlus, sus responsabilidades, las decisiones de tecnología y la forma en que se comunican entre sí y con los sistemas externos:
 
 | Container | Tecnología | Despliegue | Responsabilidad |
 | --- | --- | --- | --- |
-| Landing Page | HTML5, CSS3, JavaScript | GitHub Pages | Presentar la propuesta de valor, los planes y el equipo; enviar las consultas del formulario de contacto y llevar a cada usuario al inicio de sesión de su entorno o al registro de la organización. |
-| Web Application | Vue 3, Vite, Pinia, Vue Router, Vue I18n, PrimeVue, JavaScript | Firebase Hosting | SPA responsive con un módulo por bounded context; consume el RESTful API con un token JWT. |
-| RESTful API | ASP.NET Core, C# 12, Entity Framework Core, ASP.NET Core Identity, Swashbuckle (Swagger) | Render | Monolito modular con los seis bounded contexts; expone endpoints REST documentados con OpenAPI (Swagger), recibe la telemetría de ThingsBoard y publica notificaciones por WebSocket (STOMP). |
+| Landing Page | HTML5, CSS3, JavaScript | GitHub Pages | Presentar la propuesta de valor, los planes y el equipo, y llevar a cada usuario, mediante el call to action, al inicio de sesión de su entorno o al registro de la organización. |
+| Web Application | Archivos estáticos generados por `npm run build` (Vite) | Firebase Hosting | Entregar al navegador del usuario el contenido estático y la Single-Page Application (`index.html` y los archivos JavaScript y CSS). No ejecuta lógica de negocio. |
+| Single-Page Application | Vue 3, Vite, Pinia, Vue Router, Vue I18n, PrimeVue, JavaScript | Navegador del usuario | Toda la interfaz de DoofPlus, con un módulo por bounded context; consume el RESTful API con un token JWT. |
+| RESTful API | ASP.NET Core, C#, Entity Framework Core, ASP.NET Core Identity, Swashbuckle (Swagger) | Render | Monolito modular con los seis bounded contexts; expone endpoints REST documentados con OpenAPI (Swagger), recibe la telemetría de ThingsBoard y publica notificaciones por WebSocket (STOMP). |
 | Database | MySQL 8 | Railway | Persistencia relacional; las tablas se agrupan por bounded context. |
 
-El Lector RFID se conecta al equipo del almacén y envía a la Web Application el código de la etiqueta como entrada de teclado (USB HID), por lo que no requiere integración con el RESTful API.
+La aplicación web de DoofPlus se representa con dos contenedores, como indica el modelo C4 para una Single-Page Application. Al compilar el proyecto Vue con Vite se genera una carpeta con `index.html` y los archivos JavaScript y CSS; Firebase Hosting (Web Application) solo los entrega cuando el usuario ingresa a la URL de DoofPlus, y la aplicación se ejecuta en el navegador del usuario (Single-Page Application), por eso este contenedor se dibuja con la forma de un navegador. La Landing Page es un contenedor aparte.
+
+En el diagrama se observa que:
+
+- El visitante ingresa a la **Landing Page**, cuyo call to action lo lleva a la URL de la Web Application.
+- Los tres usuarios de la plataforma visitan la URL de DoofPlus; la **Web Application** entrega la **Single-Page Application** a su navegador, y desde ese momento trabajan con la SPA.
+- La **Single-Page Application** se comunica solo con el **RESTful API**: realiza peticiones JSON/HTTPS con un token JWT y recibe las alertas en tiempo real por WebSocket.
+- El **RESTful API** lee y escribe en la **Database** mediante Entity Framework Core, recibe la telemetría de **ThingsBoard** sin pasar por la SPA y se integra con **Niubiz** y **SendGrid**.
+- El **RFID Reader** se conecta al equipo del almacén y escribe el código de la etiqueta en la Single-Page Application como entrada de teclado (USB HID), por lo que no requiere integración con el RESTful API.
 
 Se eligió un monolito modular en lugar de microservicios porque el statement define un único RESTful API y porque el equipo y el volumen de datos de laboratorios pequeños y medianos no justifican la complejidad operativa de varios servicios. La separación por bounded context dentro del código (paquetes independientes que solo se comunican mediante fachadas y eventos) permite extraer un contexto a un servicio propio en el futuro.
 
@@ -1140,35 +1166,45 @@ Se eligió un monolito modular en lugar de microservicios porque el statement de
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-Los diagramas de componentes (nivel 3) descomponen la Web Application y el RESTful API. La Web Application sigue la estructura del proyecto en Vue 3: un módulo por bounded context con las capas `domain`, `application`, `infrastructure` y `presentation`, más los elementos compartidos de `shared`. El módulo `manufacturing` recibe el código leído por el Lector RFID en el registro de la recepción de insumos.
+En el nivel de componentes se detalla cómo se descompone cada contenedor que contiene código propio: la Single-Page Application y el RESTful API. En ambos, cada componente corresponde a un bounded context identificado en el Design-Level EventStorming (sección 4.6.1), más un componente `Shared` con los elementos reutilizados por todos. La descomposición de cada bounded context en sus capas (domain, application, infrastructure y presentation o interfaces) y en sus clases se presenta en los diagramas de clases de la sección 4.7.
 
-![Component Diagram - Web Application](../assets/img/chapter4/software-architecture/c4/c4-03-webapp-components.png)
+#### Single-Page Application
 
-En el RESTful API cada bounded context es un namespace del proyecto ASP.NET Core con cuatro capas: `interfaces` (controladores REST y fachadas ACL), `application` (command services, query services, event handlers y servicios ACL de salida), `domain` (aggregates, entities, value objects, commands, queries y domain services) e `infrastructure` (repositorios con Entity Framework Core e integraciones externas).
+La Single-Page Application sigue la estructura del proyecto en Vue 3: un módulo por bounded context en `src/<bounded-context>/`, más el módulo `shared`.
 
-**Identity & Access Management.** `AuthenticationController` atiende sign-up, sign-in y la verificación 2FA; `BearerAuthorizationRequestFilter` valida el JWT en cada request; `UserCommandServiceImpl` da de alta usuarios, asigna roles y bloquea cuentas; `SignatureCommandServiceImpl` registra firmas electrónicas. `IamContextFacade` expone estas capacidades a los demás contextos.
+- **Shared:** el shell del espacio de trabajo (layout, toolbar, sidebar, footer y selector de idioma), las rutas de cada entorno (QA/QC, Production y Administration) y el cliente REST base del que heredan los endpoints de todos los módulos.
+- **Identity & Access Management:** elección del entorno, inicio de sesión con 2FA, sesión, usuarios, invitaciones y protección de las rutas según el rol.
+- **Organizations & Profiles:** registro de la organización, plantas, resumen de administración, consultas de contacto y preferencias del perfil.
+- **Subscriptions & Payments:** planes, medio de pago, suscripción vigente e historial de facturas.
+- **Manufacturing & Batch Management:** resumen de producción, órdenes, productos y fórmulas, lotes y recepción de insumos.
+- **IoT Monitoring:** resumen IoT, equipos y sensores, lecturas, alertas y evidencia IoT de cada lote.
+- **Quality & Compliance:** documentos, desviaciones, CAPA, liberación de lotes, resultados analíticos, auditorías, audit trail y reportes regulatorios.
 
-![Component Diagram - IAM](../assets/img/chapter4/software-architecture/c4/c4-04-api-iam-components.png)
+En el diagrama se observa que los usuarios trabajan en el shell de `Shared`, que carga de forma diferida el módulo del bounded context que corresponde a cada vista; cada módulo llama al RESTful API mediante JSON/HTTPS. El RFID Reader escribe el código de la etiqueta en el módulo de Manufacturing durante la recepción de insumos.
 
-**Organizations & Profiles.** Registra organizaciones, plantas, perfiles y las consultas del formulario de contacto de la Landing Page; al registrar una organización pide a IAM crear su administrador mediante `ExternalIamService`.
+![Component Diagram - Single-Page Application](../assets/img/chapter4/software-architecture/c4/c4-03-spa-components.png)
 
-![Component Diagram - Organizations](../assets/img/chapter4/software-architecture/c4/c4-05-api-organizations-components.png)
+#### RESTful API
 
-**Subscriptions & Payments.** Gestiona planes y suscripciones; `NiubizPaymentGateway` autoriza los cobros y `SubscriptionRenewalScheduler` renueva las suscripciones vencidas.
+El RESTful API es un monolito modular: cada bounded context es un namespace independiente del proyecto ASP.NET Core, y los namespaces solo se comunican mediante fachadas ACL (`<Context>ContextFacade`) y eventos de dominio.
 
-![Component Diagram - Subscriptions](../assets/img/chapter4/software-architecture/c4/c4-06-api-subscriptions-components.png)
+- **Shared:** clase base de los aggregates auditables, estrategia de nombres en snake_case, el tipo `Result` y la configuración común.
+- **Identity & Access Management:** registro e inicio de sesión con JWT y TOTP, usuarios, roles, bloqueo de cuentas tras cinco intentos fallidos y firmas electrónicas. Envía las invitaciones por SendGrid.
+- **Organizations & Profiles:** organizaciones (con RUC único), plantas, perfiles y consultas de contacto. Al registrar una organización pide a IAM crear su usuario administrador y avisa de cada consulta por SendGrid.
+- **Subscriptions & Payments:** planes, suscripciones, pagos, renovaciones y cancelaciones. Autoriza los cobros con Niubiz.
+- **Manufacturing & Batch Management:** productos, fórmulas maestras, lotes de insumos, órdenes de producción, lotes e incidencias.
+- **IoT Monitoring:** equipos, calibraciones, sensores, lecturas de telemetría y alertas. Recibe la telemetría de ThingsBoard y envía las alertas por WebSocket y por SendGrid.
+- **Quality & Compliance:** documentos de calidad, dictamen de insumos, revisión y liberación de lotes, desviaciones, CAPA, auditorías, audit trail y reportes regulatorios.
 
-**Manufacturing & Batch Management.** Gestiona productos, fórmulas, insumos, órdenes y lotes; solicita a Quality la aprobación de insumos y la cuarentena del lote, y actualiza sus aggregates cuando recibe los eventos `MaterialApprovalDecided` y `BatchReleaseDecided`.
+En el diagrama se observa que:
 
-![Component Diagram - Manufacturing](../assets/img/chapter4/software-architecture/c4/c4-07-api-manufacturing-components.png)
+- La Single-Page Application llama a cada bounded context mediante sus endpoints REST; con IoT Monitoring, además, recibe las alertas en tiempo real por WebSocket.
+- Organizations & Profiles crea el administrador de la organización mediante la fachada de IAM, y Quality & Compliance le pide a IAM la firma electrónica de documentos y liberaciones.
+- Manufacturing & Batch Management solicita a Quality & Compliance la aprobación de insumos y la cuarentena de los lotes; Quality & Compliance le devuelve su veredicto mediante los eventos `MaterialApprovalDecided` y `BatchReleaseDecided`.
+- Manufacturing & Batch Management pide a IoT Monitoring asignar sensores a cada lote, e IoT Monitoring consulta a Manufacturing el lote en curso al registrar cada lectura y a Subscriptions & Payments el límite de sensores del plan.
+- Cada bounded context persiste sus datos en sus propias tablas de la Database.
 
-**IoT Monitoring.** `TelemetryWebhookController` recibe las lecturas de ThingsBoard, `AlertRuleEvaluator` compara cada lectura con los rangos permitidos y `NotificationService` publica las alertas por WebSocket y por correo.
-
-![Component Diagram - IoT Monitoring](../assets/img/chapter4/software-architecture/c4/c4-08-api-iot-components.png)
-
-**Quality & Compliance.** Gestiona documentos, dictamen de insumos, revisión y liberación de lotes, resultados analíticos, desviaciones, CAPA y auditorías. `AuditTrailEntityListener` registra cada cambio de las entidades de todos los contextos y `ReportGenerationServiceImpl` genera expedientes y reportes en PDF con OpenPDF.
-
-![Component Diagram - Quality & Compliance](../assets/img/chapter4/software-architecture/c4/c4-09-api-quality-components.png)
+![Component Diagram - RESTful API](../assets/img/chapter4/software-architecture/c4/c4-04-api-components.png)
 
 ## 4.7. Software Object-Oriented Design
 

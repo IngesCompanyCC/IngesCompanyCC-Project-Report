@@ -163,8 +163,10 @@ function Pandoc(doc)
 
   local first_chapter = find_first_chapter(blocks)
   if first_chapter then
+    -- The front matter (version register and collaboration insights) stays
+    -- out of the table of contents.
     local content = pandoc.Blocks({})
-    for i = (cover_first or 0) + 1, #blocks do
+    for i = first_chapter, #blocks do
       content:insert(blocks[i])
     end
     local toc = pandoc.structure.table_of_contents(content, { toc_depth = 4 })

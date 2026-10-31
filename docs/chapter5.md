@@ -45,7 +45,7 @@ A continuación se detallan los productos de software que los miembros del equip
 
 ### 5.1.2. Source Code Management
 
-El equipo utiliza **GitHub** como plataforma y **Git** como sistema de control de versiones. Todos los repositorios pertenecen a la organización [IngesCompanyCC](https://github.com/IngesCompanyCC):
+El equipo utiliza **GitHub** como plataforma y **Git** como sistema de control de versiones. Todos los repositorios pertenecen a la organización IngesCompanyCC: https://github.com/IngesCompanyCC:
 
 | Producto | Repositorio |
 |----------|-------------|
@@ -93,13 +93,13 @@ Los mensajes de commit siguen la especificación **Conventional Commits 1.0.0**:
 
 Toda la nomenclatura del código fuente (archivos, clases, variables, métodos y comentarios) se escribe en **inglés**, respetando el Ubiquitous Language del dominio de calidad farmacéutica (por ejemplo, `ProductionBatch`, `Deviation`, `CapaAction`). Las convenciones adoptadas por lenguaje son las siguientes:
 
-* **HTML:** [HTML Style Guide and Coding Conventions (W3Schools)](https://www.w3schools.com/html/html5_syntax.asp) y [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). Etiquetas y atributos en minúsculas, valores de atributos entre comillas dobles, uso de etiquetas semánticas (`header`, `main`, `section`, `footer`) y atributo `alt` en todas las imágenes.
-* **CSS:** [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). Indentación de 2 espacios, nombres de clases en kebab-case y selectores cortos; los ids no se usan para estilos.
-* **JavaScript:** [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html). Uso de `const`/`let`, lowerCamelCase para variables y funciones y punto y coma al final de cada sentencia.
-* **Vue:** [Vue Style Guide](https://vuejs.org/style-guide/). Componentes de un solo archivo (`.vue`) con nombres en kebab-case, `<script setup>` con Composition API, props tipadas y organización del código por bounded context (`domain`, `infrastructure`, `application`, `presentation`).
-* **C#:** [C# Coding Conventions (Microsoft)](https://learn.microsoft.com/dotnet/csharp/fundamentals/coding-style/coding-conventions). PascalCase para clases, métodos y propiedades, camelCase para variables locales y parámetros, y prefijo `I` en las interfaces.
-* **ASP.NET Core:** [ASP.NET Core Web API (Microsoft)](https://learn.microsoft.com/aspnet/core/web-api). Configuración externalizada en `appsettings.json` y variables de entorno, y controladores RESTful con rutas en plural y kebab-case (por ejemplo, `/api/v1/production-batches`).
-* **Gherkin:** [Gherkin Conventions for Readable Specifications](https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications). Palabras clave `Feature`, `Scenario`, `Given`, `When`, `Then` en inglés, un comportamiento por escenario y uso de `Scenario Outline` con `Examples` para casos basados en datos.
+* **HTML:** HTML Style Guide and Coding Conventions (W3Schools): https://www.w3schools.com/html/html5_syntax.asp y Google HTML/CSS Style Guide: https://google.github.io/styleguide/htmlcssguide.html. Etiquetas y atributos en minúsculas, valores de atributos entre comillas dobles, uso de etiquetas semánticas (`header`, `main`, `section`, `footer`) y atributo `alt` en todas las imágenes.
+* **CSS:** Google HTML/CSS Style Guide: https://google.github.io/styleguide/htmlcssguide.html. Indentación de 2 espacios, nombres de clases en kebab-case y selectores cortos; los ids no se usan para estilos.
+* **JavaScript:** Google JavaScript Style Guide: https://google.github.io/styleguide/jsguide.html. Uso de `const`/`let`, lowerCamelCase para variables y funciones y punto y coma al final de cada sentencia.
+* **Vue:** Vue Style Guide: https://vuejs.org/style-guide/. Componentes de un solo archivo (`.vue`) con nombres en kebab-case, `<script setup>` con Composition API, props tipadas y organización del código por bounded context (`domain`, `infrastructure`, `application`, `presentation`).
+* **C#:** C# Coding Conventions (Microsoft): https://learn.microsoft.com/dotnet/csharp/fundamentals/coding-style/coding-conventions. PascalCase para clases, métodos y propiedades, camelCase para variables locales y parámetros, y prefijo `I` en las interfaces.
+* **ASP.NET Core:** ASP.NET Core Web API (Microsoft): https://learn.microsoft.com/aspnet/core/web-api. Configuración externalizada en `appsettings.json` y variables de entorno, y controladores RESTful con rutas en plural y kebab-case (por ejemplo, `/api/v1/production-batches`).
+* **Gherkin:** Gherkin Conventions for Readable Specifications: https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications. Palabras clave `Feature`, `Scenario`, `Given`, `When`, `Then` en inglés, un comportamiento por escenario y uso de `Scenario Outline` con `Examples` para casos basados en datos.
 
 ### 5.1.4. Software Deployment Configuration
 
@@ -722,83 +722,83 @@ Videos de navegación del producto (upc-pre-202620-1asi0730-8130-IngesCompanyCC-
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-En el Sprint 2 todavía no se implementaron los RESTful Web Services, por lo que no hay documentación OpenAPI. Mientras tanto, la Web Application consume una Fake API con json-server (`server/db.json`), cuyas rutas se exponen bajo el prefijo `/api/v1` mediante `server/routes.json`, el mismo que tendrán los Web Services. La siguiente tabla documenta los endpoints que usa la Web Application; la URL base local es `http://localhost:3000/api/v1` y la publicada en Render es `https://ingescompanycc-api.onrender.com/api/v1` (por ejemplo, [`/plans`](https://ingescompanycc-api.onrender.com/api/v1/plans)).
+En el Sprint 2 todavía no se implementaron los RESTful Web Services, por lo que no hay documentación OpenAPI. Mientras tanto, la Web Application consume una Fake API con json-server (`server/db.json`), cuyas rutas se exponen bajo el prefijo `/api/v1` mediante `server/routes.json`, el mismo que tendrán los Web Services. La siguiente tabla documenta los endpoints que usa la Web Application; la URL base local es `http://localhost:3000/api/v1` y la publicada en Render es `https://ingescompanycc-api.onrender.com/api/v1` (por ejemplo, `/plans` (https://ingescompanycc-api.onrender.com/api/v1/plans)).
 
 | Endpoint | Verbo HTTP | Sintaxis | Parámetros | Response | URL documentación |
 |---|---|---|---|---|---|
-| `/users` | GET | `/api/v1/users` | — | 200 OK con la lista de `users` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/users` | POST | `/api/v1/users` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/users` | GET | `/api/v1/users?email={email}&password={password}` | `email`, `password` (query) | 200 OK con el usuario cuyas credenciales coinciden (inicio de sesión) | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/users` | GET | `/api/v1/users?id={id}&twoFactorCode={code}` | `id`, `twoFactorCode` (query) | 200 OK con el usuario si el código 2FA es válido | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/organizations` | GET | `/api/v1/organizations` | — | 200 OK con la lista de `organizations` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/organizations` | GET | `/api/v1/organizations/{id}` | `id` (path) | 200 OK con el recurso de `organizations` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/organizations` | POST | `/api/v1/organizations` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/organizations` | GET | `/api/v1/organizations?ruc={ruc}` | `ruc` (query) | 200 OK con la organización que ya usa ese RUC | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/facilities` | GET | `/api/v1/facilities` | — | 200 OK con la lista de `facilities` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/facilities` | POST | `/api/v1/facilities` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/user-profiles` | GET | `/api/v1/user-profiles` | — | 200 OK con la lista de `user-profiles` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/user-profiles` | POST | `/api/v1/user-profiles` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/user-profiles` | PUT | `/api/v1/user-profiles/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/administrative-activities` | GET | `/api/v1/administrative-activities` | — | 200 OK con la lista de `administrative-activities` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/administrative-activities` | POST | `/api/v1/administrative-activities` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/plans` | GET | `/api/v1/plans` | — | 200 OK con la lista de `plans` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/subscriptions` | GET | `/api/v1/subscriptions` | — | 200 OK con la lista de `subscriptions` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/subscriptions` | POST | `/api/v1/subscriptions` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/subscriptions` | PUT | `/api/v1/subscriptions/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/invoices` | GET | `/api/v1/invoices` | — | 200 OK con la lista de `invoices` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/invoices` | POST | `/api/v1/invoices` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/products` | GET | `/api/v1/products` | — | 200 OK con la lista de `products` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/products` | POST | `/api/v1/products` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/master-formulas` | GET | `/api/v1/master-formulas` | — | 200 OK con la lista de `master-formulas` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/formula-items` | GET | `/api/v1/formula-items` | — | 200 OK con la lista de `formula-items` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/production-orders` | GET | `/api/v1/production-orders` | — | 200 OK con la lista de `production-orders` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/production-orders` | POST | `/api/v1/production-orders` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/operations` | GET | `/api/v1/operations` | — | 200 OK con la lista de `operations` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/operations` | PUT | `/api/v1/operations/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/batches` | GET | `/api/v1/batches` | — | 200 OK con la lista de `batches` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/batches` | POST | `/api/v1/batches` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/batches` | PUT | `/api/v1/batches/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/batch-events` | GET | `/api/v1/batch-events` | — | 200 OK con la lista de `batch-events` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/batch-events` | POST | `/api/v1/batch-events` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/material-lots` | GET | `/api/v1/material-lots` | — | 200 OK con la lista de `material-lots` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/material-lots` | POST | `/api/v1/material-lots` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/material-lots` | PUT | `/api/v1/material-lots/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/equipment` | GET | `/api/v1/equipment` | — | 200 OK con la lista de `equipment` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/equipment` | PUT | `/api/v1/equipment/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/sensors` | GET | `/api/v1/sensors` | — | 200 OK con la lista de `sensors` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/sensors` | POST | `/api/v1/sensors` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/sensors` | PUT | `/api/v1/sensors/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/readings` | GET | `/api/v1/readings` | — | 200 OK con la lista de `readings` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/alerts` | GET | `/api/v1/alerts` | — | 200 OK con la lista de `alerts` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/alerts` | PUT | `/api/v1/alerts/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/quality-documents` | GET | `/api/v1/quality-documents` | — | 200 OK con la lista de `quality-documents` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/quality-documents` | PUT | `/api/v1/quality-documents/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/deviations` | GET | `/api/v1/deviations` | — | 200 OK con la lista de `deviations` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/deviations` | POST | `/api/v1/deviations` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/deviations` | PUT | `/api/v1/deviations/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/evidence` | GET | `/api/v1/evidence` | — | 200 OK con la lista de `evidence` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/evidence` | POST | `/api/v1/evidence` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/evidence` | PUT | `/api/v1/evidence/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/capa-plans` | GET | `/api/v1/capa-plans` | — | 200 OK con la lista de `capa-plans` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/capa-plans` | PUT | `/api/v1/capa-plans/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/capa-actions` | GET | `/api/v1/capa-actions` | — | 200 OK con la lista de `capa-actions` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/capa-actions` | POST | `/api/v1/capa-actions` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/capa-actions` | PUT | `/api/v1/capa-actions/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/analytical-results` | GET | `/api/v1/analytical-results` | — | 200 OK con la lista de `analytical-results` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/analytical-results` | PUT | `/api/v1/analytical-results/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/audits` | GET | `/api/v1/audits` | — | 200 OK con la lista de `audits` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/audit-findings` | GET | `/api/v1/audit-findings` | — | 200 OK con la lista de `audit-findings` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/audit-findings` | POST | `/api/v1/audit-findings` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/audit-events` | GET | `/api/v1/audit-events` | — | 200 OK con la lista de `audit-events` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/audit-events` | POST | `/api/v1/audit-events` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/regulatory-reports` | GET | `/api/v1/regulatory-reports` | — | 200 OK con la lista de `regulatory-reports` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/regulatory-reports` | POST | `/api/v1/regulatory-reports` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/collaboration-tasks` | GET | `/api/v1/collaboration-tasks` | — | 200 OK con la lista de `collaboration-tasks` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/collaboration-tasks` | POST | `/api/v1/collaboration-tasks` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/task-comments` | GET | `/api/v1/task-comments` | — | 200 OK con la lista de `task-comments` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/task-comments` | POST | `/api/v1/task-comments` | Recurso en el body (JSON) | 201 Created con el recurso creado | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/traceability-gaps` | GET | `/api/v1/traceability-gaps` | — | 200 OK con la lista de `traceability-gaps` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
-| `/deviation-trends` | GET | `/api/v1/deviation-trends` | — | 200 OK con la lista de `deviation-trends` | [README](https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme) |
+| `/users` | GET | `/api/v1/users` | — | 200 OK con la lista de `users` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/users` | POST | `/api/v1/users` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/users` | GET | `/api/v1/users?email={email}&password={password}` | `email`, `password` (query) | 200 OK con el usuario cuyas credenciales coinciden (inicio de sesión) | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/users` | GET | `/api/v1/users?id={id}&twoFactorCode={code}` | `id`, `twoFactorCode` (query) | 200 OK con el usuario si el código 2FA es válido | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/organizations` | GET | `/api/v1/organizations` | — | 200 OK con la lista de `organizations` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/organizations` | GET | `/api/v1/organizations/{id}` | `id` (path) | 200 OK con el recurso de `organizations` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/organizations` | POST | `/api/v1/organizations` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/organizations` | GET | `/api/v1/organizations?ruc={ruc}` | `ruc` (query) | 200 OK con la organización que ya usa ese RUC | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/facilities` | GET | `/api/v1/facilities` | — | 200 OK con la lista de `facilities` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/facilities` | POST | `/api/v1/facilities` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/user-profiles` | GET | `/api/v1/user-profiles` | — | 200 OK con la lista de `user-profiles` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/user-profiles` | POST | `/api/v1/user-profiles` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/user-profiles` | PUT | `/api/v1/user-profiles/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/administrative-activities` | GET | `/api/v1/administrative-activities` | — | 200 OK con la lista de `administrative-activities` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/administrative-activities` | POST | `/api/v1/administrative-activities` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/plans` | GET | `/api/v1/plans` | — | 200 OK con la lista de `plans` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/subscriptions` | GET | `/api/v1/subscriptions` | — | 200 OK con la lista de `subscriptions` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/subscriptions` | POST | `/api/v1/subscriptions` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/subscriptions` | PUT | `/api/v1/subscriptions/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/invoices` | GET | `/api/v1/invoices` | — | 200 OK con la lista de `invoices` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/invoices` | POST | `/api/v1/invoices` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/products` | GET | `/api/v1/products` | — | 200 OK con la lista de `products` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/products` | POST | `/api/v1/products` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/master-formulas` | GET | `/api/v1/master-formulas` | — | 200 OK con la lista de `master-formulas` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/formula-items` | GET | `/api/v1/formula-items` | — | 200 OK con la lista de `formula-items` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/production-orders` | GET | `/api/v1/production-orders` | — | 200 OK con la lista de `production-orders` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/production-orders` | POST | `/api/v1/production-orders` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/operations` | GET | `/api/v1/operations` | — | 200 OK con la lista de `operations` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/operations` | PUT | `/api/v1/operations/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/batches` | GET | `/api/v1/batches` | — | 200 OK con la lista de `batches` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/batches` | POST | `/api/v1/batches` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/batches` | PUT | `/api/v1/batches/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/batch-events` | GET | `/api/v1/batch-events` | — | 200 OK con la lista de `batch-events` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/batch-events` | POST | `/api/v1/batch-events` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/material-lots` | GET | `/api/v1/material-lots` | — | 200 OK con la lista de `material-lots` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/material-lots` | POST | `/api/v1/material-lots` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/material-lots` | PUT | `/api/v1/material-lots/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/equipment` | GET | `/api/v1/equipment` | — | 200 OK con la lista de `equipment` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/equipment` | PUT | `/api/v1/equipment/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/sensors` | GET | `/api/v1/sensors` | — | 200 OK con la lista de `sensors` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/sensors` | POST | `/api/v1/sensors` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/sensors` | PUT | `/api/v1/sensors/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/readings` | GET | `/api/v1/readings` | — | 200 OK con la lista de `readings` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/alerts` | GET | `/api/v1/alerts` | — | 200 OK con la lista de `alerts` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/alerts` | PUT | `/api/v1/alerts/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/quality-documents` | GET | `/api/v1/quality-documents` | — | 200 OK con la lista de `quality-documents` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/quality-documents` | PUT | `/api/v1/quality-documents/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/deviations` | GET | `/api/v1/deviations` | — | 200 OK con la lista de `deviations` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/deviations` | POST | `/api/v1/deviations` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/deviations` | PUT | `/api/v1/deviations/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/evidence` | GET | `/api/v1/evidence` | — | 200 OK con la lista de `evidence` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/evidence` | POST | `/api/v1/evidence` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/evidence` | PUT | `/api/v1/evidence/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/capa-plans` | GET | `/api/v1/capa-plans` | — | 200 OK con la lista de `capa-plans` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/capa-plans` | PUT | `/api/v1/capa-plans/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/capa-actions` | GET | `/api/v1/capa-actions` | — | 200 OK con la lista de `capa-actions` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/capa-actions` | POST | `/api/v1/capa-actions` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/capa-actions` | PUT | `/api/v1/capa-actions/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/analytical-results` | GET | `/api/v1/analytical-results` | — | 200 OK con la lista de `analytical-results` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/analytical-results` | PUT | `/api/v1/analytical-results/{id}` | `id` (path) y recurso en el body (JSON) | 200 OK con el recurso actualizado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/audits` | GET | `/api/v1/audits` | — | 200 OK con la lista de `audits` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/audit-findings` | GET | `/api/v1/audit-findings` | — | 200 OK con la lista de `audit-findings` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/audit-findings` | POST | `/api/v1/audit-findings` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/audit-events` | GET | `/api/v1/audit-events` | — | 200 OK con la lista de `audit-events` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/audit-events` | POST | `/api/v1/audit-events` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/regulatory-reports` | GET | `/api/v1/regulatory-reports` | — | 200 OK con la lista de `regulatory-reports` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/regulatory-reports` | POST | `/api/v1/regulatory-reports` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/collaboration-tasks` | GET | `/api/v1/collaboration-tasks` | — | 200 OK con la lista de `collaboration-tasks` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/collaboration-tasks` | POST | `/api/v1/collaboration-tasks` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/task-comments` | GET | `/api/v1/task-comments` | — | 200 OK con la lista de `task-comments` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/task-comments` | POST | `/api/v1/task-comments` | Recurso en el body (JSON) | 201 Created con el recurso creado | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/traceability-gaps` | GET | `/api/v1/traceability-gaps` | — | 200 OK con la lista de `traceability-gaps` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
+| `/deviation-trends` | GET | `/api/v1/deviation-trends` | — | 200 OK con la lista de `deviation-trends` | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend#readme |
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
