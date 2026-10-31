@@ -288,66 +288,66 @@ El objetivo del Sprint fue completar la Landing Page y entregar la primera versi
 | **User Story** | | **Work-Item / Task** | | | | | |
 | **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status (To-do / In-Process / To-Review / Done)** |
 | US01 | Visualización de la propuesta de valor | T008 | Hero con propuesta de valor | Implementar el hero con el título, el subtítulo, los indicadores de confianza y los botones Get Started y View plans. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US02 | Visualización de servicios y características | T009 | Secciones Services y Features | Implementar las tarjetas de servicios y el acordeón de características con su panel de vista previa. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US02 | Visualización de servicios y características | T009 | Secciones Services y Features | Implementar las tarjetas de servicios y el acordeón de características con su panel de vista previa. | 4 | Angulo Ramírez, Marcelo Martín | Done |
 | US48 | Acceso por segmento a la Web Application | T010 | Acceso por segmento | Implementar la sección Choose your workspace y los enlaces con data-app-segment hacia el inicio de sesión de cada entorno. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | US49 | Visualización del video promocional | T011 | Video About the Product y About the Team | Implementar el reproductor que carga el video de YouTube al pulsar play y muestra un aviso mientras el video no está publicado. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US05 | Preguntas frecuentes | T012 | Sección FAQ | Implementar las preguntas frecuentes con acordeón accesible y el enlace al formulario de contacto. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US05 | Preguntas frecuentes | T012 | Sección FAQ | Implementar las preguntas frecuentes con acordeón accesible y el enlace al formulario de contacto. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
 | US44 | Navegación por secciones | T013 | Navbar con menú móvil | Reimplementar la barra de navegación con anclas reales, Sign in y Get Started con destino propio y el menú overlay en mobile. | 4 | Rojas Ambicho, Nestor Daniel | Done |
 | US03 | Visualización de planes y precios | T014 | Planes con toggle mensual/anual | Reimplementar las tarjetas de planes con el cambio de precio mensual/anual y su nota de precios. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US45 | Visualización del equipo y de la startup | T015 | Secciones About us y Our Team | Implementar la misión, la visión y las tarjetas de los integrantes con su foto y rol. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US04 | Formulario de contacto | T016 | Formulario Contact us | Implementar el formulario de consulta con validación de campos y el estado de mensaje enviado. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US47 | Consulta de términos y política de privacidad | T017 | Términos y política de privacidad | Implementar las páginas terms.html y privacy.html con sus estilos y traducciones. | 4 | Rojas Ambicho, Nestor Daniel | Done |
-| US06 | Inicio de sesión con segundo factor | T018 | Inicio de sesión con 2FA | Implementar la elección de entorno, el inicio de sesión por entorno y la verificación con código de seis dígitos. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US45 | Visualización del equipo y de la startup | T015 | Secciones About us y Our Team | Implementar la misión, la visión y las tarjetas de los integrantes con su foto y rol. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| US04 | Formulario de contacto | T016 | Formulario Contact us | Implementar el formulario de consulta con validación de campos y el estado de mensaje enviado. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
+| US47 | Consulta de términos y política de privacidad | T017 | Términos y política de privacidad | Implementar las páginas terms.html y privacy.html con sus estilos y traducciones. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| US06 | Inicio de sesión con segundo factor | T018 | Inicio de sesión con 2FA | Implementar la elección de entorno, el inicio de sesión por entorno y la verificación con código de seis dígitos. | 4 | Rojas Ambicho, Nestor Daniel | Done |
 | US07 | Gestión de roles | T019 | Acceso por rol | Implementar el guard de IAM y el estado Access not authorized cuando el rol no corresponde al entorno. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
 | US08 | Firmas electrónicas | T020 | Firma electrónica | Implementar la confirmación con contraseña en las aprobaciones, liberaciones y cierres críticos. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US55 | Alta de usuarios del equipo | T021 | Usuarios e invitaciones | Implementar el directorio de usuarios y perfiles y el formulario para invitar usuarios. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US50 | Registro de organización | T022 | Registro de organización | Implementar el registro con razón social, RUC, planta, plan y primer administrador, y el resumen de administración. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US51 | Selección de plan | T023 | Selección de plan | Implementar la revisión del cambio de plan en la página de suscripción. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US52 | Pago de suscripción | T024 | Pago de suscripción | Implementar el historial de facturación y el reintento de un pago rechazado. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US53 | Renovación y cancelación | T025 | Renovación de la suscripción | Mostrar la fecha de renovación y el estado de la suscripción en la página de suscripción y pagos. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US55 | Alta de usuarios del equipo | T021 | Usuarios e invitaciones | Implementar el directorio de usuarios y perfiles y el formulario para invitar usuarios. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US50 | Registro de organización | T022 | Registro de organización | Implementar el registro con razón social, RUC, planta, plan y primer administrador, y el resumen de administración. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US51 | Selección de plan | T023 | Selección de plan | Implementar la revisión del cambio de plan en la página de suscripción. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US52 | Pago de suscripción | T024 | Pago de suscripción | Implementar el historial de facturación y el reintento de un pago rechazado. | 6 | Rojas Ambicho, Nestor Daniel | Done |
+| US53 | Renovación y cancelación | T025 | Renovación de la suscripción | Mostrar la fecha de renovación y el estado de la suscripción en la página de suscripción y pagos. | 4 | Rojas Ambicho, Nestor Daniel | Done |
 | US35 | Catálogo de productos | T026 | Catálogo de productos | Implementar el catálogo de productos con su fórmula maestra vigente. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | US36 | Gestión de fórmulas maestras | T027 | Fórmulas maestras | Mostrar los componentes y la versión aprobada de la fórmula maestra de cada producto. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | US57 | Gestión de órdenes de producción | T028 | Órdenes de producción | Implementar la lista y la ejecución de órdenes de producción contra la fórmula maestra. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | US14 | Registro de lotes | T029 | Registro de lotes | Implementar el diálogo Create batch con el estado de lote rechazado por fórmula no aprobada. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| US15 | Consulta del historial de lotes | T030 | Historial de lotes | Implementar la lista de lotes con filtros y la genealogía y el historial de estados de cada lote. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US16 | Gestión de estados de lote | T031 | Estados de lote | Implementar el cambio de estado de los lotes y sus conteos por estado. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US58 | Recepción de materias primas | T032 | Recepción de materias primas | Implementar la recepción de materias primas con cuarentena e inspección. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US17 | Asociación de materias primas | T033 | Asociación de materias primas | Asignar lotes de materia prima aprobados a un lote de producción. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US15 | Consulta del historial de lotes | T030 | Historial de lotes | Implementar la lista de lotes con filtros y la genealogía y el historial de estados de cada lote. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US16 | Gestión de estados de lote | T031 | Estados de lote | Implementar el cambio de estado de los lotes y sus conteos por estado. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| US58 | Recepción de materias primas | T032 | Recepción de materias primas | Implementar la recepción de materias primas con cuarentena e inspección. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| US17 | Asociación de materias primas | T033 | Asociación de materias primas | Asignar lotes de materia prima aprobados a un lote de producción. | 4 | Angulo Ramírez, Marcelo Martín | Done |
 | US32 | Dashboard de producción | T034 | Resumen de producción | Implementar el resumen de producción con el programa del día, la disponibilidad de equipos y las incidencias. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| US23 | Registro de dispositivos IoT | T035 | Inventario de equipos y sensores | Implementar el inventario de equipos con sus sensores IoT y el registro de un sensor. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US24 | Asociación de sensores a un lote | T036 | Asociación de sensores a lotes | Implementar la evidencia IoT del lote con la asociación de equipos y sensores. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US25 | Captura automática de evidencias | T037 | Telemetría | Implementar el gráfico de telemetría con límites y lectura pico. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
+| US23 | Registro de dispositivos IoT | T035 | Inventario de equipos y sensores | Implementar el inventario de equipos con sus sensores IoT y el registro de un sensor. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| US24 | Asociación de sensores a un lote | T036 | Asociación de sensores a lotes | Implementar la evidencia IoT del lote con la asociación de equipos y sensores. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| US25 | Captura automática de evidencias | T037 | Telemetría | Implementar el gráfico de telemetría con límites y lectura pico. | 6 | Angulo Ramírez, Marcelo Martín | Done |
 | US26 | Consulta de registros IoT | T038 | Consulta de registros IoT | Implementar el resumen IoT con la salud de los equipos y la cola de alertas. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
 | US37 | Gestión de equipos | T039 | Gestión de equipos | Mostrar el estado operativo de cada equipo en el inventario. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
 | US38 | Gestión de calibraciones | T040 | Calibraciones | Mostrar el estado de calibración (apto, por vencer, no apto) de equipos y sensores. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US39 | Mantenimiento preventivo | T041 | Mantenimiento preventivo | Mostrar el próximo mantenimiento y su responsable en el detalle del equipo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US56 | Registro y escalamiento de incidencias | T042 | Incidentes | Implementar la lista de incidentes con su severidad y el reconocimiento de alertas. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US39 | Mantenimiento preventivo | T041 | Mantenimiento preventivo | Mostrar el próximo mantenimiento y su responsable en el detalle del equipo. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| US56 | Registro y escalamiento de incidencias | T042 | Incidentes | Implementar la lista de incidentes con su severidad y el reconocimiento de alertas. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
 | US22 | Notificaciones de desviación crítica | T043 | Alertas críticas | Implementar el detalle del sensor con la alerta activa y la regla de reconocimiento. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US09 | Gestión de protocolos de calidad | T044 | Documentos de calidad | Implementar el repositorio de documentos controlados con su flujo de aprobación. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US10 | Repositorio de SOP | T045 | Repositorio de SOP | Filtrar los documentos por tipo y estado para consultar la versión vigente. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US09 | Gestión de protocolos de calidad | T044 | Documentos de calidad | Implementar el repositorio de documentos controlados con su flujo de aprobación. | 6 | Rojas Ambicho, Nestor Daniel | Done |
+| US10 | Repositorio de SOP | T045 | Repositorio de SOP | Filtrar los documentos por tipo y estado para consultar la versión vigente. | 4 | Angulo Ramírez, Marcelo Martín | Done |
 | US12 | Control de versiones documentales | T046 | Versiones de documentos | Implementar el historial de versiones de cada documento. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
 | US13 | Aprobación documental | T047 | Aprobación documental | Implementar la aprobación con firma y el bloqueo de autoaprobación (segregación de funciones). | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US18 | Registro de desviaciones | T048 | Registro de desviaciones | Implementar el reporte de desviación con su evaluación de riesgo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US18 | Registro de desviaciones | T048 | Registro de desviaciones | Implementar el reporte de desviación con su evaluación de riesgo. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
 | US19 | Análisis de causa raíz | T049 | Análisis de causa raíz | Implementar el registro de la causa raíz como requisito del plan CAPA. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
 | US20 | Gestión CAPA | T050 | Plan CAPA | Implementar el plan CAPA con sus acciones, responsables y fechas. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
 | US21 | Seguimiento de acciones CAPA | T051 | Seguimiento de CAPA | Mostrar el avance de las acciones CAPA y bloquear el cierre sin evidencia de eficacia. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
 | US11 | Automatización de cálculos de calidad | T052 | Resultados analíticos | Implementar los resultados analíticos con su conformidad respecto de la especificación. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
 | US54 | Revisión y liberación de lotes | T053 | Liberación de lotes | Implementar la liberación de lotes con requisitos previos, firma electrónica y estado bloqueado. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US31 | Dashboard de calidad | T054 | Resumen de calidad | Implementar el resumen de calidad con la cola de prioridades y las próximas decisiones. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US27 | Audit trail | T055 | Audit trail | Implementar el registro de eventos con filtros por registro y actor, compartido por los tres entornos. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US28 | Generación automática de reportes | T056 | Reportes regulatorios | Implementar la lista y generación de reportes regulatorios. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US29 | Preparación de auditorías | T057 | Preparación de auditorías | Implementar el registro de auditorías y su estado de preparación. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
-| US30 | Acceso de auditor a evidencias | T058 | Evidencias para auditor | Mostrar las evidencias vinculadas a cada hallazgo de auditoría. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US59 | Registro de auditorías y hallazgos | T059 | Hallazgos de auditoría | Implementar el registro de hallazgos con su severidad y acción asignada. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US33 | Indicadores de trazabilidad | T060 | Indicadores de trazabilidad | Implementar los indicadores de brechas de trazabilidad. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US34 | Indicadores de desviaciones | T061 | Indicadores de desviaciones | Implementar la tendencia de desviaciones por periodo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US40 | Bandeja de tareas | T062 | Bandeja de tareas | Implementar la lista de tareas pendientes vinculadas a registros. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US41 | Notificaciones entre áreas | T063 | Comunicación entre áreas | Implementar los comentarios de cada tarea para la coordinación entre Producción y Calidad. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US42 | Solicitudes de aprobación | T064 | Solicitudes de aprobación | Crear tareas de aprobación dirigidas a Calidad desde un registro. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
-| US43 | Seguimiento de tareas | T065 | Seguimiento de tareas | Mostrar el estado de las tareas asignadas por el usuario. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| US31 | Dashboard de calidad | T054 | Resumen de calidad | Implementar el resumen de calidad con la cola de prioridades y las próximas decisiones. | 4 | Rojas Ambicho, Nestor Daniel | Done |
+| US27 | Audit trail | T055 | Audit trail | Implementar el registro de eventos con filtros por registro y actor, compartido por los tres entornos. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US28 | Generación automática de reportes | T056 | Reportes regulatorios | Implementar la lista y generación de reportes regulatorios. | 6 | Yarleque Ruiz, Cristina Marcela | Done |
+| US29 | Preparación de auditorías | T057 | Preparación de auditorías | Implementar el registro de auditorías y su estado de preparación. | 6 | Yarleque Ruiz, Cristina Marcela | Done |
+| US30 | Acceso de auditor a evidencias | T058 | Evidencias para auditor | Mostrar las evidencias vinculadas a cada hallazgo de auditoría. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
+| US59 | Registro de auditorías y hallazgos | T059 | Hallazgos de auditoría | Implementar el registro de hallazgos con su severidad y acción asignada. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
+| US33 | Indicadores de trazabilidad | T060 | Indicadores de trazabilidad | Implementar los indicadores de brechas de trazabilidad. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US34 | Indicadores de desviaciones | T061 | Indicadores de desviaciones | Implementar la tendencia de desviaciones por periodo. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| US40 | Bandeja de tareas | T062 | Bandeja de tareas | Implementar la lista de tareas pendientes vinculadas a registros. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
+| US41 | Notificaciones entre áreas | T063 | Comunicación entre áreas | Implementar los comentarios de cada tarea para la coordinación entre Producción y Calidad. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
+| US42 | Solicitudes de aprobación | T064 | Solicitudes de aprobación | Crear tareas de aprobación dirigidas a Calidad desde un registro. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| US43 | Seguimiento de tareas | T065 | Seguimiento de tareas | Mostrar el estado de las tareas asignadas por el usuario. | 4 | Angulo Ramírez, Marcelo Martín | Done |
 | — | Tareas técnicas | T066 | Capa shared | Implementar las clases base de la API, el layout público, el workspace shell, el page header y el selector de idioma. | 6 | Cobades Zamora, Yhoshua Hebert | Done |
 | — | Tareas técnicas | T067 | Accesibilidad del layout público | Mejorar el layout público, el footer y la página 404 con atributos de accesibilidad y textos traducidos. | 4 | Angulo Ramírez, Marcelo Martín | Done |
-| — | Tareas técnicas | T068 | Traducciones de IoT Monitoring | Agregar las 121 claves de la sección monitoring en inglés y español. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| — | Tareas técnicas | T068 | Traducciones de IoT Monitoring | Agregar las 121 claves de la sección monitoring en inglés y español. | 4 | Rojas Ambicho, Nestor Daniel | Done |
 | — | Tareas técnicas | T069 | Documentación del repositorio | Redactar la estructura base de la documentación, las user stories, las ADRs y el diagrama de clases del proyecto. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
 | — | Tareas técnicas | T070 | Releases v1.0.2 | Preparar release/v1.0.2 en la Landing Page y en la Web Application, con merge a main y tag SemVer. | 4 | Angulo Ramírez, Marcelo Martín | Done |
 | — | Tareas técnicas | T071 | Configuración de despliegue | Agregar firebase.json para Firebase Hosting y el script server:prod para publicar la Fake API. | 4 | Rojas Ambicho, Nestor Daniel | Done |
