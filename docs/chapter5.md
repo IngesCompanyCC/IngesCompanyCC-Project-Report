@@ -164,7 +164,7 @@ En el Sprint 1 se consideraron cuatro aspectos: la base de la Landing Page, la c
 
 El objetivo de este Sprint fue construir la base de la Landing Page y dejar configurado el proyecto de la Web Application. Las tareas se registraron en el board del Sprint 1 en Jira Software.
 
-![Sprint 1 en Jira Software: historias y tareas finalizadas](../assets/img/chapter5/evidencia/jira-sprint1.png)
+![Sprint 1 en Jira Software: actividades finalizadas y responsables](../assets/img/chapter5/evidencia/jira-sprint1.png)
 
 **Enlace al board en Jira:** https://inges-company-cc.atlassian.net/jira/software/projects/UPC/boards/1
 
@@ -279,7 +279,7 @@ En el Sprint 2 se consideraron ocho aspectos: la Landing Page y, en la Web Appli
 
 El objetivo del Sprint fue completar la Landing Page y entregar la primera versión de la Web Application. Las tareas se organizaron por User Story; las de la Landing Page incluyen la reimplementación de las secciones del Sprint 1 sobre el diseño del capítulo 4. Las tareas se registraron en el board del Sprint 2 en Jira Software.
 
-![Board del Sprint 2 en Jira Software: 64 actividades finalizadas](../assets/img/chapter5/evidencia/jira-sprint2.png)
+![Sprint 2 en Jira Software: 64 actividades finalizadas y responsables](../assets/img/chapter5/evidencia/jira-sprint2.png)
 
 **Enlace al board en Jira:** https://inges-company-cc.atlassian.net/jira/software/projects/UPC/boards/1
 
