@@ -13,7 +13,7 @@ NRC:
 
 ### 8130
 
-## Informe de Trabajo Final
+## Informe del Trabajo Final
 
 Docente
 
@@ -50,7 +50,7 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 
 ---
 
-## Registro de Versiones del Informe {.unlisted}
+## Registro de Versiones del Informe
 
 | Versión | Fecha | Autor | Descripción |
 |:-------:|:-----:|:------|:------------|
@@ -161,7 +161,7 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 | 3.61.2 | 09/10/2026 | Zavaleta Gutierrez, Rodolfo Martin | Corrección y saneamiento de los caracteres de codificación en entornos para evitar el quiebre de compilación. |
 | 4.0.0 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Integración en `develop` de las ramas `feature/chapter1` a `feature/chapter5`, que contenían la versión completa de los capítulos entregada en el TB1. |
 | 4.0.1 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Corrección de los caracteres acentuados dañados en el Capítulo IV y en el README. |
-| 4.1.0 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Actualización de la carátula según la plantilla del curso: código 1ASI0730, carrera, NRC 8130 y el período al final de la carátula. |
+| 4.1.0 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Actualización de la carátula según la plantilla del curso: código 1ASI0730, carrera, NRC 8130, título «Informe del Trabajo Final» y el período al final de la carátula. |
 | 4.2.0 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Alineación de los capítulos I a IV con el informe compartido del proyecto, con el perfil de Yarleque Ruiz, Cristina Marcela y el stack Vue 3 y ASP.NET Core del curso. |
 | 4.3.0 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Reescritura del Capítulo V con los repositorios de la organización IngesCompanyCC: Source Code Management, Sprint Backlogs con tareas de 4 a 8 horas y evidencias de commits, ejecución, servicios, despliegue y colaboración de los Sprints 1 y 2. |
 | 4.3.1 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Reemplazo de las capturas de evidencia por capturas de la Landing Page, la Web Application y los repositorios de IngesCompanyCC, con el equipo actualizado. |
@@ -170,7 +170,7 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 
 ---
 
-## Project Report Collaboration Insights {.unlisted}
+## Project Report Collaboration Insights
 
 **Link de los repositorios de la organización:**
 https://github.com/IngesCompanyCC
@@ -194,7 +194,7 @@ A partir de la retroalimentación del docente sobre el TB1, el equipo revisó el
 
 | Observación del TB1 | Mejora aplicada |
 |---|---|
-| En la sección 5.1.2 se citaba la organización `IngesCompany-7742`, que no pertenece al curso. | Todas las referencias a repositorios, despliegues y evidencias apuntan a la organización [IngesCompanyCC](https://github.com/IngesCompanyCC) (secciones 5.1 y 5.2). |
+| En la sección 5.1.2 se citaba la organización `IngesCompany-7742`, que no pertenece al curso. | Todas las referencias a repositorios, despliegues y evidencias apuntan a la organización IngesCompanyCC: https://github.com/IngesCompanyCC (secciones 5.1 y 5.2). |
 | La tarea T070 del Sprint Backlog 2 describía la configuración de un proyecto Angular. | La configuración del proyecto se registra como tarea T006 del Sprint 1, con Vite, PrimeVue, Vue I18n y json-server; se revisaron también las menciones de stack en los capítulos I a V. |
 | Faltaba la figura de Jira del Sprint Backlog 2 y no todas las tareas estaban estimadas entre 4 y 8 horas. | Todas las tareas de los Sprint Backlogs se estimaron entre 4 y 8 horas y se agregó el enlace al board de Jira del curso. |
 | El equipo no estaba actualizado: aparecía Ricardo Flores en lugar de Cristina Yarleque (página 131 y Sprint 2). | Se actualizaron el perfil del equipo, la sección Our Team, los Sprint Plannings, los LACX y los Sprint Backlogs, y se reemplazaron las capturas de evidencia por capturas de los productos de IngesCompanyCC. |
@@ -237,6 +237,7 @@ A partir de la retroalimentación del docente sobre el TB1, el equipo revisó el
       - [Enfoque vertical en la calidad farmacéutica](docs/chapter2.md#enfoque-vertical-en-la-calidad-farmacéutica)
       - [Gestión multi-planta y trazabilidad centralizada de lotes](docs/chapter2.md#gestión-multi-planta-y-trazabilidad-centralizada-de-lotes)
       - [Estrategia comercial B2B dirigida](docs/chapter2.md#estrategia-comercial-b2b-dirigida)
+      - [Funciones diferenciadoras](docs/chapter2.md#funciones-diferenciadoras)
   - [2.2. Entrevistas](docs/chapter2.md#22-entrevistas)
     - [2.2.1. Diseño de entrevistas](docs/chapter2.md#221-diseño-de-entrevistas)
       - [Segmento Objetivo: Especialista de Aseguramiento y Control de Calidad (QA/QC)](docs/chapter2.md#segmento-objetivo-especialista-de-aseguramiento-y-control-de-calidad-qaqc)
@@ -301,6 +302,8 @@ A partir de la retroalimentación del docente sobre el TB1, el equipo revisó el
     - [4.6.2. Software Architecture Context Diagram](docs/chapter4.md#462-software-architecture-context-diagram)
     - [4.6.3. Software Architecture Container Diagrams](docs/chapter4.md#463-software-architecture-container-diagrams)
     - [4.6.4. Software Architecture Components Diagrams](docs/chapter4.md#464-software-architecture-components-diagrams)
+      - [Single-Page Application](docs/chapter4.md#single-page-application)
+      - [RESTful API](docs/chapter4.md#restful-api)
   - [4.7. Software Object-Oriented Design](docs/chapter4.md#47-software-object-oriented-design)
     - [4.7.1. Class Diagrams](docs/chapter4.md#471-class-diagrams)
   - [4.8. Database Design](docs/chapter4.md#48-database-design)
