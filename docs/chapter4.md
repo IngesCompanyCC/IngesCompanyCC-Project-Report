@@ -4,11 +4,11 @@ En este capítulo se presenta el diseño de DoofPlus a partir de las User Storie
 
 ## 4.1. Style Guidelines
 
-En esta sección se establecen las bases visuales y de comunicacián para DoofPlus, centralizando los recursos que serán de uso común para todo el equipo de desarrollo y diseño. El objetivo es garantizar una presentación consistente, inclusiva y enfocada a través de todos los puntos de contacto del producto, facilitando la mantenibilidad y escalabilidad del código y del diseño a lo largo del ciclo de vida del proyecto.
+En esta sección se establecen las bases visuales y de comunicación para DoofPlus, centralizando los recursos que serán de uso común para todo el equipo de desarrollo y diseño. El objetivo es garantizar una presentación consistente, inclusiva y enfocada a través de todos los puntos de contacto del producto, facilitando la mantenibilidad y escalabilidad del código y del diseño a lo largo del ciclo de vida del proyecto.
 
 ### 4.1.1. General Style Guidelines
 
-Para asegurar una interfaz coherente y alineada con los estándares que exige la industria farmacéutica, el sistema de diseño de DoofPlus toma como base **Material Design**, el lenguaje de diseño indicado para el proyecto. En la Web Application se implementa con **Vue CLI** usando un tema basado en **Material Design**, y en la Landing Page con ***HTML5*** y ***CSS3*** respetando los mismos tokens de color, tipografía y espaciado.
+Para asegurar una interfaz coherente y alineada con los estándares que exige la industria farmacéutica, el sistema de diseño de DoofPlus toma como base **Material Design**, el lenguaje de diseño indicado para el proyecto. En la Web Application se implementa con **Vite** usando un tema basado en **Material Design**, y en la Landing Page con ***HTML5*** y ***CSS3*** respetando los mismos tokens de color, tipografía y espaciado.
 
 #### Branding:
 El logotipo escogido para DoofPlus comunica de forma directa y sintética la propuesta de valor del sistema: la integración de la automatización industrial con la rigurosidad del control farmacéutico. Para la sección de Branding, el análisis de los componentes de dicho logotipo se desglosa de la siguiente manera:
@@ -19,7 +19,7 @@ El logotipo escogido para DoofPlus comunica de forma directa y sintética la pro
 
 - **Maquinaria y cinta transportadora:** la silueta industrial con cápsulas en la cinta representa el núcleo operativo de la plataforma: la manufactura y la conexión IoT en la línea de producción.
 - **Escudo de verificación:** representa el aseguramiento de la calidad y transmite protección de los datos y cumplimiento de las BPM exigidas por DIGEMID.
-- **Construcción tipográfica y cromática:** el nombre DoofPlus usa una fuente sans-serif sólida; “Doof” en azul pizarra oscuro evoca la base tecnológica y “Plus” en verde marino (#0D9488) conecta con la salud y la validación de procesos.
+- **Construcción tipográfica y cromática:** el nombre DoofPlus usa una fuente sans-serif sólida; “Doof” en azul pizarra oscuro evoca la base tecnológica y “Plus” en verde marino (#0D9488) conecta con la salud y la validación de procesos.
 
 Para su uso en las interfaces se definieron dos versiones horizontales del logotipo: a color, para fondos claros (barra de navegación de la Landing Page y de la Web Application), y en blanco, para fondos oscuros (footer de la Landing Page y barras de color). Ambas se usan como componentes reutilizables en Figma.
 
@@ -34,9 +34,9 @@ La tipografía de DoofPlus es Inter, una fuente sans-serif moderna y legible con
 
 | **Elemento** | **Tamaño (desktop)** | **Peso** | **Uso** |
 | --- | --- | --- | --- |
-| H1 Capitulo principal | 3rem (48 px), interlineado 1.1 | Semi Bold (600) | Título del hero de la Landing Page |
-| H2 Capitulo de sección o pantalla | 2rem (32 px), interlineado 1.2 | Semi Bold (600) | Secciones de la Landing Page y títulos de pantalla |
-| H3 Capitulo de tarjeta | 1.5rem (24 px), interlineado 1.3 | Semi Bold (600) | Tarjetas, paneles y diálogos |
+| H1 – Título principal | 3rem (48 px), interlineado 1.1 | Semi Bold (600) | Título del hero de la Landing Page |
+| H2 – Título de sección o pantalla | 2rem (32 px), interlineado 1.2 | Semi Bold (600) | Secciones de la Landing Page y títulos de pantalla |
+| H3 – Título de tarjeta | 1.5rem (24 px), interlineado 1.3 | Semi Bold (600) | Tarjetas, paneles y diálogos |
 | Body | 1rem (16 px), interlineado 1.45 | Regular (400) | Párrafos y tablas de datos |
 | Label | 0.875rem (14 px) | Medium (500) | Etiquetas de formulario, botones y estados |
 | Metadata | 0.75rem (12 px) | Regular (400) | Fechas, identificadores y notas |
@@ -44,11 +44,11 @@ La tipografía de DoofPlus es Inter, una fuente sans-serif moderna y legible con
 #### Colors
 La paleta de colores de DoofPlus está diseñada para evocar pulcritud clínica, seguridad tecnológica y control sobre los procesos. Se distribuye en cuatro categorías; los colores funcionales se acompañan siempre de un ícono y de un texto, de modo que el estado nunca se comunica solo con color:
 
-| **Token** | **Valor** | **Categoria** | **Uso** |
+| **Token** | **Valor** | **Categoría** | **Uso** |
 | --- | --- | --- | --- |
 | --primary-color | #0F766E (verde azulado) | Principal | Botones y acciones principales (texto blanco) |
 | --accent-color | #0D9488 (verde marino) | Principal | Hover, anillos de foco y detalles decorativos |
-| --secondary-color | #0F172A (azul pizarra oscuro) | Principal | Titulos, texto principal y barras oscuras |
+| --secondary-color | #0F172A (azul pizarra oscuro) | Principal | Títulos, texto principal y barras oscuras |
 | --tertiary-color | #64748B (gris pizarra) | Soporte | Texto secundario y placeholders |
 | --bg-light | #F8FAFC | Soporte | Fondo de la aplicación y de secciones |
 | --bg-highlight | #F0FDFA | Soporte | Paneles destacados |
@@ -77,12 +77,13 @@ El espaciado se rige por la cuadrícula de 8 puntos de Material Design, que aseg
 La voz y el tono de DoofPlus están diseñados para reflejar la misma fiabilidad e inmutabilidad que su arquitectura de software, conectando directamente con Supervisores de Producción, Especialistas QA/QC y auditores externos.
 
 - ***Tono:*** Formal, corporativo y analítico. Proyecta dominio absoluto sobre las normativas de calidad (BPM, Data Integrity), manteniendo el rigor que exige la industria farmacéutica.
-- ***Actitud:*** Resolutiva y proactiva. La comunicación se enfoca en la eficiencia operativa (“Trazabilidad automatizada”, “Monitoreo en tiempo real”) y en la alerta temprana de desviaciones.
+- ***Actitud:*** Resolutiva y proactiva. La comunicación se enfoca en la eficiencia operativa (“Trazabilidad automatizada”, “Monitoreo en tiempo real”) y en la alerta temprana de desviaciones.
 - ***Lenguaje:*** Técnico y preciso. Se utiliza terminología propia del dominio farmacéutico y tecnológico (telemetría, IoT, Cuarentena, Fórmulas Maestras, Audit Trail, DIGEMID) asumiendo que el usuario es un profesional capacitado en estas áreas.
 - ***Voz:*** Experta e inquebrantable. Posiciona a DoofPlus como el puente definitivo entre la maquinaria industrial y el cumplimiento normativo, siendo una fuente de verdad única y segura para las auditorías.
-erta e inquebrantable. Posiciona a DoofPlus como el puente definitivo entre la maquinaria industrial y el cumplimiento normativo, siendo una fuente de verdad única y segura para las auditorías.
 
 ### 4.1.2. Web Style Guidelines
+
+Las directrices de estilo web de DoofPlus explican e ilustran las decisiones sobre los estándares visuales y de interacción para las interfaces web responsivas de la plataforma. Nuestro objetivo es crear una experiencia visual que refleje la misión del sistema: digitalizar el control de calidad farmacéutico y la telemetría industrial mediante un diseño limpio, riguroso y altamente funcional, minimizando la carga cognitiva en la planta de producción.
 
 1. Layout
 - Sistema de Grid: Utilizamos un diseño de cuadrícula fluida de 12 columnas para garantizar que el contenido de DoofPlus se adapte perfectamente a cualquier resolución de pantalla. Este enfoque permite que los dashboards de telemetría, las tablas de trazabilidad de lotes y los planes de suscripción se ajusten dinámicamente, manteniendo la jerarquía visual requerida en un entorno industrial.
@@ -97,15 +98,16 @@ erta e inquebrantable. Posiciona a DoofPlus como el puente definitivo entre la m
 3. Interaction Design
 - Botones: las llamadas a la acción (CTA) usan el color primario (#0F766E) con texto blanco; las acciones secundarias usan botones outlined. Los estados hover, focus (con contorno visible para teclado), active y disabled están definidos para asegurar la accesibilidad. Las acciones destructivas o de rechazo de lotes usan el color de error y piden confirmación.
 - Formularios y Validaciones: Los formularios marcan los campos obligatorios con un asterisco y validan los datos antes del envío. Ante un error, el campo se resalta con el color de error, se muestra un mensaje descriptivo debajo y un aviso general en la parte superior del formulario, conservando los datos ingresados.
-- Selector de idioma: componente EN/ES (mat-button-toggle-group) visible en todas las pantallas públicas y autenticadas; inglés (en-US) es el idioma por defecto.
+- Selector de idioma: componente EN/ES (SelectButton de PrimeVue) visible en todas las pantallas públicas y autenticadas; inglés (en-US) es el idioma por defecto.
 
 4. Images and Icons
 - Imágenes: En la Landing Page se utilizan fotografías de alta calidad, optimizadas en formato WebP, que evocan el entorno de manufactura: líneas de producción automatizadas, laboratorios esterilizados y operarios utilizando tablets. Refuerzan el mensaje de tecnología aplicada al cumplimiento BPM.
 - Íconos: Se emplea la biblioteca Material Symbols (variante Rounded) para un estilo lineal y minimalista. Estos íconos ofrecen una guía visual rápida para representar servicios críticos: un microchip o antena para la telemetría, un escudo con un símbolo de check para el cumplimiento regulatorio y cápsulas o maquinaria para la gestión de producción.
 
 5. Repositorio Central
-- Organización: el proyecto de la Web Application en Vue se organiza por bounded context dentro de `src/app`: `iam`, `organizations`, `subscriptions`, `manufacturing`, `iot-monitoring` y `quality`, cada uno con las capas `domain`, `application`, `infrastructure` y `presentation`. Los elementos comunes (layout, toolbar, footer, selector de idioma y cliente REST base) se ubican en `src/app/shared`; los estilos globales y los design tokens de color, tipografía y espaciado, en `src/styles.css`; las imágenes e íconos, en `public/images`, y las traducciones, en `public/i18n` (`en.json`, idioma por defecto, y `es.json`). La Landing Page aplica los mismos tokens en su hoja de estilos.
+- Organización: el proyecto de la Web Application en Vue 3 se organiza por bounded context dentro de `src`: `iam`, `organizations`, `subscriptions`, `manufacturing`, `monitoring` y `quality`, cada uno con las capas `domain`, `application`, `infrastructure` y `presentation`. Los elementos comunes (layout, toolbar, footer, selector de idioma y cliente REST base) se ubican en `src/shared`; los estilos globales y los design tokens de color, tipografía y espaciado, en `src/styles.css`; las imágenes e íconos, en `public/images`, y las traducciones, en `public/i18n` (`en.json`, idioma por defecto, y `es.json`). La Landing Page aplica los mismos tokens en su hoja de estilos.
 - Versionado: Se utiliza Git gestionado desde GitHub como sistema de control de versiones central. El equipo aplica GitFlow y Conventional Commits para gestionar los cambios en el código, lo que ayuda a garantizar que el entorno de desarrollo mantenga una integración continua y una versión estable del producto en todo momento. Además, se aplica Semantic Versioning para darle un orden a las versiones.
+
 
 ## 4.2. Information Architecture
 
@@ -137,10 +139,10 @@ Valores para la Landing Page (sitio estático indexable):
 
 | **Página** | **Title** | **Meta description** | **Meta keywords** | **Author** |
 | --- | --- | --- | --- | --- |
-| Landing Page (index.html) | DoofPlus \| Pharmaceutical Quality & Batch Traceability Platform | SaaS platform that centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories (GMP/DIGEMID). | pharmaceutical quality management, batch traceability, GMP, DIGEMID, CAPA, audit trail, IoT | IngesCompany |
-| Contact us (contact.html) | Contact us \| DoofPlus | Send your questions about DoofPlus and its plans to the IngesCompany team. | DoofPlus contact, pharmaceutical quality software, GMP software Peru | IngesCompany |
+| Landing Page (index.html) | DoofPlus \| Pharmaceutical Quality & Batch Traceability Platform | SaaS platform that centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories (GMP/DIGEMID). | pharmaceutical quality management, batch traceability, GMP, DIGEMID, CAPA, audit trail, IoT | IngesCompanyCC |
+| Contact us (contact.html) | Contact us \| DoofPlus | Send your questions about DoofPlus and its plans to the IngesCompanyCC team. | DoofPlus contact, pharmaceutical quality software, GMP software Peru | IngesCompanyCC |
 
-Valores para las vistas principales de la Web Application. Al ser una SPA, el título se actualiza en cada cambio de ruta con la propiedad `title` de las rutas de Vue Router y la descripción con el servicio `Meta` de Vue; keywords y author se definen una vez en `index.html` con los mismos valores de la Landing Page:
+Valores para las vistas principales de la Web Application. Al ser una SPA, el título se actualiza en cada cambio de ruta con la propiedad `meta.title` de las rutas de Vue Router y la descripción con un guard global del router; keywords y author se definen una vez en `index.html` con los mismos valores de la Landing Page:
 
 | **Vista de la Web Application** | **Title** | **Meta description** |
 | --- | --- | --- |
@@ -157,9 +159,10 @@ Para que los usuarios no se pierdan en el volumen de información generado por l
 
 - **Búsqueda global:** barra en el encabezado para consultar por identificador exacto (número de lote, código de documento o de sensor).
 - **Filtros combinados:** por estado del lote (Planned, In progress, On hold, Release requested, Released, Rejected), rango de fechas de fabricación, severidad de la desviación (Minor, Major, Critical) y tipo de documento.
-- **Presentación de resultados:** tabla de datos de Vue paginada y ordenable que resalta la coincidencia y muestra el estado actual de cada registro; si no hay resultados se muestra un mensaje con sugerencias.
+- **Presentación de resultados:** tabla de datos de PrimeVue (`DataTable` con paginador y ordenamiento) paginada y ordenable que resalta la coincidencia y muestra el estado actual de cada registro; si no hay resultados se muestra un mensaje con sugerencias.
 
 ### 4.2.5. Navigation Systems
+
 Las acciones y técnicas que guían a los usuarios son:
 
 1. ***Landing Page:***
@@ -177,7 +180,7 @@ Las acciones y técnicas que guían a los usuarios son:
 
 ## 4.3. Landing Page UI Design
 
-La propuesta de UI de la Landing Page traduce las decisiones de las secciones anteriores: la jerarquía visual ordena el contenido desde la propuesta de valor hasta la presentación de la startup; las etiquetas (Home, Features, Benefits, Plans, About Us) siguen el Labeling System; la barra fija con anclas, las llamadas a la acción por segmento y el enlace "Sign in" implementan el Navigation System; y el Design System de la sección 4.1 (Inter, verde azulado #0F766E, azul pizarra #0F172A y Material Symbols Rounded) se aplica de forma consistente con la Web Application. La Landing Page atiende las user stories US01 a US05 y US44 a US49. Los wireframes y mock-ups se elaboraron en Figma y están disponibles en el archivo de diseño de DoofPlus (https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-813).
+La propuesta de UI de la Landing Page traduce las decisiones de las secciones anteriores: la jerarquía visual ordena el contenido desde la propuesta de valor hasta la presentación de la startup; las etiquetas (Home, Features, Benefits, Plans, About Us) siguen el Labeling System; la barra fija con anclas, las llamadas a la acción por segmento y el enlace "Sign in" implementan el Navigation System; y el Design System de la sección 4.1 (Inter, verde azulado #0F766E, azul pizarra #0F172A y Material Symbols Rounded) se aplica de forma consistente con la Web Application. La Landing Page atiende las user stories US01 a US05 y US44 a US49. Los wireframes y mock-ups se elaboraron en Figma y están disponibles en el [archivo de diseño de DoofPlus](https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-813).
 
 Las secciones se presentan en el siguiente orden, que prioriza la información que el visitante necesita para decidir (qué es DoofPlus, qué ofrece y cuánto cuesta) antes que la presentación del equipo:
 
@@ -193,11 +196,12 @@ Las secciones se presentan en el siguiente orden, que prioriza la información q
 | 8 | Testimonials | Opiniones de clientes | US01 |
 | 9 | FAQ | Preguntas frecuentes en acordeón | US05 |
 | 10 | Contact | Banda de llamada a la acción "Contact us" | US04 |
-| 11 | About Us | Misión y visión de IngesCompany | US45 |
+| 11 | About Us | Misión y visión de IngesCompanyCC | US45 |
 | 12 | Our Team | Integrantes del equipo y Video About-the-Team embebido | US45 |
 | 13 | Footer | Logotipo blanco, enlaces, contacto, términos, privacidad y selector de idioma | US46, US47 |
 
 ### 4.3.1. Landing Page Wireframe
+
 Los wireframes son de baja fidelidad: los textos se representan con barras, las imágenes con un recuadro cruzado y los íconos con círculos; solo se conservan los títulos y las etiquetas de los botones, que definen la estructura. Así se valida la disposición y el flujo de la información sin decidir aún colores ni contenido final.
 
 **Desktop Web Browser (1440 px)**
@@ -324,15 +328,15 @@ Los mock-ups aplican sobre los wireframes el Design System de la sección 4.1 y 
 
 ![Landing Page Mock-up · Contact](../assets/img/chapter4/landing-page/mockups/desktop/10-contact.png)
 
-**About Us:** presenta a IngesCompany, la startup detrás de DoofPlus, con su misión y su visión.
+**About Us:** presenta a IngesCompanyCC, la startup detrás de DoofPlus, con su misión y su visión.
 
 ![Landing Page Mock-up · About Us](../assets/img/chapter4/landing-page/mockups/desktop/11-about-us.png)
 
-**Our Team:** presenta a los integrantes de IngesCompany: Marcelo Angulo, Yhoshua Cobades, Ricardo Flores, Nestor Rojas y Rodolfo Zavaleta, con su foto, nombre y rol. Debajo se incrusta el Video About-the-Team, que resume el proceso de trabajo del equipo, la retrospectiva y el testimonio de cada integrante, con un enlace alternativo a YouTube.
+**Our Team:** presenta a los integrantes de IngesCompanyCC: Marcelo Angulo, Yhoshua Cobades, Nestor Rojas, Cristina Yarleque y Rodolfo Zavaleta, con su foto, nombre y rol. Debajo se incrusta el Video About-the-Team, que resume el proceso de trabajo del equipo, la retrospectiva y el testimonio de cada integrante, con un enlace alternativo a YouTube.
 
 ![Landing Page Mock-up · Our Team](../assets/img/chapter4/landing-page/mockups/desktop/12-our-team.png)
 
-**Footer:** fondo azul pizarra con el logotipo blanco, los enlaces de producto y de empresa, los datos de contacto (doofplus.inges@gmail.com, +51 (1) 234-5678, Lima, Perú), los enlaces "Terms of Service" y "Privacy Policy", el copyright de IngesCompany y el selector de idioma.
+**Footer:** fondo azul pizarra con el logotipo blanco, los enlaces de producto y de empresa, los datos de contacto (doofplus.inges@gmail.com, +51 (1) 234-5678, Lima, Perú), los enlaces "Terms of Service" y "Privacy Policy", el copyright de IngesCompanyCC y el selector de idioma.
 
 ![Landing Page Mock-up · Footer](../assets/img/chapter4/landing-page/mockups/desktop/13-footer.png)
 
@@ -362,7 +366,7 @@ La versión mobile mantiene el orden y el contenido de desktop en una sola colum
 
 ## 4.4. Web Applications UX/UI Design
 
-Esta sección describe el diseño de experiencia (UX) e interfaz (UI) de la Web Application de DoofPlus. La aplicación se organiza en tres entornos, cada uno con su propio inicio de sesión, color y módulos: **QA/QC** (segmento 1, especialista de aseguramiento y control de calidad, persona María México), **Production** (segmento 2, jefe o supervisor de producción, persona Alberto Valle) y **Administration** (administrador del laboratorio, que registra la organización, invita a los usuarios y gestiona la suscripción). Los datos de ejemplo corresponden a un mismo caso: Laboratorios Andinos S.A.C., el lote B-26041 de Paracetamol 500 mg y la excursión de temperatura del sensor T-204 que origina la desviación DEV-26017, de modo que las pantallas de ambos segmentos cuentan una historia coherente. Los wireframes y mock-ups de escritorio y mobile se elaboraron en Figma y están disponibles en el archivo de diseño de DoofPlus (https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-814).
+Esta sección describe el diseño de experiencia (UX) e interfaz (UI) de la Web Application de DoofPlus. La aplicación se organiza en tres entornos, cada uno con su propio inicio de sesión, color y módulos: **QA/QC** (segmento 1, especialista de aseguramiento y control de calidad, persona María México), **Production** (segmento 2, jefe o supervisor de producción, persona Alberto Valle) y **Administration** (administrador del laboratorio, que registra la organización, invita a los usuarios y gestiona la suscripción). Los datos de ejemplo corresponden a un mismo caso: Laboratorios Andinos S.A.C., el lote B-26041 de Paracetamol 500 mg y la excursión de temperatura del sensor T-204 que origina la desviación DEV-26017, de modo que las pantallas de ambos segmentos cuentan una historia coherente. Los wireframes y mock-ups de escritorio y mobile se elaboraron en Figma y están disponibles en el [archivo de diseño de DoofPlus](https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-814).
 
 Todas las pantallas comparten la misma estructura, derivada de la arquitectura de información de la sección 4.2: un sidebar con el logotipo, el entorno activo y sus módulos (navegación global); una barra superior con la búsqueda global, el selector de idioma y el avatar del usuario; y un área de contenido que ubica arriba los indicadores y abajo las tablas de detalle. Las acciones críticas, como aprobar, liberar o rechazar, se confirman con firma electrónica (US08), y los estados se muestran con los valores del modelo de dominio.
 
@@ -428,7 +432,7 @@ En mobile se priorizan las tareas que se realizan fuera del escritorio: la elecc
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para representar la secuencia de pantallas que lo llevan a cumplir un objetivo. Para cada segmento se definieron seis user goals, basados en sus user stories. Cada diagrama muestra el user goal, la persona, el camino principal y los puntos de decisión que desvían el flujo hacia una pantalla de error o de bloqueo. Los diagramas se elaboraron en FigJam y están disponibles en el tablero de Wireflows y User Flows (https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp).
+Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para representar la secuencia de pantallas que lo llevan a cumplir un objetivo. Para cada segmento se definieron seis user goals, basados en sus user stories. Cada diagrama muestra el user goal, la persona, el camino principal y los puntos de decisión que desvían el flujo hacia una pantalla de error o de bloqueo. Los diagramas se elaboraron en FigJam y están disponibles en el [tablero de Wireflows y User Flows](https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp).
 
 #### Segmento 1 – Especialista de Aseguramiento y Control de Calidad (QA/QC)
 
@@ -712,7 +716,7 @@ En mobile, la navegación del entorno se agrupa en una barra inferior y las pant
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-Los User Flow Diagrams representan, para los mismos user goals de la sección 4.4.2, la secuencia de pantallas y acciones del camino principal (happy path) y las decisiones que llevan a caminos alternativos (unhappy paths). Se elaboraron en FigJam, en el mismo tablero (https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp) que los Wireflow Diagrams.
+Los User Flow Diagrams representan, para los mismos user goals de la sección 4.4.2, la secuencia de pantallas y acciones del camino principal (happy path) y las decisiones que llevan a caminos alternativos (unhappy paths). Se elaboraron en FigJam, en el mismo [tablero](https://www.figma.com/board/6SfHJP9IQFJtTxZKgOYyWp) que los Wireflow Diagrams.
 
 #### Segmento 1 – Especialista QA/QC
 
@@ -831,9 +835,9 @@ El diseño del prototipo se guió por cuatro criterios:
 - **Consistencia visual:** todos los entornos comparten componentes, tipografía y estructura, y solo cambia el color que identifica al entorno.
 - **Prevención de errores:** los estados de bloqueo explican el motivo y la acción necesaria, en lugar de permitir una operación que luego deba corregirse.
 
-Prototipo navegable en Figma (página "Prototype", que une los mock-ups de la Landing Page y de la Web Application para navegar entre ambas): abrir el prototipo (https://www.figma.com/proto/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?page-id=353%3A237&node-id=353-240&starting-point-node-id=353%3A240). Desde el selector de flujos del visor se accede a los puntos de inicio de cada user goal.
+Prototipo navegable en Figma (página "Prototype", que une los mock-ups de la Landing Page y de la Web Application para navegar entre ambas): [abrir el prototipo](https://www.figma.com/proto/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?page-id=353%3A237&node-id=353-240&starting-point-node-id=353%3A240). Desde el selector de flujos del visor se accede a los puntos de inicio de cada user goal.
 
-Video de navegación del prototipo: upc-pre-202620-1asi0729-7742-IngesCompany-prototypenavigation-sprint-1, ver en Microsoft Stream (https://upcedupe-my.sharepoint.com/:v:/g/personal/u202423162_upc_edu_pe/IQC9TP0VdDx0SbIEr4nWmikhAceGoBqdZ78DiR68qJ8FV-A?e=1BIqfW) (copia en YouTube (https://youtu.be/6PLCLqaF8Tg)). Inicio: 00:00. Duración: 06:10.
+Video de navegación del prototipo (Sprint 1): [ver en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202423162_upc_edu_pe/IQC9TP0VdDx0SbIEr4nWmikhAceGoBqdZ78DiR68qJ8FV-A?e=1BIqfW) (copia en [YouTube](https://youtu.be/6PLCLqaF8Tg)). Inicio: 00:00. Duración: 06:10.
 
 **Landing Page** (desde 00:00 hasta 00:24)
 
@@ -844,31 +848,15 @@ Video de navegación del prototipo: upc-pre-202620-1asi0729-7742-IngesCompany-pr
 ![Video de navegación del prototipo · Web Application](../assets/img/chapter4/prototype/video-web-application.png)
 
 ## 4.6. Domain-Driven Software Architecture
-La arquitectura de DoofPlus se fundamenta en Domain-Driven Design (DDD). El punto de partida es el Big Picture EventStorming (sección 2.4), que dejó una línea de tiempo de eventos organizada en siete swimlanes, con sus actores, sistemas externos y problemas. En esta sección ese conocimiento se profundiza con un Design-Level EventStorming hasta identificar los bounded contexts y obtener aggregates, commands, policies, read models y sistemas externos por contexto; luego la solución se representa con el modelo C4 (contexto, contenedores y componentes). Cada bounded context se corresponde con un módulo de la Web Application en Vue y con un paquete del RESTful API en Spring Boot.
+La arquitectura de DoofPlus se fundamenta en Domain-Driven Design (DDD). El punto de partida es el Big Picture EventStorming (sección 2.4), que dejó una línea de tiempo de eventos organizada en siete swimlanes, con sus actores, sistemas externos y problemas. En esta sección ese conocimiento se profundiza con un Design-Level EventStorming hasta identificar los bounded contexts y obtener aggregates, commands, policies, read models y sistemas externos por contexto; luego la solución se representa con el modelo C4 (contexto, contenedores y componentes). Cada bounded context se corresponde con un módulo de la Web Application en Vue 3 y con un namespace del RESTful API en ASP.NET Core.
 
 La siguiente tabla resume la trazabilidad entre artefactos:
 
-| Bounded context | Tipo | Swimlanes del Big Picture | Épicas | Aggregates (DLES) | Módulo Vue / paquete Spring |
+| Bounded context | Tipo | Swimlanes del Big Picture | Épicas | Aggregates (DLES) | Módulo Vue / proyecto ASP.NET Core |
 | --- | --- | --- | --- | --- | --- |
 | Manufacturing & Batch Management | Core | Producción y almacén | EP04, EP09 (productos y fórmulas) | Product, MasterFormula, RawMaterialLot, ProductionOrder, ProductionBatch | `manufacturing` |
 | Quality & Compliance | Core | Gestión documental, Control de calidad y liberación, Desviaciones y CAPA, Auditoría y cumplimiento | EP03, EP05, EP07, EP08, EP10 | QualityDocument, MaterialApproval, BatchReview, AnalyticalResult, Deviation, Audit, RegulatoryReport | `quality` |
-| IoT Monitoring | Supporting | Monitoreo de equipos (IoT) | EP06, EP09 (equipos, calibraciones y mantenimiento) | Equipment, IoTDevice, TelemetryReading, Alert | `iot-monitoring` / `iotmonitoring` |
-| Identity & Access Management | Generic | Plataforma y administración, Gestión documental | EP02 | User, ElectronicSignature | `iam` |
-| Organizations & Profiles | Supporting | Plataforma y administración | EP01 (consultas del formulario de contacto), EP02 (registro de la organización) | Organization, Profile, ContactInquiry | `organizations` |
-| Subscriptions & Payments | Generic | Plataforma y administración | EP11 | Plan, Subscription | `subscriptions` |
-
-Los dashboards (EP08) y las notificaciones entre áreas (EP10) no forman un contexto propio: los dashboards son read models que cada contexto expone y las notificaciones son policies que reaccionan a domain events.
-
-### 4.6.1. Design-Level Event Storming
-La arquitectura de DoofPlus se fundamenta en Domain-Driven Design (DDD). El punto de partida es el Big Picture EventStorming (sección 2.4), que dejó una línea de tiempo de eventos organizada en siete swimlanes, con sus actores, sistemas externos y problemas. En esta sección ese conocimiento se profundiza con un Design-Level EventStorming hasta identificar los bounded contexts y obtener aggregates, commands, policies, read models y sistemas externos por contexto; luego la solución se representa con el modelo C4 (contexto, contenedores y componentes). Cada bounded context se corresponde con un módulo de la Web Application en Vue y con un paquete del RESTful API en Spring Boot.
-
-La siguiente tabla resume la trazabilidad entre artefactos:
-
-| Bounded context | Tipo | Swimlanes del Big Picture | Épicas | Aggregates (DLES) | Módulo Vue / paquete Spring |
-| --- | --- | --- | --- | --- | --- |
-| Manufacturing & Batch Management | Core | Producción y almacén | EP04, EP09 (productos y fórmulas) | Product, MasterFormula, RawMaterialLot, ProductionOrder, ProductionBatch | `manufacturing` |
-| Quality & Compliance | Core | Gestión documental, Control de calidad y liberación, Desviaciones y CAPA, Auditoría y cumplimiento | EP03, EP05, EP07, EP08, EP10 | QualityDocument, MaterialApproval, BatchReview, AnalyticalResult, Deviation, Audit, RegulatoryReport | `quality` |
-| IoT Monitoring | Supporting | Monitoreo de equipos (IoT) | EP06, EP09 (equipos, calibraciones y mantenimiento) | Equipment, IoTDevice, TelemetryReading, Alert | `iot-monitoring` / `iotmonitoring` |
+| IoT Monitoring | Supporting | Monitoreo de equipos (IoT) | EP06, EP09 (equipos, calibraciones y mantenimiento) | Equipment, IoTDevice, TelemetryReading, Alert | `monitoring` / `iotmonitoring` |
 | Identity & Access Management | Generic | Plataforma y administración, Gestión documental | EP02 | User, ElectronicSignature | `iam` |
 | Organizations & Profiles | Supporting | Plataforma y administración | EP01 (consultas del formulario de contacto), EP02 (registro de la organización) | Organization, Profile, ContactInquiry | `organizations` |
 | Subscriptions & Payments | Generic | Plataforma y administración | EP11 | Plan, Subscription | `subscriptions` |
@@ -1140,7 +1128,7 @@ El diagrama de contenedores (nivel 2) muestra las unidades de despliegue de la s
 | Container | Tecnología | Despliegue | Responsabilidad |
 | --- | --- | --- | --- |
 | Landing Page | HTML5, CSS3, JavaScript | GitHub Pages | Presentar la propuesta de valor, los planes y el equipo; enviar las consultas del formulario de contacto y llevar a cada usuario al inicio de sesión de su entorno o al registro de la organización. |
-| Web Application | Vue, Vite , TypeScript, ngx-translate | Firebase Hosting | SPA responsive con un módulo por bounded context; consume el RESTful API con un token JWT. |
+| Web Application | Vue 3, Vite, Pinia, Vue Router, Vue I18n, PrimeVue, JavaScript | Firebase Hosting | SPA responsive con un módulo por bounded context; consume el RESTful API con un token JWT. |
 | RESTful API | ASP.NET Core, C# 12, Entity Framework Core, ASP.NET Core Identity, Swashbuckle (Swagger) | Render | Monolito modular con los seis bounded contexts; expone endpoints REST documentados con OpenAPI (Swagger), recibe la telemetría de ThingsBoard y publica notificaciones por WebSocket (STOMP). |
 | Database | MySQL 8 | Railway | Persistencia relacional; las tablas se agrupan por bounded context. |
 
@@ -1152,11 +1140,11 @@ Se eligió un monolito modular en lugar de microservicios porque el statement de
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-Los diagramas de componentes (nivel 3) descomponen la Web Application y el RESTful API. La Web Application sigue la estructura del proyecto en Vite: un módulo por bounded context con las capas `domain`, `application`, `infrastructure` y `presentation`, más los elementos compartidos de `shared`. El módulo `manufacturing` recibe el código leído por el Lector RFID en el registro de la recepción de insumos.
+Los diagramas de componentes (nivel 3) descomponen la Web Application y el RESTful API. La Web Application sigue la estructura del proyecto en Vue 3: un módulo por bounded context con las capas `domain`, `application`, `infrastructure` y `presentation`, más los elementos compartidos de `shared`. El módulo `manufacturing` recibe el código leído por el Lector RFID en el registro de la recepción de insumos.
 
 ![Component Diagram - Web Application](../assets/img/chapter4/software-architecture/c4/c4-03-webapp-components.png)
 
-En el RESTful API cada bounded context es un paquete de Spring Boot con cuatro capas: `interfaces` (controladores REST y fachadas ACL), `application` (command services, query services, event handlers y servicios ACL de salida), `domain` (aggregates, entities, value objects, commands, queries y domain services) e `infrastructure` (repositorios Spring Data JPA e integraciones externas).
+En el RESTful API cada bounded context es un namespace del proyecto ASP.NET Core con cuatro capas: `interfaces` (controladores REST y fachadas ACL), `application` (command services, query services, event handlers y servicios ACL de salida), `domain` (aggregates, entities, value objects, commands, queries y domain services) e `infrastructure` (repositorios con Entity Framework Core e integraciones externas).
 
 **Identity & Access Management.** `AuthenticationController` atiende sign-up, sign-in y la verificación 2FA; `BearerAuthorizationRequestFilter` valida el JWT en cada request; `UserCommandServiceImpl` da de alta usuarios, asigna roles y bloquea cuentas; `SignatureCommandServiceImpl` registra firmas electrónicas. `IamContextFacade` expone estas capacidades a los demás contextos.
 
@@ -1184,12 +1172,12 @@ En el RESTful API cada bounded context es un paquete de Spring Boot con cuatro c
 
 ## 4.7. Software Object-Oriented Design
 
-El diseño orientado a objetos traduce los aggregates del Design-Level EventStorming a clases C# de la RESTful API. Se aplicaron estas convenciones:
+El diseño orientado a objetos traduce los aggregates del Design-Level EventStorming a clases C# del RESTful API. Se aplicaron estas convenciones:
 
-- Cada aggregate root extiende `AuditableAbstractAggregateRoot`, que aporta el identificador `Long id` y las fechas `createdAt` y `updatedAt` (en los diagramas, `id` se muestra en cada aggregate y la clase base solo en IAM).
+- Cada aggregate root extiende `AuditableAbstractAggregateRoot`, que aporta el identificador `int Id` y las fechas `createdAt` y `updatedAt` (en los diagramas, `id` se muestra en cada aggregate y la clase base solo en IAM).
 - Las entities internas de un aggregate se acceden solo a través de su raíz; los value objects (por ejemplo, `BatchNumber`, `Quantity`, `Money`, `Ruc`) se implementan como records inmutables de C#.
-- Los nombres siguen la convenciones de C#: clases en PascalCase, atributos y métodos en camelCase y constantes de enumeraciones en UPPER_SNAKE_CASE. Las propiedades se definen con getters automáticos de C# y no se muestran.
-- Los cambios de estado se solicitan con commands (`CreateBatchCommand`, `CloseDeviationCommand`, etc.) atendidos por command services; las consultas usan query services. Los repositorios son interfaces de Spring Data JPA.
+- Los nombres siguen las convenciones de codificación de C# de Microsoft: clases en PascalCase, atributos y métodos en camelCase y constantes de enumeraciones en UPPER_SNAKE_CASE. Las propiedades usan getters y setters automáticos de C# y no se muestran.
+- Los cambios de estado se solicitan con commands (`CreateBatchCommand`, `CloseDeviationCommand`, etc.) atendidos por command services; las consultas usan query services. Los repositorios son interfaces implementadas con Entity Framework Core.
 - Las relaciones entre contextos se modelan por identificador (`batchId`, `userId`) y no por referencia directa, respetando los límites de cada bounded context.
 
 ### 4.7.1. Class Diagrams
@@ -1264,5 +1252,3 @@ Los diagramas se elaboraron con Mermaid (Diagram-as-Code), uno por bounded conte
 ![Database Diagram - Quality & Compliance](../assets/img/chapter4/database/db-06-quality.png)
 
 La fuente Structurizr DSL de los diagramas C4 se encuentra en `assets/diagrams/structurizr/workspace.dsl`, y las fuentes Mermaid de los diagramas de clases y de base de datos, en `assets/diagrams/mermaid`.
-
-
