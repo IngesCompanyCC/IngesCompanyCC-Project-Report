@@ -1,6 +1,6 @@
-# Capítulo 1: Introducción
+# Capítulo I: Introducción
 
-La presente introducción tiene como finalidad contextualizar el proyecto desarrollado, proporcionando una visión general de los antecedentes, objetivos y fundamentos que sustentan su planteamiento. Asimismo, delimita el alcance de la propuesta y establece el marco de referencia necesario para comprender su desarrollo, destacando su relevancia, los retos que busca abordar y los beneficios esperados de su implementación. De esta manera, se ofrece una base conceptual que orienta al lector y facilita la comprensión de los contenidos expuestos en las secciones posteriores del documento.
+La presente introducción tiene como finalidad contextualizar el proyecto desarrollado, proporcionando una visión general de los antecedentes, objetivos y fundamentos que sustentan su planteamiento. Asimismo, delimita el alcance de la propuesta y establece el marco de referencia necesario para comprender su desarrollo, destacando su relevancia, los retos que busca abordar y los beneficios esperados de su implementación. De esta manera, se ofrece una base conceptual que orienta al lector sobre el problema y la propuesta.
 
 ## 1.1. Startup Profile
 
@@ -8,29 +8,29 @@ La presente sección tiene como finalidad presentar la startup responsable de la
 
 ### 1.1.1. Descripción de la Startup
 
-La startup IngesCompany se dedica al desarrollo de soluciones tecnológicas orientadas a la transformación digital de procesos especializados en industrias altamente reguladas. Su objetivo es contribuir a la mejora de la eficiencia operativa, la gestión de información y el cumplimiento de estándares de calidad mediante herramientas digitales que apoyen las actividades críticas de las organizaciones.
+La startup IngesCompanyCC se dedica al desarrollo de soluciones tecnológicas orientadas a la transformación digital de procesos especializados en industrias altamente reguladas. Su objetivo es contribuir a la mejora de la eficiencia operativa, la gestión de información y el cumplimiento de estándares de calidad mediante herramientas digitales que apoyen las actividades críticas de las organizaciones.
 
 Como parte de esta visión, la empresa desarrolla DoofPlus, una plataforma web diseñada para apoyar la gestión de calidad y la trazabilidad dentro de la industria farmacéutica. La solución permite centralizar información relacionada con los procesos de fabricación y control de calidad, facilitando el acceso a registros organizados, confiables y disponibles para su consulta y seguimiento.
 
 DoofPlus busca fortalecer la gestión de los procesos asociados al ciclo de vida de los productos farmacéuticos, apoyando actividades de documentación, trazabilidad y cumplimiento regulatorio. De esta manera, la plataforma contribuye a mejorar la visibilidad de la información requerida para la toma de decisiones y favorece el cumplimiento de las Buenas Prácticas de Manufactura (BPM) y de los estándares exigidos por las entidades regulatorias del sector.
 
-### **Misión**
+### Misión
 
 Diseñar soluciones tecnológicas abiertas que permitan digitalizar y optimizar la gestión de calidad farmacéutica, integrando información operativa y datos IoT para fortalecer la trazabilidad, el cumplimiento regulatorio y la confiabilidad de los procesos.
 
-### **Visión**
+### Visión
 
 Convertirnos en una referencia en soluciones digitales de aseguramiento de calidad para la industria farmacéutica latinoamericana, facilitando la adopción de tecnologías abiertas que mejoren la trazabilidad, la integridad de los datos y la gestión del cumplimiento regulatorio.
 
-### 1.1.2 Perfiles de Integrantes del Equipo
+### 1.1.2. Perfiles de integrantes del equipo
 
-|                          Foto                           |                                Detalles del Perfil                                 |                                                                                                                                                                                                                    Descripción Personal                                                                                                                                                                                                                     |
-|:-------------------------------------------------------:|:----------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|   ![Marcelo Angulo](../assets/img/photo/Marcelo.jpg)    |   Marcelo Martín Angulo Ramírez  <br/>(U202321425)  <br/>Ingeniería de Software.   |                                                                Tengo 21 años y soy una persona puntual, responsable y comunicativa. Me interesé por la carrera gracias a cursos de programación del colegio y a los que tomé por mi cuenta; actualmente manejo C++ y Python, y busco ampliar mis conocimientos en otros lenguajes para optimizar mi trabajo en equipo y resolver problemas.                                                                 |
-|   ![Yhoshua Cobades](../assets/img/photo/Yhoshua.jpg)   |    Cobades Zamora Yhoshua Hebert  <br>(U20231H117)  <br>Ingeniería de Software.    |                                                                                            Tengo 19 años, me interesa mucho aprender sobre tecnología y soy bastante resistente al estrés. En mis tiempos libres me gusta aprender e informarme sobre la situación actual de varias tecnologías. Me divierto surfeando en las olas de internet. I use Arch btw.                                                                                             |
-|    ![Nestor Daniel](../assets/img/photo/Daniel.jpg)     |    Nestor Daniel Rojas Ambicho  <br/>(U20241F397)  <br/>Ingeniería de Software.    |                 Tengo 20 años, apasionado por la tecnología, el desarrollo de aplicaciones y la programación. Con experiencia en proyectos académicos de software, bases de datos y metodologías de desarrollo, busco constantemente aprender y dominar nuevas herramientas técnicas. Me interesé por la carrera debido a que desde el colegio me gustaban cursos relacionados a la tecnologia, y después empecé a aprender por mi cuenta.                  |
-| ![Cristina Yarleque](../assets/img/photo/Cristina.jpeg) |  Yarleque Ruiz, Cristina Marcela  <br/>(U202423162)  <br/>Ingeniería de Software.  | Tengo 20 años y soy una persona responsable, organizada y comprometida. Me interesa mucho la tecnología, especialmente el desarrollo de software y la creación de aplicaciones. Mi interés por la programación fue gracias a mi familia, lo que me llevó a elegir Ingeniería de Software. Actualmente cuento con conocimientos en programación, bases de datos y desarrollo de proyectos, y busco constantemente aprender nuevas herramientas y tecnologías |
-|  ![Rodolfo Zavaleta](../assets/img/photo/Rodolfo.jpg)   | Rodolfo Martin Zavaleta Gutierrez  <br/>(U20241F733)  <br/>Ingeniería de Software. |                                                                                                                                 Tengo 19 años y soy una persona puntual y responsable. Me interesé por la carrera debido a mis gustos adquiridos por la programación gracias a cursos del colegio y que tomé por mi parte.                                                                                                                                  |  
+| Foto | **Nombres, código y carrera** | **Resumen de conocimientos y habilidades** |
+| --- | --- | --- |
+| <img src="../assets/img/photo/Marcelo.jpg" width="120"> | **Angulo Ramírez, Marcelo Martín**<br>Código: U202321425<br>Carrera: Ingeniería de Software<br>GitHub: Zock2005 | Tengo 21 años y soy una persona puntual, responsable y comunicativa. Me interesé por la carrera gracias a cursos de programación del colegio y a los que tomé por mi cuenta; actualmente manejo C++ y Python, y busco ampliar mis conocimientos en otros lenguajes para optimizar mi trabajo en equipo y resolver problemas. |
+| <img src="../assets/img/photo/Yhoshua.jpg" width="120"> | **Cobades Zamora, Yhoshua Hebert**<br>Código: U20231H117<br>Carrera: Ingeniería de Software<br>GitHub: YhoshuaCZ | Tengo 19 años, me interesa mucho aprender sobre tecnología y soy bastante resistente al estrés. En mis tiempos libres me gusta aprender e informarme sobre la situación actual de varias tecnologías. Me divierto surfeando en las olas de internet. I use Arch btw. |
+| <img src="../assets/img/photo/Daniel.jpg" width="120"> | **Rojas Ambicho, Nestor Daniel**<br>Código: U20241F397<br>Carrera: Ingeniería de Software<br>GitHub: danRO-20 | Tengo 20 años, apasionado por la tecnología, el desarrollo de aplicaciones y la programación. Con experiencia en proyectos académicos de software, bases de datos y metodologías de desarrollo, busco constantemente aprender y dominar nuevas herramientas técnicas. Me interesé por la carrera debido a que desde el colegio me gustaban cursos relacionados a la tecnologia, y después empecé a aprender por mi cuenta. |
+| <img src="../assets/img/photo/Cristina.jpeg" width="120"> | **Yarleque Ruiz, Cristina Marcela**<br>Código: U20241F859<br>Carrera: Ingeniería de Software<br>GitHub: Cris06luna | Tengo 20 años y soy una persona responsable, organizada y comprometida. Me interesa mucho la tecnología, especialmente el desarrollo de software y la creación de aplicaciones. Mi interés por la programación fue gracias a mi familia, lo que me llevó a elegir Ingeniería de Software. Actualmente cuento con conocimientos en programación, bases de datos y desarrollo de proyectos, y busco constantemente aprender nuevas herramientas y tecnologías |
+| <img src="../assets/img/photo/Rodolfo.jpg" width="120"> | **Zavaleta Gutierrez, Rodolfo Martin**<br>Código: U20241F733<br>Carrera: Ingeniería de Software<br>GitHub: gutierrezrodolfo360-bit | Tengo 19 años y soy una persona puntual y responsable. Me interesé por la carrera debido a mis gustos adquiridos por la programación gracias a cursos del colegio y que tomé por mi parte. |
 
 ## 1.2. Solution Profile
 
@@ -100,21 +100,21 @@ Las tecnologías basadas en Internet de las Cosas (IoT) permiten capturar inform
 
 - Identificar las necesidades de especialistas QA/QC y jefes de producción mediante entrevistas a cada segmento objetivo.
 - Publicar una Landing Page responsive y bilingüe (en-US / es-419) que comunique la propuesta de valor y dirija a cada segmento a la Web Application.
-- Implementar una Frontend Web Application con Angular y Angular Material para la gestión de lotes, desviaciones y documentación de calidad.
-- Implementar un RESTful API con Spring Boot y Spring Data JPA, documentado con OpenAPI (Swagger) e integrado con los servicios externos ThingsBoard y Niubiz.
+- Implementar una Frontend Web Application con Vue 3 y PrimeVue para la gestión de lotes, desviaciones y documentación de calidad.
+- Implementar un RESTful API con ASP.NET Core y Entity Framework Core, documentado con OpenAPI (Swagger) e integrado con los servicios externos ThingsBoard y Niubiz.
 - Validar la solución con usuarios de ambos segmentos mediante evaluaciones heurísticas de usabilidad, arquitectura de información y diseño inclusivo.
 
 #### 5. RESTRICCIONES Y ALCANCE
 
 - **Alcance:** Landing Page, Frontend Web Application y RESTful API de elaboración interna. No incluye una aplicación móvil nativa ni la fabricación de hardware IoT: la captura de datos de sensores se integra mediante la plataforma externa ThingsBoard.
-- **Tecnológicas:** HTML5, CSS3 y JavaScript para la Landing Page; Angular con TypeScript y Angular Material (Material Design) para la Web Application; Spring Boot con Spring Data JPA (Java) para el RESTful API; MySQL como base de datos; OpenAPI (Swagger) para documentar los servicios; GitHub con GitFlow, Conventional Commits y Semantic Versioning.
+- **Tecnológicas:** HTML5, CSS3 y JavaScript para la Landing Page; Vue 3 con JavaScript, Vite, Pinia y PrimeVue (tema Material) para la Web Application; ASP.NET Core con Entity Framework Core (C#) para el RESTful API; MySQL como base de datos; OpenAPI (Swagger) para documentar los servicios; GitHub con GitFlow, Conventional Commits y Semantic Versioning.
 - **Regulatorias:** DoofPlus apoya el cumplimiento de las BPM de DIGEMID y de los principios de integridad de datos de la OMS, pero no reemplaza la validación de sistemas computarizados que cada laboratorio debe ejecutar; las firmas electrónicas siguen los criterios de 21 CFR Part 11 sin constituir una certificación.
 - **Datos personales:** el tratamiento de datos se rige por la Ley N.° 29733, Ley de Protección de Datos Personales.
 - **Idiomas y accesibilidad:** inglés (en-US) como idioma por defecto y español latinoamericano (es-419) en la Landing Page, la Web Application y los mensajes del RESTful API; atributos ARIA en la Landing Page y la Web Application.
 - **Tiempo:** el desarrollo se organiza en cuatro sprints dentro del ciclo académico 2026-20.
 
-
 ### 1.2.2. Lean UX Process
+
 La presente sección tiene como finalidad presentar el proceso de Lean UX aplicado para la validación de la propuesta desarrollada. En ella se describen las actividades de investigación, análisis y validación realizadas con el fin de comprender el contexto de los usuarios y verificar los supuestos que motivan la solución planteada. Asimismo, se exponen los artefactos y resultados obtenidos durante el proceso, los cuales permiten identificar necesidades, oportunidades y criterios de diseño relevantes. De esta manera, la información recopilada constituye una base para la definición y evolución de la propuesta de solución presentada en el proyecto.
 
 #### 1.2.2.1. Lean UX Problem Statements
@@ -180,7 +180,6 @@ A continuación se muestran los Assumptions en su idioma original:
 - We believe that approval requests and notifications between Production and Quality will reduce waiting times in batch manufacturing.
 - We believe that an immutable audit trail with electronic signatures will strengthen the integrity of the records reviewed by inspectors.
 
-
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
 A continuación se muestran las Hypothesis Statements en su idioma original:
@@ -216,7 +215,7 @@ A continuación se muestran las Hypothesis Statements en su idioma original:
 
 
 - **Hypothesis 4:**  
-  ***We believe we will achieve*** a 30% reduction in audit-preparation time
+  ***We believe we will achieve*** an 80% reduction in audit-preparation time
 
   ***If*** QA/QC specialists
 
@@ -267,7 +266,7 @@ A continuación se muestran las Hypothesis Statements en su idioma original:
 #### 1.2.2.4. Lean UX Canvas
 A continuación se muestra el Lean UX Canvas en su idioma original:
 
-![LeanUX](../assets/img/chapter1/Lean-UX-canvas.jpg)
+![LeanUX](../assets/img/chapter1/Lean-UX-canvas.png)
 
 *Fuente editable del Lean UX Canvas:* [Lean-UX-canvas.pptx](../assets/diagrams/lean-ux-canvas/Lean-UX-canvas.pptx)
 
