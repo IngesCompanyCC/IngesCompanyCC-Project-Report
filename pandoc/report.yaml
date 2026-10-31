@@ -1,0 +1,34 @@
+# Pandoc defaults file for the IngesCompanyCC project report.
+# Usage (from the repository root): pandoc --defaults=pandoc/report.yaml
+
+# GitHub-flavored Markdown, so the PDF matches the preview in GitHub and WebStorm.
+from: gfm
+to: html5
+standalone: true
+embed-resources: true
+pdf-engine: weasyprint
+css:
+  - pandoc/report.css
+
+input-files:
+  - README.md
+  - docs/chapter1.md
+  - docs/chapter2.md
+  - docs/chapter3.md
+  - docs/chapter4.md
+  - docs/chapter5.md
+
+output-file: build/upc-pre-202620-1asi0730-8130-IngesCompanyCC-report.pdf
+
+# README.md uses assets/... and the chapters use ../assets/...
+resource-path:
+  - .
+  - docs
+
+# Marks the README cover and inserts the table of contents.
+filters:
+  - pandoc/report.lua
+
+metadata:
+  title: Informe del Trabajo Final - DoofPlus
+  lang: es-PE
