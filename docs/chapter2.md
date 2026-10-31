@@ -1,12 +1,12 @@
 # Capítulo II: Requirements Elicitation & Analysis
 
 ## 2.1. Competidores
-Para desarrollar una solución efectiva, es importante entender la situación competitiva y las diferentes variantes que se utilizan en los laboratorios farmacéuticos. Este análisis nos ayuda a identificar cómo se gestionan los procesos de calidad actualmente, y qué limitaciones presentan las soluciones existentes.
+Para desarrollar una solución efectiva, es importante entender la situación competitiva y las diferentes variantes que se utilizan en los laboratorios farmacéuticos. Este análisis nos ayuda a identificar cómo se gestionan los procesos de calidad actualmente y qué limitaciones presentan las soluciones existentes.
 
 En este periodo, se analizan distintos tipos de competidores con el objetivo de entender sus fortalezas y debilidades, y así posicionar a DoofPlus como una propuesta que responda de manera más efectiva a las necesidades reales del sector.
 
 ### 2.1.1. Análisis competitivo
-A continuación, se presenta una tabla comparativa sobre los principales competidores, en el que se considera su propuesta de valor, mercado objetivo y características generales. Este análisis permite evidenciar que, mientras las soluciones existentes se orientan a grandes corporaciones o dependen de procesos manuales, DoofPlus podrá destacar como una alternativa specializada, accesible y centrada en la automatización del aseguramiento de la calidad mediante integración IoT y trazabilidad digital, especialmente pensada para laboratorios medianos y entidades públicas de la región.
+A continuación, se presenta una tabla comparativa sobre los principales competidores, en el que se considera su propuesta de valor, mercado objetivo y características generales. Este análisis permite evidenciar que, mientras las soluciones existentes se orientan a grandes corporaciones o dependen de procesos manuales, DoofPlus se posiciona como una alternativa especializada, accesible y centrada en la automatización del aseguramiento de la calidad mediante integración IoT y trazabilidad digital, especialmente pensada para laboratorios medianos y entidades públicas de la región.
 
 <table>
   <tr>
@@ -14,11 +14,7 @@ A continuación, se presenta una tabla comparativa sobre los principales competi
   </tr>
   <tr>
     <td colspan="2">¿Por qué llevar a cabo este análisis?</td>
-    <td colspan="4">¿Cómo se posiciona DoofPlus frente a sus competidores en fortalezas, debilidades, oportunidades y propuesta de valor dentro del mercado de software de gestión de calidad y trazabilidad farmacéutica?</td>
-  </tr>
-  <tr>
-    <td colspan="2">Respuesta del análisis</td>
-    <td colspan="4">Es una propuesta que posiciona a DoofPlus como una plataforma SaaS orientada a la gestión de calidad farmacéutica, incorporando integración IoT para automatizar la captura de datos, mejorar la trazabilidad y asegurar el cumplimiento normativo frente a otras soluciones del mercado.</td>
+    <td colspan="4">¿Cómo se posiciona DoofPlus frente a sus competidores en fortalezas, debilidades, oportunidades y propuesta de valor dentro del mercado de software de gestión de calidad y trazabilidad farmacéutica?<br><br>Es una propuesta que posiciona a DoofPlus como una plataforma SaaS orientada a la gestión de calidad farmacéutica, incorporando integración IoT para automatizar la captura de datos, mejorar la trazabilidad y asegurar el cumplimiento normativo frente a otras soluciones del mercado.</td>
   </tr>
   <tr>
     <td colspan="2"></td>
@@ -52,8 +48,8 @@ A continuación, se presenta una tabla comparativa sobre los principales competi
   </tr>
   <tr>
     <td>Estrategias de marketing</td>
-    <td>Contenido educativo sobre BPM e integridad de datos, demos desde la Landing Page y presencia en eventos del sector.</td>
-    <td>Marketing digital B2B (blog, casos de éxito) y demostraciones comerciales.</td>
+    <td>Contenido educativo sobre BPM e integridad de datos, precios públicos y registro de la organización desde la Landing Page, y presencia en eventos del sector.</td>
+    <td>Marketing digital B2B (blog, casos de éxito) y webinars sobre gestión de calidad.</td>
     <td>Venta consultiva B2B con implementación y soporte locales.</td>
     <td>Venta B2B y B2G a actores de la cadena de suministro y reguladores.</td>
   </tr>
@@ -112,11 +108,11 @@ A continuación, se presenta una tabla comparativa sobre los principales competi
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-Para posicionar a DoofPlus frente a TuHub (MES con IoT), LOLFAR (gestión de farmacias) y DrugXafe (serialización), IngesCompany aplicará las siguientes estrategias y tácticas:
+Para posicionar a DoofPlus frente a TuHub (MES con IoT), LOLFAR (gestión de farmacias) y DrugXafe (serialización), IngesCompanyCC aplicará las siguientes estrategias y tácticas:
 
 #### Estrategia de costos y accesibilidad (suscripción sin inversión inicial)
 
-Frente a soluciones cotizadas por proyecto con costos de implementación elevados (TuHub, LOLFAR), DoofPlus ofrece precios públicos por suscripción (Standard Lab y Enterprise) sin inversión en servidores ni hardware propio, ya que la captura IoT se integra con ThingsBoard. Táctica: prueba piloto de 30 días para laboratorios que soliciten una demo desde la Landing Page.
+Frente a soluciones cotizadas por proyecto con costos de implementación elevados (TuHub, LOLFAR), DoofPlus ofrece precios públicos por suscripción (Standard Lab y Enterprise) sin inversión en servidores ni hardware propio, ya que la captura IoT se integra con ThingsBoard. Táctica: el laboratorio registra su organización desde la Landing Page y elige su plan sin intermediarios; la modalidad anual equivale a dos meses gratis.
 
 #### Enfoque vertical en la calidad farmacéutica
 
@@ -128,11 +124,11 @@ Se ofrece una única cuenta por organización con varias plantas y líneas de pr
 
 #### Estrategia comercial B2B dirigida
 
-La prospección se dirige a jefes de aseguramiento de calidad y de producción, demostrando la reducción del tiempo de preparación de auditorías y del riesgo de observaciones de DIGEMID. Tácticas: webinars sobre integridad de datos, casos de uso con laboratorios piloto y alianzas con consultores de BPM.
+La prospección se dirige a jefes de aseguramiento de calidad y de producción, demostrando la reducción del tiempo de preparación de auditorías y del riesgo de observaciones de DIGEMID. Tácticas: webinars sobre integridad de datos, casos de uso con los primeros laboratorios suscritos y alianzas con consultores de BPM.
 
 ## 2.2. Entrevistas
 
-Las entrevistas constituyen una herramienta fundamental para obtener información cualitativa directamente de los profesionales involucrados en los procesos de aseguramiento de calidad y producción farmacéutica. A través de conversaciones estructuradas, se busca comprender sus actividades, necesidades, desafíos, comportamientos y experiencias relacionadas con la gestión de documentación, la trazabilidad de lotes y el acceso a la información. La información recopilada permitirá identificar problemáticas, oportunidades de mejora y necesidades reales del entorno de aplicación, contribuyendo a definir una propuesta de solución alineada con los requerimientos y expectativas de los segmentos objetivo.
+Las entrevistas constituyen una herramienta fundamental para obtener información cualitativa directamente de los profesionales involucrados en los procesos de aseguramiento de calidad y producción farmacéutica. A través de conversaciones estructuradas, se busca comprender sus actividades, necesidades, desafíos, comportamientos y experiencias relacionadas con la gestión de documentación, la trazabilidad de lotes y el acceso a la información. La información recopilada permitió identificar problemáticas, oportunidades de mejora y necesidades reales del entorno de aplicación, contribuyendo a definir una propuesta de solución alineada con los requerimientos y expectativas de los segmentos objetivo.
 
 ### 2.2.1. Diseño de entrevistas
 
@@ -188,7 +184,7 @@ En esta sección se presentan los resultados obtenidos de las entrevistas realiz
 |---------|--------|
 | **Campo** | **Información** |
 | Nombre | María |
-| Apellido | Mexico |
+| Apellido | México |
 | Edad | 53 |
 | Distrito | San Juan de Lurigancho |
 | Evidencia | ![Entrevista 1 - Segmento 1](../assets/img/chapter2/interview/segmento1/entrevista1-segmento1.png) |
@@ -329,15 +325,18 @@ A partir del análisis de las entrevistas y la información recopilada sobre los
 **1) Segmento 1: Especialista de Aseguramiento y Control de Calidad (QA/QC)**
 
 Para este segmento se elaboró el User Persona María México, tomando como referencia el perfil de los profesionales responsables de las actividades de aseguramiento y control de calidad dentro de laboratorios farmacéuticos. Se consideraron factores como su experiencia en validaciones, revisión documental, verificación de equipos y evaluación de personal analista, así como su participación en la gestión de protocolos, registros y auditorías regulatorias. Sus principales frustraciones se relacionan con la dependencia de procesos manuales para revisar cálculos, informes y documentación antes de registrar los resultados en los sistemas de la organización, lo que incrementa el tiempo invertido en tareas operativas y dificulta la preparación de evidencias para inspecciones y auditorías. Asimismo, se tomó en cuenta su necesidad de disponer de una plataforma que centralice la información de calidad, facilite la trazabilidad de los lotes, automatice la generación de reportes y reduzca la carga administrativa asociada a la gestión documental, permitiéndole dedicar más tiempo a actividades de supervisión y mejora continua de los procesos de calidad.
+
 ![User - Segmento 1](../assets/img/chapter2/interview/segmento1/user-persona1.png)
 
 
 **2) Segmento 2: Jefe o Supervisor de Producción Farmacéutica**
 
 Para este segmento se elaboró el User Persona Alberto Valle Vega. Se consideraron factores como su amplia experiencia en la industria farmacéutica, su responsabilidad en la supervisión de los procesos de fabricación y su participación en la coordinación con las áreas de aseguramiento y control de calidad. Sus principales motivaciones están orientadas a garantizar que la producción se desarrolle conforme a los procedimientos establecidos, manteniendo la calidad, la trazabilidad y el cumplimiento de los estándares regulatorios durante todas las etapas de fabricación. Entre sus principales dificultades se encuentra el acceso oportuno a información consolidada sobre los lotes en producción, así como la gestión y comunicación de incidencias que requieren seguimiento y documentación formal. Asimismo, se tomó en cuenta su necesidad de disponer de herramientas que faciliten la consulta del historial de producción, mejoren la coordinación entre las diferentes áreas involucradas y permitan acceder a información confiable para la toma de decisiones operativas, contribuyendo a una gestión más eficiente y a la reducción de errores durante el proceso productivo.
+
 ![User - Segmento 2](../assets/img/chapter2/interview/segmento2/user-persona2.png)
 
 ### 2.3.2. User Task Matrix
+
 En esta sección se presenta el User Task Matrix, que concentra las tareas que los User Persona realizan para cumplir sus objetivos en su día a día, independientemente de la existencia de una solución de software. Para este análisis se consideran los dos segmentos objetivo identificados: el Especialista de Aseguramiento y Control de Calidad (QA/QC), representado por María México, y el Jefe de Producción Farmacéutica, representado por Alberto Valle. Se evalúa la frecuencia y la importancia de cada tarea para cada segmento con el fin de identificar dónde aportar mayor valor.
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:100%; font-family:Arial, sans-serif; text-align:center;">
@@ -396,9 +395,11 @@ En esta sección se presenta el User Task Matrix, que concentra las tareas que l
 **Análisis del Task Matrix:**
 Se observa que las tareas **"Consultar el historial y trazabilidad de un lote"** y **"Registrar y dar seguimiento a desviaciones e incidencias"** presentan una Importancia **High** para ambos segmentos, confirmando que la trazabilidad centralizada y la gestión de desviaciones son las necesidades más críticas y compartidas del negocio. Las principales diferencias radican en que María México concentra su actividad diaria en tareas documentales de aseguramiento —como revisar cálculos analíticos, gestionar protocolos y recopilar evidencias para auditorías (todas con Importancia High para ella)—, mientras que Alberto Valle prioriza la supervisión operativa de la fabricación y la coordinación de aprobaciones de insumos con el área de Calidad (Often / High). Esta complementariedad evidencia que ambos perfiles dependen de información oportuna sobre los mismos lotes, pero desde perspectivas distintas, lo que valida la necesidad de una plataforma que centralice dicha información y facilite la comunicación entre las áreas de Producción y Calidad.
 
+
+
 ### 2.3.3. User Journey Mapping
 
-**Segmento 1 – Especialista de Aseguramiento y Control de Calidad (María Mexico)**
+**Segmento 1 – Especialista de Aseguramiento y Control de Calidad (María México)**
 
 El User Journey Map de María ilustra su recorrido integral (end-to-end) en el proceso de validación documental y liberación de lotes de producción. Este diagrama documenta su flujo de trabajo paso a paso: desde la recepción de expedientes de planta en formato físico, pasando por la verificación de cálculos analíticos, hasta la transcripción de datos y la búsqueda de antecedentes frente a auditorías inopinadas.
 
@@ -419,7 +420,6 @@ Este mapa expone cómo la desconexión interdepartamental impacta negativamente 
 ![User Journey Map - Segmento 2](../assets/img/chapter2/interview/segmento2/User-Journey-Mapping2.png)
 
 ### 2.3.4. Empathy Mapping
-
 Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y observaciones recolectadas durante el análisis de los User Persona. Se colocó al centro de cada mapa al usuario correspondiente (María México y Alberto Valle Vega) y se respondieron las preguntas claves sobre su entorno, emociones, comportamientos y necesidades.
 
 **1) Segmento 1: Especialista de Aseguramiento y Control de Calidad (QA/QC)**
@@ -428,7 +428,7 @@ Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y o
 
 En este mapa se analizó a María México, química farmacéutica encargada del área de aseguramiento y control de calidad en un laboratorio farmacéutico. Se identificó que piensa constantemente en la necesidad de automatizar procesos e informes para liberar la alta carga administrativa del departamento, preocupándose por el riesgo de errores humanos al momento de revisar registros manualmente. Escucha la exigencia de la gerencia para agilizar la entrega de documentación y de las autoridades de salud requerir trazabilidad inmediata. Observa el entorno cargado de expedientes físicos, tablas dispersas y la recurrencia de errores de llenado por parte del personal. María expresa la necesidad de reducir la carga operativa y actúa revisando minuciosamente cálculos a mano e investigando desviaciones operativas junto a su equipo. Su dolor principal es el tiempo invertido en revisiones manuales y la dificultad para recopilar evidencias en auditorías inopinadas, mientras que su ganancia esperada es disponer de generación automática de reportes, un expediente de lotes centralizado y tranquilidad en el cumplimiento normativo.
 
-**Segmento 2: Jefe o Supervisor de Producción Farmacéutica**
+**2) Segmento 2: Jefe o Supervisor de Producción Farmacéutica**
 
 ![EmpathyMap - Segmento 2](../assets/img/chapter2/interview/segmento2/user-empathymap2.png)
 
@@ -449,7 +449,7 @@ Antes de generar eventos se cumplieron los pasos 1 a 3 de la guía: se preparó 
 | Actor | Amarillo (pequeño) | Persona o rol que provoca o atiende el evento. |
 | External system | Azul | Sistema u organización externa que interviene (Niubiz, ThingsBoard, Lector RFID, DIGEMID). |
 | Problema u oportunidad (hotspot) | Rosado | Dificultad detectada en la situación actual. |
-| Pivotal event | Línea roja | Evento que cambia de fase el proceso. |
+| Pivotal event | Naranja (de mayor tamaño) | Evento que cambia de fase el proceso. |
 
 **Step 4 – Generating Domain Events**
 
@@ -457,7 +457,7 @@ Cada integrante escribió en post-its naranjas, sin orden y en tiempo pasado, lo
 
 Frame en Miro: https://miro.com/app/board/uXjVHl-67N8=/?moveToWidget=3458764685732289571
 
-![Step 4 - Generating Domain Events](../assets/img/chapter2/event-storming/step4-generating-domain-events.jpg)
+![Step 4 - Generating Domain Events](../assets/img/chapter2/big-picture/step4-generating-domain-events.jpg)
 
 **Step 5 – Sorting Domain Events**
 
@@ -465,7 +465,7 @@ Los eventos se ordenaron cronológicamente de izquierda a derecha. Los resultado
 
 Frame en Miro: https://miro.com/app/board/uXjVHl-67N8=/?moveToWidget=3458764685732347233
 
-![Step 5 - Sorting Domain Events](../assets/img/chapter2/event-storming/step5-sorting-domain-events.jpg)
+![Step 5 - Sorting Domain Events](../assets/img/chapter2/big-picture/step5-sorting-domain-events.jpg)
 
 **Step 6 – Adding Actors and External Systems**
 
@@ -473,11 +473,11 @@ Sobre la línea de tiempo se agregaron los actores que provocan cada grupo de ev
 
 Frame en Miro: https://miro.com/app/board/uXjVHl-67N8=/?moveToWidget=3458764685732347919
 
-![Step 6 - Adding Actors and External Systems](../assets/img/chapter2/event-storming/step6-actors-external-systems.jpg)
+![Step 6 - Adding Actors and External Systems](../assets/img/chapter2/big-picture/step6-actors-external-systems.jpg)
 
 **Step 7 – Storytelling**
 
-Un integrante narró la historia completa de inicio a fin mientras el resto validaba el orden y el significado de cada evento. Durante la narración se registraron en rosado los problemas que hoy enfrentan los laboratorios, tomados de las entrevistas, y se conectaron con flechas los eventos que disparan a otros (por ejemplo, "Parámetro fuera de rango detectado" dispara "Alerta generada", que genera una "Incidencia registrada").
+Un integrante narró la historia completa de inicio a fin mientras el resto validaba el orden y el significado de cada evento. Durante la narración se registraron en rosado los problemas que hoy enfrentan los laboratorios, tomados de las entrevistas, y se conectaron con flechas los eventos que disparan a otros (por ejemplo, "Parámetro fuera de rango detectado" dispara "Alerta generada", que genera una "Incidencia registrada"). Los pivotal events, destacados con un post-it de mayor tamaño, marcan los cambios de fase del lote: "Materia prima recibida", "Lote creado", "Lote cerrado", "Muestra de lote tomada", "Registro de lote revisado", "Lote liberado", "Auditoría iniciada" y "Auditoría cerrada".
 
 | Problema detectado | Evidencia en las entrevistas |
 | --- | --- |
@@ -492,7 +492,7 @@ Un integrante narró la historia completa de inicio a fin mientras el resto vali
 
 Frame en Miro: https://miro.com/app/board/uXjVHl-67N8=/?moveToWidget=3458764685732393843
 
-![Step 7 - Storytelling](../assets/img/chapter2/event-storming/step7-storytelling.jpg)
+![Step 7 - Storytelling](../assets/img/chapter2/big-picture/step7-storytelling.jpg)
 
 ## 2.5. Ubiquitous Language
 
