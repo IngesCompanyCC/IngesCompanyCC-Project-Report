@@ -1,0 +1,250 @@
+---
+title: "Class Diagram – Quality & Compliance Bounded Context"
+---
+classDiagram
+  direction LR
+  class QualityDocument {
+    <<Aggregate Root>>
+    +long Id
+    +string Code
+    +string Title
+    +DocumentType Type
+    +DocumentStatus Status
+    +ICollection~DocumentVersion~ Versions
+    +SubmitForReview() void
+    +Approve(long signatureId) void
+    +Reject(string reason) void
+    +PublishNewVersion(string fileUrl, string changeReason, long authorId) DocumentVersion
+  }
+  class DocumentVersion {
+    <<Entity>>
+    +long Id
+    +string VersionNumber
+    +string FileUrl
+    +string ChangeReason
+    +long AuthorId
+    +long ApprovalSignatureId
+  }
+  class MaterialApproval {
+    <<Aggregate Root>>
+    +long Id
+    +long RawMaterialLotId
+    +string SampleCode
+    +MaterialApprovalStatus Status
+    +long DecidedBy
+    +string Reason
+    +RegisterSample(string sampleCode) void
+    +Approve(long signatureId) void
+    +Reject(string reason) void
+  }
+  class BatchReview {
+    <<Aggregate Root>>
+    +long Id
+    +long BatchId
+    +ReviewStatus Status
+    +DateTime QuarantineStartedAt
+    +string SampleCode
+    +ICollection~EvidenceAttachment~ Evidences
+    +ReleaseCertificate Certificate
+    +RegisterSample(string sampleCode) void
+    +AttachEvidence(string fileUrl, string description) void
+    +Evaluate(ICollection~AnalyticalResult~ results, bool hasOpenDeviations) void
+    +Release(long signatureId) ReleaseCertificate
+    +Reject(string reason) void
+  }
+  class EvidenceAttachment {
+    <<Entity>>
+    +long Id
+    +string FileUrl
+    +string Description
+  }
+  class ReleaseCertificate {
+    <<Entity>>
+    +long Id
+    +string CertificateNumber
+    +ReleaseVerdict Verdict
+    +long SignatureId
+    +DateTime IssuedAt
+  }
+  class AnalyticalResult {
+    <<Aggregate Root>>
+    +long Id
+    +long BatchId
+    +string TestName
+    +decimal Value
+    +SpecificationRange Specification
+    +bool OutOfSpecification
+    +long AnalystId
+    +Calculate(IDictionary~string, decimal~ variables, string formula) void
+  }
+  class SpecificationRange {
+    <<Value Object>>
+    +decimal Min
+    +decimal Max
+    +string Unit
+    +Contains(decimal value) bool
+  }
+  class DocumentStatus {
+    <<enumeration>>
+    Draft
+    InReview
+    Approved
+    Obsolete
+  }
+  class MaterialApprovalStatus {
+    <<enumeration>>
+    Pending
+    Sampled
+    Approved
+    Rejected
+  }
+  class ReviewStatus {
+    <<enumeration>>
+    InQuarantine
+    UnderEvaluation
+    Released
+    Rejected
+  }
+  class IBatchReviewCommandService {
+    <<interface>>
+    +Handle(StartQuarantineCommand command) Task~BatchReview?~
+    +Handle(EvaluateBatchCommand command) Task~BatchReview?~
+    +Handle(ReleaseBatchCommand command) Task~ReleaseCertificate?~
+  }
+  class ExternalIamService {
+    +SignRecord(long userId, string password, string entityType, long entityId) long?
+  }
+  class ExternalManufacturingService {
+    +FetchBatchStatus(long batchId) string?
+  }
+  QualityDocument "1" *-- "1..*" DocumentVersion : versions
+  QualityDocument --> DocumentStatus : status
+  MaterialApproval --> MaterialApprovalStatus : status
+  BatchReview "1" *-- "0..*" EvidenceAttachment : evidences
+  BatchReview "1" *-- "0..1" ReleaseCertificate : issues
+  BatchReview ..> AnalyticalResult : evaluates
+  BatchReview --> ReviewStatus : status
+  AnalyticalResult *-- SpecificationRange : specification
+  IBatchReviewCommandService ..> ExternalIamService : uses
+  IBatchReviewCommandService ..> ExternalManufacturingService : uses
+  class Deviation {
+    <<Aggregate Root>>
+    +long Id
+    +string Code
+    +long BatchId
+    +Severity Severity
+    +DeviationStatus Status
+    +string Description
+    +RootCause RootCause
+    +ICollection~CapaAction~ Actions
+    +Classify(Severity severity) void
+    +StartInvestigation() void
+    +RegisterRootCause(RootCause rootCause) void
+    +AddCapaAction(CapaAction action) void
+    +Close() void
+  }
+  class CapaAction {
+    <<Entity>>
+    +long Id
+    +CapaType Type
+    +string Description
+    +long ResponsibleId
+    +DateOnly DueDate
+    +int Progress
+    +CapaStatus Status
+    +UpdateProgress(int progress) void
+    +Verify() void
+    +IsOverdue() bool
+  }
+  class RootCause {
+    <<Value Object>>
+    +string Method
+    +string Description
+  }
+  class Audit {
+    <<Aggregate Root>>
+    +long Id
+    +AuditType Type
+    +DateOnly ScheduledDate
+    +AuditStatus Status
+    +ICollection~AuditFinding~ Findings
+    +string EvidencePackageUrl
+    +Start() void
+    +RegisterFinding(FindingType type, string description) AuditFinding
+    +AttachEvidencePackage(string fileUrl) void
+    +Close() void
+  }
+  class AuditFinding {
+    <<Entity>>
+    +long Id
+    +FindingType Type
+    +string Description
+  }
+  class AuditTrailEntry {
+    <<Aggregate Root>>
+    +long Id
+    +string EntityType
+    +string EntityId
+    +AuditAction Action
+    +string OldValue
+    +string NewValue
+    +long ChangedBy
+    +DateTime ChangedAt
+    +string Reason
+  }
+  class RegulatoryReport {
+    <<Aggregate Root>>
+    +long Id
+    +YearMonth Period
+    +string FileUrl
+    +DateTime GeneratedAt
+  }
+  class Severity {
+    <<enumeration>>
+    Minor
+    Major
+    Critical
+  }
+  class DeviationStatus {
+    <<enumeration>>
+    Open
+    UnderInvestigation
+    Closed
+  }
+  class CapaStatus {
+    <<enumeration>>
+    Open
+    Implemented
+    Overdue
+    Verified
+  }
+  class FindingType {
+    <<enumeration>>
+    Finding
+    Observation
+  }
+  class IDeviationCommandService {
+    <<interface>>
+    +Handle(RegisterDeviationCommand command) Task~Deviation?~
+    +Handle(CloseDeviationCommand command) Task~Deviation?~
+  }
+  class IReportGenerationService {
+    <<interface>>
+    +GenerateAuditPackageAsync(long organizationId, DateOnly from, DateOnly to) Task~byte[]~
+    +GenerateMonthlyReportAsync(long organizationId, YearMonth period) Task~byte[]~
+  }
+  class INotificationService {
+    <<interface>>
+    +NotifyCriticalDeviation(Deviation deviation) void
+  }
+  Deviation "1" *-- "0..*" CapaAction : resolvedBy
+  Deviation *-- RootCause : rootCause
+  Deviation --> Severity : severity
+  Deviation --> DeviationStatus : status
+  CapaAction --> CapaStatus : status
+  Audit "1" *-- "0..*" AuditFinding : findings
+  AuditFinding --> FindingType : type
+  IDeviationCommandService ..> INotificationService : uses
+  IReportGenerationService ..> AuditTrailEntry : reads
+  IReportGenerationService ..> Audit : packages
+  IReportGenerationService ..> RegulatoryReport : creates
