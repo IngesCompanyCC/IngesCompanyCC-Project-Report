@@ -1210,10 +1210,10 @@ En el diagrama se observa que:
 
 El diseño orientado a objetos traduce los aggregates del Design-Level EventStorming a clases C# del RESTful API. Se aplicaron estas convenciones:
 
-- Cada aggregate root extiende `AuditableAbstractAggregateRoot`, que aporta el identificador `int Id` y las fechas `createdAt` y `updatedAt` (en los diagramas, `id` se muestra en cada aggregate y la clase base solo en IAM).
+- Cada aggregate root extiende `AuditableAbstractAggregateRoot`, que aporta el identificador `long Id` y las fechas `CreatedAt` y `UpdatedAt` (en los diagramas, `Id` se muestra en cada aggregate y la clase base solo en IAM).
 - Las entities internas de un aggregate se acceden solo a través de su raíz; los value objects (por ejemplo, `BatchNumber`, `Quantity`, `Money`, `Ruc`) se implementan como records inmutables de C#.
-- Los nombres siguen las convenciones de codificación de C# de Microsoft: clases en PascalCase, atributos y métodos en camelCase y constantes de enumeraciones en UPPER_SNAKE_CASE. Las propiedades usan getters y setters automáticos de C# y no se muestran.
-- Los cambios de estado se solicitan con commands (`CreateBatchCommand`, `CloseDeviationCommand`, etc.) atendidos por command services; las consultas usan query services. Los repositorios son interfaces implementadas con Entity Framework Core.
+- Los nombres siguen las convenciones de codificación de C# de Microsoft: clases, propiedades, métodos y valores de enumeraciones en PascalCase, parámetros en camelCase e interfaces con el prefijo `I` (por ejemplo, `IUserRepository`). Las propiedades se muestran con su tipo de C# (`long`, `string`, `bool`, `DateTime`, `DateOnly`, `decimal`, `ICollection<T>`) y tienen get público y set privado.
+- Los cambios de estado se solicitan con commands (`CreateBatchCommand`, `CloseDeviationCommand`, etc.) atendidos por command services; las consultas usan query services. Los repositorios y servicios de aplicación son interfaces asíncronas que devuelven `Task<T>`, implementadas con Entity Framework Core.
 - Las relaciones entre contextos se modelan por identificador (`batchId`, `userId`) y no por referencia directa, respetando los límites de cada bounded context.
 
 ### 4.7.1. Class Diagrams

@@ -1,0 +1,94 @@
+---
+title: "Class Diagram – Subscriptions & Payments Bounded Context"
+---
+classDiagram
+  direction LR
+  class Plan {
+    <<Aggregate Root>>
+    +long Id
+    +string Name
+    +Money MonthlyPrice
+    +Money AnnualPrice
+    +int IotDeviceLimit
+    +int UserLimit
+    +GetPrice(BillingCycle cycle) Money
+  }
+  class Subscription {
+    <<Aggregate Root>>
+    +long Id
+    +long OrganizationId
+    +long PlanId
+    +BillingCycle BillingCycle
+    +SubscriptionStatus Status
+    +DateOnly CurrentPeriodStart
+    +DateOnly CurrentPeriodEnd
+    +bool AutoRenew
+    +ICollection~Payment~ Payments
+    +Subscription(long organizationId, long planId, BillingCycle cycle)
+    +Activate(Payment payment) void
+    +Renew(Payment payment) void
+    +Cancel() void
+    +IsWithinDeviceLimit(int registeredDevices, Plan plan) bool
+  }
+  class Payment {
+    <<Entity>>
+    +long Id
+    +Money Amount
+    +string GatewayTransactionId
+    +PaymentStatus Status
+    +DateTime ProcessedAt
+    +Approve(string transactionId) void
+    +Reject(string reason) void
+  }
+  class Money {
+    <<Value Object>>
+    +decimal Amount
+    +string Currency
+  }
+  class BillingCycle {
+    <<enumeration>>
+    Monthly
+    Annual
+  }
+  class SubscriptionStatus {
+    <<enumeration>>
+    Pending
+    Active
+    Cancelled
+    Expired
+  }
+  class PaymentStatus {
+    <<enumeration>>
+    Pending
+    Approved
+    Rejected
+  }
+  class IPaymentGateway {
+    <<interface>>
+    +Authorize(Money amount, string cardToken) PaymentResult
+  }
+  class NiubizPaymentGateway {
+    +RestClient RestClient
+    +Authorize(Money amount, string cardToken) PaymentResult
+  }
+  class ISubscriptionRepository {
+    <<interface>>
+    +FindByOrganizationIdAndStatusAsync(long organizationId, SubscriptionStatus status) Task~Subscription?~
+  }
+  class ISubscriptionCommandService {
+    <<interface>>
+    +Handle(SelectPlanCommand command) Task~Subscription?~
+    +Handle(PaySubscriptionCommand command) Task~Subscription?~
+    +Handle(RenewSubscriptionCommand command) Task~Subscription?~
+    +Handle(CancelSubscriptionCommand command) Task~Subscription?~
+  }
+  Subscription "0..*" --> "1" Plan : subscribesTo
+  Subscription "1" *-- "0..*" Payment : records
+  Subscription --> BillingCycle : billingCycle
+  Subscription --> SubscriptionStatus : status
+  Payment --> PaymentStatus : status
+  Payment *-- Money : amount
+  Plan *-- Money : prices
+  NiubizPaymentGateway ..|> IPaymentGateway
+  ISubscriptionCommandService ..> IPaymentGateway : uses
+  ISubscriptionRepository ..> Subscription : persists

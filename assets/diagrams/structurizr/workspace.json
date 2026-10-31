@@ -1,0 +1,1538 @@
+{
+  "configuration": {},
+  "description": "C4 model of DoofPlus (IngesCompanyCC). Structurizr DSL source of the diagrams in section 4.6.",
+  "documentation": {},
+  "id": 0,
+  "lastModifiedDate": "2026-10-30T07:50:28Z",
+  "model": {
+    "people": [
+      {
+        "description": "Evaluates DoofPlus from the Landing Page and reviews its plans before registering the laboratory.",
+        "id": "1",
+        "name": "Laboratory Visitor",
+        "properties": {
+          "structurizr.dsl.identifier": "visitor"
+        },
+        "relationships": [
+          {
+            "description": "Learns about the value proposition and plans, and registers the laboratory",
+            "destinationId": "10",
+            "id": "30",
+            "sourceId": "1",
+            "tags": "Relationship",
+            "technology": "HTTPS"
+          },
+          {
+            "description": "Visits",
+            "destinationId": "11",
+            "id": "41",
+            "sourceId": "1",
+            "tags": "Relationship",
+            "technology": "HTTPS"
+          }
+        ],
+        "tags": "Element,Person"
+      },
+      {
+        "description": "Manages documents, raw material approvals, deviations, CAPA, audits and batch release.",
+        "id": "2",
+        "name": "QA/QC Specialist",
+        "properties": {
+          "structurizr.dsl.identifier": "qa"
+        },
+        "relationships": [
+          {
+            "description": "Manages quality and compliance",
+            "destinationId": "10",
+            "id": "31",
+            "sourceId": "2",
+            "tags": "Relationship",
+            "technology": "HTTPS"
+          },
+          {
+            "description": "Visits the DoofPlus web address",
+            "destinationId": "12",
+            "id": "43",
+            "sourceId": "2",
+            "tags": "Relationship",
+            "technology": "HTTPS"
+          },
+          {
+            "description": "Uses",
+            "destinationId": "13",
+            "id": "47",
+            "sourceId": "2",
+            "tags": "Relationship"
+          },
+          {
+            "description": "Uses",
+            "destinationId": "14",
+            "id": "57",
+            "sourceId": "2",
+            "tags": "Relationship"
+          }
+        ],
+        "tags": "Element,Person"
+      },
+      {
+        "description": "Manages orders and batches, monitors equipment and requests approvals from Quality.",
+        "id": "3",
+        "name": "Pharmaceutical Production Supervisor",
+        "properties": {
+          "structurizr.dsl.identifier": "prod"
+        },
+        "relationships": [
+          {
+            "description": "Manages production and monitors the plant",
+            "destinationId": "10",
+            "id": "32",
+            "sourceId": "3",
+            "tags": "Relationship",
+            "technology": "HTTPS"
+          },
+          {
+            "description": "Reads the tag of the received raw material",
+            "destinationId": "9",
+            "id": "40",
+            "sourceId": "3",
+            "tags": "Relationship"
+          },
+          {
+            "description": "Visits the DoofPlus web address",
+            "destinationId": "12",
+            "id": "44",
+            "sourceId": "3",
+            "tags": "Relationship",
+            "technology": "HTTPS"
+          },
+          {
+            "description": "Uses",
+            "destinationId": "13",
+            "id": "48",
+            "sourceId": "3",
+            "tags": "Relationship"
+          },
+          {
+            "description": "Uses",
+            "destinationId": "14",
+            "id": "58",
+            "sourceId": "3",
+            "tags": "Relationship"
+          }
+        ],
+        "tags": "Element,Person"
+      },
+      {
+        "description": "Registers the organization, users, roles, sensors and the subscription.",
+        "id": "4",
+        "name": "Laboratory Administrator",
+        "properties": {
+          "structurizr.dsl.identifier": "admin"
+        },
+        "relationships": [
+          {
+            "description": "Manages the organization, users and subscription",
+            "destinationId": "10",
+            "id": "33",
+            "sourceId": "4",
+            "tags": "Relationship",
+            "technology": "HTTPS"
+          },
+          {
+            "description": "Visits the DoofPlus web address",
+            "destinationId": "12",
+            "id": "45",
+            "sourceId": "4",
+            "tags": "Relationship",
+            "technology": "HTTPS"
+          },
+          {
+            "description": "Uses",
+            "destinationId": "13",
+            "id": "49",
+            "sourceId": "4",
+            "tags": "Relationship"
+          },
+          {
+            "description": "Uses",
+            "destinationId": "14",
+            "id": "59",
+            "sourceId": "4",
+            "tags": "Relationship"
+          }
+        ],
+        "tags": "Element,Person"
+      }
+    ],
+    "properties": {
+      "structurizr.groupSeparator": "/"
+    },
+    "softwareSystems": [
+      {
+        "description": "IoT platform that receives the plant sensor readings and forwards them.",
+        "documentation": {},
+        "id": "5",
+        "name": "ThingsBoard",
+        "properties": {
+          "structurizr.dsl.identifier": "tb"
+        },
+        "relationships": [
+          {
+            "description": "Sends sensor telemetry",
+            "destinationId": "10",
+            "id": "34",
+            "sourceId": "5",
+            "tags": "Relationship",
+            "technology": "Webhook REST/HTTPS, JSON"
+          },
+          {
+            "description": "Sends telemetry",
+            "destinationId": "21",
+            "id": "52",
+            "sourceId": "5",
+            "tags": "Relationship",
+            "technology": "Webhook JSON/HTTPS"
+          },
+          {
+            "description": "Sends telemetry",
+            "destinationId": "27",
+            "id": "79",
+            "sourceId": "5",
+            "tags": "Relationship",
+            "technology": "Webhook JSON/HTTPS"
+          }
+        ],
+        "tags": "Element,Software System,External"
+      },
+      {
+        "description": "Payment gateway that charges the subscriptions.",
+        "documentation": {},
+        "id": "6",
+        "name": "Niubiz",
+        "properties": {
+          "structurizr.dsl.identifier": "niubiz"
+        },
+        "tags": "Element,Software System,External"
+      },
+      {
+        "description": "Email service for invitations, alerts and notifications.",
+        "documentation": {},
+        "id": "7",
+        "name": "SendGrid",
+        "properties": {
+          "structurizr.dsl.identifier": "mail"
+        },
+        "tags": "Element,Software System,External"
+      },
+      {
+        "description": "User's mobile app (e.g., Google Authenticator) that generates the 2FA codes.",
+        "documentation": {},
+        "id": "8",
+        "name": "Authenticator App (TOTP)",
+        "properties": {
+          "structurizr.dsl.identifier": "ga"
+        },
+        "relationships": [
+          {
+            "description": "Shows the TOTP code (no API integration)",
+            "destinationId": "2",
+            "id": "37",
+            "sourceId": "8",
+            "tags": "Relationship,Optional"
+          },
+          {
+            "description": "Shows the TOTP code (no API integration)",
+            "destinationId": "3",
+            "id": "38",
+            "sourceId": "8",
+            "tags": "Relationship,Optional"
+          },
+          {
+            "description": "Shows the TOTP code (no API integration)",
+            "destinationId": "4",
+            "id": "39",
+            "sourceId": "8",
+            "tags": "Relationship,Optional"
+          }
+        ],
+        "tags": "Element,Software System,External"
+      },
+      {
+        "description": "Warehouse RFID tag reader; types the code it reads into the Single-Page Application as keyboard input (USB HID), without an API of its own.",
+        "documentation": {},
+        "id": "9",
+        "name": "RFID Reader",
+        "properties": {
+          "structurizr.dsl.identifier": "rfid"
+        },
+        "relationships": [
+          {
+            "description": "Types the raw material tag code",
+            "destinationId": "13",
+            "id": "55",
+            "sourceId": "9",
+            "tags": "Relationship",
+            "technology": "USB HID (keyboard emulation)"
+          },
+          {
+            "description": "Types the raw material tag code",
+            "destinationId": "10",
+            "id": "56",
+            "linkedRelationshipId": "55",
+            "sourceId": "9",
+            "technology": "USB HID (keyboard emulation)"
+          },
+          {
+            "description": "Types the raw material tag code",
+            "destinationId": "18",
+            "id": "72",
+            "sourceId": "9",
+            "tags": "Relationship",
+            "technology": "USB HID (keyboard emulation)"
+          }
+        ],
+        "tags": "Element,Software System,External"
+      },
+      {
+        "containers": [
+          {
+            "description": "Static website with the value proposition, plans, team and the call to action to the Web Application; en-US/es-419.",
+            "documentation": {},
+            "id": "11",
+            "name": "Landing Page",
+            "properties": {
+              "structurizr.dsl.identifier": "landing"
+            },
+            "relationships": [
+              {
+                "description": "Links to the sign-in of each environment and to the registration",
+                "destinationId": "12",
+                "id": "42",
+                "sourceId": "11",
+                "tags": "Relationship",
+                "technology": "HTTPS"
+              }
+            ],
+            "tags": "Element,Container",
+            "technology": "HTML5, CSS3, JavaScript (GitHub Pages)"
+          },
+          {
+            "description": "Delivers the static content and the DoofPlus single-page application (index.html and JavaScript bundles) to the user's web browser.",
+            "documentation": {},
+            "id": "12",
+            "name": "Web Application",
+            "properties": {
+              "structurizr.dsl.identifier": "webapp"
+            },
+            "relationships": [
+              {
+                "description": "Delivers to the user's web browser",
+                "destinationId": "13",
+                "id": "46",
+                "sourceId": "12",
+                "tags": "Relationship"
+              }
+            ],
+            "tags": "Element,Container",
+            "technology": "Firebase Hosting"
+          },
+          {
+            "components": [
+              {
+                "description": "Workspace shell (layout, toolbar, sidebar, footer and language switcher), routes per environment and the base REST client reused by every bounded context.",
+                "documentation": {},
+                "id": "14",
+                "name": "Shared",
+                "properties": {
+                  "structurizr.dsl.identifier": "spa_shared"
+                },
+                "relationships": [
+                  {
+                    "description": "Loads",
+                    "destinationId": "15",
+                    "id": "60",
+                    "sourceId": "14",
+                    "tags": "Relationship"
+                  },
+                  {
+                    "description": "Loads",
+                    "destinationId": "16",
+                    "id": "61",
+                    "sourceId": "14",
+                    "tags": "Relationship"
+                  },
+                  {
+                    "description": "Loads",
+                    "destinationId": "17",
+                    "id": "62",
+                    "sourceId": "14",
+                    "tags": "Relationship"
+                  },
+                  {
+                    "description": "Loads",
+                    "destinationId": "18",
+                    "id": "63",
+                    "sourceId": "14",
+                    "tags": "Relationship"
+                  },
+                  {
+                    "description": "Loads",
+                    "destinationId": "19",
+                    "id": "64",
+                    "sourceId": "14",
+                    "tags": "Relationship"
+                  },
+                  {
+                    "description": "Loads",
+                    "destinationId": "20",
+                    "id": "65",
+                    "sourceId": "14",
+                    "tags": "Relationship"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "Vue module"
+              },
+              {
+                "description": "Environment selection, sign-in with 2FA, session, users, invitations and route protection by role.",
+                "documentation": {},
+                "id": "15",
+                "name": "Identity & Access Management",
+                "properties": {
+                  "structurizr.dsl.identifier": "spa_iam"
+                },
+                "relationships": [
+                  {
+                    "description": "Makes API calls to",
+                    "destinationId": "21",
+                    "id": "66",
+                    "sourceId": "15",
+                    "tags": "Relationship",
+                    "technology": "JSON/HTTPS"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "Vue module"
+              },
+              {
+                "description": "Organization registration, facilities, administration overview, contact inquiries and profile preferences.",
+                "documentation": {},
+                "id": "16",
+                "name": "Organizations & Profiles",
+                "properties": {
+                  "structurizr.dsl.identifier": "spa_org"
+                },
+                "relationships": [
+                  {
+                    "description": "Makes API calls to",
+                    "destinationId": "21",
+                    "id": "67",
+                    "sourceId": "16",
+                    "tags": "Relationship",
+                    "technology": "JSON/HTTPS"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "Vue module"
+              },
+              {
+                "description": "Plans, payment method, current subscription and invoice history.",
+                "documentation": {},
+                "id": "17",
+                "name": "Subscriptions & Payments",
+                "properties": {
+                  "structurizr.dsl.identifier": "spa_sub"
+                },
+                "relationships": [
+                  {
+                    "description": "Makes API calls to",
+                    "destinationId": "21",
+                    "id": "68",
+                    "sourceId": "17",
+                    "tags": "Relationship",
+                    "technology": "JSON/HTTPS"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "Vue module"
+              },
+              {
+                "description": "Production overview, orders, products and formulas, batches and raw material receipt.",
+                "documentation": {},
+                "id": "18",
+                "name": "Manufacturing & Batch Management",
+                "properties": {
+                  "structurizr.dsl.identifier": "spa_mfg"
+                },
+                "relationships": [
+                  {
+                    "description": "Makes API calls to",
+                    "destinationId": "21",
+                    "id": "69",
+                    "sourceId": "18",
+                    "tags": "Relationship",
+                    "technology": "JSON/HTTPS"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "Vue module"
+              },
+              {
+                "description": "IoT overview, equipment and sensors, readings, alerts and batch IoT evidence.",
+                "documentation": {},
+                "id": "19",
+                "name": "IoT Monitoring",
+                "properties": {
+                  "structurizr.dsl.identifier": "spa_iot"
+                },
+                "relationships": [
+                  {
+                    "description": "Makes API calls to",
+                    "destinationId": "21",
+                    "id": "70",
+                    "sourceId": "19",
+                    "tags": "Relationship",
+                    "technology": "JSON/HTTPS"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "Vue module"
+              },
+              {
+                "description": "Documents, deviations, CAPA, batch release, analytical results, audits, audit trail and regulatory reports.",
+                "documentation": {},
+                "id": "20",
+                "name": "Quality & Compliance",
+                "properties": {
+                  "structurizr.dsl.identifier": "spa_qa"
+                },
+                "relationships": [
+                  {
+                    "description": "Makes API calls to",
+                    "destinationId": "21",
+                    "id": "71",
+                    "sourceId": "20",
+                    "tags": "Relationship",
+                    "technology": "JSON/HTTPS"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "Vue module"
+              }
+            ],
+            "description": "Runs in the user's web browser and provides all the DoofPlus features, one module per bounded context.",
+            "documentation": {},
+            "id": "13",
+            "name": "Single-Page Application",
+            "properties": {
+              "structurizr.dsl.identifier": "spa"
+            },
+            "relationships": [
+              {
+                "description": "Makes API calls to and receives real-time alerts from",
+                "destinationId": "21",
+                "id": "50",
+                "sourceId": "13",
+                "tags": "Relationship",
+                "technology": "JSON/HTTPS with Bearer JWT, WebSocket (SignalR)"
+              },
+              {
+                "description": "Makes API calls to",
+                "destinationId": "23",
+                "id": "73",
+                "sourceId": "13",
+                "tags": "Relationship",
+                "technology": "JSON/HTTPS"
+              },
+              {
+                "description": "Makes API calls to",
+                "destinationId": "24",
+                "id": "74",
+                "sourceId": "13",
+                "tags": "Relationship",
+                "technology": "JSON/HTTPS"
+              },
+              {
+                "description": "Makes API calls to",
+                "destinationId": "25",
+                "id": "75",
+                "sourceId": "13",
+                "tags": "Relationship",
+                "technology": "JSON/HTTPS"
+              },
+              {
+                "description": "Makes API calls to",
+                "destinationId": "26",
+                "id": "76",
+                "sourceId": "13",
+                "tags": "Relationship",
+                "technology": "JSON/HTTPS"
+              },
+              {
+                "description": "Makes API calls to and receives alerts from",
+                "destinationId": "27",
+                "id": "77",
+                "sourceId": "13",
+                "tags": "Relationship",
+                "technology": "JSON/HTTPS, WebSocket (SignalR)"
+              },
+              {
+                "description": "Makes API calls to",
+                "destinationId": "28",
+                "id": "78",
+                "sourceId": "13",
+                "tags": "Relationship",
+                "technology": "JSON/HTTPS"
+              }
+            ],
+            "tags": "Element,Container,Web Browser",
+            "technology": "Vue 3, Vite, PrimeVue, Pinia, JavaScript"
+          },
+          {
+            "components": [
+              {
+                "description": "Base auditable aggregate, snake_case naming convention for Entity Framework Core, Result type and common configuration reused by every bounded context.",
+                "documentation": {},
+                "id": "22",
+                "name": "Shared",
+                "properties": {
+                  "structurizr.dsl.identifier": "api_shared"
+                },
+                "tags": "Element,Component",
+                "technology": "ASP.NET Core namespace"
+              },
+              {
+                "description": "Sign-up, sign-in with JWT and TOTP, users, roles, account locking and electronic signatures.",
+                "documentation": {},
+                "id": "23",
+                "name": "Identity & Access Management",
+                "properties": {
+                  "structurizr.dsl.identifier": "api_iam"
+                },
+                "relationships": [
+                  {
+                    "description": "Sends invitations through",
+                    "destinationId": "7",
+                    "id": "87",
+                    "sourceId": "23",
+                    "tags": "Relationship",
+                    "technology": "REST/HTTPS"
+                  },
+                  {
+                    "description": "Persists data in",
+                    "destinationId": "29",
+                    "id": "91",
+                    "sourceId": "23",
+                    "tags": "Relationship",
+                    "technology": "Entity Framework Core"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "ASP.NET Core namespace"
+              },
+              {
+                "description": "Organizations (unique RUC), facilities, profiles and contact inquiries.",
+                "documentation": {},
+                "id": "24",
+                "name": "Organizations & Profiles",
+                "properties": {
+                  "structurizr.dsl.identifier": "api_org"
+                },
+                "relationships": [
+                  {
+                    "description": "Creates the administrator through",
+                    "destinationId": "23",
+                    "id": "80",
+                    "sourceId": "24",
+                    "tags": "Relationship",
+                    "technology": "IamContextFacade"
+                  },
+                  {
+                    "description": "Notifies contact inquiries through",
+                    "destinationId": "7",
+                    "id": "88",
+                    "sourceId": "24",
+                    "tags": "Relationship",
+                    "technology": "REST/HTTPS"
+                  },
+                  {
+                    "description": "Persists data in",
+                    "destinationId": "29",
+                    "id": "92",
+                    "sourceId": "24",
+                    "tags": "Relationship",
+                    "technology": "Entity Framework Core"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "ASP.NET Core namespace"
+              },
+              {
+                "description": "Plans, subscriptions, payments, renewals and cancellations.",
+                "documentation": {},
+                "id": "25",
+                "name": "Subscriptions & Payments",
+                "properties": {
+                  "structurizr.dsl.identifier": "api_sub"
+                },
+                "relationships": [
+                  {
+                    "description": "Authorizes charges with",
+                    "destinationId": "6",
+                    "id": "90",
+                    "sourceId": "25",
+                    "tags": "Relationship",
+                    "technology": "REST/HTTPS"
+                  },
+                  {
+                    "description": "Persists data in",
+                    "destinationId": "29",
+                    "id": "93",
+                    "sourceId": "25",
+                    "tags": "Relationship",
+                    "technology": "Entity Framework Core"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "ASP.NET Core namespace"
+              },
+              {
+                "description": "Products, master formulas, raw material lots, production orders, batches and incidents.",
+                "documentation": {},
+                "id": "26",
+                "name": "Manufacturing & Batch Management",
+                "properties": {
+                  "structurizr.dsl.identifier": "api_mfg"
+                },
+                "relationships": [
+                  {
+                    "description": "Requests material approval and batch quarantine from",
+                    "destinationId": "28",
+                    "id": "82",
+                    "sourceId": "26",
+                    "tags": "Relationship",
+                    "technology": "QualityContextFacade"
+                  },
+                  {
+                    "description": "Assigns sensors to batches through",
+                    "destinationId": "27",
+                    "id": "84",
+                    "sourceId": "26",
+                    "tags": "Relationship",
+                    "technology": "IotMonitoringContextFacade"
+                  },
+                  {
+                    "description": "Persists data in",
+                    "destinationId": "29",
+                    "id": "94",
+                    "sourceId": "26",
+                    "tags": "Relationship",
+                    "technology": "Entity Framework Core"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "ASP.NET Core namespace"
+              },
+              {
+                "description": "Equipment, calibrations, IoT devices, telemetry readings and alerts.",
+                "documentation": {},
+                "id": "27",
+                "name": "IoT Monitoring",
+                "properties": {
+                  "structurizr.dsl.identifier": "api_iot"
+                },
+                "relationships": [
+                  {
+                    "description": "Checks the batch in progress through",
+                    "destinationId": "26",
+                    "id": "85",
+                    "sourceId": "27",
+                    "tags": "Relationship",
+                    "technology": "ManufacturingContextFacade"
+                  },
+                  {
+                    "description": "Checks the plan device limit through",
+                    "destinationId": "25",
+                    "id": "86",
+                    "sourceId": "27",
+                    "tags": "Relationship",
+                    "technology": "SubscriptionsContextFacade"
+                  },
+                  {
+                    "description": "Sends alerts through",
+                    "destinationId": "7",
+                    "id": "89",
+                    "sourceId": "27",
+                    "tags": "Relationship",
+                    "technology": "REST/HTTPS"
+                  },
+                  {
+                    "description": "Persists data in",
+                    "destinationId": "29",
+                    "id": "95",
+                    "sourceId": "27",
+                    "tags": "Relationship",
+                    "technology": "Entity Framework Core"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "ASP.NET Core namespace"
+              },
+              {
+                "description": "Quality documents, raw material approval, batch review and release, deviations, CAPA, audits, audit trail and regulatory reports.",
+                "documentation": {},
+                "id": "28",
+                "name": "Quality & Compliance",
+                "properties": {
+                  "structurizr.dsl.identifier": "api_qa"
+                },
+                "relationships": [
+                  {
+                    "description": "Requests electronic signatures from",
+                    "destinationId": "23",
+                    "id": "81",
+                    "sourceId": "28",
+                    "tags": "Relationship",
+                    "technology": "IamContextFacade"
+                  },
+                  {
+                    "description": "Publishes release and approval verdicts to",
+                    "destinationId": "26",
+                    "id": "83",
+                    "sourceId": "28",
+                    "tags": "Relationship",
+                    "technology": "Domain events"
+                  },
+                  {
+                    "description": "Persists data in",
+                    "destinationId": "29",
+                    "id": "96",
+                    "sourceId": "28",
+                    "tags": "Relationship",
+                    "technology": "Entity Framework Core"
+                  }
+                ],
+                "tags": "Element,Component",
+                "technology": "ASP.NET Core namespace"
+              }
+            ],
+            "description": "Modular monolith with the six bounded contexts; ASP.NET Core Identity (JWT + TOTP), OpenAPI (Swashbuckle) and real-time notifications (SignalR).",
+            "documentation": {},
+            "id": "21",
+            "name": "RESTful API",
+            "properties": {
+              "structurizr.dsl.identifier": "api"
+            },
+            "relationships": [
+              {
+                "description": "Reads from and writes to",
+                "destinationId": "29",
+                "id": "51",
+                "sourceId": "21",
+                "tags": "Relationship",
+                "technology": "Entity Framework Core (MySQL provider)"
+              },
+              {
+                "description": "Authorizes charges",
+                "destinationId": "6",
+                "id": "53",
+                "sourceId": "21",
+                "tags": "Relationship",
+                "technology": "REST JSON/HTTPS"
+              },
+              {
+                "description": "Sends emails",
+                "destinationId": "7",
+                "id": "54",
+                "sourceId": "21",
+                "tags": "Relationship",
+                "technology": "REST JSON/HTTPS"
+              }
+            ],
+            "tags": "Element,Container",
+            "technology": "ASP.NET Core, C#, Entity Framework Core (Render)"
+          },
+          {
+            "description": "Tables grouped by bounded context.",
+            "documentation": {},
+            "id": "29",
+            "name": "Database",
+            "properties": {
+              "structurizr.dsl.identifier": "db"
+            },
+            "tags": "Element,Container,Database",
+            "technology": "MySQL 8 (Railway)"
+          }
+        ],
+        "description": "SaaS platform for quality management and batch traceability in pharmaceutical laboratories.",
+        "documentation": {},
+        "id": "10",
+        "name": "DoofPlus",
+        "properties": {
+          "structurizr.dsl.identifier": "doofplus"
+        },
+        "relationships": [
+          {
+            "description": "Authorizes subscription charges",
+            "destinationId": "6",
+            "id": "35",
+            "sourceId": "10",
+            "tags": "Relationship",
+            "technology": "REST/HTTPS, JSON"
+          },
+          {
+            "description": "Sends emails",
+            "destinationId": "7",
+            "id": "36",
+            "sourceId": "10",
+            "tags": "Relationship",
+            "technology": "REST/HTTPS, JSON"
+          }
+        ],
+        "tags": "Element,Software System"
+      }
+    ]
+  },
+  "name": "DoofPlus",
+  "properties": {
+    "structurizr.dsl": "d29ya3NwYWNlICJEb29mUGx1cyIgIkM0IG1vZGVsIG9mIERvb2ZQbHVzIChJbmdlc0NvbXBhbnkpLiBTdHJ1Y3R1cml6ciBEU0wgc291cmNlIG9mIHRoZSBkaWFncmFtcyBpbiBzZWN0aW9uIDQuNi4iIHsNCg0KICAgIG1vZGVsIHsNCiAgICAgICAgcHJvcGVydGllcyB7DQogICAgICAgICAgICAic3RydWN0dXJpenIuZ3JvdXBTZXBhcmF0b3IiICIvIg0KICAgICAgICB9DQoNCiAgICAgICAgdmlzaXRvciA9IHBlcnNvbiAiTGFib3JhdG9yeSBWaXNpdG9yIiAiRXZhbHVhdGVzIERvb2ZQbHVzIGZyb20gdGhlIExhbmRpbmcgUGFnZSBhbmQgcmV2aWV3cyBpdHMgcGxhbnMgYmVmb3JlIHJlZ2lzdGVyaW5nIHRoZSBsYWJvcmF0b3J5LiINCiAgICAgICAgcWEgPSBwZXJzb24gIlFBL1FDIFNwZWNpYWxpc3QiICJNYW5hZ2VzIGRvY3VtZW50cywgcmF3IG1hdGVyaWFsIGFwcHJvdmFscywgZGV2aWF0aW9ucywgQ0FQQSwgYXVkaXRzIGFuZCBiYXRjaCByZWxlYXNlLiINCiAgICAgICAgcHJvZCA9IHBlcnNvbiAiUGhhcm1hY2V1dGljYWwgUHJvZHVjdGlvbiBTdXBlcnZpc29yIiAiTWFuYWdlcyBvcmRlcnMgYW5kIGJhdGNoZXMsIG1vbml0b3JzIGVxdWlwbWVudCBhbmQgcmVxdWVzdHMgYXBwcm92YWxzIGZyb20gUXVhbGl0eS4iDQogICAgICAgIGFkbWluID0gcGVyc29uICJMYWJvcmF0b3J5IEFkbWluaXN0cmF0b3IiICJSZWdpc3RlcnMgdGhlIG9yZ2FuaXphdGlvbiwgdXNlcnMsIHJvbGVzLCBzZW5zb3JzIGFuZCB0aGUgc3Vic2NyaXB0aW9uLiINCiAgICAgICAgdGIgPSBzb2Z0d2FyZVN5c3RlbSAiVGhpbmdzQm9hcmQiICJJb1QgcGxhdGZvcm0gdGhhdCByZWNlaXZlcyB0aGUgcGxhbnQgc2Vuc29yIHJlYWRpbmdzIGFuZCBmb3J3YXJkcyB0aGVtLiIgIkV4dGVybmFsIg0KICAgICAgICBuaXViaXogPSBzb2Z0d2FyZVN5c3RlbSAiTml1Yml6IiAiUGF5bWVudCBnYXRld2F5IHRoYXQgY2hhcmdlcyB0aGUgc3Vic2NyaXB0aW9ucy4iICJFeHRlcm5hbCINCiAgICAgICAgbWFpbCA9IHNvZnR3YXJlU3lzdGVtICJTZW5kR3JpZCIgIkVtYWlsIHNlcnZpY2UgZm9yIGludml0YXRpb25zLCBhbGVydHMgYW5kIG5vdGlmaWNhdGlvbnMuIiAiRXh0ZXJuYWwiDQogICAgICAgIGdhID0gc29mdHdhcmVTeXN0ZW0gIkF1dGhlbnRpY2F0b3IgQXBwIChUT1RQKSIgIlVzZXIncyBtb2JpbGUgYXBwIChlLmcuLCBHb29nbGUgQXV0aGVudGljYXRvcikgdGhhdCBnZW5lcmF0ZXMgdGhlIDJGQSBjb2Rlcy4iICJFeHRlcm5hbCINCiAgICAgICAgcmZpZCA9IHNvZnR3YXJlU3lzdGVtICJSRklEIFJlYWRlciIgIldhcmVob3VzZSBSRklEIHRhZyByZWFkZXI7IHR5cGVzIHRoZSBjb2RlIGl0IHJlYWRzIGludG8gdGhlIFNpbmdsZS1QYWdlIEFwcGxpY2F0aW9uIGFzIGtleWJvYXJkIGlucHV0IChVU0IgSElEKSwgd2l0aG91dCBhbiBBUEkgb2YgaXRzIG93bi4iICJFeHRlcm5hbCINCg0KICAgICAgICBkb29mcGx1cyA9IHNvZnR3YXJlU3lzdGVtICJEb29mUGx1cyIgIlNhYVMgcGxhdGZvcm0gZm9yIHF1YWxpdHkgbWFuYWdlbWVudCBhbmQgYmF0Y2ggdHJhY2VhYmlsaXR5IGluIHBoYXJtYWNldXRpY2FsIGxhYm9yYXRvcmllcy4iIHsNCiAgICAgICAgICAgIGxhbmRpbmcgPSBjb250YWluZXIgIkxhbmRpbmcgUGFnZSIgIlN0YXRpYyB3ZWJzaXRlIHdpdGggdGhlIHZhbHVlIHByb3Bvc2l0aW9uLCBwbGFucywgdGVhbSBhbmQgdGhlIGNhbGwgdG8gYWN0aW9uIHRvIHRoZSBXZWIgQXBwbGljYXRpb247IGVuLVVTL2VzLTQxOS4iICJIVE1MNSwgQ1NTMywgSmF2YVNjcmlwdCAoR2l0SHViIFBhZ2VzKSINCiAgICAgICAgICAgIHdlYmFwcCA9IGNvbnRhaW5lciAiV2ViIEFwcGxpY2F0aW9uIiAiRGVsaXZlcnMgdGhlIHN0YXRpYyBjb250ZW50IGFuZCB0aGUgRG9vZlBsdXMgc2luZ2xlLXBhZ2UgYXBwbGljYXRpb24gKGluZGV4Lmh0bWwgYW5kIEphdmFTY3JpcHQgYnVuZGxlcykgdG8gdGhlIHVzZXIncyB3ZWIgYnJvd3Nlci4iICJGaXJlYmFzZSBIb3N0aW5nIg0KICAgICAgICAgICAgc3BhID0gY29udGFpbmVyICJTaW5nbGUtUGFnZSBBcHBsaWNhdGlvbiIgIlJ1bnMgaW4gdGhlIHVzZXIncyB3ZWIgYnJvd3NlciBhbmQgcHJvdmlkZXMgYWxsIHRoZSBEb29mUGx1cyBmZWF0dXJlcywgb25lIG1vZHVsZSBwZXIgYm91bmRlZCBjb250ZXh0LiIgIkFuZ3VsYXIsIEFuZ3VsYXIgTWF0ZXJpYWwsIFR5cGVTY3JpcHQiICJXZWIgQnJvd3NlciIgew0KICAgICAgICAgICAgICAgIHNwYV9zaGFyZWQgPSBjb21wb25lbnQgIlNoYXJlZCIgIldvcmtzcGFjZSBzaGVsbCAobGF5b3V0LCB0b29sYmFyLCBzaWRlYmFyLCBmb290ZXIgYW5kIGxhbmd1YWdlIHN3aXRjaGVyKSwgcm91dGVzIHBlciBlbnZpcm9ubWVudCBhbmQgdGhlIGJhc2UgUkVTVCBjbGllbnQgcmV1c2VkIGJ5IGV2ZXJ5IGJvdW5kZWQgY29udGV4dC4iICJBbmd1bGFyIG1vZHVsZSINCiAgICAgICAgICAgICAgICBzcGFfaWFtID0gY29tcG9uZW50ICJJZGVudGl0eSAmIEFjY2VzcyBNYW5hZ2VtZW50IiAiRW52aXJvbm1lbnQgc2VsZWN0aW9uLCBzaWduLWluIHdpdGggMkZBLCBzZXNzaW9uLCB1c2VycywgaW52aXRhdGlvbnMgYW5kIHJvdXRlIHByb3RlY3Rpb24gYnkgcm9sZS4iICJBbmd1bGFyIG1vZHVsZSINCiAgICAgICAgICAgICAgICBzcGFfb3JnID0gY29tcG9uZW50ICJPcmdhbml6YXRpb25zICYgUHJvZmlsZXMiICJPcmdhbml6YXRpb24gcmVnaXN0cmF0aW9uLCBmYWNpbGl0aWVzLCBhZG1pbmlzdHJhdGlvbiBvdmVydmlldywgY29udGFjdCBpbnF1aXJpZXMgYW5kIHByb2ZpbGUgcHJlZmVyZW5jZXMuIiAiQW5ndWxhciBtb2R1bGUiDQogICAgICAgICAgICAgICAgc3BhX3N1YiA9IGNvbXBvbmVudCAiU3Vic2NyaXB0aW9ucyAmIFBheW1lbnRzIiAiUGxhbnMsIHBheW1lbnQgbWV0aG9kLCBjdXJyZW50IHN1YnNjcmlwdGlvbiBhbmQgaW52b2ljZSBoaXN0b3J5LiIgIkFuZ3VsYXIgbW9kdWxlIg0KICAgICAgICAgICAgICAgIHNwYV9tZmcgPSBjb21wb25lbnQgIk1hbnVmYWN0dXJpbmcgJiBCYXRjaCBNYW5hZ2VtZW50IiAiUHJvZHVjdGlvbiBvdmVydmlldywgb3JkZXJzLCBwcm9kdWN0cyBhbmQgZm9ybXVsYXMsIGJhdGNoZXMgYW5kIHJhdyBtYXRlcmlhbCByZWNlaXB0LiIgIkFuZ3VsYXIgbW9kdWxlIg0KICAgICAgICAgICAgICAgIHNwYV9pb3QgPSBjb21wb25lbnQgIklvVCBNb25pdG9yaW5nIiAiSW9UIG92ZXJ2aWV3LCBlcXVpcG1lbnQgYW5kIHNlbnNvcnMsIHJlYWRpbmdzLCBhbGVydHMgYW5kIGJhdGNoIElvVCBldmlkZW5jZS4iICJBbmd1bGFyIG1vZHVsZSINCiAgICAgICAgICAgICAgICBzcGFfcWEgPSBjb21wb25lbnQgIlF1YWxpdHkgJiBDb21wbGlhbmNlIiAiRG9jdW1lbnRzLCBkZXZpYXRpb25zLCBDQVBBLCBiYXRjaCByZWxlYXNlLCBhbmFseXRpY2FsIHJlc3VsdHMsIGF1ZGl0cywgYXVkaXQgdHJhaWwgYW5kIHJlZ3VsYXRvcnkgcmVwb3J0cy4iICJBbmd1bGFyIG1vZHVsZSINCiAgICAgICAgICAgIH0NCg0KICAgICAgICAgICAgYXBpID0gY29udGFpbmVyICJSRVNUZnVsIEFQSSIgIk1vZHVsYXIgbW9ub2xpdGggd2l0aCB0aGUgc2l4IGJvdW5kZWQgY29udGV4dHM7IFNwcmluZyBTZWN1cml0eSAoSldUICsgVE9UUCksIE9wZW5BUEkgKHNwcmluZ2RvYykgYW5kIFdlYlNvY2tldCBub3RpZmljYXRpb25zIChTVE9NUCkuIiAiU3ByaW5nIEJvb3QsIEphdmEsIFNwcmluZyBEYXRhIEpQQSAoUmVuZGVyKSIgew0KICAgICAgICAgICAgICAgIGFwaV9zaGFyZWQgPSBjb21wb25lbnQgIlNoYXJlZCIgIkJhc2UgYXVkaXRhYmxlIGFnZ3JlZ2F0ZSwgc25ha2UgY2FzZSBuYW1pbmcgc3RyYXRlZ3ksIFJlc3VsdCB0eXBlIGFuZCBjb21tb24gY29uZmlndXJhdGlvbiByZXVzZWQgYnkgZXZlcnkgYm91bmRlZCBjb250ZXh0LiIgIlNwcmluZyBCb290IHBhY2thZ2UiDQogICAgICAgICAgICAgICAgYXBpX2lhbSA9IGNvbXBvbmVudCAiSWRlbnRpdHkgJiBBY2Nlc3MgTWFuYWdlbWVudCIgIlNpZ24tdXAsIHNpZ24taW4gd2l0aCBKV1QgYW5kIFRPVFAsIHVzZXJzLCByb2xlcywgYWNjb3VudCBsb2NraW5nIGFuZCBlbGVjdHJvbmljIHNpZ25hdHVyZXMuIiAiU3ByaW5nIEJvb3QgcGFja2FnZSINCiAgICAgICAgICAgICAgICBhcGlfb3JnID0gY29tcG9uZW50ICJPcmdhbml6YXRpb25zICYgUHJvZmlsZXMiICJPcmdhbml6YXRpb25zICh1bmlxdWUgUlVDKSwgZmFjaWxpdGllcywgcHJvZmlsZXMgYW5kIGNvbnRhY3QgaW5xdWlyaWVzLiIgIlNwcmluZyBCb290IHBhY2thZ2UiDQogICAgICAgICAgICAgICAgYXBpX3N1YiA9IGNvbXBvbmVudCAiU3Vic2NyaXB0aW9ucyAmIFBheW1lbnRzIiAiUGxhbnMsIHN1YnNjcmlwdGlvbnMsIHBheW1lbnRzLCByZW5ld2FscyBhbmQgY2FuY2VsbGF0aW9ucy4iICJTcHJpbmcgQm9vdCBwYWNrYWdlIg0KICAgICAgICAgICAgICAgIGFwaV9tZmcgPSBjb21wb25lbnQgIk1hbnVmYWN0dXJpbmcgJiBCYXRjaCBNYW5hZ2VtZW50IiAiUHJvZHVjdHMsIG1hc3RlciBmb3JtdWxhcywgcmF3IG1hdGVyaWFsIGxvdHMsIHByb2R1Y3Rpb24gb3JkZXJzLCBiYXRjaGVzIGFuZCBpbmNpZGVudHMuIiAiU3ByaW5nIEJvb3QgcGFja2FnZSINCiAgICAgICAgICAgICAgICBhcGlfaW90ID0gY29tcG9uZW50ICJJb1QgTW9uaXRvcmluZyIgIkVxdWlwbWVudCwgY2FsaWJyYXRpb25zLCBJb1QgZGV2aWNlcywgdGVsZW1ldHJ5IHJlYWRpbmdzIGFuZCBhbGVydHMuIiAiU3ByaW5nIEJvb3QgcGFja2FnZSINCiAgICAgICAgICAgICAgICBhcGlfcWEgPSBjb21wb25lbnQgIlF1YWxpdHkgJiBDb21wbGlhbmNlIiAiUXVhbGl0eSBkb2N1bWVudHMsIHJhdyBtYXRlcmlhbCBhcHByb3ZhbCwgYmF0Y2ggcmV2aWV3IGFuZCByZWxlYXNlLCBkZXZpYXRpb25zLCBDQVBBLCBhdWRpdHMsIGF1ZGl0IHRyYWlsIGFuZCByZWd1bGF0b3J5IHJlcG9ydHMuIiAiU3ByaW5nIEJvb3QgcGFja2FnZSINCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGRiID0gY29udGFpbmVyICJEYXRhYmFzZSIgIlRhYmxlcyBncm91cGVkIGJ5IGJvdW5kZWQgY29udGV4dC4iICJNeVNRTCA4IChSYWlsd2F5KSIgIkRhdGFiYXNlIg0KICAgICAgICB9DQoNCiAgICAgICAgIyBTeXN0ZW0gY29udGV4dA0KICAgICAgICB2aXNpdG9yIC0+IGRvb2ZwbHVzICJMZWFybnMgYWJvdXQgdGhlIHZhbHVlIHByb3Bvc2l0aW9uIGFuZCBwbGFucywgYW5kIHJlZ2lzdGVycyB0aGUgbGFib3JhdG9yeSIgIkhUVFBTIg0KICAgICAgICBxYSAtPiBkb29mcGx1cyAiTWFuYWdlcyBxdWFsaXR5IGFuZCBjb21wbGlhbmNlIiAiSFRUUFMiDQogICAgICAgIHByb2QgLT4gZG9vZnBsdXMgIk1hbmFnZXMgcHJvZHVjdGlvbiBhbmQgbW9uaXRvcnMgdGhlIHBsYW50IiAiSFRUUFMiDQogICAgICAgIGFkbWluIC0+IGRvb2ZwbHVzICJNYW5hZ2VzIHRoZSBvcmdhbml6YXRpb24sIHVzZXJzIGFuZCBzdWJzY3JpcHRpb24iICJIVFRQUyINCiAgICAgICAgdGIgLT4gZG9vZnBsdXMgIlNlbmRzIHNlbnNvciB0ZWxlbWV0cnkiICJXZWJob29rIFJFU1QvSFRUUFMsIEpTT04iDQogICAgICAgIGRvb2ZwbHVzIC0+IG5pdWJpeiAiQXV0aG9yaXplcyBzdWJzY3JpcHRpb24gY2hhcmdlcyIgIlJFU1QvSFRUUFMsIEpTT04iDQogICAgICAgIGRvb2ZwbHVzIC0+IG1haWwgIlNlbmRzIGVtYWlscyIgIlJFU1QvSFRUUFMsIEpTT04iDQogICAgICAgIGdhIC0+IHFhICJTaG93cyB0aGUgVE9UUCBjb2RlIChubyBBUEkgaW50ZWdyYXRpb24pIiAiIiAiT3B0aW9uYWwiDQogICAgICAgIGdhIC0+IHByb2QgIlNob3dzIHRoZSBUT1RQIGNvZGUgKG5vIEFQSSBpbnRlZ3JhdGlvbikiICIiICJPcHRpb25hbCINCiAgICAgICAgZ2EgLT4gYWRtaW4gIlNob3dzIHRoZSBUT1RQIGNvZGUgKG5vIEFQSSBpbnRlZ3JhdGlvbikiICIiICJPcHRpb25hbCINCiAgICAgICAgcHJvZCAtPiByZmlkICJSZWFkcyB0aGUgdGFnIG9mIHRoZSByZWNlaXZlZCByYXcgbWF0ZXJpYWwiDQoNCiAgICAgICAgIyBDb250YWluZXJzDQogICAgICAgIHZpc2l0b3IgLT4gbGFuZGluZyAiVmlzaXRzIiAiSFRUUFMiDQogICAgICAgIGxhbmRpbmcgLT4gd2ViYXBwICJMaW5rcyB0byB0aGUgc2lnbi1pbiBvZiBlYWNoIGVudmlyb25tZW50IGFuZCB0byB0aGUgcmVnaXN0cmF0aW9uIiAiSFRUUFMiDQogICAgICAgIHFhIC0+IHdlYmFwcCAiVmlzaXRzIHRoZSBEb29mUGx1cyB3ZWIgYWRkcmVzcyIgIkhUVFBTIg0KICAgICAgICBwcm9kIC0+IHdlYmFwcCAiVmlzaXRzIHRoZSBEb29mUGx1cyB3ZWIgYWRkcmVzcyIgIkhUVFBTIg0KICAgICAgICBhZG1pbiAtPiB3ZWJhcHAgIlZpc2l0cyB0aGUgRG9vZlBsdXMgd2ViIGFkZHJlc3MiICJIVFRQUyINCiAgICAgICAgd2ViYXBwIC0+IHNwYSAiRGVsaXZlcnMgdG8gdGhlIHVzZXIncyB3ZWIgYnJvd3NlciINCiAgICAgICAgcWEgLT4gc3BhICJVc2VzIg0KICAgICAgICBwcm9kIC0+IHNwYSAiVXNlcyINCiAgICAgICAgYWRtaW4gLT4gc3BhICJVc2VzIg0KICAgICAgICBzcGEgLT4gYXBpICJNYWtlcyBBUEkgY2FsbHMgdG8gYW5kIHJlY2VpdmVzIHJlYWwtdGltZSBhbGVydHMgZnJvbSIgIkpTT04vSFRUUFMgd2l0aCBCZWFyZXIgSldULCBXZWJTb2NrZXQgKFNUT01QKSINCiAgICAgICAgYXBpIC0+IGRiICJSZWFkcyBmcm9tIGFuZCB3cml0ZXMgdG8iICJKREJDLCBTcHJpbmcgRGF0YSBKUEEvSGliZXJuYXRlIg0KICAgICAgICB0YiAtPiBhcGkgIlNlbmRzIHRlbGVtZXRyeSIgIldlYmhvb2sgSlNPTi9IVFRQUyINCiAgICAgICAgYXBpIC0+IG5pdWJpeiAiQXV0aG9yaXplcyBjaGFyZ2VzIiAiUkVTVCBKU09OL0hUVFBTIg0KICAgICAgICBhcGkgLT4gbWFpbCAiU2VuZHMgZW1haWxzIiAiUkVTVCBKU09OL0hUVFBTIg0KICAgICAgICByZmlkIC0+IHNwYSAiVHlwZXMgdGhlIHJhdyBtYXRlcmlhbCB0YWcgY29kZSIgIlVTQiBISUQgKGtleWJvYXJkIGVtdWxhdGlvbikiDQoNCiAgICAgICAgIyBTaW5nbGUtUGFnZSBBcHBsaWNhdGlvbiBjb21wb25lbnRzDQogICAgICAgIHFhIC0+IHNwYV9zaGFyZWQgIlVzZXMiDQogICAgICAgIHByb2QgLT4gc3BhX3NoYXJlZCAiVXNlcyINCiAgICAgICAgYWRtaW4gLT4gc3BhX3NoYXJlZCAiVXNlcyINCiAgICAgICAgc3BhX3NoYXJlZCAtPiBzcGFfaWFtICJMb2FkcyINCiAgICAgICAgc3BhX3NoYXJlZCAtPiBzcGFfb3JnICJMb2FkcyINCiAgICAgICAgc3BhX3NoYXJlZCAtPiBzcGFfc3ViICJMb2FkcyINCiAgICAgICAgc3BhX3NoYXJlZCAtPiBzcGFfbWZnICJMb2FkcyINCiAgICAgICAgc3BhX3NoYXJlZCAtPiBzcGFfaW90ICJMb2FkcyINCiAgICAgICAgc3BhX3NoYXJlZCAtPiBzcGFfcWEgIkxvYWRzIg0KICAgICAgICBzcGFfaWFtIC0+IGFwaSAiTWFrZXMgQVBJIGNhbGxzIHRvIiAiSlNPTi9IVFRQUyINCiAgICAgICAgc3BhX29yZyAtPiBhcGkgIk1ha2VzIEFQSSBjYWxscyB0byIgIkpTT04vSFRUUFMiDQogICAgICAgIHNwYV9zdWIgLT4gYXBpICJNYWtlcyBBUEkgY2FsbHMgdG8iICJKU09OL0hUVFBTIg0KICAgICAgICBzcGFfbWZnIC0+IGFwaSAiTWFrZXMgQVBJIGNhbGxzIHRvIiAiSlNPTi9IVFRQUyINCiAgICAgICAgc3BhX2lvdCAtPiBhcGkgIk1ha2VzIEFQSSBjYWxscyB0byIgIkpTT04vSFRUUFMiDQogICAgICAgIHNwYV9xYSAtPiBhcGkgIk1ha2VzIEFQSSBjYWxscyB0byIgIkpTT04vSFRUUFMiDQogICAgICAgIHJmaWQgLT4gc3BhX21mZyAiVHlwZXMgdGhlIHJhdyBtYXRlcmlhbCB0YWcgY29kZSIgIlVTQiBISUQgKGtleWJvYXJkIGVtdWxhdGlvbikiDQoNCiAgICAgICAgIyBSRVNUZnVsIEFQSSBjb21wb25lbnRzDQogICAgICAgIHNwYSAtPiBhcGlfaWFtICJNYWtlcyBBUEkgY2FsbHMgdG8iICJKU09OL0hUVFBTIg0KICAgICAgICBzcGEgLT4gYXBpX29yZyAiTWFrZXMgQVBJIGNhbGxzIHRvIiAiSlNPTi9IVFRQUyINCiAgICAgICAgc3BhIC0+IGFwaV9zdWIgIk1ha2VzIEFQSSBjYWxscyB0byIgIkpTT04vSFRUUFMiDQogICAgICAgIHNwYSAtPiBhcGlfbWZnICJNYWtlcyBBUEkgY2FsbHMgdG8iICJKU09OL0hUVFBTIg0KICAgICAgICBzcGEgLT4gYXBpX2lvdCAiTWFrZXMgQVBJIGNhbGxzIHRvIGFuZCByZWNlaXZlcyBhbGVydHMgZnJvbSIgIkpTT04vSFRUUFMsIFdlYlNvY2tldCINCiAgICAgICAgc3BhIC0+IGFwaV9xYSAiTWFrZXMgQVBJIGNhbGxzIHRvIiAiSlNPTi9IVFRQUyINCiAgICAgICAgdGIgLT4gYXBpX2lvdCAiU2VuZHMgdGVsZW1ldHJ5IiAiV2ViaG9vayBKU09OL0hUVFBTIg0KICAgICAgICBhcGlfb3JnIC0+IGFwaV9pYW0gIkNyZWF0ZXMgdGhlIGFkbWluaXN0cmF0b3IgdGhyb3VnaCIgIklhbUNvbnRleHRGYWNhZGUiDQogICAgICAgIGFwaV9xYSAtPiBhcGlfaWFtICJSZXF1ZXN0cyBlbGVjdHJvbmljIHNpZ25hdHVyZXMgZnJvbSIgIklhbUNvbnRleHRGYWNhZGUiDQogICAgICAgIGFwaV9tZmcgLT4gYXBpX3FhICJSZXF1ZXN0cyBtYXRlcmlhbCBhcHByb3ZhbCBhbmQgYmF0Y2ggcXVhcmFudGluZSBmcm9tIiAiUXVhbGl0eUNvbnRleHRGYWNhZGUiDQogICAgICAgIGFwaV9xYSAtPiBhcGlfbWZnICJQdWJsaXNoZXMgcmVsZWFzZSBhbmQgYXBwcm92YWwgdmVyZGljdHMgdG8iICJEb21haW4gZXZlbnRzIg0KICAgICAgICBhcGlfbWZnIC0+IGFwaV9pb3QgIkFzc2lnbnMgc2Vuc29ycyB0byBiYXRjaGVzIHRocm91Z2giICJJb3RNb25pdG9yaW5nQ29udGV4dEZhY2FkZSINCiAgICAgICAgYXBpX2lvdCAtPiBhcGlfbWZnICJDaGVja3MgdGhlIGJhdGNoIGluIHByb2dyZXNzIHRocm91Z2giICJNYW51ZmFjdHVyaW5nQ29udGV4dEZhY2FkZSINCiAgICAgICAgYXBpX2lvdCAtPiBhcGlfc3ViICJDaGVja3MgdGhlIHBsYW4gZGV2aWNlIGxpbWl0IHRocm91Z2giICJTdWJzY3JpcHRpb25zQ29udGV4dEZhY2FkZSINCiAgICAgICAgYXBpX2lhbSAtPiBtYWlsICJTZW5kcyBpbnZpdGF0aW9ucyB0aHJvdWdoIiAiUkVTVC9IVFRQUyINCiAgICAgICAgYXBpX29yZyAtPiBtYWlsICJOb3RpZmllcyBjb250YWN0IGlucXVpcmllcyB0aHJvdWdoIiAiUkVTVC9IVFRQUyINCiAgICAgICAgYXBpX2lvdCAtPiBtYWlsICJTZW5kcyBhbGVydHMgdGhyb3VnaCIgIlJFU1QvSFRUUFMiDQogICAgICAgIGFwaV9zdWIgLT4gbml1Yml6ICJBdXRob3JpemVzIGNoYXJnZXMgd2l0aCIgIlJFU1QvSFRUUFMiDQogICAgICAgIGFwaV9pYW0gLT4gZGIgIlBlcnNpc3RzIGRhdGEgaW4iICJKREJDIg0KICAgICAgICBhcGlfb3JnIC0+IGRiICJQZXJzaXN0cyBkYXRhIGluIiAiSkRCQyINCiAgICAgICAgYXBpX3N1YiAtPiBkYiAiUGVyc2lzdHMgZGF0YSBpbiIgIkpEQkMiDQogICAgICAgIGFwaV9tZmcgLT4gZGIgIlBlcnNpc3RzIGRhdGEgaW4iICJKREJDIg0KICAgICAgICBhcGlfaW90IC0+IGRiICJQZXJzaXN0cyBkYXRhIGluIiAiSkRCQyINCiAgICAgICAgYXBpX3FhIC0+IGRiICJQZXJzaXN0cyBkYXRhIGluIiAiSkRCQyINCg0KICAgIH0NCg0KICAgIHZpZXdzIHsNCiAgICAgICAgc3lzdGVtQ29udGV4dCBkb29mcGx1cyAiQzQtMDEtQ29udGV4dCIgew0KICAgICAgICAgICAgdGl0bGUgIltTeXN0ZW0gQ29udGV4dF0gRG9vZlBsdXMiDQogICAgICAgICAgICBpbmNsdWRlICoNCiAgICAgICAgICAgIGluY2x1ZGUgZ2ENCiAgICAgICAgfQ0KICAgICAgICBjb250YWluZXIgZG9vZnBsdXMgIkM0LTAyLUNvbnRhaW5lcnMiIHsNCiAgICAgICAgICAgIHRpdGxlICJbQ29udGFpbmVyXSBEb29mUGx1cyINCiAgICAgICAgICAgIGluY2x1ZGUgKg0KICAgICAgICB9DQogICAgICAgIGNvbXBvbmVudCBzcGEgIkM0LTAzLVNQQSIgew0KICAgICAgICAgICAgdGl0bGUgIltDb21wb25lbnRdIERvb2ZQbHVzIC0gU2luZ2xlLVBhZ2UgQXBwbGljYXRpb24iDQogICAgICAgICAgICBpbmNsdWRlICoNCiAgICAgICAgfQ0KICAgICAgICBjb21wb25lbnQgYXBpICJDNC0wNC1BUEkiIHsNCiAgICAgICAgICAgIHRpdGxlICJbQ29tcG9uZW50XSBEb29mUGx1cyAtIFJFU1RmdWwgQVBJIg0KICAgICAgICAgICAgaW5jbHVkZSAqDQogICAgICAgIH0NCg0KICAgICAgICBzdHlsZXMgew0KICAgICAgICAgICAgZWxlbWVudCAiRWxlbWVudCIgew0KICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYNCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGVsZW1lbnQgIlBlcnNvbiIgew0KICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzA4NDI3Qg0KICAgICAgICAgICAgICAgIHNoYXBlIFBlcnNvbg0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7DQogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMTE2OEJEDQogICAgICAgICAgICB9DQogICAgICAgICAgICBlbGVtZW50ICJFeHRlcm5hbCIgew0KICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzhDOEM4Qw0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgZWxlbWVudCAiQ29udGFpbmVyIiB7DQogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjNDM4REQ1DQogICAgICAgICAgICB9DQogICAgICAgICAgICBlbGVtZW50ICJXZWIgQnJvd3NlciIgew0KICAgICAgICAgICAgICAgIHNoYXBlIFdlYkJyb3dzZXINCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7DQogICAgICAgICAgICAgICAgc2hhcGUgQ3lsaW5kZXINCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGVsZW1lbnQgIkNvbXBvbmVudCIgew0KICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzg1QkJGMA0KICAgICAgICAgICAgICAgIGNvbG9yICMwQjI1NDUNCiAgICAgICAgICAgICAgICB3aWR0aCA1MjANCiAgICAgICAgICAgICAgICBoZWlnaHQgMzMwDQogICAgICAgICAgICB9DQogICAgICAgICAgICBlbGVtZW50ICJHcm91cCIgew0KICAgICAgICAgICAgICAgIGNvbG9yICM0NDQ0NDQNCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIHJlbGF0aW9uc2hpcCAiUmVsYXRpb25zaGlwIiB7DQogICAgICAgICAgICAgICAgZGFzaGVkIGZhbHNlDQogICAgICAgICAgICAgICAgY29sb3IgIzU1NTU1NQ0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgcmVsYXRpb25zaGlwICJPcHRpb25hbCIgew0KICAgICAgICAgICAgICAgIGRhc2hlZCB0cnVlDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICB9DQp9DQo="
+  },
+  "views": {
+    "componentViews": [
+      {
+        "containerId": "13",
+        "dimensions": {
+          "height": 3030,
+          "width": 4370
+        },
+        "elements": [
+          {
+            "id": "2",
+            "x": 1250,
+            "y": 150
+          },
+          {
+            "id": "3",
+            "x": 2570,
+            "y": 150
+          },
+          {
+            "id": "4",
+            "x": 1910,
+            "y": 150
+          },
+          {
+            "id": "9",
+            "x": 3400,
+            "y": 150
+          },
+          {
+            "id": "14",
+            "x": 1850,
+            "y": 800
+          },
+          {
+            "id": "15",
+            "x": 150,
+            "y": 1450
+          },
+          {
+            "id": "16",
+            "x": 830,
+            "y": 1450
+          },
+          {
+            "id": "17",
+            "x": 1510,
+            "y": 1450
+          },
+          {
+            "id": "18",
+            "x": 2190,
+            "y": 1450
+          },
+          {
+            "id": "19",
+            "x": 2870,
+            "y": 1450
+          },
+          {
+            "id": "20",
+            "x": 3550,
+            "y": 1450
+          },
+          {
+            "id": "21",
+            "x": 1885,
+            "y": 2200
+          }
+        ],
+        "externalContainerBoundariesVisible": false,
+        "key": "C4-03-SPA",
+        "name": "Component View: DoofPlus - Single-Page Application",
+        "order": 3,
+        "relationships": [
+          {
+            "id": "40"
+          },
+          {
+            "id": "57"
+          },
+          {
+            "id": "58"
+          },
+          {
+            "id": "59"
+          },
+          {
+            "id": "60"
+          },
+          {
+            "id": "61"
+          },
+          {
+            "id": "62"
+          },
+          {
+            "id": "63"
+          },
+          {
+            "id": "64"
+          },
+          {
+            "id": "65"
+          },
+          {
+            "id": "66"
+          },
+          {
+            "id": "67"
+          },
+          {
+            "id": "68"
+          },
+          {
+            "id": "69"
+          },
+          {
+            "id": "70"
+          },
+          {
+            "id": "71"
+          },
+          {
+            "id": "72"
+          }
+        ],
+        "title": "[Component] DoofPlus - Single-Page Application"
+      },
+      {
+        "containerId": "21",
+        "dimensions": {
+          "height": 3230,
+          "width": 6170
+        },
+        "elements": [
+          {
+            "id": "5",
+            "x": 5350,
+            "y": 1550
+          },
+          {
+            "id": "6",
+            "x": 5350,
+            "y": 850
+          },
+          {
+            "id": "7",
+            "x": 150,
+            "y": 1550
+          },
+          {
+            "id": "13",
+            "x": 3285,
+            "y": 150
+          },
+          {
+            "id": "22",
+            "x": 1150,
+            "y": 2400
+          },
+          {
+            "id": "23",
+            "x": 2200,
+            "y": 850
+          },
+          {
+            "id": "24",
+            "x": 1150,
+            "y": 850
+          },
+          {
+            "id": "25",
+            "x": 4300,
+            "y": 850
+          },
+          {
+            "id": "26",
+            "x": 3250,
+            "y": 1550
+          },
+          {
+            "id": "27",
+            "x": 4300,
+            "y": 1550
+          },
+          {
+            "id": "28",
+            "x": 2200,
+            "y": 1550
+          },
+          {
+            "id": "29",
+            "x": 3285,
+            "y": 2400
+          }
+        ],
+        "externalContainerBoundariesVisible": false,
+        "key": "C4-04-API",
+        "name": "Component View: DoofPlus - RESTful API",
+        "order": 4,
+        "relationships": [
+          {
+            "id": "73"
+          },
+          {
+            "id": "74"
+          },
+          {
+            "id": "75"
+          },
+          {
+            "id": "76"
+          },
+          {
+            "id": "77"
+          },
+          {
+            "id": "78",
+            "vertices": [
+              {
+                "x": 2985,
+                "y": 1350
+              }
+            ]
+          },
+          {
+            "id": "79"
+          },
+          {
+            "id": "80"
+          },
+          {
+            "id": "81"
+          },
+          {
+            "id": "82",
+            "vertices": [
+              {
+                "x": 2985,
+                "y": 1620
+              }
+            ]
+          },
+          {
+            "id": "83",
+            "vertices": [
+              {
+                "x": 2985,
+                "y": 1810
+              }
+            ]
+          },
+          {
+            "id": "84",
+            "vertices": [
+              {
+                "x": 4035,
+                "y": 1620
+              }
+            ]
+          },
+          {
+            "id": "85",
+            "vertices": [
+              {
+                "x": 4035,
+                "y": 1810
+              }
+            ]
+          },
+          {
+            "id": "86"
+          },
+          {
+            "id": "87"
+          },
+          {
+            "id": "88"
+          },
+          {
+            "id": "89",
+            "vertices": [
+              {
+                "x": 4560,
+                "y": 2130
+              },
+              {
+                "x": 410,
+                "y": 2130
+              }
+            ]
+          },
+          {
+            "id": "90"
+          },
+          {
+            "id": "91",
+            "vertices": [
+              {
+                "x": 2830,
+                "y": 1250
+              },
+              {
+                "x": 2830,
+                "y": 2250
+              }
+            ]
+          },
+          {
+            "id": "92",
+            "vertices": [
+              {
+                "x": 1410,
+                "y": 2250
+              }
+            ]
+          },
+          {
+            "id": "93",
+            "vertices": [
+              {
+                "x": 4190,
+                "y": 1250
+              },
+              {
+                "x": 4190,
+                "y": 2250
+              }
+            ]
+          },
+          {
+            "id": "94"
+          },
+          {
+            "id": "95"
+          },
+          {
+            "id": "96"
+          }
+        ],
+        "title": "[Component] DoofPlus - RESTful API"
+      }
+    ],
+    "configuration": {
+      "styles": {
+        "elements": [
+          {
+            "background": "#85bbf0",
+            "color": "#0b2545",
+            "height": 330,
+            "tag": "Component",
+            "width": 520
+          },
+          {
+            "background": "#438dd5",
+            "tag": "Container"
+          },
+          {
+            "shape": "Cylinder",
+            "tag": "Database"
+          },
+          {
+            "color": "#ffffff",
+            "tag": "Element"
+          },
+          {
+            "background": "#8c8c8c",
+            "tag": "External"
+          },
+          {
+            "color": "#444444",
+            "tag": "Group"
+          },
+          {
+            "background": "#08427b",
+            "shape": "Person",
+            "tag": "Person"
+          },
+          {
+            "background": "#1168bd",
+            "tag": "Software System"
+          },
+          {
+            "shape": "WebBrowser",
+            "tag": "Web Browser"
+          }
+        ],
+        "relationships": [
+          {
+            "dashed": true,
+            "tag": "Optional"
+          },
+          {
+            "color": "#555555",
+            "dashed": false,
+            "tag": "Relationship"
+          }
+        ]
+      },
+      "terminology": {}
+    },
+    "containerViews": [
+      {
+        "dimensions": {
+          "height": 4180,
+          "width": 3800
+        },
+        "elements": [
+          {
+            "id": "1",
+            "x": 150,
+            "y": 150
+          },
+          {
+            "id": "2",
+            "x": 1300,
+            "y": 150
+          },
+          {
+            "id": "3",
+            "x": 2500,
+            "y": 150
+          },
+          {
+            "id": "4",
+            "x": 1900,
+            "y": 150
+          },
+          {
+            "id": "5",
+            "x": 3050,
+            "y": 2050
+          },
+          {
+            "id": "6",
+            "x": 3050,
+            "y": 2700
+          },
+          {
+            "id": "7",
+            "x": 3050,
+            "y": 3350
+          },
+          {
+            "id": "9",
+            "x": 3050,
+            "y": 1400
+          },
+          {
+            "id": "11",
+            "x": 150,
+            "y": 800
+          },
+          {
+            "id": "12",
+            "x": 850,
+            "y": 800
+          },
+          {
+            "id": "13",
+            "x": 1675,
+            "y": 1400
+          },
+          {
+            "id": "21",
+            "x": 1675,
+            "y": 2050
+          },
+          {
+            "id": "29",
+            "x": 1675,
+            "y": 2700
+          }
+        ],
+        "externalSoftwareSystemBoundariesVisible": false,
+        "key": "C4-02-Containers",
+        "name": "Container View: DoofPlus",
+        "order": 2,
+        "relationships": [
+          {
+            "id": "40"
+          },
+          {
+            "id": "41"
+          },
+          {
+            "id": "42"
+          },
+          {
+            "id": "43"
+          },
+          {
+            "id": "44"
+          },
+          {
+            "id": "45"
+          },
+          {
+            "id": "46"
+          },
+          {
+            "id": "47"
+          },
+          {
+            "id": "48"
+          },
+          {
+            "id": "49"
+          },
+          {
+            "id": "50"
+          },
+          {
+            "id": "51"
+          },
+          {
+            "id": "52"
+          },
+          {
+            "id": "53"
+          },
+          {
+            "id": "54"
+          },
+          {
+            "id": "55"
+          }
+        ],
+        "softwareSystemId": "10",
+        "title": "[Container] DoofPlus"
+      }
+    ],
+    "systemContextViews": [
+      {
+        "dimensions": {
+          "height": 3480,
+          "width": 2850
+        },
+        "elements": [
+          {
+            "id": "1",
+            "x": 150,
+            "y": 800
+          },
+          {
+            "id": "2",
+            "x": 800,
+            "y": 800
+          },
+          {
+            "id": "3",
+            "x": 2100,
+            "y": 800
+          },
+          {
+            "id": "4",
+            "x": 1450,
+            "y": 800
+          },
+          {
+            "id": "5",
+            "x": 350,
+            "y": 2650
+          },
+          {
+            "id": "6",
+            "x": 1125,
+            "y": 2650
+          },
+          {
+            "id": "7",
+            "x": 1900,
+            "y": 2650
+          },
+          {
+            "id": "8",
+            "x": 1450,
+            "y": 150
+          },
+          {
+            "id": "9",
+            "x": 2100,
+            "y": 1450
+          },
+          {
+            "id": "10",
+            "x": 1125,
+            "y": 2000
+          }
+        ],
+        "enterpriseBoundaryVisible": true,
+        "key": "C4-01-Context",
+        "name": "System Context View: DoofPlus",
+        "order": 1,
+        "relationships": [
+          {
+            "id": "30"
+          },
+          {
+            "id": "31"
+          },
+          {
+            "id": "32"
+          },
+          {
+            "id": "33"
+          },
+          {
+            "id": "34"
+          },
+          {
+            "id": "35"
+          },
+          {
+            "id": "36"
+          },
+          {
+            "id": "37"
+          },
+          {
+            "id": "38"
+          },
+          {
+            "id": "39"
+          },
+          {
+            "id": "40"
+          },
+          {
+            "id": "56"
+          }
+        ],
+        "softwareSystemId": "10",
+        "title": "[System Context] DoofPlus"
+      }
+    ]
+  }
+}

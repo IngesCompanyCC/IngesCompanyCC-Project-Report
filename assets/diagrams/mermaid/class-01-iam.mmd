@@ -1,0 +1,122 @@
+---
+title: "Class Diagram – Identity & Access Management (IAM) Bounded Context"
+---
+classDiagram
+  direction LR
+  class AuditableAbstractAggregateRoot~T~ {
+    <<abstract>>
+    #long Id
+    #DateTime CreatedAt
+    #DateTime UpdatedAt
+  }
+  class User {
+    <<Aggregate Root>>
+    +long OrganizationId
+    +EmailAddress Email
+    +string PasswordHash
+    +string MfaSecret
+    +UserStatus Status
+    +int FailedSignInAttempts
+    +ICollection~Role~ Roles
+    +User(long organizationId, EmailAddress email, string passwordHash)
+    +Activate(string passwordHash, string mfaSecret) void
+    +AssignRole(Role role) User
+    +RegisterFailedSignIn() void
+    +ResetFailedSignIns() void
+    +Lock() void
+    +IsLocked() bool
+  }
+  class Role {
+    <<Entity>>
+    +long Id
+    +Roles Name
+    +GetStringName() string
+  }
+  class ElectronicSignature {
+    <<Aggregate Root>>
+    +long UserId
+    +string EntityType
+    +long EntityId
+    +SignatureMeaning Meaning
+    +DateTime SignedAt
+    +ElectronicSignature(long userId, string entityType, long entityId, SignatureMeaning meaning)
+  }
+  class EmailAddress {
+    <<Value Object>>
+    +string Address
+  }
+  class Roles {
+    <<enumeration>>
+    RoleAdministrator
+    RoleQaSpecialist
+    RoleQualityManager
+    RoleProductionSupervisor
+    RoleInternalAuditor
+  }
+  class UserStatus {
+    <<enumeration>>
+    Invited
+    Active
+    Locked
+    Disabled
+  }
+  class SignatureMeaning {
+    <<enumeration>>
+    Authored
+    Reviewed
+    Approved
+    Released
+  }
+  class IUserRepository {
+    <<interface>>
+    +FindByEmailAsync(EmailAddress email) Task~User?~
+    +ExistsByEmail(EmailAddress email) bool
+  }
+  class IElectronicSignatureRepository {
+    <<interface>>
+    +FindByEntityTypeAndEntityIdAsync(string entityType, long entityId) Task~IEnumerable~ElectronicSignature~~
+  }
+  class IUserCommandService {
+    <<interface>>
+    +Handle(RegisterUserCommand command) Task~User?~
+    +Handle(SignInCommand command) Task~AuthenticatedUser?~
+    +Handle(AssignRoleCommand command) Task~User?~
+  }
+  class ISignatureCommandService {
+    <<interface>>
+    +Handle(SignRecordCommand command) Task~ElectronicSignature?~
+  }
+  class ITokenService {
+    <<interface>>
+    +GenerateToken(string username) string
+    +ValidateToken(string token) bool
+  }
+  class IHashingService {
+    <<interface>>
+    +Encode(string rawPassword) string
+    +Matches(string rawPassword, string encodedPassword) bool
+  }
+  class ITotpService {
+    <<interface>>
+    +VerifyCode(string secret, string code) bool
+  }
+  class IamContextFacade {
+    +CreateAdministrator(long organizationId, string email) long
+    +SignRecord(long userId, string password, string entityType, long entityId, string meaning) long
+  }
+  AuditableAbstractAggregateRoot <|-- User
+  AuditableAbstractAggregateRoot <|-- ElectronicSignature
+  User "0..*" o-- "1..*" Role : has
+  User *-- EmailAddress : email
+  User --> UserStatus : status
+  Role --> Roles : name
+  ElectronicSignature "0..*" --> "1" User : signedBy
+  ElectronicSignature --> SignatureMeaning : meaning
+  IUserRepository ..> User : persists
+  IElectronicSignatureRepository ..> ElectronicSignature : persists
+  IUserCommandService ..> ITokenService : uses
+  IUserCommandService ..> IHashingService : uses
+  IUserCommandService ..> ITotpService : uses
+  ISignatureCommandService ..> IHashingService : verifiesIdentity
+  IamContextFacade ..> IUserCommandService : delegates
+  IamContextFacade ..> ISignatureCommandService : delegates

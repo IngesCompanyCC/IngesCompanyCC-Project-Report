@@ -1,0 +1,110 @@
+---
+title: "Class Diagram – Organizations & Profiles Bounded Context"
+---
+classDiagram
+  direction LR
+  class Organization {
+    <<Aggregate Root>>
+    +long Id
+    +string LegalName
+    +Ruc Ruc
+    +OrganizationStatus Status
+    +ICollection~Plant~ Plants
+    +Organization(string legalName, Ruc ruc)
+    +AddPlant(string name, string address) Plant
+    +Suspend() void
+    +Reactivate() void
+  }
+  class Plant {
+    <<Entity>>
+    +long Id
+    +string Name
+    +string Address
+  }
+  class Ruc {
+    <<Value Object>>
+    +string Value
+    +Ruc(string value)
+  }
+  class Profile {
+    <<Aggregate Root>>
+    +long Id
+    +long UserId
+    +long OrganizationId
+    +PersonName Name
+    +string Position
+    +Area Area
+    +string PreferredLanguage
+    +NotificationPreferences Preferences
+    +UpdatePreferences(NotificationPreferences preferences) void
+    +ChangeLanguage(string languageTag) void
+  }
+  class PersonName {
+    <<Value Object>>
+    +string FirstName
+    +string LastName
+    +GetFullName() string
+  }
+  class NotificationPreferences {
+    <<Value Object>>
+    +bool EmailEnabled
+    +bool InAppEnabled
+  }
+  class ContactInquiry {
+    <<Aggregate Root>>
+    +long Id
+    +string FullName
+    +string Email
+    +string Message
+    +InquiryStatus Status
+    +DateTime ReceivedAt
+    +ContactInquiry(string fullName, string email, string message)
+    +MarkAsAnswered() void
+  }
+  class OrganizationStatus {
+    <<enumeration>>
+    Active
+    Suspended
+  }
+  class Area {
+    <<enumeration>>
+    Quality
+    Production
+    Administration
+  }
+  class InquiryStatus {
+    <<enumeration>>
+    Received
+    Answered
+  }
+  class IOrganizationRepository {
+    <<interface>>
+    +ExistsByRuc(Ruc ruc) bool
+  }
+  class IProfileRepository {
+    <<interface>>
+    +FindByUserIdAsync(long userId) Task~Profile?~
+  }
+  class IOrganizationCommandService {
+    <<interface>>
+    +Handle(RegisterOrganizationCommand command) Task~Organization?~
+    +Handle(AddPlantCommand command) Task~Plant?~
+  }
+  class IContactInquiryCommandService {
+    <<interface>>
+    +Handle(SendContactInquiryCommand command) Task~ContactInquiry?~
+  }
+  class ExternalIamService {
+    +CreateAdministrator(long organizationId, string email) long?
+  }
+  Organization "1" *-- "1..*" Plant : operates
+  Organization *-- Ruc : ruc
+  Organization --> OrganizationStatus : status
+  Profile "0..*" --> "1" Organization : belongsTo
+  Profile *-- PersonName : name
+  Profile *-- NotificationPreferences : preferences
+  Profile --> Area : area
+  ContactInquiry --> InquiryStatus : status
+  IOrganizationRepository ..> Organization : persists
+  IProfileRepository ..> Profile : persists
+  IOrganizationCommandService ..> ExternalIamService : uses
