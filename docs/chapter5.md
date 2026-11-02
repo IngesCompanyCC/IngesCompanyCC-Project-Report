@@ -613,9 +613,9 @@ En este Sprint se completó el Website, publicada en GitHub Pages, y se implemen
 
 *Figura: Preguntas frecuentes (US05).*
 
-![Llamada a la acción final y footer con datos de contacto y redes sociales (US04)](../assets/img/chapter5/sprint2/landing/12-contact.png)
+![Llamada a la acción final y footer con datos de contacto y redes sociales](../assets/img/chapter5/sprint2/landing/12-contact.png)
 
-*Figura: Llamada a la acción final y footer con datos de contacto y redes sociales (US04).*
+*Figura: Llamada a la acción final y footer con datos de contacto y redes sociales.*
 
 ![Website en español (US46)](../assets/img/chapter5/sprint2/landing/13-home-es.png)
 
