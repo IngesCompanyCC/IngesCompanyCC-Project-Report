@@ -175,8 +175,8 @@ El objetivo de este Sprint fue construir la base del Website y dejar configurado
 | US44 | Navegación por secciones | T001 | Navbar bilingüe | Implementar la barra de navegación con el logotipo, los enlaces a las secciones y el selector de idioma, con sus estilos. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | US01 | Visualización de la propuesta de valor | T002 | Hero con propuesta de valor | Implementar el hero con el título, el subtítulo, los botones de acción y la tarjeta flotante de estado de lote. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | US46 | Cambio de idioma | T003 | Archivos de traducción y cambio de idioma | Crear los archivos de traducción en inglés y español y la lógica que aplica los textos con `data-i18n`. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| TS01 | Implementación de Website responsive y accesible | T004 | Configuración del repositorio del Website | Crear el repositorio con la estructura base del sitio, el `.gitignore` y las ramas `main` y `develop`. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| TS01 | Implementación de Website responsive y accesible | T005 | Recursos gráficos | Agregar el logotipo de DoofPlus y las fotos de los integrantes del equipo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| TS01 | Implementación de Website adaptable y accesible | T004 | Configuración del repositorio del Website | Crear el repositorio con la estructura base del sitio, el `.gitignore` y las ramas `main` y `develop`. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| TS01 | Implementación de Website adaptable y accesible | T005 | Recursos gráficos | Agregar el logotipo de DoofPlus y las fotos de los integrantes del equipo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
 | — | Tareas técnicas | T006 | Configuración del proyecto Vue | Configurar Vite, PrimeVue, Vue I18n, las variables de entorno (`.env`) y json-server con las rutas `/api/v1`. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | — | Tareas técnicas | T007 | Footer de la Web Application | Implementar el componente de footer con soporte de internacionalización. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 
