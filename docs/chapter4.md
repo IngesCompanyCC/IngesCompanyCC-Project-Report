@@ -835,7 +835,7 @@ El diseño del prototipo se guió por cuatro criterios:
 - **Consistencia visual:** todos los entornos comparten componentes, tipografía y estructura, y solo cambia el color que identifica al entorno.
 - **Prevención de errores:** los estados de bloqueo explican el motivo y la acción necesaria, en lugar de permitir una operación que luego deba corregirse.
 
-Prototipo navegable en Figma (página "Prototype", que une los mock-ups del Website y de la Web Application para navegar entre ambas): abrir el prototipo: https://www.figma.com/proto/YYtMivGL4tZEsLacA8HQmN/Aplicaciones-Web?page-id=1%3A1117&node-id=175-239&starting-point-node-id=175%3A239. Desde el selector de flujos del visor se accede a los puntos de inicio de cada user goal.
+Prototipo navegable en Figma (página "Prototype", que une los mock-ups del Website y de la Web Application para navegar entre ambas): abrir el prototipo: https://www.figma.com/proto/YYtMivGL4tZEsLacA8HQmN/Aplicaciones-Web?page-id=1%3A1117&node-id=191-3378&starting-point-node-id=191%3A3378. Desde el selector de flujos del visor se accede a los puntos de inicio de cada user goal.
 
 Video de navegación del prototipo (Sprint 1): ver en Microsoft Stream: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202423162_upc_edu_pe/IQC9TP0VdDx0SbIEr4nWmikhAceGoBqdZ78DiR68qJ8FV-A?e=1BIqfW (copia en YouTube: https://youtu.be/6PLCLqaF8Tg). Inicio: 00:00. Duración: 06:10.
 
