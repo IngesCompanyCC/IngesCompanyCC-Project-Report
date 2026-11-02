@@ -169,6 +169,7 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 | 4.4.1 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Registro de las mejoras aplicadas según la retroalimentación del TB1 en Project Report Collaboration Insights y del Anexo A de videos de exposición. |
 | 4.5.0 | 01/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo V: figuras de Jira de los Sprint Backlogs 1 y 2, responsables de las tareas iguales a los del board y capturas actualizadas del Website (CTA y footer de contacto) y de la Web Application (usuarios, invitaciones y tareas). |
 | 4.5.1 | 01/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: diagramas C4 con la notación oficial de contenedores y descripción del RFID Reader. Project Report Collaboration Insights: captura de los analíticos de colaboración del repositorio del informe. |
+| 4.6.0 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos I a V y README: el sitio público pasa a llamarse Website, como en el informe del curso de Open Source (títulos del statement sin cambios); diagramas C4 y capturas de Jira actualizados con el nuevo nombre. |
 
 ---
 
