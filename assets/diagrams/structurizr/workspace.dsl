@@ -5,7 +5,7 @@ workspace "DoofPlus" "C4 model of DoofPlus (IngesCompanyCC). Structurizr DSL sou
             "structurizr.groupSeparator" "/"
         }
 
-        visitor = person "Laboratory Visitor" "Evaluates DoofPlus from the Landing Page and reviews its plans before registering the laboratory."
+        visitor = person "Laboratory Visitor" "Evaluates DoofPlus from the Website and reviews its plans before registering the laboratory."
         qa = person "QA/QC Specialist" "Manages documents, raw material approvals, deviations, CAPA, audits and batch release."
         prod = person "Pharmaceutical Production Supervisor" "Manages orders and batches, monitors equipment and requests approvals from Quality."
         admin = person "Laboratory Administrator" "Registers the organization, users, roles, sensors and the subscription."
@@ -16,7 +16,7 @@ workspace "DoofPlus" "C4 model of DoofPlus (IngesCompanyCC). Structurizr DSL sou
         rfid = softwareSystem "RFID Reader" "Warehouse RFID tag reader; types the code it reads into the Single-Page Application as keyboard input (USB HID), without an API of its own." "External"
 
         doofplus = softwareSystem "DoofPlus" "SaaS platform for quality management and batch traceability in pharmaceutical laboratories." {
-            landing = container "Landing Page" "Static website with the value proposition, plans, team and the call to action to the Web Application; en-US/es-419." "HTML5, CSS3, JavaScript (GitHub Pages)" "Directory"
+            landing = container "Website" "Static website with the value proposition, plans, team and the call to action to the Web Application; en-US/es-419." "HTML5, CSS3, JavaScript (GitHub Pages)" "Directory"
             webapp = container "Web Application" "Delivers the static content and the DoofPlus single-page application (index.html and JavaScript bundles) to the user's web browser." "Firebase Hosting" "Directory"
             spa = container "Single-Page Application" "Runs in the user's web browser and provides all the DoofPlus features, one module per bounded context." "Vue 3, Vite, PrimeVue, Pinia, JavaScript" "Web Browser" {
                 spa_shared = component "Shared" "Workspace shell (layout, toolbar, sidebar, footer and language switcher), routes per environment and the base REST client reused by every bounded context." "Vue module"
