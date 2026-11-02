@@ -367,11 +367,15 @@ Todas las pantallas comparten la misma estructura, derivada de la arquitectura d
 
 Los wireframes de baja fidelidad definen la distribución de cada pantalla antes del diseño visual. Se agrupan por segmento y se presentan en montajes, en el mismo orden que los mock-ups de la sección 4.4.3, donde se explica cada pantalla.
 
-**Desktop Web Browser · Compartido: elección de entorno, registro de la organización y perfil**
+**Desktop Web Browser · Compartido: elección de entorno, contacto, registro de la organización y perfil**
 
-Incluye "Sign in · Choose your environment", "Organization registration" con su estado "RUC already registered" y "Account · Profile & preferences".
+Incluye "Sign in · Choose your environment", "Organization registration" con su estado "RUC already registered" y "Account · Profile & preferences". El formulario "Contact us" se ubica en la misma zona pública que el inicio de sesión, con sus estados "Invalid data" e "Inquiry received".
 
 ![Web App Wireframes · Desktop · Shared](../assets/img/chapter4/web-application/wireframes/desktop-shared-environment-selection-onboarding-profile-montage-1.png)
+
+| Contact us | Contact us · Invalid data | Contact us · Inquiry received |
+| :---: | :---: | :---: |
+| ![Contact us](../assets/img/chapter4/web-application/wireframes/contact/contact-us.png) | ![Contact us · Invalid data](../assets/img/chapter4/web-application/wireframes/contact/contact-us-invalid-data.png) | ![Contact us · Inquiry received](../assets/img/chapter4/web-application/wireframes/contact/contact-us-inquiry-received.png) |
 
 **Desktop Web Browser · Segmento 1: Especialista QA/QC**
 
@@ -413,6 +417,10 @@ En mobile se priorizan las tareas que se realizan fuera del escritorio: la elecc
 
 ![Web App Wireframes · Mobile · Shared](../assets/img/chapter4/web-application/wireframes/mobile-shared-environment-selection-montage-1.png)
 
+| Contact us | Contact us · Invalid data | Contact us · Inquiry received |
+| :---: | :---: | :---: |
+| ![Contact us](../assets/img/chapter4/web-application/wireframes/contact/contact-us-mobile.png) | ![Contact us · Invalid data](../assets/img/chapter4/web-application/wireframes/contact/contact-us-mobile-invalid-data.png) | ![Contact us · Inquiry received](../assets/img/chapter4/web-application/wireframes/contact/contact-us-mobile-inquiry-received.png) |
+
 ![Web App Wireframes · Mobile · QA/QC (1)](../assets/img/chapter4/web-application/wireframes/mobile-segment-1-qa-qc-specialist-montage-1.png)
 
 ![Web App Wireframes · Mobile · QA/QC (2)](../assets/img/chapter4/web-application/wireframes/mobile-segment-1-qa-qc-specialist-montage-2.png)
@@ -425,7 +433,7 @@ En mobile se priorizan las tareas que se realizan fuera del escritorio: la elecc
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para representar la secuencia de pantallas que lo llevan a cumplir un objetivo. Para cada segmento se definieron seis user goals, basados en sus user stories. Cada diagrama muestra el user goal, la persona, el camino principal y los puntos de decisión que desvían el flujo hacia una pantalla de error o de bloqueo. Los diagramas se elaboraron en FigJam y están disponibles en el tablero de Wireflows y User Flows: https://www.figma.com/board/WxYyDGMJ42w7w7yQNNnGNN.
+Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para representar la secuencia de pantallas que lo llevan a cumplir un objetivo. Para cada segmento se definieron seis user goals, basados en sus user stories, y uno para el visitante del Website (VI-1), que envía una consulta desde el formulario "Contact us" de la Web Application. Cada diagrama muestra el user goal, la persona, el camino principal y los puntos de decisión que desvían el flujo hacia una pantalla de error o de bloqueo. Los diagramas se elaboraron en FigJam y están disponibles en el tablero de Wireflows y User Flows: https://www.figma.com/board/WxYyDGMJ42w7w7yQNNnGNN.
 
 #### Segmento 1 – Especialista de Aseguramiento y Control de Calidad (QA/QC)
 
@@ -527,15 +535,31 @@ Flujo: Production overview → Batches → Batch detail & traceability.
 
 ![Wireflow PR-6](../assets/img/chapter4/web-application/wireflows/wireflow-pr-6.png)
 
+#### Visitante del Website
+
+**User Goal VI-1:** Enviar una consulta al equipo de DoofPlus (US04).
+
+Como visitante interesado, quiero enviar una consulta al equipo de DoofPlus para resolver mis dudas sobre la plataforma y sus planes. Desde el Website, el visitante elige "Sign in", abre "Contact us" en la elección de entorno, completa su nombre, su correo y su consulta y recibe la confirmación. Si el correo no es válido o la consulta está vacía, el formulario muestra el error bajo cada campo y el visitante los corrige.
+
+Flujo: Website · Home → Choose your environment → Contact us → Inquiry received.
+
+![Wireflow VI-1](../assets/img/chapter4/web-application/wireflows/wireflow-vi-1.png)
+
 ### 4.4.3. Web Applications Mock-ups
 
 Los mock-ups aplican el Design System de la sección 4.1 sobre los wireframes y se presentan en inglés (en-US), idioma por defecto. Cada entorno se reconoce por su color: QA/QC en verde azulado (#0F766E), Production en azul (#1E40AF) y Administration en azul pizarra (#334155). A continuación se presentan las pantallas Desktop por grupo, con su propósito y las user stories que atienden.
 
-#### Compartido: elección de entorno, registro de la organización y perfil
+#### Compartido: elección de entorno, contacto, registro de la organización y perfil
 
-**Sign in · Choose your environment:** se abre desde "Sign in" en el Website. Presenta tres tarjetas, QA/QC, Production y Administration, cada una con su color, ícono y descripción; al elegir una se abre el inicio de sesión de ese entorno. Incluye el enlace "Register your laboratory" y "See plans" para quienes aún no tienen cuenta.
+**Sign in · Choose your environment:** se abre desde "Sign in" en el Website. Presenta tres tarjetas, QA/QC, Production y Administration, cada una con su color, ícono y descripción; al elegir una se abre el inicio de sesión de ese entorno. Incluye el enlace "Register your organization" para los laboratorios que aún no tienen cuenta y "Contact us" para quienes tienen preguntas; la barra superior muestra también "Contact us" junto al selector de idioma.
 
 ![Mock-up · Choose your environment](../assets/img/chapter4/web-application/mockups/desktop-shared-environment-selection-onboarding-profile/sign-in-choose-your-environment.png)
+
+**Contact us:** formulario de consultas del visitante (US04), en la zona pública de la Web Application, junto al inicio de sesión. El panel verde azulado presenta los temas de consulta (planes, demo guiada, cumplimiento DIGEMID y GMP, soporte) y los canales del equipo (correo, teléfono y oficina); el formulario pide nombre, correo de trabajo y consulta. Si el correo no es válido o la consulta está vacía, se muestra el error bajo cada campo ("Invalid data"); si el envío es correcto, se registra la consulta y se confirma su recepción ("Inquiry received"), con las opciones "Send another inquiry" y "Back to sign in". En mobile, la barra superior muestra solo el ícono de contacto.
+
+| Contact us | Contact us · Invalid data | Contact us · Inquiry received |
+| :---: | :---: | :---: |
+| ![Contact us](../assets/img/chapter4/web-application/mockups/contact/contact-us.png) | ![Contact us · Invalid data](../assets/img/chapter4/web-application/mockups/contact/contact-us-invalid-data.png) | ![Contact us · Inquiry received](../assets/img/chapter4/web-application/mockups/contact/contact-us-inquiry-received.png) |
 
 **Organization registration:** el administrador registra el laboratorio con su razón social, RUC, planta y datos de contacto, y elige su plan, que aparece preseleccionado cuando llega desde la sección Plans del Website (US50, US51). Si el RUC ya pertenece a otra organización, el formulario muestra el estado "RUC already registered" y no crea un duplicado.
 
@@ -687,9 +711,13 @@ Los mock-ups aplican el Design System de la sección 4.1 sobre los wireframes y 
 
 En mobile, la navegación del entorno se agrupa en una barra inferior y las pantallas se reducen a las tareas de campo de cada segmento.
 
-**Compartido:** elección del entorno.
+**Compartido:** elección del entorno y formulario de contacto.
 
 ![Mock-up · Mobile · Shared](../assets/img/chapter4/web-application/mockups/mobile-shared-environment-selection-montage-1.png)
+
+| Contact us | Contact us · Invalid data | Contact us · Inquiry received |
+| :---: | :---: | :---: |
+| ![Contact us](../assets/img/chapter4/web-application/mockups/contact/contact-us-mobile.png) | ![Contact us · Invalid data](../assets/img/chapter4/web-application/mockups/contact/contact-us-mobile-invalid-data.png) | ![Contact us · Inquiry received](../assets/img/chapter4/web-application/mockups/contact/contact-us-mobile-inquiry-received.png) |
 
 **Segmento 1 – QA/QC:** inicio de sesión con sus estados, Task inbox, Approval review y Approval completed, donde la Quality Manager aprueba el documento (con el estado "Record changed", que impide firmar si el registro cambió durante la revisión), Electronic signature (con el estado "Invalid password") y Signature confirmed, donde María firma la liberación del lote B-26038, y Batch detail.
 
@@ -810,6 +838,16 @@ Happy path: Production overview → Batches → Batch detail & traceability.
 Unhappy path: ¿Hay una incidencia abierta en una línea? Sí → se sigue en IoT overview.
 
 ![User Flow PR-6](../assets/img/chapter4/web-application/user-flows/user-flow-pr-6.png)
+
+#### Visitante del Website
+
+**User Goal VI-1:** Enviar una consulta al equipo de DoofPlus.
+
+Happy path: Website · Home → "Sign in" → Choose your environment → "Contact us" → nombre, correo y consulta → Inquiry received.
+
+Unhappy path: ¿El correo y la consulta son válidos? No → "Invalid data"; el visitante corrige los campos y vuelve a enviar.
+
+![User Flow VI-1](../assets/img/chapter4/web-application/user-flows/user-flow-vi-1.png)
 
 ## 4.5. Web Applications Prototyping
 
