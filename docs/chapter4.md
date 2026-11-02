@@ -197,8 +197,8 @@ Las secciones se presentan en el siguiente orden, que prioriza la información q
 | 9 | Our Team | Integrantes del equipo y Video About-the-Team | US45 |
 | 10 | Testimonials | Opiniones de clientes | US01 |
 | 11 | FAQ | Preguntas frecuentes en acordeón | US05 |
-| 12 | Call to action | Acceso al inicio de sesión de cada segmento y al registro del laboratorio | US04, US48, US50 |
-| 13 | Footer | Logotipo blanco, redes sociales, enlaces, datos de contacto, términos, privacidad y selector de idioma | US04, US46, US47 |
+| 12 | Call to action | Acceso al inicio de sesión de cada segmento y al registro del laboratorio | US48, US50 |
+| 13 | Footer | Logotipo blanco, redes sociales, enlaces, datos de contacto, términos, privacidad y selector de idioma | US46, US47 |
 
 El formulario de contacto no forma parte del Website: el visitante lo encuentra en la Web Application, junto al inicio de sesión (sección 4.4). En el Website, los datos de contacto y las redes sociales se muestran en el footer.
 
