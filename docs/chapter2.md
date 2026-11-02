@@ -48,7 +48,7 @@ A continuación, se presenta una tabla comparativa sobre los principales competi
   </tr>
   <tr>
     <td>Estrategias de marketing</td>
-    <td>Contenido educativo sobre BPM e integridad de datos, precios públicos y registro de la organización desde la Landing Page, y presencia en eventos del sector.</td>
+    <td>Contenido educativo sobre BPM e integridad de datos, precios públicos y registro de la organización desde el Website, y presencia en eventos del sector.</td>
     <td>Marketing digital B2B (blog, casos de éxito) y webinars sobre gestión de calidad.</td>
     <td>Venta consultiva B2B con implementación y soporte locales.</td>
     <td>Venta B2B y B2G a actores de la cadena de suministro y reguladores.</td>
@@ -112,7 +112,7 @@ Para posicionar a DoofPlus frente a TuHub (MES con IoT), LOLFAR (gestión de far
 
 #### Estrategia de costos y accesibilidad (suscripción sin inversión inicial)
 
-Frente a soluciones cotizadas por proyecto con costos de implementación elevados (TuHub, LOLFAR), DoofPlus ofrece precios públicos por suscripción (Standard Lab y Enterprise) sin inversión en servidores ni hardware propio, ya que la captura IoT se integra con ThingsBoard. Táctica: el laboratorio registra su organización desde la Landing Page y elige su plan sin intermediarios; la modalidad anual equivale a dos meses gratis.
+Frente a soluciones cotizadas por proyecto con costos de implementación elevados (TuHub, LOLFAR), DoofPlus ofrece precios públicos por suscripción (Standard Lab y Enterprise) sin inversión en servidores ni hardware propio, ya que la captura IoT se integra con ThingsBoard. Táctica: el laboratorio registra su organización desde el Website y elige su plan sin intermediarios; la modalidad anual equivale a dos meses gratis.
 
 #### Enfoque vertical en la calidad farmacéutica
 
