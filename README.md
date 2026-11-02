@@ -167,6 +167,8 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 | 4.3.1 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Reemplazo de las capturas de evidencia por capturas de la Landing Page, la Web Application y los repositorios de IngesCompanyCC, con el equipo actualizado. |
 | 4.4.0 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Inserción de la tabla de contenido con hipervínculos de cuatro niveles y de la configuración de exportación a PDF con Pandoc. |
 | 4.4.1 | 31/10/2026 | Rojas Ambicho, Nestor Daniel | Registro de las mejoras aplicadas según la retroalimentación del TB1 en Project Report Collaboration Insights y del Anexo A de videos de exposición. |
+| 4.5.0 | 01/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo V: figuras de Jira de los Sprint Backlogs 1 y 2, responsables de las tareas iguales a los del board y capturas actualizadas de la Landing Page (CTA y footer de contacto) y de la Web Application (usuarios, invitaciones y tareas). |
+| 4.5.1 | 01/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: diagramas C4 con la notación oficial de contenedores y descripción del RFID Reader. Project Report Collaboration Insights: captura de los analíticos de colaboración del repositorio del informe. |
 
 ---
 
