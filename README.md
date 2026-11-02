@@ -170,6 +170,9 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 | 4.5.0 | 01/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo V: figuras de Jira de los Sprint Backlogs 1 y 2, responsables de las tareas iguales a los del board y capturas actualizadas del Website (CTA y footer de contacto) y de la Web Application (usuarios, invitaciones y tareas). |
 | 4.5.1 | 01/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: diagramas C4 con la notación oficial de contenedores y descripción del RFID Reader. Project Report Collaboration Insights: captura de los analíticos de colaboración del repositorio del informe. |
 | 4.6.0 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos I a V y README: el sitio público pasa a llamarse Website, como en el informe del curso de Open Source (títulos del statement sin cambios); diagramas C4 y capturas de Jira actualizados con el nuevo nombre. |
+| 4.6.1 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: enlaces de Figma, FigJam y del prototipo apuntan a los archivos del curso (Aplicaciones Web) en lugar de los de Open Source. |
+| 4.7.0 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: wireframes, mock-ups y prototipo del Website calcados del Website actual y exportados desde Figma; formulario "Contact us" en la Web Application con su user goal VI-1 (wireflow y user flow); imágenes de la Web Application actualizadas desde Figma. |
+| 4.7.1 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos III a V: la épica EP01 incluye el formulario de contacto de la Web Application, ajustes de US04 y US45 y de la arquitectura de información del Website. |
 
 ---
 
