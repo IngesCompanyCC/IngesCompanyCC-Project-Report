@@ -1131,7 +1131,7 @@ Sistemas externos:
 - **ThingsBoard:** plataforma IoT que recibe las lecturas de los sensores de planta y las reenvía a DoofPlus.
 - **Niubiz:** pasarela de pagos que autoriza los cobros de las suscripciones.
 - **SendGrid:** servicio de correo para invitaciones, alertas y notificaciones.
-- **RFID Reader:** lector del almacén con el que el Jefe de Producción lee la etiqueta del insumo recibido; envía ese código a DoofPlus.
+- **RFID Reader:** lector del almacén con el que el Jefe de Producción escanea la etiqueta RFID de cada lote de insumo recibido; envía ese código a DoofPlus.
 - **Authenticator App (TOTP):** aplicación móvil del usuario que genera los códigos del segundo factor. No se integra por API con DoofPlus, por eso su relación se dibuja con línea punteada.
 
 En el diagrama se observa que las cuatro personas usan DoofPlus mediante HTTPS, que ThingsBoard envía la telemetría al sistema mediante un webhook y que DoofPlus se integra con Niubiz y SendGrid a través de sus API REST. DIGEMID, identificada en el EventStorming, no forma parte del diagrama porque inspecciona al laboratorio sin intercambiar datos con DoofPlus: el modelo C4 solo incluye a las personas y los sistemas conectados directamente con el sistema.
@@ -1151,6 +1151,8 @@ En el nivel de contenedores, la atención pasa de "quién usa el sistema" a "có
 | Database | MySQL 8 | Railway | Persistencia relacional; las tablas se agrupan por bounded context. |
 
 La aplicación web de DoofPlus se representa con dos contenedores, como indica el modelo C4 para una Single-Page Application. Al compilar el proyecto Vue con Vite se genera una carpeta con `index.html` y los archivos JavaScript y CSS; Firebase Hosting (Web Application) solo los entrega cuando el usuario ingresa a la URL de DoofPlus, y la aplicación se ejecuta en el navegador del usuario (Single-Page Application), por eso este contenedor se dibuja con la forma de un navegador. La Landing Page es un contenedor aparte.
+
+Las figuras siguen la notación del diagrama de contenedores del sitio oficial del modelo C4: la Landing Page y la Web Application, que solo entregan archivos estáticos (HTML, CSS y JavaScript), se dibujan como una carpeta (*Directory*); la Single-Page Application, como un navegador; el RESTful API, como una aplicación del lado del servidor (*Server-side Application*, con el símbolo `>_`), y la Database, como un cilindro.
 
 En el diagrama se observa que:
 

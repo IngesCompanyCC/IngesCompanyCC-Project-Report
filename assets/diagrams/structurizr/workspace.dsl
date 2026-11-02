@@ -16,8 +16,8 @@ workspace "DoofPlus" "C4 model of DoofPlus (IngesCompanyCC). Structurizr DSL sou
         rfid = softwareSystem "RFID Reader" "Warehouse RFID tag reader; types the code it reads into the Single-Page Application as keyboard input (USB HID), without an API of its own." "External"
 
         doofplus = softwareSystem "DoofPlus" "SaaS platform for quality management and batch traceability in pharmaceutical laboratories." {
-            landing = container "Landing Page" "Static website with the value proposition, plans, team and the call to action to the Web Application; en-US/es-419." "HTML5, CSS3, JavaScript (GitHub Pages)"
-            webapp = container "Web Application" "Delivers the static content and the DoofPlus single-page application (index.html and JavaScript bundles) to the user's web browser." "Firebase Hosting"
+            landing = container "Landing Page" "Static website with the value proposition, plans, team and the call to action to the Web Application; en-US/es-419." "HTML5, CSS3, JavaScript (GitHub Pages)" "Directory"
+            webapp = container "Web Application" "Delivers the static content and the DoofPlus single-page application (index.html and JavaScript bundles) to the user's web browser." "Firebase Hosting" "Directory"
             spa = container "Single-Page Application" "Runs in the user's web browser and provides all the DoofPlus features, one module per bounded context." "Vue 3, Vite, PrimeVue, Pinia, JavaScript" "Web Browser" {
                 spa_shared = component "Shared" "Workspace shell (layout, toolbar, sidebar, footer and language switcher), routes per environment and the base REST client reused by every bounded context." "Vue module"
                 spa_iam = component "Identity & Access Management" "Environment selection, sign-in with 2FA, session, users, invitations and route protection by role." "Vue module"
@@ -28,7 +28,7 @@ workspace "DoofPlus" "C4 model of DoofPlus (IngesCompanyCC). Structurizr DSL sou
                 spa_qa = component "Quality & Compliance" "Documents, deviations, CAPA, batch release, analytical results, audits, audit trail and regulatory reports." "Vue module"
             }
 
-            api = container "RESTful API" "Modular monolith with the six bounded contexts; ASP.NET Core Identity (JWT + TOTP), OpenAPI (Swashbuckle) and real-time notifications (SignalR)." "ASP.NET Core, C#, Entity Framework Core (Render)" {
+            api = container "RESTful API" "Modular monolith with the six bounded contexts; ASP.NET Core Identity (JWT + TOTP), OpenAPI (Swashbuckle) and real-time notifications (SignalR)." "ASP.NET Core, C#, Entity Framework Core (Render)" "Server-side Application" {
                 api_shared = component "Shared" "Base auditable aggregate, snake_case naming convention for Entity Framework Core, Result type and common configuration reused by every bounded context." "ASP.NET Core namespace"
                 api_iam = component "Identity & Access Management" "Sign-up, sign-in with JWT and TOTP, users, roles, account locking and electronic signatures." "ASP.NET Core namespace"
                 api_org = component "Organizations & Profiles" "Organizations (unique RUC), facilities, profiles and contact inquiries." "ASP.NET Core namespace"
@@ -51,7 +51,7 @@ workspace "DoofPlus" "C4 model of DoofPlus (IngesCompanyCC). Structurizr DSL sou
         ga -> qa "Shows the TOTP code (no API integration)" "" "Optional"
         ga -> prod "Shows the TOTP code (no API integration)" "" "Optional"
         ga -> admin "Shows the TOTP code (no API integration)" "" "Optional"
-        prod -> rfid "Reads the tag of the received raw material"
+        prod -> rfid "Scans the RFID tag of each received raw material lot using"
 
         # Containers
         visitor -> landing "Visits" "HTTPS"
@@ -157,6 +157,13 @@ workspace "DoofPlus" "C4 model of DoofPlus (IngesCompanyCC). Structurizr DSL sou
             }
             element "Database" {
                 shape Cylinder
+            }
+            element "Directory" {
+                shape Folder
+            }
+            element "Server-side Application" {
+                shape Shell
+                stroke #FFFFFF
             }
             element "Component" {
                 background #85BBF0
