@@ -2,7 +2,7 @@
 
 ## 5.1. Software Configuration Management
 
-En esta sección se describen las decisiones, convenciones y herramientas utilizadas por el equipo IngesCompanyCC para gestionar el ciclo de vida, la implementación, la validación y el despliegue de **DoofPlus**. Estas decisiones permiten mantener la consistencia y la trazabilidad de los cambios realizados en cada sprint sobre la Landing Page, la Frontend Web Application y los RESTful Web Services.
+En esta sección se describen las decisiones, convenciones y herramientas utilizadas por el equipo IngesCompanyCC para gestionar el ciclo de vida, la implementación, la validación y el despliegue de **DoofPlus**. Estas decisiones permiten mantener la consistencia y la trazabilidad de los cambios realizados en cada sprint sobre el Website, la Frontend Web Application y los RESTful Web Services.
 
 ### 5.1.1. Software Development Environment Configuration
 
@@ -16,7 +16,7 @@ A continuación se detallan los productos de software que los miembros del equip
     * **Gherkin:** Redacción de criterios de aceptación con la estructura Given-When-Then. (Referencia: https://cucumber.io/docs/gherkin/reference)
     * **Miro:** Elaboración del Big Picture Event Storming y del Design-Level Event Storming. (Referencia: https://miro.com)
 * **Product UX/UI Design**
-    * **Figma:** Elaboración de Wireframes, Mock-ups y Prototypes de la Landing Page y la Web Application. (Referencia: https://www.figma.com)
+    * **Figma:** Elaboración de Wireframes, Mock-ups y Prototypes del Website y la Web Application. (Referencia: https://www.figma.com)
     * **FigJam:** Elaboración de los Wireflows y User Flows de la Web Application. (Referencia: https://www.figma.com/figjam)
     * **UXPressia:** Elaboración de User Personas, Empathy Maps, Journey Maps e Impact Maps. (Referencia: https://uxpressia.com)
     * **Structurizr DSL:** Elaboración de los diagramas C4 de contexto, contenedores y componentes bajo el enfoque Diagram-as-Code. (Referencia: https://structurizr.com)
@@ -24,21 +24,21 @@ A continuación se detallan los productos de software que los miembros del equip
 * **Software Development**
     * **Git:** Sistema de control de versiones distribuido utilizado en todos los repositorios. (Descarga: https://git-scm.com/downloads)
     * **GitHub:** Plataforma de alojamiento de los repositorios de la organización y de colaboración mediante ramas y Pull Requests. (Referencia: https://github.com/IngesCompanyCC)
-    * **Visual Studio Code y WebStorm:** Editores para el desarrollo de la Landing Page (HTML5, CSS3 y JavaScript) y de la Frontend Web Application en Vue 3. (Descarga: https://code.visualstudio.com/download y https://www.jetbrains.com/webstorm/download)
+    * **Visual Studio Code y WebStorm:** Editores para el desarrollo del Website (HTML5, CSS3 y JavaScript) y de la Frontend Web Application en Vue 3. (Descarga: https://code.visualstudio.com/download y https://www.jetbrains.com/webstorm/download)
     * **JetBrains Rider:** IDE para el desarrollo de los RESTful Web Services en C# con ASP.NET Core. (Descarga: https://www.jetbrains.com/rider/download)
     * **Node.js y npm:** Entorno de ejecución y gestor de paquetes requeridos por Vite y json-server. (Descarga: https://nodejs.org/en/download)
     * **Vite y Vue 3:** Herramienta de build y framework de JavaScript (Composition API) para la Frontend Web Application, con **PrimeVue** y **PrimeFlex** para los componentes de interfaz, **Pinia** para el estado, **Vue Router** para la navegación y **Vue I18n** para la internacionalización. (Referencia: https://vuejs.org)
     * **ASP.NET Core y Entity Framework Core:** Framework de C# y ORM para el desarrollo de los RESTful Web Services. (Referencia: https://dotnet.microsoft.com/apps/aspnet)
     * **MySQL:** Sistema gestor de base de datos relacional (MySQL 8). (Descarga: https://dev.mysql.com/downloads)
 * **Software Testing**
-    * **Chrome DevTools:** Inspección del diseño responsive y depuración de la Landing Page y la Web Application. (Referencia: https://developer.chrome.com/docs/devtools)
+    * **Chrome DevTools:** Inspección del diseño responsive y depuración del Website y la Web Application. (Referencia: https://developer.chrome.com/docs/devtools)
     * **json-server:** Fake API para simular los endpoints REST desde la Web Application mientras se implementan los Web Services. (Referencia: https://github.com/typicode/json-server)
     * **Swagger UI:** Ejecución de pruebas sobre los endpoints documentados de los RESTful Web Services. (Referencia: https://swagger.io/tools/swagger-ui)
 * **Software Documentation**
     * **Markdown en GitHub:** Redacción del informe del proyecto bajo el enfoque Docs-as-Code en el repositorio del informe. (Referencia: https://www.markdownguide.org)
     * **OpenAPI (Swagger):** Documentación de los RESTful Web Services. (Referencia: https://swagger.io/specification)
 * **Software Deployment**
-    * **GitHub Pages:** Publicación de la Landing Page. (Referencia: https://pages.github.com)
+    * **GitHub Pages:** Publicación del Website. (Referencia: https://pages.github.com)
     * **Firebase Hosting:** Publicación de la Frontend Web Application. (Referencia: https://firebase.google.com/docs/hosting)
     * **Render:** Publicación de los RESTful Web Services. (Referencia: https://render.com)
     * **Railway:** Base de datos MySQL gestionada en la nube. (Referencia: https://railway.com)
@@ -49,7 +49,7 @@ El equipo utiliza **GitHub** como plataforma y **Git** como sistema de control d
 
 | Producto | Repositorio |
 |----------|-------------|
-| Landing Page | https://github.com/IngesCompanyCC/IngesCompanyCC-LandingPage |
+| Website | https://github.com/IngesCompanyCC/IngesCompanyCC-LandingPage |
 | Frontend Web Application | https://github.com/IngesCompanyCC/IngesCompanyCC-Frontend |
 | RESTful Web Services | Se creará en el Sprint 3. |
 | Informe del proyecto | https://github.com/IngesCompanyCC/IngesCompanyCC-Project-Report |
@@ -61,7 +61,7 @@ El equipo aplica el modelo GitFlow propuesto por Vincent Driessen en *A successf
 * **`main`:** Contiene únicamente versiones estables listas para producción. Solo recibe merges desde ramas `release/*` y `hotfix/*`, y cada merge se etiqueta con su versión (por ejemplo, `v1.0.0`).
 * **`develop`:** Rama de integración. Consolida las funcionalidades terminadas antes de preparar una nueva versión.
 * **Feature branches:** Nacen de `develop` y regresan a `develop` mediante Pull Request. Convención: `feature/<nombre-en-kebab-case>`, nombrando el bounded context o la funcionalidad (por ejemplo, `feature/shared`, `feature/manufacturing`, `feature/project-configuration`). En el repositorio del informe se usa `feature/chapter<n>`.
-* **Release branches:** Nacen de `develop` cuando un incremento está listo para entregarse y se fusionan con `main` y `develop`. Convención: `release/v<MAJOR>.<MINOR>.<PATCH>`, admitiendo el sufijo de pre-release `-rc.<n>` (por ejemplo, `release/v1.0.2`, usada en la Landing Page y en la Web Application).
+* **Release branches:** Nacen de `develop` cuando un incremento está listo para entregarse y se fusionan con `main` y `develop`. Convención: `release/v<MAJOR>.<MINOR>.<PATCH>`, admitiendo el sufijo de pre-release `-rc.<n>` (por ejemplo, `release/v1.0.2`, usada en el Website y en la Web Application).
 * **Hotfix branches:** Nacen de `main` para corregir errores críticos en producción y se fusionan con `main` y `develop`. Convención: `hotfix/v<MAJOR>.<MINOR>.<PATCH>` (por ejemplo, `hotfix/v1.0.3`).
 
 **Semantic Versioning**
@@ -105,7 +105,7 @@ Toda la nomenclatura del código fuente (archivos, clases, variables, métodos y
 
 A continuación se describen los pasos para desplegar cada producto de la solución a partir de su repositorio de código fuente:
 
-1. **Landing Page (GitHub Pages)**
+1. **Website (GitHub Pages)**
     1. Fusionar la rama de release en `main` y etiquetar la versión.
     2. En el repositorio `IngesCompanyCC-LandingPage`, ingresar a *Settings > Pages* y seleccionar *Deploy from a branch* con la rama `main` y la carpeta `/ (root)`.
     3. GitHub Pages publica el sitio en https://ingescompanycc.github.io/IngesCompanyCC-LandingPage/ y lo vuelve a publicar con cada push a `main`.
@@ -123,15 +123,15 @@ A continuación se describen los pasos para desplegar cada producto de la soluci
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
-En esta sección se explica y evidencia el proceso de implementación, pruebas, documentación y despliegue de **DoofPlus**, incluyendo la Landing Page, la Frontend Web Application y los RESTful Web Services. El avance se presenta organizado por Sprints a partir del Product Backlog.
+En esta sección se explica y evidencia el proceso de implementación, pruebas, documentación y despliegue de **DoofPlus**, incluyendo el Website, la Frontend Web Application y los RESTful Web Services. El avance se presenta organizado por Sprints a partir del Product Backlog.
 
 ### 5.2.1. Sprint 1
 
-En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo para el **Sprint 1**, cuyo enfoque fue configurar los repositorios de la organización IngesCompanyCC, construir la base de la Landing Page de DoofPlus y configurar el proyecto de la Frontend Web Application.
+En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo para el **Sprint 1**, cuyo enfoque fue configurar los repositorios de la organización IngesCompanyCC, construir la base del Website de DoofPlus y configurar el proyecto de la Frontend Web Application.
 
 #### 5.2.1.1. Sprint Planning 1
 
-El Sprint Planning Meeting sirvió para definir los objetivos iniciales, asignar responsabilidades y seleccionar las primeras User Stories de la Landing Page y las tareas técnicas de configuración de la Web Application. A continuación, se presenta el resumen de la reunión de planificación:
+El Sprint Planning Meeting sirvió para definir los objetivos iniciales, asignar responsabilidades y seleccionar las primeras User Stories del Website y las tareas técnicas de configuración de la Web Application. A continuación, se presenta el resumen de la reunión de planificación:
 
 | Sprint # | Sprint 1 |
 |----------|----------|
@@ -144,15 +144,15 @@ El Sprint Planning Meeting sirvió para definir los objetivos iniciales, asignar
 | **Sprint 0 Review Summary** | No aplica por ser el primer Sprint del proyecto. |
 | **Sprint 0 Retrospective Summary** | No aplica por ser el primer Sprint del proyecto. |
 | **Sprint Goal & User Stories** | |
-| **Sprint 1 Goal** | **Our focus is on** setting up the IngesCompanyCC repositories, the base of the DoofPlus Landing Page and the configuration of the DoofPlus Web Application.<br>**We believe it delivers** a first bilingual entry point that presents DoofPlus to QA/QC specialists and production supervisors of pharmaceutical laboratories, and a ready project to build the Web Application.<br>**This will be confirmed when** visitors can use the navigation bar, read the value proposition in the hero and switch between English and Spanish, and the Web Application project runs with PrimeVue, Vue I18n and the Fake API. |
+| **Sprint 1 Goal** | **Our focus is on** setting up the IngesCompanyCC repositories, the base of the DoofPlus Website and the configuration of the DoofPlus Web Application.<br>**We believe it delivers** a first bilingual entry point that presents DoofPlus to QA/QC specialists and production supervisors of pharmaceutical laboratories, and a ready project to build the Web Application.<br>**This will be confirmed when** visitors can use the navigation bar, read the value proposition in the hero and switch between English and Spanish, and the Web Application project runs with PrimeVue, Vue I18n and the Fake API. |
 | **Sprint 1 Velocity** | 10 Story Points |
 | **Sum of Story Points** | 10 Story Points (US44: 3, US01: 2, US46: 5) |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-En el Sprint 1 se consideraron cuatro aspectos: la base de la Landing Page, la configuración de la Web Application, los repositorios y la documentación del sprint. A continuación se presenta el Leadership-and-Collaboration Matrix (LACX), que indica quién es el líder (L) y quiénes son los colaboradores (C) en cada aspecto:
+En el Sprint 1 se consideraron cuatro aspectos: la base del Website, la configuración de la Web Application, los repositorios y la documentación del sprint. A continuación se presenta el Leadership-and-Collaboration Matrix (LACX), que indica quién es el líder (L) y quiénes son los colaboradores (C) en cada aspecto:
 
-| Team Member (Last Name, First Name) | GitHub Username | Landing Page | Web Application Setup | Repositories | Documentation |
+| Team Member (Last Name, First Name) | GitHub Username | Website | Web Application Setup | Repositories | Documentation |
 |-------------------------------------|-----------------|:---:|:---:|:---:|:---:|
 | Angulo Ramírez, Marcelo Martín | Zock2005 | C | | | C |
 | Cobades Zamora, Yhoshua Hebert | YhoshuaCZ | C | C | C | |
@@ -162,7 +162,7 @@ En el Sprint 1 se consideraron cuatro aspectos: la base de la Landing Page, la c
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El objetivo de este Sprint fue construir la base de la Landing Page y dejar configurado el proyecto de la Web Application. Las tareas se registraron en el board del Sprint 1 en Jira Software.
+El objetivo de este Sprint fue construir la base del Website y dejar configurado el proyecto de la Web Application. Las tareas se registraron en el board del Sprint 1 en Jira Software.
 
 ![Sprint 1 en Jira Software: actividades finalizadas y responsables](../assets/img/chapter5/evidencia/jira-sprint1.png)
 
@@ -175,16 +175,16 @@ El objetivo de este Sprint fue construir la base de la Landing Page y dejar conf
 | US44 | Navegación por secciones | T001 | Navbar bilingüe | Implementar la barra de navegación con el logotipo, los enlaces a las secciones y el selector de idioma, con sus estilos. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | US01 | Visualización de la propuesta de valor | T002 | Hero con propuesta de valor | Implementar el hero con el título, el subtítulo, los botones de acción y la tarjeta flotante de estado de lote. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | US46 | Cambio de idioma | T003 | Archivos de traducción y cambio de idioma | Crear los archivos de traducción en inglés y español y la lógica que aplica los textos con `data-i18n`. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| TS01 | Implementación de Landing Page responsive y accesible | T004 | Configuración del repositorio de la Landing Page | Crear el repositorio con la estructura base del sitio, el `.gitignore` y las ramas `main` y `develop`. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
-| TS01 | Implementación de Landing Page responsive y accesible | T005 | Recursos gráficos | Agregar el logotipo de DoofPlus y las fotos de los integrantes del equipo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
+| TS01 | Implementación de Website responsive y accesible | T004 | Configuración del repositorio del Website | Crear el repositorio con la estructura base del sitio, el `.gitignore` y las ramas `main` y `develop`. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
+| TS01 | Implementación de Website responsive y accesible | T005 | Recursos gráficos | Agregar el logotipo de DoofPlus y las fotos de los integrantes del equipo. | 4 | Cobades Zamora, Yhoshua Hebert | Done |
 | — | Tareas técnicas | T006 | Configuración del proyecto Vue | Configurar Vite, PrimeVue, Vue I18n, las variables de entorno (`.env`) y json-server con las rutas `/api/v1`. | 6 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 | — | Tareas técnicas | T007 | Footer de la Web Application | Implementar el componente de footer con soporte de internacionalización. | 4 | Zavaleta Gutierrez, Rodolfo Martin | Done |
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-Durante el Sprint 1 se creó el repositorio de la Landing Page con su navegación, el hero y el cambio de idioma, y se configuró el proyecto de la Web Application con Vue 3, PrimeVue, Vue I18n y la Fake API. Las tablas siguientes presentan los commits de todas las ramas de ambos repositorios en el periodo del Sprint (del 30 de setiembre al 8 de octubre de 2026); la columna *Branch* indica la rama en que se realizó cada commit.
+Durante el Sprint 1 se creó el repositorio del Website con su navegación, el hero y el cambio de idioma, y se configuró el proyecto de la Web Application con Vue 3, PrimeVue, Vue I18n y la Fake API. Las tablas siguientes presentan los commits de todas las ramas de ambos repositorios en el periodo del Sprint (del 30 de setiembre al 8 de octubre de 2026); la columna *Branch* indica la rama en que se realizó cada commit.
 
-**Landing Page** (11 commits)
+**Website** (11 commits)
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |------------|--------|-----------|----------------|---------------------|---------------------|
@@ -214,11 +214,11 @@ Durante el Sprint 1 se creó el repositorio de la Landing Page con su navegació
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
-En este Sprint se logró la base de la Landing Page, bilingüe (inglés y español), con la barra de navegación, el hero con la propuesta de valor y la tarjeta de estado de lote. La siguiente captura muestra la Landing Page al cierre del Sprint (commit `185d2c0`):
+En este Sprint se logró la base del Website, bilingüe (inglés y español), con la barra de navegación, el hero con la propuesta de valor y la tarjeta de estado de lote. La siguiente captura muestra el Website al cierre del Sprint (commit `185d2c0`):
 
-![Landing Page al cierre del Sprint 1](../assets/img/chapter5/screenshots/s1-full.png)
+![Website al cierre del Sprint 1](../assets/img/chapter5/screenshots/s1-full.png)
 
-*Figura: Landing Page al cierre del Sprint 1: navegación, hero y selector de idioma.*
+*Figura: Website al cierre del Sprint 1: navegación, hero y selector de idioma.*
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -226,13 +226,13 @@ El alcance del Sprint 1 no incluyó endpoints propios. La Web Application quedó
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-En el Sprint 1 los productos se mantuvieron en los repositorios de la organización IngesCompanyCC, con las ramas `main` y `develop` de GitFlow. La publicación de la Landing Page en GitHub Pages, de la Web Application en Firebase Hosting y de la Fake API en Render se realizó en el Sprint 2 (sección 5.2.2.7).
+En el Sprint 1 los productos se mantuvieron en los repositorios de la organización IngesCompanyCC, con las ramas `main` y `develop` de GitFlow. La publicación del Website en GitHub Pages, de la Web Application en Firebase Hosting y de la Fake API en Render se realizó en el Sprint 2 (sección 5.2.2.7).
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
 En el Sprint 1 la configuración inicial de ambos repositorios estuvo a cargo de Zavaleta Gutierrez, Rodolfo Martin, con el aporte de Cobades Zamora, Yhoshua Hebert en los recursos gráficos. La siguiente tabla resume los commits de cada integrante en ambos repositorios durante el Sprint (sin contar los commits de merge):
 
-| Team Member | GitHub Username | Landing Page | Web Application | Total |
+| Team Member | GitHub Username | Website | Web Application | Total |
 |---|---|:---:|:---:|:---:|
 | Zavaleta Gutierrez, Rodolfo Martin | gutierrezrodolfo360-bit | 8 | 6 | 14 |
 | Cobades Zamora, Yhoshua Hebert | YhoshuaCZ | 1 | 0 | 1 |
@@ -242,11 +242,11 @@ En el Sprint 1 la configuración inicial de ambos repositorios estuvo a cargo de
 
 ### 5.2.2. Sprint 2
 
-En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo para el **Sprint 2**, cuyo enfoque fue completar la Landing Page de DoofPlus y construir la primera versión de la Frontend Web Application con sus seis bounded contexts, consumiendo una Fake API mientras se implementan los RESTful Web Services.
+En esta sección se registra y explica el avance en términos de producto y trabajo colaborativo para el **Sprint 2**, cuyo enfoque fue completar el Website de DoofPlus y construir la primera versión de la Frontend Web Application con sus seis bounded contexts, consumiendo una Fake API mientras se implementan los RESTful Web Services.
 
 #### 5.2.2.1. Sprint Planning 2
 
-El Sprint Planning Meeting sirvió para definir los objetivos del Sprint, asignar responsabilidades por bounded context y seleccionar las User Stories pendientes de la Landing Page y las de la Web Application. A continuación, se presenta el resumen de la reunión de planificación:
+El Sprint Planning Meeting sirvió para definir los objetivos del Sprint, asignar responsabilidades por bounded context y seleccionar las User Stories pendientes del Website y las de la Web Application. A continuación, se presenta el resumen de la reunión de planificación:
 
 | Sprint # | Sprint 2 |
 |----------|----------|
@@ -256,18 +256,18 @@ El Sprint Planning Meeting sirvió para definir los objetivos del Sprint, asigna
 | **Location** | Reunión virtual vía Discord |
 | **Prepared By** | Cobades Zamora, Yhoshua Hebert |
 | **Attendees (to planning meeting)** | Angulo Ramírez, Marcelo Martín / Cobades Zamora, Yhoshua Hebert / Rojas Ambicho, Nestor Daniel / Yarleque Ruiz, Cristina Marcela / Zavaleta Gutierrez, Rodolfo Martin |
-| **Sprint 1 Review Summary** | Se entregó la base de la Landing Page (navegación, hero y cambio de idioma) y el proyecto de la Web Application configurado con Vue 3, PrimeVue, Vue I18n y la Fake API. Como feedback, se pidió completar las secciones de la Landing Page según los mock-ups del capítulo 4, agregar el acceso por segmento a la Web Application y publicar ambos productos. |
+| **Sprint 1 Review Summary** | Se entregó la base del Website (navegación, hero y cambio de idioma) y el proyecto de la Web Application configurado con Vue 3, PrimeVue, Vue I18n y la Fake API. Como feedback, se pidió completar las secciones del Website según los mock-ups del capítulo 4, agregar el acceso por segmento a la Web Application y publicar ambos productos. |
 | **Sprint 1 Retrospective Summary** | Como acierto, los repositorios se crearon desde el inicio con las ramas `main` y `develop` de GitFlow. Como oportunidades de mejora, se acordó repartir el trabajo entre todos los integrantes, usar una feature branch por sección o bounded context, distribuir los commits a lo largo del sprint y usar los types de Conventional Commits según su significado. |
 | **Sprint Goal & User Stories** | |
-| **Sprint 2 Goal** | **Our focus is on** delivering the complete DoofPlus Landing Page and the first version of the DoofPlus Web Application for the QA/QC, Production and Administration environments.<br>**We believe it delivers** a single place to register batches, follow deviations and CAPA, release batches with electronic signature and monitor IoT equipment to QA/QC specialists and production supervisors of pharmaceutical laboratories.<br>**This will be confirmed when** each segment signs in to its own environment with two-factor authentication and completes its user goals (QA-1 to QA-6 and PR-1 to PR-6) on the published Web Application. |
+| **Sprint 2 Goal** | **Our focus is on** delivering the complete DoofPlus Website and the first version of the DoofPlus Web Application for the QA/QC, Production and Administration environments.<br>**We believe it delivers** a single place to register batches, follow deviations and CAPA, release batches with electronic signature and monitor IoT equipment to QA/QC specialists and production supervisors of pharmaceutical laboratories.<br>**This will be confirmed when** each segment signs in to its own environment with two-factor authentication and completes its user goals (QA-1 to QA-6 and PR-1 to PR-6) on the published Web Application. |
 | **Sprint 2 Velocity** | 182 Story Points |
 | **Sum of Story Points** | 182 Story Points (US03: 2, US45: 1, US04: 1, US47: 1, US01: 2, US02: 2, US48: 2, US49: 2, US05: 1, US06: 2, US07: 3, US08: 5, US55: 3, US50: 3, US51: 3, US52: 5, US53: 3, US35: 3, US36: 5, US57: 3, US14: 3, US15: 5, US16: 2, US58: 3, US17: 3, US32: 3, US23: 3, US24: 3, US25: 5, US26: 3, US37: 3, US38: 3, US39: 3, US56: 3, US22: 2, US09: 5, US10: 3, US12: 5, US13: 3, US18: 3, US19: 5, US20: 5, US21: 3, US11: 5, US54: 5, US31: 3, US27: 5, US28: 5, US29: 5, US30: 3, US59: 3, US33: 3, US34: 3, US40: 3, US41: 3, US42: 2, US43: 3) |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
-En el Sprint 2 se consideraron ocho aspectos: la Landing Page y, en la Web Application, los bounded contexts (Shared e IAM; Organizations y Subscriptions; Manufacturing; IoT Monitoring; Quality & Compliance), las releases y el despliegue, y la documentación. El líder (L) de cada aspecto es el integrante con más commits en él, según el historial de los repositorios de la organización IngesCompanyCC.
+En el Sprint 2 se consideraron ocho aspectos: el Website y, en la Web Application, los bounded contexts (Shared e IAM; Organizations y Subscriptions; Manufacturing; IoT Monitoring; Quality & Compliance), las releases y el despliegue, y la documentación. El líder (L) de cada aspecto es el integrante con más commits en él, según el historial de los repositorios de la organización IngesCompanyCC.
 
-| Team Member (Last Name, First Name) | GitHub Username | Landing Page | Shared & IAM | Organizations & Subscriptions | Manufacturing | IoT Monitoring | Quality & Compliance | Releases & Deployment | Documentation |
+| Team Member (Last Name, First Name) | GitHub Username | Website | Shared & IAM | Organizations & Subscriptions | Manufacturing | IoT Monitoring | Quality & Compliance | Releases & Deployment | Documentation |
 |-------------------------------------|-----------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Angulo Ramírez, Marcelo Martín | Zock2005 | C | C | | | | | L | C |
 | Cobades Zamora, Yhoshua Hebert | YhoshuaCZ | | L | L | C | L | L | | |
@@ -277,7 +277,7 @@ En el Sprint 2 se consideraron ocho aspectos: la Landing Page y, en la Web Appli
 
 #### 5.2.2.3. Sprint Backlog 2
 
-El objetivo del Sprint fue completar la Landing Page y entregar la primera versión de la Web Application. Las tareas se organizaron por User Story; las de la Landing Page incluyen la reimplementación de las secciones del Sprint 1 sobre el diseño del capítulo 4. Las tareas se registraron en el board del Sprint 2 en Jira Software.
+El objetivo del Sprint fue completar el Website y entregar la primera versión de la Web Application. Las tareas se organizaron por User Story; las del Website incluyen la reimplementación de las secciones del Sprint 1 sobre el diseño del capítulo 4. Las tareas se registraron en el board del Sprint 2 en Jira Software.
 
 ![Sprint 2 en Jira Software: 64 actividades finalizadas y responsables](../assets/img/chapter5/evidencia/jira-sprint2.png)
 
@@ -349,14 +349,14 @@ El objetivo del Sprint fue completar la Landing Page y entregar la primera versi
 | — | Tareas técnicas | T067 | Accesibilidad del layout público | Mejorar el layout público, el footer y la página 404 con atributos de accesibilidad y textos traducidos. | 4 | Angulo Ramírez, Marcelo Martín | Done |
 | — | Tareas técnicas | T068 | Traducciones de IoT Monitoring | Agregar las 121 claves de la sección monitoring en inglés y español. | 4 | Rojas Ambicho, Nestor Daniel | Done |
 | — | Tareas técnicas | T069 | Documentación del repositorio | Redactar la estructura base de la documentación, las user stories, las ADRs y el diagrama de clases del proyecto. | 4 | Yarleque Ruiz, Cristina Marcela | Done |
-| — | Tareas técnicas | T070 | Releases v1.0.2 | Preparar release/v1.0.2 en la Landing Page y en la Web Application, con merge a main y tag SemVer. | 4 | Angulo Ramírez, Marcelo Martín | Done |
+| — | Tareas técnicas | T070 | Releases v1.0.2 | Preparar release/v1.0.2 en el Website y en la Web Application, con merge a main y tag SemVer. | 4 | Angulo Ramírez, Marcelo Martín | Done |
 | — | Tareas técnicas | T071 | Configuración de despliegue | Agregar firebase.json para Firebase Hosting y el script server:prod para publicar la Fake API. | 4 | Rojas Ambicho, Nestor Daniel | Done |
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-En el Sprint 2 se trabajó en dos repositorios siguiendo GitFlow: una feature branch por sección de la Landing Page o por bounded context de la Web Application, integradas en `develop` con merges `--no-ff`, y una rama `release/v1.0.2` fusionada en `main` con el tag `v1.0.2` en ambos repositorios. Las tablas siguientes presentan los commits de todas las ramas de ambos repositorios en el periodo del Sprint (9 y 10 de octubre de 2026); la columna *Branch* indica la rama en que se realizó cada commit.
+En el Sprint 2 se trabajó en dos repositorios siguiendo GitFlow: una feature branch por sección del Website o por bounded context de la Web Application, integradas en `develop` con merges `--no-ff`, y una rama `release/v1.0.2` fusionada en `main` con el tag `v1.0.2` en ambos repositorios. Las tablas siguientes presentan los commits de todas las ramas de ambos repositorios en el periodo del Sprint (9 y 10 de octubre de 2026); la columna *Branch* indica la rama en que se realizó cada commit.
 
-**Landing Page** (104 commits)
+**Website** (104 commits)
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |------------|--------|-----------|----------------|---------------------|---------------------|
@@ -565,9 +565,9 @@ En el Sprint 2 se trabajó en dos repositorios siguiendo GitFlow: una feature br
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-En este Sprint se completó la Landing Page, publicada en GitHub Pages, y se implementó la Web Application con sus tres entornos. En la Landing Page se agregaron el hero, el acceso por segmento, los servicios y características, el video About the Product, los beneficios, About us, el equipo con su video, los testimonios y las preguntas frecuentes, y se reimplementaron la navegación con menú mobile, los planes, el formulario de consulta y las páginas legales. La Web Application permite elegir el entorno, iniciar sesión con segundo factor y recorrer todos los módulos de QA/QC (documentos, desviaciones y CAPA, resultados analíticos, liberación de lotes, auditorías, audit trail, reportes y tareas), Production (órdenes, productos y fórmulas, lotes, materias primas, equipos e IoT, incidentes) y Administration (usuarios, organización y suscripción), en inglés y español, con datos servidos por una Fake API.
+En este Sprint se completó el Website, publicada en GitHub Pages, y se implementó la Web Application con sus tres entornos. En el Website se agregaron el hero, el acceso por segmento, los servicios y características, el video About the Product, los beneficios, About us, el equipo con su video, los testimonios y las preguntas frecuentes, y se reimplementaron la navegación con menú mobile, los planes, el formulario de consulta y las páginas legales. La Web Application permite elegir el entorno, iniciar sesión con segundo factor y recorrer todos los módulos de QA/QC (documentos, desviaciones y CAPA, resultados analíticos, liberación de lotes, auditorías, audit trail, reportes y tareas), Production (órdenes, productos y fórmulas, lotes, materias primas, equipos e IoT, incidentes) y Administration (usuarios, organización y suscripción), en inglés y español, con datos servidos por una Fake API.
 
-**Landing Page:** https://ingescompanycc.github.io/IngesCompanyCC-LandingPage/
+**Website:** https://ingescompanycc.github.io/IngesCompanyCC-LandingPage/
 
 ![Hero con la propuesta de valor (US01)](../assets/img/chapter5/sprint2/landing/01-home.png)
 
@@ -617,9 +617,9 @@ En este Sprint se completó la Landing Page, publicada en GitHub Pages, y se imp
 
 *Figura: Llamada a la acción final y footer con datos de contacto y redes sociales (US04).*
 
-![Landing Page en español (US46)](../assets/img/chapter5/sprint2/landing/13-home-es.png)
+![Website en español (US46)](../assets/img/chapter5/sprint2/landing/13-home-es.png)
 
-*Figura: Landing Page en español (US46).*
+*Figura: Website en español (US46).*
 
 ![Términos de Servicio (US47)](../assets/img/chapter5/sprint2/landing/14-terms.png)
 
@@ -725,7 +725,7 @@ En este Sprint se completó la Landing Page, publicada en GitHub Pages, y se imp
 
 Videos de navegación del producto (upc-pre-202620-1asi0730-8130-IngesCompanyCC-productnavigation-sprint-2):
 
-- **Landing Page:** *pendiente de publicar en Microsoft Stream.*
+- **Website:** *pendiente de publicar en Microsoft Stream.*
 - **Web Application:** *pendiente de publicar en Microsoft Stream.*
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
@@ -812,26 +812,26 @@ En el Sprint 2 todavía no se implementaron los RESTful Web Services, por lo que
 
 En este Sprint se prepararon y publicaron las versiones estables de ambos productos siguiendo GitFlow:
 
-- **Landing Page:** la rama `release/v1.0.2` se fusionó en `main` con el tag `v1.0.2`. La Landing Page se publica en GitHub Pages desde `main` en https://ingescompanycc.github.io/IngesCompanyCC-LandingPage/.
+- **Website:** la rama `release/v1.0.2` se fusionó en `main` con el tag `v1.0.2`. El Website se publica en GitHub Pages desde `main` en https://ingescompanycc.github.io/IngesCompanyCC-LandingPage/.
 - **Web Application:** la rama `release/v1.0.2` se fusionó en `main` con el tag `v1.0.2`. El repositorio incluye `firebase.json`, que configura Firebase Hosting como Single Page Application, y el script `npm run server:prod`, que publica la Fake API en un Web Service de Render. La Web Application está publicada en Firebase Hosting en https://ingescompanycc-frontend.web.app y la Fake API en Render en https://ingescompanycc-api.onrender.com/api/v1.
 
-![Tag v1.0.2 de la Landing Page](../assets/img/chapter5/sprint2/github/release-landing-v1.0.2.png)
+![Tag v1.0.2 del Website](../assets/img/chapter5/sprint2/github/release-landing-v1.0.2.png)
 
-*Figura: Tag v1.0.2 del repositorio de la Landing Page.*
+*Figura: Tag v1.0.2 del repositorio del Website.*
 
 ![Tag v1.0.2 de la Web Application](../assets/img/chapter5/sprint2/github/release-frontend-v1.0.2.png)
 
 *Figura: Tag v1.0.2 del repositorio de la Web Application.*
 
-![Landing Page publicada](../assets/img/chapter5/evidencia/pages.png)
+![Website publicado](../assets/img/chapter5/evidencia/pages.png)
 
-*Figura: Landing Page publicada en GitHub Pages.*
+*Figura: Website publicado en GitHub Pages.*
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
-Los cinco integrantes participaron en el Sprint: en la Landing Page, en la Web Application y en su documentación. La siguiente tabla resume los commits de cada integrante en todas las ramas de ambos repositorios (sin contar los commits de merge), seguida de los analíticos de GitHub: *Contributors*, que muestra los commits por integrante, y *Network*, que muestra las ramas de GitFlow y sus merges.
+Los cinco integrantes participaron en el Sprint: en el Website, en la Web Application y en su documentación. La siguiente tabla resume los commits de cada integrante en todas las ramas de ambos repositorios (sin contar los commits de merge), seguida de los analíticos de GitHub: *Contributors*, que muestra los commits por integrante, y *Network*, que muestra las ramas de GitFlow y sus merges.
 
-| Team Member | GitHub Username | Landing Page | Web Application | Total |
+| Team Member | GitHub Username | Website | Web Application | Total |
 |---|---|:---:|:---:|:---:|
 | Rojas Ambicho, Nestor Daniel | danRO-20 | 44 | 4 | 48 |
 | Cobades Zamora, Yhoshua Hebert | YhoshuaCZ | 0 | 43 | 43 |
@@ -839,17 +839,17 @@ Los cinco integrantes participaron en el Sprint: en la Landing Page, en la Web A
 | Angulo Ramírez, Marcelo Martín | Zock2005 | 17 | 3 | 20 |
 | Yarleque Ruiz, Cristina Marcela | Cris06luna | 0 | 6 | 6 |
 
-![Contributors de la Landing Page](../assets/img/chapter5/sprint2/github/insights-landing-contributors.png)
+![Contributors del Website](../assets/img/chapter5/sprint2/github/insights-landing-contributors.png)
 
-*Figura: Contributors del repositorio de la Landing Page.*
+*Figura: Contributors del repositorio del Website.*
 
 ![Contributors de la Web Application](../assets/img/chapter5/sprint2/github/insights-frontend-contributors.png)
 
 *Figura: Contributors del repositorio de la Web Application.*
 
-![Network de la Landing Page](../assets/img/chapter5/sprint2/github/insights-landing-network.png)
+![Network del Website](../assets/img/chapter5/sprint2/github/insights-landing-network.png)
 
-*Figura: Network graph del repositorio de la Landing Page.*
+*Figura: Network graph del repositorio del Website.*
 
 ![Network de la Web Application](../assets/img/chapter5/sprint2/github/insights-frontend-network.png)
 
