@@ -188,6 +188,10 @@ El informe se elabora bajo el enfoque Docs-as-Code en el repositorio del informe
 | Rojas Ambicho, Nestor Daniel | danRO-20 | 26 |
 | Cobades Zamora, Yhoshua Hebert | YhoshuaCZ | 11 |
 
+La siguiente captura muestra los analíticos de colaboración de GitHub (Insights → Contributors) del repositorio del informe para la entrega TB1, con los commits de cada integrante en la rama `main`:
+
+![Contributors del repositorio del informe - TB1](assets/img/readme/insights/tb1-contributors.png)
+
 **Mejoras aplicadas según la retroalimentación del TB1**
 
 A partir de la retroalimentación del docente sobre el TB1, el equipo revisó el informe y los productos, y aplicó las siguientes mejoras:
