@@ -140,13 +140,13 @@ Valores para el Website (sitio estático indexable):
 | **Página** | **Title** | **Meta description** | **Meta keywords** | **Author** |
 | --- | --- | --- | --- | --- |
 | Website (index.html) | DoofPlus \| Pharmaceutical Quality & Batch Traceability Platform | SaaS platform that centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories (GMP/DIGEMID). | pharmaceutical quality management, batch traceability, GMP, DIGEMID, CAPA, audit trail, IoT | IngesCompanyCC |
-| Contact us (contact.html) | Contact us \| DoofPlus | Send your questions about DoofPlus and its plans to the IngesCompanyCC team. | DoofPlus contact, pharmaceutical quality software, GMP software Peru | IngesCompanyCC |
 
 Valores para las vistas principales de la Web Application. Al ser una SPA, el título se actualiza en cada cambio de ruta con la propiedad `meta.title` de las rutas de Vue Router y la descripción con un guard global del router; keywords y author se definen una vez en `index.html` con los mismos valores del Website:
 
 | **Vista de la Web Application** | **Title** | **Meta description** |
 | --- | --- | --- |
 | Choose your environment | Sign in \| DoofPlus | Choose the QA/QC, Production or Administration environment of DoofPlus. |
+| Contact us | Contact us \| DoofPlus | Send your questions about DoofPlus and its plans to the IngesCompanyCC team. |
 | Sign in (por entorno) | Sign in to {environment} \| DoofPlus | Secure access to DoofPlus with two-factor authentication. |
 | Quality dashboard | Quality Dashboard \| DoofPlus | Pending batches, open deviations and quality indicators. |
 | Production dashboard | Production Console \| DoofPlus | Active production orders, batch status and alerts. |
@@ -167,8 +167,8 @@ Las acciones y técnicas que guían a los usuarios son:
 
 1. ***Website:***
 - **Navegación por anclas:** barra superior fija con enlaces a cada sección y desplazamiento suave; en mobile, menú hamburguesa que se abre como overlay.
-- **Llamadas a la acción por segmento:** la sección "Get Started" ofrece una tarjeta por segmento; cada una lleva directamente al inicio de sesión de su entorno en la Web Application (QA/QC o Producción). El enlace "Sign in" de la barra lleva a la elección de entorno, y "Register your laboratory" al registro de la organización.
-- **Páginas secundarias:** "Contact us" (formulario de consultas), "Terms of Service" y "Privacy Policy", enlazadas desde el footer.
+- **Llamadas a la acción por segmento:** la sección "Your workspace" presenta una tarjeta por segmento, y la llamada a la acción final ofrece un botón por segmento que lleva directamente al inicio de sesión de su entorno en la Web Application (QA/QC o Producción). El enlace "Sign in" de la barra lleva a la elección de entorno, y "Register your laboratory" al registro de la organización.
+- **Páginas secundarias:** "Terms of Service" y "Privacy Policy", enlazadas desde el footer. El formulario "Contact us" está en la Web Application, junto al inicio de sesión; el footer del Website muestra los datos de contacto y las redes sociales.
 
 2. ***Web Application:***
 - **Ingreso por entorno:** la elección de entorno (QA/QC, Production o Administration) precede al inicio de sesión; cada entorno se reconoce por su color, ícono y módulos.
@@ -182,47 +182,49 @@ Las acciones y técnicas que guían a los usuarios son:
 
 La propuesta de UI del Website traduce las decisiones de las secciones anteriores: la jerarquía visual ordena el contenido desde la propuesta de valor hasta la presentación de la startup; las etiquetas (Home, Features, Benefits, Plans, About Us) siguen el Labeling System; la barra fija con anclas, las llamadas a la acción por segmento y el enlace "Sign in" implementan el Navigation System; y el Design System de la sección 4.1 (Inter, verde azulado #0F766E, azul pizarra #0F172A y Material Symbols Rounded) se aplica de forma consistente con la Web Application. El Website atiende las user stories US01 a US05 y US44 a US49. Los wireframes y mock-ups se elaboraron en Figma y están disponibles en el archivo de diseño de DoofPlus: https://www.figma.com/design/YYtMivGL4tZEsLacA8HQmN/Aplicaciones-Web?node-id=72-57358.
 
-Las secciones se presentan en el siguiente orden, que prioriza la información que el visitante necesita para decidir (qué es DoofPlus, qué ofrece y cuánto cuesta) antes que la presentación del equipo:
+Las secciones se presentan en el siguiente orden, que prioriza la información que el visitante necesita para decidir (qué es DoofPlus, qué ofrece y cuánto cuesta), después presenta a la startup y termina con la llamada a la acción final:
 
 | N.° | Sección | Contenido | User stories |
 | --- | --- | --- | --- |
 | 1 | Home | Propuesta de valor, botón "Get Started" y enlace "View plans" | US01 |
-| 2 | Get Started | Una tarjeta por segmento con acceso al inicio de sesión de su entorno y el enlace "Register your laboratory" | US48, US50 |
-| 3 | Services | Cuatro servicios principales con ícono y descripción | US02 |
-| 4 | Features | Acordeón con las funcionalidades clave | US02 |
-| 5 | About the product (video) | Video promocional embebido | US49 |
-| 6 | Benefits | Beneficios medibles para el laboratorio | US02 |
-| 7 | Plans | Planes Standard Lab y Enterprise con selector mensual/anual | US03, US51 |
-| 8 | Testimonials | Opiniones de clientes | US01 |
-| 9 | FAQ | Preguntas frecuentes en acordeón | US05 |
-| 10 | Contact | Banda de llamada a la acción "Contact us" | US04 |
-| 11 | About Us | Misión y visión de IngesCompanyCC | US45 |
-| 12 | Our Team | Integrantes del equipo y Video About-the-Team embebido | US45 |
-| 13 | Footer | Logotipo blanco, enlaces, contacto, términos, privacidad y selector de idioma | US46, US47 |
+| 2 | Your workspace | Una tarjeta por segmento (QA/QC y Production) y el aviso "New to DoofPlus?" con el botón "Get started" | US48 |
+| 3 | Services | Cuatro servicios principales con ícono, descripción y enlace "Learn more" | US02 |
+| 4 | Features | Panel de lecturas IoT y acordeón con las funcionalidades clave | US02 |
+| 5 | About the product (video) | Video promocional con sus capítulos | US49 |
+| 6 | Benefits | Cuatro resultados medibles para el laboratorio | US02 |
+| 7 | Plans | Planes Standard Lab y Enterprise con selector mensual/anual | US03 |
+| 8 | About Us | Misión y visión de IngesCompanyCC | US45 |
+| 9 | Our Team | Integrantes del equipo y Video About-the-Team | US45 |
+| 10 | Testimonials | Opiniones de clientes | US01 |
+| 11 | FAQ | Preguntas frecuentes en acordeón | US05 |
+| 12 | Call to action | Acceso al inicio de sesión de cada segmento y al registro del laboratorio | US04, US48, US50 |
+| 13 | Footer | Logotipo blanco, redes sociales, enlaces, datos de contacto, términos, privacidad y selector de idioma | US04, US46, US47 |
+
+El formulario de contacto no forma parte del Website: el visitante lo encuentra en la Web Application, junto al inicio de sesión (sección 4.4). En el Website, los datos de contacto y las redes sociales se muestran en el footer.
 
 ### 4.3.1. Landing Page Wireframe
 
-Los wireframes son de baja fidelidad: los textos se representan con barras, las imágenes con un recuadro cruzado y los íconos con círculos; solo se conservan los títulos y las etiquetas de los botones, que definen la estructura. Así se valida la disposición y el flujo de la información sin decidir aún colores ni contenido final.
+Los wireframes son de baja fidelidad: se presentan en escala de grises, los párrafos se representan con barras y las imágenes con recuadros grises; solo se conservan los títulos, las etiquetas de los botones y los íconos, que definen la estructura. Así se valida la disposición y el flujo de la información sin decidir aún colores ni contenido final.
 
 **Desktop Web Browser (1440 px)**
 
-**Navigation y Home:** barra superior fija con el logotipo, los enlaces a las secciones, "Sign in" y "Get Started". Debajo, el título de la propuesta de valor, un párrafo breve, los dos botones y una imagen del producto a la derecha.
+**Navigation y Home:** barra superior fija con el logotipo, los enlaces Home, Features, Benefits, Plans y About Us, el selector de idioma, "Sign in" y "Get Started". Debajo, el título de la propuesta de valor, un párrafo breve, los dos botones y la imagen del producto con la tarjeta de estado de un lote.
 
 ![Landing Page Wireframe · Home](../assets/img/chapter4/landing-page/wireframes/desktop/01-home.png)
 
-**Get Started:** dos tarjetas, una por segmento (QA/QC y Production), cada una con su descripción y su botón de acceso; debajo, el enlace para registrar un laboratorio nuevo.
+**Your workspace:** dos tarjetas, una por segmento (QA/QC y Production), con su etiqueta y su descripción; debajo, el aviso para los laboratorios nuevos con el botón "Get started".
 
-![Landing Page Wireframe · Get Started](../assets/img/chapter4/landing-page/wireframes/desktop/02-get-started.png)
+![Landing Page Wireframe · Your workspace](../assets/img/chapter4/landing-page/wireframes/desktop/02-workspace.png)
 
-**Services:** cuatro tarjetas en una fila, cada una con ícono, título y descripción.
+**Services:** cuatro tarjetas en una fila, cada una con ícono, título, descripción y enlace "Learn more".
 
 ![Landing Page Wireframe · Services](../assets/img/chapter4/landing-page/wireframes/desktop/03-services.png)
 
-**Features:** imagen a la izquierda y acordeón a la derecha; solo un elemento permanece abierto a la vez.
+**Features:** panel de lecturas a la izquierda y acordeón a la derecha; solo un elemento permanece abierto a la vez.
 
 ![Landing Page Wireframe · Features](../assets/img/chapter4/landing-page/wireframes/desktop/04-features.png)
 
-**About the product (video):** título, descripción y un reproductor de video centrado.
+**About the product (video):** título, descripción, reproductor de video y la lista de capítulos.
 
 ![Landing Page Wireframe · Video](../assets/img/chapter4/landing-page/wireframes/desktop/05-about-the-product-video.png)
 
@@ -230,39 +232,35 @@ Los wireframes son de baja fidelidad: los textos se representan con barras, las 
 
 ![Landing Page Wireframe · Benefits](../assets/img/chapter4/landing-page/wireframes/desktop/06-benefits.png)
 
-**Plans:** selector mensual/anual y dos tarjetas de plan con precio, lista de características y botón de suscripción.
+**Plans:** selector mensual/anual y dos tarjetas de plan con precio y lista de características.
 
 ![Landing Page Wireframe · Plans](../assets/img/chapter4/landing-page/wireframes/desktop/07-plans.png)
 
-**Testimonials:** tres tarjetas con cita, nombre y cargo.
+**About Us:** texto de presentación con etiquetas y, a la derecha, las tarjetas de misión y visión.
 
-![Landing Page Wireframe · Testimonials](../assets/img/chapter4/landing-page/wireframes/desktop/08-testimonials.png)
+![Landing Page Wireframe · About Us](../assets/img/chapter4/landing-page/wireframes/desktop/08-about-us.png)
+
+**Our Team:** cuadrícula de tarjetas con foto, nombre, rol y descripción, y debajo el reproductor del Video About-the-Team.
+
+![Landing Page Wireframe · Our Team](../assets/img/chapter4/landing-page/wireframes/desktop/09-our-team.png)
+
+**Testimonials:** tres tarjetas con calificación, cita, nombre y cargo.
+
+![Landing Page Wireframe · Testimonials](../assets/img/chapter4/landing-page/wireframes/desktop/10-testimonials.png)
 
 **FAQ:** lista de preguntas en acordeón.
 
-![Landing Page Wireframe · FAQ](../assets/img/chapter4/landing-page/wireframes/desktop/09-faq.png)
+![Landing Page Wireframe · FAQ](../assets/img/chapter4/landing-page/wireframes/desktop/11-faq.png)
 
-**Contact:** banda horizontal con un mensaje y el botón "Contact us", que abre la página de contacto.
+**Call to action:** banda final con el título, los botones de inicio de sesión de cada segmento y el enlace para registrar un laboratorio nuevo.
 
-![Landing Page Wireframe · Contact](../assets/img/chapter4/landing-page/wireframes/desktop/10-contact.png)
+![Landing Page Wireframe · Call to action](../assets/img/chapter4/landing-page/wireframes/desktop/12-call-to-action.png)
 
-**About Us:** texto de misión y visión junto a una imagen.
-
-![Landing Page Wireframe · About Us](../assets/img/chapter4/landing-page/wireframes/desktop/11-about-us.png)
-
-**Our Team:** cuadrícula de tarjetas con foto, nombre y rol, y debajo el reproductor del Video About-the-Team con su descripción y capítulos.
-
-![Landing Page Wireframe · Our Team](../assets/img/chapter4/landing-page/wireframes/desktop/12-our-team.png)
-
-**Footer:** logotipo, columnas de enlaces (producto, empresa y legal), datos de contacto, derechos de autor y selector de idioma.
+**Footer:** logotipo, redes sociales, columnas de enlaces (producto, empresa, contacto y legal), derechos de autor y selector de idioma.
 
 ![Landing Page Wireframe · Footer](../assets/img/chapter4/landing-page/wireframes/desktop/13-footer.png)
 
-**Páginas secundarias (Desktop):** la página "Contact us" contiene el formulario de consultas (nombre, correo y consulta); si el correo es inválido o la consulta está vacía, se muestra el estado "Invalid data" con los campos resaltados; si el envío es correcto, se muestra "Message sent". El footer enlaza además "Terms of Service" y "Privacy Policy".
-
-| Contact us | Contact us · Invalid data | Message sent |
-| :---: | :---: | :---: |
-| ![Contact us](../assets/img/chapter4/landing-page/wireframes/pages/landing-desktop-contact-us.png) | ![Contact us · Invalid data](../assets/img/chapter4/landing-page/wireframes/pages/landing-desktop-contact-us-invalid-data.png) | ![Message sent](../assets/img/chapter4/landing-page/wireframes/pages/landing-desktop-message-sent.png) |
+**Páginas secundarias (Desktop):** el footer enlaza "Terms of Service" y "Privacy Policy".
 
 | Terms of Service | Privacy Policy |
 | :---: | :---: |
@@ -278,73 +276,68 @@ En mobile las mismas secciones se apilan en una sola columna, en el mismo orden;
 
 ![Landing Page Wireframe · Mobile (3)](../assets/img/chapter4/landing-page/wireframes/mobile/mobile-montage-3.png)
 
-| Menu open | Contact us | Contact us · Invalid data | Message sent |
-| :---: | :---: | :---: | :---: |
-| ![Menu open](../assets/img/chapter4/landing-page/wireframes/pages/landing-mobile-menu-open.png) | ![Contact us](../assets/img/chapter4/landing-page/wireframes/pages/landing-mobile-contact-us.png) | ![Invalid data](../assets/img/chapter4/landing-page/wireframes/pages/landing-mobile-contact-us-invalid-data.png) | ![Message sent](../assets/img/chapter4/landing-page/wireframes/pages/landing-mobile-message-sent.png) |
+| Menu open |
+| :---: |
+| ![Menu open](../assets/img/chapter4/landing-page/wireframes/pages/landing-mobile-menu-open.png) |
 
 ### 4.3.2. Landing Page Mock-up
-
 Los mock-ups aplican sobre los wireframes el Design System de la sección 4.1 y se presentan en inglés (en-US), idioma por defecto; el selector "EN / ES" de la barra de navegación cambia todos los textos al español latinoamericano (es-419). Se aplican además criterios de diseño inclusivo: contraste alto entre texto y fondo, botones con texto explícito, estados que no dependen solo del color y áreas táctiles de 48 px.
 
 **Desktop Web Browser (1440 px)**
 
-**Navigation y Home:** la barra blanca muestra el logotipo a color, los enlaces Home, Features, Benefits, Plans y About Us, el selector de idioma, "Sign in" y el botón "Get Started". El hero presenta el título "The future of pharmaceutical quality management", una descripción breve, el botón "Get Started" (desplaza a la sección del mismo nombre) y "View plans" (desplaza a Plans).
+**Navigation y Home:** la barra blanca muestra el logotipo a color, los enlaces Home, Features, Benefits, Plans y About Us, el selector de idioma, "Sign in" (abre la elección de entorno de la Web Application) y el botón "Get Started". El hero presenta el título "The Future of Pharmaceutical Quality Management", una descripción breve, el botón "Get Started" (desplaza a la llamada a la acción final) y "View plans" (desplaza a Plans), junto a la imagen de la planta con la tarjeta "Ready for release" del lote B-26038.
 
 ![Landing Page Mock-up · Home](../assets/img/chapter4/landing-page/mockups/desktop/01-home.png)
 
-**Get Started:** cada segmento tiene su tarjeta: "QA/QC Specialist" lleva al inicio de sesión del entorno QA/QC y "Production Supervisor" al del entorno de Producción. Los laboratorios que aún no usan DoofPlus encuentran el enlace "Register your laboratory", que abre el registro de la organización.
+**Your workspace:** "A workspace for each role" presenta una tarjeta por segmento: "For QA/QC Specialists" y "For Production Supervisors", con lo que cada uno hace en su entorno. El aviso "New to DoofPlus?" explica que el administrador registra la organización, elige el plan e invita al equipo, y su botón "Get started" lleva a la llamada a la acción final.
 
-![Landing Page Mock-up · Get Started](../assets/img/chapter4/landing-page/mockups/desktop/02-get-started.png)
+![Landing Page Mock-up · Your workspace](../assets/img/chapter4/landing-page/mockups/desktop/02-workspace.png)
 
-**Services:** "Real-time IoT monitoring", "Automated GMP compliance", "Immutable traceability" y "Digital batch management", cada uno con su ícono Material Symbols y una descripción breve.
+**Services:** "Real-Time IoT Monitoring", "Automated BPM Compliance", "Immutable Traceability" y "Digital Batch Management", cada uno con su ícono, una descripción breve y el enlace "Learn more", que lleva a Features.
 
 ![Landing Page Mock-up · Services](../assets/img/chapter4/landing-page/mockups/desktop/03-services.png)
 
-**Features:** el acordeón presenta la integración de telemetría IoT, el motor de cumplimiento GMP, las alertas de desviación y el panel de indicadores; cada elemento se expande para mostrar su descripción.
+**Features:** el panel muestra las lecturas en vivo de un equipo (temperatura, humedad y presión diferencial) y el acordeón presenta la integración de telemetría IoT, el motor de cumplimiento GMP, las alertas de desviación y el panel de indicadores.
 
 ![Landing Page Mock-up · Features](../assets/img/chapter4/landing-page/mockups/desktop/04-features.png)
 
-**About the product (video):** el video promocional explica en pocos minutos cómo DoofPlus acompaña un lote desde la orden de producción hasta su liberación.
+**About the product (video):** "See DoofPlus in action" incrusta el video promocional de tres minutos con sus capítulos: por qué DoofPlus, de la materia prima al registro de lote, de la alerta IoT a la CAPA y la liberación con firma electrónica.
 
 ![Landing Page Mock-up · Video](../assets/img/chapter4/landing-page/mockups/desktop/05-about-the-product-video.png)
 
-**Benefits:** cuatro tarjetas comunican los beneficios: menos tiempo de preparación de auditorías, registros sin transcripción manual, detección inmediata de desviaciones e infraestructura SaaS sin servidores propios.
+**Benefits:** sobre fondo azul pizarra, cuatro cifras comunican los resultados: 80 % menos tiempo de preparación de auditorías, cero errores humanos en los registros, menos de 5 segundos para detectar una desviación y US$0 en servidores propios.
 
 ![Landing Page Mock-up · Benefits](../assets/img/chapter4/landing-page/mockups/desktop/06-benefits.png)
 
-**Plans:** se comparan Standard Lab (US$199 al mes; hasta 5 dispositivos IoT y 10 usuarios) y Enterprise (US$599 al mes; dispositivos y usuarios ilimitados, multi-sede). El selector "Monthly / Annual" muestra la modalidad anual (US$1,990 y US$5,990), equivalente a dos meses gratis. El botón de cada plan lleva al registro de la organización con el plan preseleccionado.
+**Plans:** se comparan Standard Lab (US$199 al mes; hasta 5 dispositivos IoT y 10 usuarios) y Enterprise (US$599 al mes; dispositivos y usuarios ilimitados, multi-sede). El selector "Monthly / Annually" muestra la modalidad anual (US$1,990 y US$5,990), equivalente a dos meses gratis. El plan se elige al registrar el laboratorio en la Web Application.
 
 ![Landing Page Mock-up · Plans](../assets/img/chapter4/landing-page/mockups/desktop/07-plans.png)
 
-**Testimonials:** tres opiniones de profesionales de laboratorios farmacéuticos con su nombre y cargo.
+**About Us:** presenta a IngesCompanyCC, la startup detrás de DoofPlus, con sus valores (trazabilidad, integridad de datos, cumplimiento regulatorio y tecnología abierta), su misión y su visión.
 
-![Landing Page Mock-up · Testimonials](../assets/img/chapter4/landing-page/mockups/desktop/08-testimonials.png)
+![Landing Page Mock-up · About Us](../assets/img/chapter4/landing-page/mockups/desktop/08-about-us.png)
 
-**FAQ:** preguntas sobre cumplimiento normativo, integración IoT, planes y seguridad de los datos, en un acordeón.
+**Our Team:** presenta a los integrantes de IngesCompanyCC: Marcelo Angulo, Yhoshua Cobades, Cristina Yarleque, Nestor Rojas y Rodolfo Zavaleta, con su foto, nombre, rol y descripción. Debajo se incrusta el Video About-the-Team, que resume el proceso de trabajo del equipo, la retrospectiva y el testimonio de cada integrante.
 
-![Landing Page Mock-up · FAQ](../assets/img/chapter4/landing-page/mockups/desktop/09-faq.png)
+![Landing Page Mock-up · Our Team](../assets/img/chapter4/landing-page/mockups/desktop/09-our-team.png)
 
-**Contact:** la banda invita a resolver dudas con el botón "Contact us", que abre la página del formulario de contacto.
+**Testimonials:** tres opiniones de profesionales de laboratorios farmacéuticos, con su calificación, nombre y cargo.
 
-![Landing Page Mock-up · Contact](../assets/img/chapter4/landing-page/mockups/desktop/10-contact.png)
+![Landing Page Mock-up · Testimonials](../assets/img/chapter4/landing-page/mockups/desktop/10-testimonials.png)
 
-**About Us:** presenta a IngesCompanyCC, la startup detrás de DoofPlus, con su misión y su visión.
+**FAQ:** preguntas sobre los entornos de cada segmento, el cumplimiento GMP, los sensores compatibles, el cambio o la cancelación del plan y la seguridad de la información, en un acordeón.
 
-![Landing Page Mock-up · About Us](../assets/img/chapter4/landing-page/mockups/desktop/11-about-us.png)
+![Landing Page Mock-up · FAQ](../assets/img/chapter4/landing-page/mockups/desktop/11-faq.png)
 
-**Our Team:** presenta a los integrantes de IngesCompanyCC: Marcelo Angulo, Yhoshua Cobades, Nestor Rojas, Cristina Yarleque y Rodolfo Zavaleta, con su foto, nombre y rol. Debajo se incrusta el Video About-the-Team, que resume el proceso de trabajo del equipo, la retrospectiva y el testimonio de cada integrante, con un enlace alternativo a YouTube.
+**Call to action:** "Ready to modernize your pharmaceutical quality management?" cierra la página con un botón por segmento ("I'm a QA/QC Specialist · Sign in" e "I'm a Production Supervisor · Sign in"), que abre el inicio de sesión de su entorno, y el enlace "Register your laboratory", que abre el registro de la organización.
 
-![Landing Page Mock-up · Our Team](../assets/img/chapter4/landing-page/mockups/desktop/12-our-team.png)
+![Landing Page Mock-up · Call to action](../assets/img/chapter4/landing-page/mockups/desktop/12-call-to-action.png)
 
-**Footer:** fondo azul pizarra con el logotipo blanco, los enlaces de producto y de empresa, los datos de contacto (doofplus.inges@gmail.com, +51 (1) 234-5678, Lima, Perú), los enlaces "Terms of Service" y "Privacy Policy", el copyright de IngesCompanyCC y el selector de idioma.
+**Footer:** fondo azul pizarra con el logotipo blanco, el lema, las redes sociales (LinkedIn, GitHub, X, YouTube e Instagram), los enlaces de producto y de empresa, los datos de contacto (doofplus.inges@gmail.com, +51 (1) 234-5678, Lima, Perú), los enlaces "Terms of Service" y "Privacy Policy", el copyright de IngesCompanyCC y el selector de idioma.
 
 ![Landing Page Mock-up · Footer](../assets/img/chapter4/landing-page/mockups/desktop/13-footer.png)
 
-**Páginas secundarias (Desktop):** "Contact us" registra la consulta del visitante (US04); ante datos inválidos muestra el aviso general y el error bajo cada campo, conservando lo ingresado; tras un envío correcto confirma la recepción en "Message sent". "Terms of Service" y "Privacy Policy" presentan las condiciones de uso y el tratamiento de datos personales (US47).
-
-| Contact us | Contact us · Invalid data | Message sent |
-| :---: | :---: | :---: |
-| ![Contact us](../assets/img/chapter4/landing-page/mockups/pages/landing-desktop-contact-us.png) | ![Contact us · Invalid data](../assets/img/chapter4/landing-page/mockups/pages/landing-desktop-contact-us-invalid-data.png) | ![Message sent](../assets/img/chapter4/landing-page/mockups/pages/landing-desktop-message-sent.png) |
+**Páginas secundarias (Desktop):** "Terms of Service" y "Privacy Policy" presentan las condiciones de uso y el tratamiento de datos personales (US47), con un enlace para volver al Website.
 
 | Terms of Service | Privacy Policy |
 | :---: | :---: |
@@ -360,9 +353,9 @@ La versión mobile mantiene el orden y el contenido de desktop en una sola colum
 
 ![Landing Page Mock-up · Mobile (3)](../assets/img/chapter4/landing-page/mockups/mobile/mobile-montage-3.png)
 
-| Menu open | Contact us | Contact us · Invalid data | Message sent |
-| :---: | :---: | :---: | :---: |
-| ![Menu open](../assets/img/chapter4/landing-page/mockups/pages/landing-mobile-menu-open.png) | ![Contact us](../assets/img/chapter4/landing-page/mockups/pages/landing-mobile-contact-us.png) | ![Invalid data](../assets/img/chapter4/landing-page/mockups/pages/landing-mobile-contact-us-invalid-data.png) | ![Message sent](../assets/img/chapter4/landing-page/mockups/pages/landing-mobile-message-sent.png) |
+| Menu open |
+| :---: |
+| ![Menu open](../assets/img/chapter4/landing-page/mockups/pages/landing-mobile-menu-open.png) |
 
 ## 4.4. Web Applications UX/UI Design
 
@@ -374,11 +367,15 @@ Todas las pantallas comparten la misma estructura, derivada de la arquitectura d
 
 Los wireframes de baja fidelidad definen la distribución de cada pantalla antes del diseño visual. Se agrupan por segmento y se presentan en montajes, en el mismo orden que los mock-ups de la sección 4.4.3, donde se explica cada pantalla.
 
-**Desktop Web Browser · Compartido: elección de entorno, registro de la organización y perfil**
+**Desktop Web Browser · Compartido: elección de entorno, contacto, registro de la organización y perfil**
 
-Incluye "Sign in · Choose your environment", "Organization registration" con su estado "RUC already registered" y "Account · Profile & preferences".
+Incluye "Sign in · Choose your environment", "Organization registration" con su estado "RUC already registered" y "Account · Profile & preferences". El formulario "Contact us" se ubica en la misma zona pública que el inicio de sesión, con sus estados "Invalid data" e "Inquiry received".
 
 ![Web App Wireframes · Desktop · Shared](../assets/img/chapter4/web-application/wireframes/desktop-shared-environment-selection-onboarding-profile-montage-1.png)
+
+| Contact us | Contact us · Invalid data | Contact us · Inquiry received |
+| :---: | :---: | :---: |
+| ![Contact us](../assets/img/chapter4/web-application/wireframes/contact/contact-us.png) | ![Contact us · Invalid data](../assets/img/chapter4/web-application/wireframes/contact/contact-us-invalid-data.png) | ![Contact us · Inquiry received](../assets/img/chapter4/web-application/wireframes/contact/contact-us-inquiry-received.png) |
 
 **Desktop Web Browser · Segmento 1: Especialista QA/QC**
 
@@ -420,6 +417,10 @@ En mobile se priorizan las tareas que se realizan fuera del escritorio: la elecc
 
 ![Web App Wireframes · Mobile · Shared](../assets/img/chapter4/web-application/wireframes/mobile-shared-environment-selection-montage-1.png)
 
+| Contact us | Contact us · Invalid data | Contact us · Inquiry received |
+| :---: | :---: | :---: |
+| ![Contact us](../assets/img/chapter4/web-application/wireframes/contact/contact-us-mobile.png) | ![Contact us · Invalid data](../assets/img/chapter4/web-application/wireframes/contact/contact-us-mobile-invalid-data.png) | ![Contact us · Inquiry received](../assets/img/chapter4/web-application/wireframes/contact/contact-us-mobile-inquiry-received.png) |
+
 ![Web App Wireframes · Mobile · QA/QC (1)](../assets/img/chapter4/web-application/wireframes/mobile-segment-1-qa-qc-specialist-montage-1.png)
 
 ![Web App Wireframes · Mobile · QA/QC (2)](../assets/img/chapter4/web-application/wireframes/mobile-segment-1-qa-qc-specialist-montage-2.png)
@@ -432,7 +433,7 @@ En mobile se priorizan las tareas que se realizan fuera del escritorio: la elecc
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para representar la secuencia de pantallas que lo llevan a cumplir un objetivo. Para cada segmento se definieron seis user goals, basados en sus user stories. Cada diagrama muestra el user goal, la persona, el camino principal y los puntos de decisión que desvían el flujo hacia una pantalla de error o de bloqueo. Los diagramas se elaboraron en FigJam y están disponibles en el tablero de Wireflows y User Flows: https://www.figma.com/board/WxYyDGMJ42w7w7yQNNnGNN.
+Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para representar la secuencia de pantallas que lo llevan a cumplir un objetivo. Para cada segmento se definieron seis user goals, basados en sus user stories, y uno para el visitante del Website (VI-1), que envía una consulta desde el formulario "Contact us" de la Web Application. Cada diagrama muestra el user goal, la persona, el camino principal y los puntos de decisión que desvían el flujo hacia una pantalla de error o de bloqueo. Los diagramas se elaboraron en FigJam y están disponibles en el tablero de Wireflows y User Flows: https://www.figma.com/board/WxYyDGMJ42w7w7yQNNnGNN.
 
 #### Segmento 1 – Especialista de Aseguramiento y Control de Calidad (QA/QC)
 
@@ -534,15 +535,31 @@ Flujo: Production overview → Batches → Batch detail & traceability.
 
 ![Wireflow PR-6](../assets/img/chapter4/web-application/wireflows/wireflow-pr-6.png)
 
+#### Visitante del Website
+
+**User Goal VI-1:** Enviar una consulta al equipo de DoofPlus (US04).
+
+Como visitante interesado, quiero enviar una consulta al equipo de DoofPlus para resolver mis dudas sobre la plataforma y sus planes. Desde el Website, el visitante elige "Sign in", abre "Contact us" en la elección de entorno, completa su nombre, su correo y su consulta y recibe la confirmación. Si el correo no es válido o la consulta está vacía, el formulario muestra el error bajo cada campo y el visitante los corrige.
+
+Flujo: Website · Home → Choose your environment → Contact us → Inquiry received.
+
+![Wireflow VI-1](../assets/img/chapter4/web-application/wireflows/wireflow-vi-1.png)
+
 ### 4.4.3. Web Applications Mock-ups
 
 Los mock-ups aplican el Design System de la sección 4.1 sobre los wireframes y se presentan en inglés (en-US), idioma por defecto. Cada entorno se reconoce por su color: QA/QC en verde azulado (#0F766E), Production en azul (#1E40AF) y Administration en azul pizarra (#334155). A continuación se presentan las pantallas Desktop por grupo, con su propósito y las user stories que atienden.
 
-#### Compartido: elección de entorno, registro de la organización y perfil
+#### Compartido: elección de entorno, contacto, registro de la organización y perfil
 
-**Sign in · Choose your environment:** se abre desde "Sign in" en el Website. Presenta tres tarjetas, QA/QC, Production y Administration, cada una con su color, ícono y descripción; al elegir una se abre el inicio de sesión de ese entorno. Incluye el enlace "Register your laboratory" y "See plans" para quienes aún no tienen cuenta.
+**Sign in · Choose your environment:** se abre desde "Sign in" en el Website. Presenta tres tarjetas, QA/QC, Production y Administration, cada una con su color, ícono y descripción; al elegir una se abre el inicio de sesión de ese entorno. Incluye el enlace "Register your organization" para los laboratorios que aún no tienen cuenta y "Contact us" para quienes tienen preguntas; la barra superior muestra también "Contact us" junto al selector de idioma.
 
 ![Mock-up · Choose your environment](../assets/img/chapter4/web-application/mockups/desktop-shared-environment-selection-onboarding-profile/sign-in-choose-your-environment.png)
+
+**Contact us:** formulario de consultas del visitante (US04), en la zona pública de la Web Application, junto al inicio de sesión. El panel verde azulado presenta los temas de consulta (planes, demo guiada, cumplimiento DIGEMID y GMP, soporte) y los canales del equipo (correo, teléfono y oficina); el formulario pide nombre, correo de trabajo y consulta. Si el correo no es válido o la consulta está vacía, se muestra el error bajo cada campo ("Invalid data"); si el envío es correcto, se registra la consulta y se confirma su recepción ("Inquiry received"), con las opciones "Send another inquiry" y "Back to sign in". En mobile, la barra superior muestra solo el ícono de contacto.
+
+| Contact us | Contact us · Invalid data | Contact us · Inquiry received |
+| :---: | :---: | :---: |
+| ![Contact us](../assets/img/chapter4/web-application/mockups/contact/contact-us.png) | ![Contact us · Invalid data](../assets/img/chapter4/web-application/mockups/contact/contact-us-invalid-data.png) | ![Contact us · Inquiry received](../assets/img/chapter4/web-application/mockups/contact/contact-us-inquiry-received.png) |
 
 **Organization registration:** el administrador registra el laboratorio con su razón social, RUC, planta y datos de contacto, y elige su plan, que aparece preseleccionado cuando llega desde la sección Plans del Website (US50, US51). Si el RUC ya pertenece a otra organización, el formulario muestra el estado "RUC already registered" y no crea un duplicado.
 
@@ -694,9 +711,13 @@ Los mock-ups aplican el Design System de la sección 4.1 sobre los wireframes y 
 
 En mobile, la navegación del entorno se agrupa en una barra inferior y las pantallas se reducen a las tareas de campo de cada segmento.
 
-**Compartido:** elección del entorno.
+**Compartido:** elección del entorno y formulario de contacto.
 
 ![Mock-up · Mobile · Shared](../assets/img/chapter4/web-application/mockups/mobile-shared-environment-selection-montage-1.png)
+
+| Contact us | Contact us · Invalid data | Contact us · Inquiry received |
+| :---: | :---: | :---: |
+| ![Contact us](../assets/img/chapter4/web-application/mockups/contact/contact-us-mobile.png) | ![Contact us · Invalid data](../assets/img/chapter4/web-application/mockups/contact/contact-us-mobile-invalid-data.png) | ![Contact us · Inquiry received](../assets/img/chapter4/web-application/mockups/contact/contact-us-mobile-inquiry-received.png) |
 
 **Segmento 1 – QA/QC:** inicio de sesión con sus estados, Task inbox, Approval review y Approval completed, donde la Quality Manager aprueba el documento (con el estado "Record changed", que impide firmar si el registro cambió durante la revisión), Electronic signature (con el estado "Invalid password") y Signature confirmed, donde María firma la liberación del lote B-26038, y Batch detail.
 
@@ -818,11 +839,21 @@ Unhappy path: ¿Hay una incidencia abierta en una línea? Sí → se sigue en Io
 
 ![User Flow PR-6](../assets/img/chapter4/web-application/user-flows/user-flow-pr-6.png)
 
+#### Visitante del Website
+
+**User Goal VI-1:** Enviar una consulta al equipo de DoofPlus.
+
+Happy path: Website · Home → "Sign in" → Choose your environment → "Contact us" → nombre, correo y consulta → Inquiry received.
+
+Unhappy path: ¿El correo y la consulta son válidos? No → "Invalid data"; el visitante corrige los campos y vuelve a enviar.
+
+![User Flow VI-1](../assets/img/chapter4/web-application/user-flows/user-flow-vi-1.png)
+
 ## 4.5. Web Applications Prototyping
 
 El prototipo interactivo de DoofPlus se construyó en Figma sobre los mock-ups de las secciones 4.3.2 y 4.4.3, con el fin de validar la navegación y los flujos antes de la implementación. Sus interacciones siguen los paths de los User Flow Diagrams de la sección 4.4.4:
 
-- **Website:** los enlaces de la barra desplazan a cada sección; "Sign in" abre la elección de entorno; las tarjetas de "Get Started" abren el inicio de sesión de su entorno; los botones de los planes y "Register your laboratory" abren el registro de la organización; "Contact us" abre el formulario de contacto, y los enlaces del footer, los términos y la política de privacidad. En mobile, el ícono de menú abre el overlay de navegación.
+- **Website:** los enlaces de la barra desplazan a cada sección; "Sign in" abre la elección de entorno; "Get Started" desplaza a la llamada a la acción final, cuyos botones abren el inicio de sesión de cada entorno y "Register your laboratory" el registro de la organización; los enlaces del footer abren los términos, la política de privacidad, el correo y las redes sociales. En la Web Application, "Contact us" abre el formulario de contacto desde la barra superior y desde la elección de entorno. En mobile, el ícono de menú abre el overlay de navegación.
 - **Ingreso:** la elección de entorno abre el inicio de sesión de QA/QC, Production o Administration; "Continue" lleva al código 2FA y "Verify" a la pantalla inicial del entorno. Los estados de error se muestran como pantallas alternativas.
 - **Web Application:** el sidebar lleva a cada módulo del entorno, el avatar abre "Profile & preferences" y los botones de cada pantalla siguen los user goals QA-1 a QA-6 y PR-1 a PR-6, que se definieron como puntos de inicio del prototipo.
 
@@ -1224,7 +1255,7 @@ El diseño orientado a objetos traduce los aggregates del Design-Level EventStor
 
 ![Class Diagram - IAM](../assets/img/chapter4/diagram-class/class-01-iam.png)
 
-**Organizations & Profiles.** `Organization` agrupa sus plantas y se identifica por el value object `Ruc`; `Profile` guarda los datos y preferencias de cada usuario; `ContactInquiry` registra las consultas enviadas desde el formulario de contacto del Website y, mediante una policy, avisa al equipo de DoofPlus.
+**Organizations & Profiles.** `Organization` agrupa sus plantas y se identifica por el value object `Ruc`; `Profile` guarda los datos y preferencias de cada usuario; `ContactInquiry` registra las consultas enviadas desde el formulario "Contact us" de la Web Application y, mediante una policy, avisa al equipo de DoofPlus.
 
 ![Class Diagram - Organizations & Profiles](../assets/img/chapter4/diagram-class/class-02-organizations.png)
 
