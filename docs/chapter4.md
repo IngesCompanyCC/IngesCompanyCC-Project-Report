@@ -1,6 +1,6 @@
 # Capítulo IV: Product Design
 
-En este capítulo se presenta el diseño de DoofPlus a partir de las User Stories y el Impact Map del capítulo III: las guías de estilo, la arquitectura de información, el diseño de la Landing Page y de la Web Application, la arquitectura de software orientada al dominio, el diseño orientado a objetos y el diseño de la base de datos. Las decisiones responden a las exigencias de los laboratorios farmacéuticos y de la DIGEMID sobre la calidad, la trazabilidad y la integridad de los registros.
+En este capítulo se presenta el diseño de DoofPlus a partir de las User Stories y el Impact Map del capítulo III: las guías de estilo, la arquitectura de información, el diseño del Website y de la Web Application, la arquitectura de software orientada al dominio, el diseño orientado a objetos y el diseño de la base de datos. Las decisiones responden a las exigencias de los laboratorios farmacéuticos y de la DIGEMID sobre la calidad, la trazabilidad y la integridad de los registros.
 
 ## 4.1. Style Guidelines
 
@@ -8,7 +8,7 @@ En esta sección se establecen las bases visuales y de comunicación para DoofPl
 
 ### 4.1.1. General Style Guidelines
 
-Para asegurar una interfaz coherente y alineada con los estándares que exige la industria farmacéutica, el sistema de diseño de DoofPlus toma como base **Material Design**, el lenguaje de diseño indicado para el proyecto. En la Web Application se implementa con **Vite** usando un tema basado en **Material Design**, y en la Landing Page con ***HTML5*** y ***CSS3*** respetando los mismos tokens de color, tipografía y espaciado.
+Para asegurar una interfaz coherente y alineada con los estándares que exige la industria farmacéutica, el sistema de diseño de DoofPlus toma como base **Material Design**, el lenguaje de diseño indicado para el proyecto. En la Web Application se implementa con **Vite** usando un tema basado en **Material Design**, y en el Website con ***HTML5*** y ***CSS3*** respetando los mismos tokens de color, tipografía y espaciado.
 
 #### Branding:
 El logotipo escogido para DoofPlus comunica de forma directa y sintética la propuesta de valor del sistema: la integración de la automatización industrial con la rigurosidad del control farmacéutico. Para la sección de Branding, el análisis de los componentes de dicho logotipo se desglosa de la siguiente manera:
@@ -21,7 +21,7 @@ El logotipo escogido para DoofPlus comunica de forma directa y sintética la pro
 - **Escudo de verificación:** representa el aseguramiento de la calidad y transmite protección de los datos y cumplimiento de las BPM exigidas por DIGEMID.
 - **Construcción tipográfica y cromática:** el nombre DoofPlus usa una fuente sans-serif sólida; “Doof” en azul pizarra oscuro evoca la base tecnológica y “Plus” en verde marino (#0D9488) conecta con la salud y la validación de procesos.
 
-Para su uso en las interfaces se definieron dos versiones horizontales del logotipo: a color, para fondos claros (barra de navegación de la Landing Page y de la Web Application), y en blanco, para fondos oscuros (footer de la Landing Page y barras de color). Ambas se usan como componentes reutilizables en Figma.
+Para su uso en las interfaces se definieron dos versiones horizontales del logotipo: a color, para fondos claros (barra de navegación del Website y de la Web Application), y en blanco, para fondos oscuros (footer del Website y barras de color). Ambas se usan como componentes reutilizables en Figma.
 
 | Versión a color (fondos claros) | Versión blanca (fondos oscuros) |
 | :---: | :---: |
@@ -34,8 +34,8 @@ La tipografía de DoofPlus es Inter, una fuente sans-serif moderna y legible con
 
 | **Elemento** | **Tamaño (desktop)** | **Peso** | **Uso** |
 | --- | --- | --- | --- |
-| H1 – Título principal | 3rem (48 px), interlineado 1.1 | Semi Bold (600) | Título del hero de la Landing Page |
-| H2 – Título de sección o pantalla | 2rem (32 px), interlineado 1.2 | Semi Bold (600) | Secciones de la Landing Page y títulos de pantalla |
+| H1 – Título principal | 3rem (48 px), interlineado 1.1 | Semi Bold (600) | Título del hero del Website |
+| H2 – Título de sección o pantalla | 2rem (32 px), interlineado 1.2 | Semi Bold (600) | Secciones del Website y títulos de pantalla |
 | H3 – Título de tarjeta | 1.5rem (24 px), interlineado 1.3 | Semi Bold (600) | Tarjetas, paneles y diálogos |
 | Body | 1rem (16 px), interlineado 1.45 | Regular (400) | Párrafos y tablas de datos |
 | Label | 0.875rem (14 px) | Medium (500) | Etiquetas de formulario, botones y estados |
@@ -67,9 +67,9 @@ La paleta de colores de DoofPlus está diseñada para evocar pulcritud clínica,
 
 El espaciado se rige por la cuadrícula de 8 puntos de Material Design, que asegura un ritmo vertical constante y facilita la lectura rápida de reportes técnicos:
 
-- **Márgenes:** 64 px en las páginas públicas (Landing Page e inicio de sesión) y 32 px como margen interior del área de trabajo de la Web Application.
+- **Márgenes:** 64 px en las páginas públicas (Website e inicio de sesión) y 32 px como margen interior del área de trabajo de la Web Application.
 - **Espacio entre elementos:** 24 px de separación (gutter) entre columnas y tarjetas, y 16 px de padding interno en los elementos.
-- **Geometría:** radio de 8 px en controles, 16 px en tarjetas y forma de píldora en botones de la Landing Page; bordes de 1 px (#E2E8F0).
+- **Geometría:** radio de 8 px en controles, 16 px en tarjetas y forma de píldora en botones del Website; bordes de 1 px (#E2E8F0).
 - **Área táctil mínima:** 48 x 48 px en botones y controles, especialmente en mobile.
 
 #### Tono de Comunicación
@@ -88,7 +88,7 @@ Las directrices de estilo web de DoofPlus explican e ilustran las decisiones sob
 1. Layout
 - Sistema de Grid: Utilizamos un diseño de cuadrícula fluida de 12 columnas para garantizar que el contenido de DoofPlus se adapte perfectamente a cualquier resolución de pantalla. Este enfoque permite que los dashboards de telemetría, las tablas de trazabilidad de lotes y los planes de suscripción se ajusten dinámicamente, manteniendo la jerarquía visual requerida en un entorno industrial.
 - Headers y Footers (encabezados y pies de página): El encabezado es fijo en la parte superior, proporcionando acceso constante a la navegación principal, alertas de desviaciones críticas y a las acciones de sesión. El pie de página centraliza los enlaces normativos, políticas de privacidad, términos de servicio, copyright y contacto de soporte.
-- Cards y Data Tables: Las tarjetas (Cards) estructuran la información de los módulos del sistema (IoT, Compliance, Auditorías) en la Landing Page. Para la aplicación web, el componente central son las Tablas de Datos (Data Tables), diseñadas con bordes sutiles y alternancia de color (Zebra striping) para facilitar la lectura de expedientes de lotes y registros inmutables (Audit Trail) sin fatiga visual.
+- Cards y Data Tables: Las tarjetas (Cards) estructuran la información de los módulos del sistema (IoT, Compliance, Auditorías) en el Website. Para la aplicación web, el componente central son las Tablas de Datos (Data Tables), diseñadas con bordes sutiles y alternancia de color (Zebra striping) para facilitar la lectura de expedientes de lotes y registros inmutables (Audit Trail) sin fatiga visual.
 
 2. Responsive Design
 - Desktop: Orientado al Jefe de Producción y al Administrador. La navegación principal es visible en una barra lateral o superior. El contenido aprovecha múltiples columnas para desplegar gráficos unificados de rendimiento y tablas complejas de fórmulas maestras en monitores de estaciones de trabajo.
@@ -101,11 +101,11 @@ Las directrices de estilo web de DoofPlus explican e ilustran las decisiones sob
 - Selector de idioma: componente EN/ES (SelectButton de PrimeVue) visible en todas las pantallas públicas y autenticadas; inglés (en-US) es el idioma por defecto.
 
 4. Images and Icons
-- Imágenes: En la Landing Page se utilizan fotografías de alta calidad, optimizadas en formato WebP, que evocan el entorno de manufactura: líneas de producción automatizadas, laboratorios esterilizados y operarios utilizando tablets. Refuerzan el mensaje de tecnología aplicada al cumplimiento BPM.
+- Imágenes: En el Website se utilizan fotografías de alta calidad, optimizadas en formato WebP, que evocan el entorno de manufactura: líneas de producción automatizadas, laboratorios esterilizados y operarios utilizando tablets. Refuerzan el mensaje de tecnología aplicada al cumplimiento BPM.
 - Íconos: Se emplea la biblioteca Material Symbols (variante Rounded) para un estilo lineal y minimalista. Estos íconos ofrecen una guía visual rápida para representar servicios críticos: un microchip o antena para la telemetría, un escudo con un símbolo de check para el cumplimiento regulatorio y cápsulas o maquinaria para la gestión de producción.
 
 5. Repositorio Central
-- Organización: el proyecto de la Web Application en Vue 3 se organiza por bounded context dentro de `src`: `iam`, `organizations`, `subscriptions`, `manufacturing`, `monitoring` y `quality`, cada uno con las capas `domain`, `application`, `infrastructure` y `presentation`. Los elementos comunes (layout, toolbar, footer, selector de idioma y cliente REST base) se ubican en `src/shared`; los estilos globales y los design tokens de color, tipografía y espaciado, en `src/styles.css`; las imágenes e íconos, en `public/images`, y las traducciones, en `public/i18n` (`en.json`, idioma por defecto, y `es.json`). La Landing Page aplica los mismos tokens en su hoja de estilos.
+- Organización: el proyecto de la Web Application en Vue 3 se organiza por bounded context dentro de `src`: `iam`, `organizations`, `subscriptions`, `manufacturing`, `monitoring` y `quality`, cada uno con las capas `domain`, `application`, `infrastructure` y `presentation`. Los elementos comunes (layout, toolbar, footer, selector de idioma y cliente REST base) se ubican en `src/shared`; los estilos globales y los design tokens de color, tipografía y espaciado, en `src/styles.css`; las imágenes e íconos, en `public/images`, y las traducciones, en `public/i18n` (`en.json`, idioma por defecto, y `es.json`). El Website aplica los mismos tokens en su hoja de estilos.
 - Versionado: Se utiliza Git gestionado desde GitHub como sistema de control de versiones central. El equipo aplica GitFlow y Conventional Commits para gestionar los cambios en el código, lo que ayuda a garantizar que el entorno de desarrollo mantenga una integración continua y una versión estable del producto en todo momento. Además, se aplica Semantic Versioning para darle un orden a las versiones.
 
 
@@ -117,32 +117,32 @@ La arquitectura de la información de DoofPlus establece las decisiones que diri
 
 Para estructurar los grupos de información de la plataforma se aplican los siguientes sistemas de organización y esquemas de categorización:
 
-- **Organización jerárquica (visual hierarchy):** en la Landing Page el contenido va de mayor a menor impacto: propuesta de valor (Home), acceso por segmento (Get Started), servicios, características, video, beneficios, planes, testimonios, preguntas frecuentes, contacto y, al final, la startup y su equipo.
+- **Organización jerárquica (visual hierarchy):** en el Website el contenido va de mayor a menor impacto: propuesta de valor (Home), acceso por segmento (Get Started), servicios, características, video, beneficios, planes, testimonios, preguntas frecuentes, contacto y, al final, la startup y su equipo.
 - **Organización secuencial (step-by-step):** en el ingreso a la Web Application (elección del entorno → inicio de sesión → 2FA) y en los flujos regulados, como la recepción de materias primas (recepción → muestreo → inspección → aprobado o rechazado) y la liberación de un lote (cuarentena → evaluación de resultados → firma electrónica).
 - **Organización matricial:** en los dashboards, que cruzan lotes, variables de equipos e indicadores de cumplimiento.
 - **Categorización cronológica:** en el audit trail, la línea de tiempo del lote y la telemetría IoT, ordenados por fecha y hora.
 - **Categorización por tópicos:** en el repositorio documental (protocolos, SOP, especificaciones) y en la navegación por módulos.
-- **Categorización por audiencia:** en la Landing Page (llamadas a la acción para QA/QC y para Producción) y en la Web Application (entornos de calidad y de producción según el rol).
+- **Categorización por audiencia:** en el Website (llamadas a la acción para QA/QC y para Producción) y en la Web Application (entornos de calidad y de producción según el rol).
 
 ### 4.2.2. Labeling Systems
 
 Para asegurar la simplicidad y evitar la confusión de los visitantes y usuarios, la representación de los datos se realiza mediante etiquetas que utilizan el mínimo número de palabras posibles, lo que representa la terminología técnica de la industria farmacéutica:
 
-- Landing Page: las etiquetas de la barra de navegación usan asociaciones estándar de una o dos palabras: "Home", "Features" (módulos técnicos), "Benefits", "Plans" (planes y precios) y "About Us", además de "Sign in" (inicio de sesión) y "Get Started" (acceso por segmento). En español latinoamericano se muestran como "Inicio", "Características", "Beneficios", "Planes", "Nosotros", "Iniciar sesión" y "Comenzar".
+- Website: las etiquetas de la barra de navegación usan asociaciones estándar de una o dos palabras: "Home", "Features" (módulos técnicos), "Benefits", "Plans" (planes y precios) y "About Us", además de "Sign in" (inicio de sesión) y "Get Started" (acceso por segmento). En español latinoamericano se muestran como "Inicio", "Características", "Beneficios", "Planes", "Nosotros", "Iniciar sesión" y "Comenzar".
 - Web Application: las etiquetas operativas siguen el Ubiquitous Language de la sección 2.5 y se definen en inglés, idioma por defecto, con su traducción al español: "Batches" (Lotes) agrupa el historial de fabricación, "Raw materials" (Materias primas) la recepción y cuarentena de insumos, "Deviations" y "CAPA plans" (Desviaciones y planes CAPA) las incidencias y su corrección, y "Audit trail" (registro de auditoría) el registro inmutable de cambios. Los estados que se muestran en pantalla son los definidos en el modelo de dominio (por ejemplo, Planned, In progress, On hold, Release requested, Released y Rejected para los lotes).
 
 ### 4.2.3. SEO Tags and Meta Tags
 
 Para el posicionamiento y la indexación correcta de las principales páginas de la experiencia web, se asignan los siguientes valores mínimos exigidos:
 
-Valores para la Landing Page (sitio estático indexable):
+Valores para el Website (sitio estático indexable):
 
 | **Página** | **Title** | **Meta description** | **Meta keywords** | **Author** |
 | --- | --- | --- | --- | --- |
-| Landing Page (index.html) | DoofPlus \| Pharmaceutical Quality & Batch Traceability Platform | SaaS platform that centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories (GMP/DIGEMID). | pharmaceutical quality management, batch traceability, GMP, DIGEMID, CAPA, audit trail, IoT | IngesCompanyCC |
+| Website (index.html) | DoofPlus \| Pharmaceutical Quality & Batch Traceability Platform | SaaS platform that centralizes quality documentation, batch traceability, deviations and IoT data for pharmaceutical laboratories (GMP/DIGEMID). | pharmaceutical quality management, batch traceability, GMP, DIGEMID, CAPA, audit trail, IoT | IngesCompanyCC |
 | Contact us (contact.html) | Contact us \| DoofPlus | Send your questions about DoofPlus and its plans to the IngesCompanyCC team. | DoofPlus contact, pharmaceutical quality software, GMP software Peru | IngesCompanyCC |
 
-Valores para las vistas principales de la Web Application. Al ser una SPA, el título se actualiza en cada cambio de ruta con la propiedad `meta.title` de las rutas de Vue Router y la descripción con un guard global del router; keywords y author se definen una vez en `index.html` con los mismos valores de la Landing Page:
+Valores para las vistas principales de la Web Application. Al ser una SPA, el título se actualiza en cada cambio de ruta con la propiedad `meta.title` de las rutas de Vue Router y la descripción con un guard global del router; keywords y author se definen una vez en `index.html` con los mismos valores del Website:
 
 | **Vista de la Web Application** | **Title** | **Meta description** |
 | --- | --- | --- |
@@ -165,7 +165,7 @@ Para que los usuarios no se pierdan en el volumen de información generado por l
 
 Las acciones y técnicas que guían a los usuarios son:
 
-1. ***Landing Page:***
+1. ***Website:***
 - **Navegación por anclas:** barra superior fija con enlaces a cada sección y desplazamiento suave; en mobile, menú hamburguesa que se abre como overlay.
 - **Llamadas a la acción por segmento:** la sección "Get Started" ofrece una tarjeta por segmento; cada una lleva directamente al inicio de sesión de su entorno en la Web Application (QA/QC o Producción). El enlace "Sign in" de la barra lleva a la elección de entorno, y "Register your laboratory" al registro de la organización.
 - **Páginas secundarias:** "Contact us" (formulario de consultas), "Terms of Service" y "Privacy Policy", enlazadas desde el footer.
@@ -180,7 +180,7 @@ Las acciones y técnicas que guían a los usuarios son:
 
 ## 4.3. Landing Page UI Design
 
-La propuesta de UI de la Landing Page traduce las decisiones de las secciones anteriores: la jerarquía visual ordena el contenido desde la propuesta de valor hasta la presentación de la startup; las etiquetas (Home, Features, Benefits, Plans, About Us) siguen el Labeling System; la barra fija con anclas, las llamadas a la acción por segmento y el enlace "Sign in" implementan el Navigation System; y el Design System de la sección 4.1 (Inter, verde azulado #0F766E, azul pizarra #0F172A y Material Symbols Rounded) se aplica de forma consistente con la Web Application. La Landing Page atiende las user stories US01 a US05 y US44 a US49. Los wireframes y mock-ups se elaboraron en Figma y están disponibles en el archivo de diseño de DoofPlus: https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-813.
+La propuesta de UI del Website traduce las decisiones de las secciones anteriores: la jerarquía visual ordena el contenido desde la propuesta de valor hasta la presentación de la startup; las etiquetas (Home, Features, Benefits, Plans, About Us) siguen el Labeling System; la barra fija con anclas, las llamadas a la acción por segmento y el enlace "Sign in" implementan el Navigation System; y el Design System de la sección 4.1 (Inter, verde azulado #0F766E, azul pizarra #0F172A y Material Symbols Rounded) se aplica de forma consistente con la Web Application. El Website atiende las user stories US01 a US05 y US44 a US49. Los wireframes y mock-ups se elaboraron en Figma y están disponibles en el archivo de diseño de DoofPlus: https://www.figma.com/design/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?node-id=19-813.
 
 Las secciones se presentan en el siguiente orden, que prioriza la información que el visitante necesita para decidir (qué es DoofPlus, qué ofrece y cuánto cuesta) antes que la presentación del equipo:
 
@@ -438,7 +438,7 @@ Los Wireflow Diagrams combinan los wireframes con las acciones del usuario para 
 
 **User Goal QA-1:** Ingresar a DoofPlus y acceder al entorno QA/QC (US06, US07).
 
-Como especialista QA/QC, quiero ingresar con mis credenciales y confirmar mi identidad para revisar mis pendientes de calidad. María México elige "Sign in" en la Landing Page, selecciona el entorno QA/QC, ingresa su correo y contraseña y confirma el código 2FA.
+Como especialista QA/QC, quiero ingresar con mis credenciales y confirmar mi identidad para revisar mis pendientes de calidad. María México elige "Sign in" en el Website, selecciona el entorno QA/QC, ingresa su correo y contraseña y confirma el código 2FA.
 
 Flujo: Home → Choose your environment → Sign in · QA/QC → Two-factor authentication → Quality overview.
 
@@ -540,11 +540,11 @@ Los mock-ups aplican el Design System de la sección 4.1 sobre los wireframes y 
 
 #### Compartido: elección de entorno, registro de la organización y perfil
 
-**Sign in · Choose your environment:** se abre desde "Sign in" en la Landing Page. Presenta tres tarjetas, QA/QC, Production y Administration, cada una con su color, ícono y descripción; al elegir una se abre el inicio de sesión de ese entorno. Incluye el enlace "Register your laboratory" y "See plans" para quienes aún no tienen cuenta.
+**Sign in · Choose your environment:** se abre desde "Sign in" en el Website. Presenta tres tarjetas, QA/QC, Production y Administration, cada una con su color, ícono y descripción; al elegir una se abre el inicio de sesión de ese entorno. Incluye el enlace "Register your laboratory" y "See plans" para quienes aún no tienen cuenta.
 
 ![Mock-up · Choose your environment](../assets/img/chapter4/web-application/mockups/desktop-shared-environment-selection-onboarding-profile/sign-in-choose-your-environment.png)
 
-**Organization registration:** el administrador registra el laboratorio con su razón social, RUC, planta y datos de contacto, y elige su plan, que aparece preseleccionado cuando llega desde la sección Plans de la Landing Page (US50, US51). Si el RUC ya pertenece a otra organización, el formulario muestra el estado "RUC already registered" y no crea un duplicado.
+**Organization registration:** el administrador registra el laboratorio con su razón social, RUC, planta y datos de contacto, y elige su plan, que aparece preseleccionado cuando llega desde la sección Plans del Website (US50, US51). Si el RUC ya pertenece a otra organización, el formulario muestra el estado "RUC already registered" y no crea un duplicado.
 
 | Organization registration | RUC already registered |
 | :---: | :---: |
@@ -822,11 +822,11 @@ Unhappy path: ¿Hay una incidencia abierta en una línea? Sí → se sigue en Io
 
 El prototipo interactivo de DoofPlus se construyó en Figma sobre los mock-ups de las secciones 4.3.2 y 4.4.3, con el fin de validar la navegación y los flujos antes de la implementación. Sus interacciones siguen los paths de los User Flow Diagrams de la sección 4.4.4:
 
-- **Landing Page:** los enlaces de la barra desplazan a cada sección; "Sign in" abre la elección de entorno; las tarjetas de "Get Started" abren el inicio de sesión de su entorno; los botones de los planes y "Register your laboratory" abren el registro de la organización; "Contact us" abre el formulario de contacto, y los enlaces del footer, los términos y la política de privacidad. En mobile, el ícono de menú abre el overlay de navegación.
+- **Website:** los enlaces de la barra desplazan a cada sección; "Sign in" abre la elección de entorno; las tarjetas de "Get Started" abren el inicio de sesión de su entorno; los botones de los planes y "Register your laboratory" abren el registro de la organización; "Contact us" abre el formulario de contacto, y los enlaces del footer, los términos y la política de privacidad. En mobile, el ícono de menú abre el overlay de navegación.
 - **Ingreso:** la elección de entorno abre el inicio de sesión de QA/QC, Production o Administration; "Continue" lleva al código 2FA y "Verify" a la pantalla inicial del entorno. Los estados de error se muestran como pantallas alternativas.
 - **Web Application:** el sidebar lleva a cada módulo del entorno, el avatar abre "Profile & preferences" y los botones de cada pantalla siguen los user goals QA-1 a QA-6 y PR-1 a PR-6, que se definieron como puntos de inicio del prototipo.
 
-Las interacciones aplican el Navigation System de la sección 4.2.5. En la Landing Page, la navegación global de la barra fija y los enlaces del footer usan interacciones "Scroll to" hacia cada sección; las llamadas a la acción y "Sign in" usan "Navigate to" hacia la Web Application, y en mobile el menú se abre y se cierra como overlay ("Open overlay" y "Close"). En la Web Application, el sidebar es la navegación global entre los módulos del entorno, las pestañas y los botones de cada pantalla son la navegación local, y el logotipo y "Back to DoofPlus" regresan a la Landing Page; todas estas acciones usan "Navigate to". Las etiquetas de los enlaces son las del Labeling System de la sección 4.2.2. Para navegar entre la Landing Page y la Web Application, el prototipo se armó en una página propia de Figma ("Prototype") que reúne los mock-ups de ambas.
+Las interacciones aplican el Navigation System de la sección 4.2.5. En el Website, la navegación global de la barra fija y los enlaces del footer usan interacciones "Scroll to" hacia cada sección; las llamadas a la acción y "Sign in" usan "Navigate to" hacia la Web Application, y en mobile el menú se abre y se cierra como overlay ("Open overlay" y "Close"). En la Web Application, el sidebar es la navegación global entre los módulos del entorno, las pestañas y los botones de cada pantalla son la navegación local, y el logotipo y "Back to DoofPlus" regresan al Website; todas estas acciones usan "Navigate to". Las etiquetas de los enlaces son las del Labeling System de la sección 4.2.2. Para navegar entre el Website y la Web Application, el prototipo se armó en una página propia de Figma ("Prototype") que reúne los mock-ups de ambas.
 
 El diseño del prototipo se guió por cuatro criterios:
 
@@ -835,13 +835,13 @@ El diseño del prototipo se guió por cuatro criterios:
 - **Consistencia visual:** todos los entornos comparten componentes, tipografía y estructura, y solo cambia el color que identifica al entorno.
 - **Prevención de errores:** los estados de bloqueo explican el motivo y la acción necesaria, en lugar de permitir una operación que luego deba corregirse.
 
-Prototipo navegable en Figma (página "Prototype", que une los mock-ups de la Landing Page y de la Web Application para navegar entre ambas): abrir el prototipo: https://www.figma.com/proto/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?page-id=353%3A237&node-id=353-240&starting-point-node-id=353%3A240. Desde el selector de flujos del visor se accede a los puntos de inicio de cada user goal.
+Prototipo navegable en Figma (página "Prototype", que une los mock-ups del Website y de la Web Application para navegar entre ambas): abrir el prototipo: https://www.figma.com/proto/E9MAGI3LDC0m8o6lWTGyfK/DoofPlus?page-id=353%3A237&node-id=353-240&starting-point-node-id=353%3A240. Desde el selector de flujos del visor se accede a los puntos de inicio de cada user goal.
 
 Video de navegación del prototipo (Sprint 1): ver en Microsoft Stream: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202423162_upc_edu_pe/IQC9TP0VdDx0SbIEr4nWmikhAceGoBqdZ78DiR68qJ8FV-A?e=1BIqfW (copia en YouTube: https://youtu.be/6PLCLqaF8Tg). Inicio: 00:00. Duración: 06:10.
 
-**Landing Page** (desde 00:00 hasta 00:24)
+**Website** (desde 00:00 hasta 00:24)
 
-![Video de navegación del prototipo · Landing Page](../assets/img/chapter4/prototype/video-landing-page.png)
+![Video de navegación del prototipo · Website](../assets/img/chapter4/prototype/video-landing-page.png)
 
 **Web Application** (desde 00:24 hasta 06:10)
 
@@ -1121,7 +1121,7 @@ El diagrama de contexto (nivel 1 del modelo C4) presenta a DoofPlus como una "ca
 
 Personas que usan DoofPlus:
 
-- **Laboratory Visitor:** representante de un laboratorio que conoce DoofPlus desde la Landing Page, revisa los planes y registra su laboratorio.
+- **Laboratory Visitor:** representante de un laboratorio que conoce DoofPlus desde el Website, revisa los planes y registra su laboratorio.
 - **QA/QC Specialist** (segmento objetivo 1): gestiona documentos, dictamen de insumos, desviaciones, CAPA, auditorías y la liberación de lotes.
 - **Pharmaceutical Production Supervisor** (segmento objetivo 2): gestiona órdenes y lotes, monitorea los equipos y solicita aprobaciones a Calidad.
 - **Laboratory Administrator:** registra la organización, los usuarios, los roles, los sensores y la suscripción.
@@ -1144,19 +1144,19 @@ En el nivel de contenedores, la atención pasa de "quién usa el sistema" a "có
 
 | Container | Tecnología | Despliegue | Responsabilidad |
 | --- | --- | --- | --- |
-| Landing Page | HTML5, CSS3, JavaScript | GitHub Pages | Presentar la propuesta de valor, los planes y el equipo, y llevar a cada usuario, mediante el call to action, al inicio de sesión de su entorno o al registro de la organización. |
+| Website | HTML5, CSS3, JavaScript | GitHub Pages | Presentar la propuesta de valor, los planes y el equipo, y llevar a cada usuario, mediante el call to action, al inicio de sesión de su entorno o al registro de la organización. |
 | Web Application | Archivos estáticos generados por `npm run build` (Vite) | Firebase Hosting | Entregar al navegador del usuario el contenido estático y la Single-Page Application (`index.html` y los archivos JavaScript y CSS). No ejecuta lógica de negocio. |
 | Single-Page Application | Vue 3, Vite, Pinia, Vue Router, Vue I18n, PrimeVue, JavaScript | Navegador del usuario | Toda la interfaz de DoofPlus, con un módulo por bounded context; consume el RESTful API con un token JWT. |
 | RESTful API | ASP.NET Core, C#, Entity Framework Core, ASP.NET Core Identity, Swashbuckle (Swagger) | Render | Monolito modular con los seis bounded contexts; expone endpoints REST documentados con OpenAPI (Swagger), recibe la telemetría de ThingsBoard y publica notificaciones por WebSocket (STOMP). |
 | Database | MySQL 8 | Railway | Persistencia relacional; las tablas se agrupan por bounded context. |
 
-La aplicación web de DoofPlus se representa con dos contenedores, como indica el modelo C4 para una Single-Page Application. Al compilar el proyecto Vue con Vite se genera una carpeta con `index.html` y los archivos JavaScript y CSS; Firebase Hosting (Web Application) solo los entrega cuando el usuario ingresa a la URL de DoofPlus, y la aplicación se ejecuta en el navegador del usuario (Single-Page Application), por eso este contenedor se dibuja con la forma de un navegador. La Landing Page es un contenedor aparte.
+La aplicación web de DoofPlus se representa con dos contenedores, como indica el modelo C4 para una Single-Page Application. Al compilar el proyecto Vue con Vite se genera una carpeta con `index.html` y los archivos JavaScript y CSS; Firebase Hosting (Web Application) solo los entrega cuando el usuario ingresa a la URL de DoofPlus, y la aplicación se ejecuta en el navegador del usuario (Single-Page Application), por eso este contenedor se dibuja con la forma de un navegador. El Website es un contenedor aparte.
 
-Las figuras siguen la notación del diagrama de contenedores del sitio oficial del modelo C4: la Landing Page y la Web Application, que solo entregan archivos estáticos (HTML, CSS y JavaScript), se dibujan como una carpeta (*Directory*); la Single-Page Application, como un navegador; el RESTful API, como una aplicación del lado del servidor (*Server-side Application*, con el símbolo `>_`), y la Database, como un cilindro.
+Las figuras siguen la notación del diagrama de contenedores del sitio oficial del modelo C4: el Website y la Web Application, que solo entregan archivos estáticos (HTML, CSS y JavaScript), se dibujan como una carpeta (*Directory*); la Single-Page Application, como un navegador; el RESTful API, como una aplicación del lado del servidor (*Server-side Application*, con el símbolo `>_`), y la Database, como un cilindro.
 
 En el diagrama se observa que:
 
-- El visitante ingresa a la **Landing Page**, cuyo call to action lo lleva a la URL de la Web Application.
+- El visitante ingresa al **Website**, cuyo call to action lo lleva a la URL de la Web Application.
 - Los tres usuarios de la plataforma visitan la URL de DoofPlus; la **Web Application** entrega la **Single-Page Application** a su navegador, y desde ese momento trabajan con la SPA.
 - La **Single-Page Application** se comunica solo con el **RESTful API**: realiza peticiones JSON/HTTPS con un token JWT y recibe las alertas en tiempo real por WebSocket.
 - El **RESTful API** lee y escribe en la **Database** mediante Entity Framework Core, recibe la telemetría de **ThingsBoard** sin pasar por la SPA y se integra con **Niubiz** y **SendGrid**.
@@ -1224,7 +1224,7 @@ El diseño orientado a objetos traduce los aggregates del Design-Level EventStor
 
 ![Class Diagram - IAM](../assets/img/chapter4/diagram-class/class-01-iam.png)
 
-**Organizations & Profiles.** `Organization` agrupa sus plantas y se identifica por el value object `Ruc`; `Profile` guarda los datos y preferencias de cada usuario; `ContactInquiry` registra las consultas enviadas desde el formulario de contacto de la Landing Page y, mediante una policy, avisa al equipo de DoofPlus.
+**Organizations & Profiles.** `Organization` agrupa sus plantas y se identifica por el value object `Ruc`; `Profile` guarda los datos y preferencias de cada usuario; `ContactInquiry` registra las consultas enviadas desde el formulario de contacto del Website y, mediante una policy, avisa al equipo de DoofPlus.
 
 ![Class Diagram - Organizations & Profiles](../assets/img/chapter4/diagram-class/class-02-organizations.png)
 
