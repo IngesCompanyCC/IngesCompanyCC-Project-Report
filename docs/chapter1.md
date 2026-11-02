@@ -94,23 +94,23 @@ Las tecnologías basadas en Internet de las Cosas (IoT) permiten capturar inform
 
 #### 4. OBJETIVOS
 
-**Objetivo general:** desarrollar y desplegar DoofPlus, una solución web compuesta por una Landing Page, una Frontend Web Application y un RESTful API, que centralice la documentación de calidad, la trazabilidad de lotes y la gestión de desviaciones de laboratorios farmacéuticos pequeños y medianos de Lima Metropolitana, con el fin de reducir en 80% el tiempo de preparación de auditorías durante los primeros seis meses de uso.
+**Objetivo general:** desarrollar y desplegar DoofPlus, una solución web compuesta por un Website, una Frontend Web Application y un RESTful API, que centralice la documentación de calidad, la trazabilidad de lotes y la gestión de desviaciones de laboratorios farmacéuticos pequeños y medianos de Lima Metropolitana, con el fin de reducir en 80% el tiempo de preparación de auditorías durante los primeros seis meses de uso.
 
 **Objetivos específicos:**
 
 - Identificar las necesidades de especialistas QA/QC y jefes de producción mediante entrevistas a cada segmento objetivo.
-- Publicar una Landing Page responsive y bilingüe (en-US / es-419) que comunique la propuesta de valor y dirija a cada segmento a la Web Application.
+- Publicar un Website responsive y bilingüe (en-US / es-419) que comunique la propuesta de valor y dirija a cada segmento a la Web Application.
 - Implementar una Frontend Web Application con Vue 3 y PrimeVue para la gestión de lotes, desviaciones y documentación de calidad.
 - Implementar un RESTful API con ASP.NET Core y Entity Framework Core, documentado con OpenAPI (Swagger) e integrado con los servicios externos ThingsBoard y Niubiz.
 - Validar la solución con usuarios de ambos segmentos mediante evaluaciones heurísticas de usabilidad, arquitectura de información y diseño inclusivo.
 
 #### 5. RESTRICCIONES Y ALCANCE
 
-- **Alcance:** Landing Page, Frontend Web Application y RESTful API de elaboración interna. No incluye una aplicación móvil nativa ni la fabricación de hardware IoT: la captura de datos de sensores se integra mediante la plataforma externa ThingsBoard.
-- **Tecnológicas:** HTML5, CSS3 y JavaScript para la Landing Page; Vue 3 con JavaScript, Vite, Pinia y PrimeVue (tema Material) para la Web Application; ASP.NET Core con Entity Framework Core (C#) para el RESTful API; MySQL como base de datos; OpenAPI (Swagger) para documentar los servicios; GitHub con GitFlow, Conventional Commits y Semantic Versioning.
+- **Alcance:** Website, Frontend Web Application y RESTful API de elaboración interna. No incluye una aplicación móvil nativa ni la fabricación de hardware IoT: la captura de datos de sensores se integra mediante la plataforma externa ThingsBoard.
+- **Tecnológicas:** HTML5, CSS3 y JavaScript para el Website; Vue 3 con JavaScript, Vite, Pinia y PrimeVue (tema Material) para la Web Application; ASP.NET Core con Entity Framework Core (C#) para el RESTful API; MySQL como base de datos; OpenAPI (Swagger) para documentar los servicios; GitHub con GitFlow, Conventional Commits y Semantic Versioning.
 - **Regulatorias:** DoofPlus apoya el cumplimiento de las BPM de DIGEMID y de los principios de integridad de datos de la OMS, pero no reemplaza la validación de sistemas computarizados que cada laboratorio debe ejecutar; las firmas electrónicas siguen los criterios de 21 CFR Part 11 sin constituir una certificación.
 - **Datos personales:** el tratamiento de datos se rige por la Ley N.° 29733, Ley de Protección de Datos Personales.
-- **Idiomas y accesibilidad:** inglés (en-US) como idioma por defecto y español latinoamericano (es-419) en la Landing Page, la Web Application y los mensajes del RESTful API; atributos ARIA en la Landing Page y la Web Application.
+- **Idiomas y accesibilidad:** inglés (en-US) como idioma por defecto y español latinoamericano (es-419) en el Website, la Web Application y los mensajes del RESTful API; atributos ARIA en el Website y la Web Application.
 - **Tiempo:** el desarrollo se organiza en cuatro sprints dentro del ciclo académico 2026-20.
 
 ### 1.2.2. Lean UX Process
@@ -148,7 +148,7 @@ A continuación se muestran los Assumptions en su idioma original:
 **Business Outcome Assumptions:**
 
 - We believe that at least 10 laboratories will subscribe to a paid plan within the first six months after launch.
-- We believe that at least 20% of the laboratories that register their organization from the landing page will subscribe to a paid plan.
+- We believe that at least 20% of the laboratories that register their organization from the website will subscribe to a paid plan.
 - We believe that monthly churn will remain below 5% once a laboratory registers its batch records in the platform.
 - We believe that subscribed laboratories will register at least 80% of their new batches in the platform after the third month of use.
 - We believe that at least 25% of Standard Lab customers will upgrade to the Enterprise plan when they connect sensors in more than one production line.
