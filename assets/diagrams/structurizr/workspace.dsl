@@ -28,7 +28,7 @@ workspace "DoofPlus" "C4 model of DoofPlus (IngesCompanyCC). Structurizr DSL sou
                 spa_qa = component "Quality & Compliance" "Documents, deviations, CAPA, batch release, analytical results, audits, audit trail and regulatory reports." "Vue module"
             }
 
-            api = container "RESTful API" "Modular monolith with the six bounded contexts; ASP.NET Core Identity (JWT + TOTP), OpenAPI (Swashbuckle) and real-time notifications (SignalR)." "ASP.NET Core, C#, Entity Framework Core (Render)" "Server-side Application" {
+            api = container "RESTful API" "Modular monolith with the six bounded contexts; JWT + TOTP authentication, OpenAPI with Scalar and real-time notifications (SignalR)." "ASP.NET Core, C#, Entity Framework Core (Render)" "Server-side Application" {
                 api_shared = component "Shared" "Base auditable aggregate, snake_case naming convention for Entity Framework Core, Result type and common configuration reused by every bounded context." "ASP.NET Core namespace"
                 api_iam = component "Identity & Access Management" "Sign-up, sign-in with JWT and TOTP, users, roles, account locking and electronic signatures." "ASP.NET Core namespace"
                 api_org = component "Organizations & Profiles" "Organizations (unique RUC), facilities, profiles and contact inquiries." "ASP.NET Core namespace"
