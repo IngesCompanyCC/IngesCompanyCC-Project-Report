@@ -173,6 +173,7 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 | 4.6.1 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: enlaces de Figma, FigJam y del prototipo apuntan a los archivos del curso (Aplicaciones Web) en lugar de los de Open Source. |
 | 4.7.0 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: wireframes, mock-ups y prototipo del Website calcados del Website actual y exportados desde Figma; formulario "Contact us" en la Web Application con su user goal VI-1 (wireflow y user flow); imágenes de la Web Application actualizadas desde Figma. |
 | 4.7.1 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos III a V: la épica EP01 incluye el formulario de contacto de la Web Application, ajustes de US04 y US45 y de la arquitectura de información del Website. |
+| 4.7.2 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: los diagramas de clases incluyen los enums que faltaban (Manufacturing, IoT y Quality); en 4.7 y 4.8 se quitan los restos del informe de Open Source (entidades JPA y naming strategy de Hibernate pasan a Entity Framework Core, y los valores de enums se escriben en PascalCase). |
 
 ---
 
