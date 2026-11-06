@@ -153,6 +153,25 @@ classDiagram
     Major
     Critical
   }
+  class DosageForm {
+    <<enumeration>>
+    Tablet
+    Capsule
+    Syrup
+    Injectable
+    Cream
+  }
+  class FormulaStatus {
+    <<enumeration>>
+    Draft
+    Approved
+  }
+  class IncidentStatus {
+    <<enumeration>>
+    Open
+    Escalated
+    Resolved
+  }
   class IProductionBatchRepository {
     <<interface>>
     +FindByNumberAsync(BatchNumber number) Task~ProductionBatch?~
@@ -182,5 +201,8 @@ classDiagram
   RawMaterialLot --> MaterialQualityStatus : qualityStatus
   ProductionOrder --> ProductionOrderStatus : status
   Incident --> IncidentSeverity : severity
+  Product --> DosageForm : dosageForm
+  MasterFormula --> FormulaStatus : status
+  Incident --> IncidentStatus : status
   IProductionBatchRepository ..> ProductionBatch : persists
   IProductionBatchCommandService ..> ExternalQualityService : uses

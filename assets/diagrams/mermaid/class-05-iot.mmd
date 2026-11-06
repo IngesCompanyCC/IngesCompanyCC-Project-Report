@@ -99,6 +99,17 @@ classDiagram
     Warning
     Critical
   }
+  class DeviceStatus {
+    <<enumeration>>
+    Available
+    AssignedToBatch
+    Offline
+  }
+  class AlertStatus {
+    <<enumeration>>
+    Open
+    Acknowledged
+  }
   class ITelemetryCommandService {
     <<interface>>
     +Handle(IngestTelemetryCommand command) Task~TelemetryReading?~
@@ -125,6 +136,8 @@ classDiagram
   IoTDevice --> SensorType : sensorType
   Equipment --> EquipmentStatus : status
   Alert --> AlertLevel : level
+  IoTDevice --> DeviceStatus : status
+  Alert --> AlertStatus : status
   ITelemetryCommandService ..> AlertRuleEvaluator : uses
   ITelemetryCommandService ..> ExternalManufacturingService : uses
   ITelemetryCommandService ..> INotificationService : uses
