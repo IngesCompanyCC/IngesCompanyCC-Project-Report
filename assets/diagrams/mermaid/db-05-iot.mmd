@@ -7,7 +7,7 @@ erDiagram
     varchar(30) code UK
     varchar(150) name
     varchar(60) serial_number UK
-    varchar(20) status "FIT_FOR_USE, NOT_FIT_FOR_USE, IN_MAINTENANCE"
+    varchar(20) status "FitForUse, NotFitForUse, InMaintenance"
     date next_calibration_date
     date next_maintenance_date
   }
@@ -28,9 +28,9 @@ erDiagram
   iot_devices {
     bigint id PK
     varchar(100) external_device_id UK "ThingsBoard"
-    varchar(20) sensor_type "TEMPERATURE, HUMIDITY, PRESSURE, PH, RFID_READER"
+    varchar(20) sensor_type "Temperature, Humidity, Pressure, Ph, RfidReader"
     bigint equipment_id FK
-    varchar(20) status
+    varchar(20) status "Available, AssignedToBatch, Offline"
     bigint current_batch_id "ref manufacturing.production_batches"
   }
   telemetry_readings {
@@ -47,14 +47,14 @@ erDiagram
     varchar(20) sensor_type
     decimal min_value "(12,4)"
     decimal max_value "(12,4)"
-    varchar(10) level "WARNING, CRITICAL"
+    varchar(10) level "Warning, Critical"
   }
   alerts {
     bigint id PK
     bigint telemetry_reading_id FK
     bigint alert_rule_id FK
     varchar(10) level
-    varchar(20) status "OPEN, ACKNOWLEDGED"
+    varchar(20) status "Open, Acknowledged"
     bigint acknowledged_by "ref iam.users"
   }
   equipment ||--o{ calibration_records : "calibrated"

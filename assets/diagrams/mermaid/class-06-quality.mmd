@@ -107,14 +107,13 @@ classDiagram
   }
   class DocumentType {
     <<enumeration>>
+    Protocol
     Sop
     Specification
-    Protocol
-    Record
   }
   class ReleaseVerdict {
     <<enumeration>>
-    Approved
+    Released
     Rejected
   }
   class IBatchReviewCommandService {
@@ -245,7 +244,6 @@ classDiagram
   class AuditType {
     <<enumeration>>
     Internal
-    External
     Regulatory
   }
   class AuditStatus {
@@ -256,10 +254,10 @@ classDiagram
   }
   class AuditAction {
     <<enumeration>>
-    Create
-    Update
-    Delete
-    Sign
+    Created
+    Updated
+    Deleted
+    Signed
   }
   class IDeviationCommandService {
     <<interface>>

@@ -6,13 +6,13 @@ erDiagram
     bigint id PK
     varchar(30) code UK
     varchar(150) name
-    varchar(30) dosage_form "TABLET, SYRUP, INJECTABLE, CREAM"
+    varchar(30) dosage_form "Tablet, Syrup, Injectable, Cream"
   }
   master_formulas {
     bigint id PK
     bigint product_id FK
     varchar(10) version
-    varchar(20) status "DRAFT, APPROVED, OBSOLETE"
+    varchar(20) status "Draft, Approved, Obsolete"
   }
   formula_components {
     bigint id PK
@@ -29,7 +29,7 @@ erDiagram
     varchar(100) rfid_tag UK "nullable"
     decimal received_quantity "(12,4)"
     varchar(50) warehouse_location "nullable"
-    varchar(20) quality_status "QUARANTINE ... REJECTED"
+    varchar(20) quality_status "Quarantine ... Rejected"
     date expiration_date
   }
   production_orders {
@@ -37,14 +37,14 @@ erDiagram
     bigint master_formula_id FK
     bigint plant_id "ref organizations.plants"
     decimal planned_quantity "(12,4)"
-    varchar(20) status "CREATED, APPROVED, REJECTED, PLANNED"
+    varchar(20) status "Created, Approved, Rejected, Planned"
     date planned_start_date "nullable"
   }
   production_batches {
     bigint id PK
     varchar(30) batch_number UK
     bigint production_order_id FK
-    varchar(20) status "PLANNED ... RELEASED, REJECTED"
+    varchar(20) status "Planned ... Released, Rejected"
     decimal manufactured_quantity "(12,4) nullable"
     datetime started_at "nullable"
     datetime finished_at "nullable"
@@ -68,8 +68,8 @@ erDiagram
     bigint id PK
     bigint production_batch_id FK
     varchar(500) description
-    varchar(10) severity "MINOR, MAJOR, CRITICAL"
-    varchar(20) status "OPEN, ESCALATED, RESOLVED"
+    varchar(10) severity "Minor, Major, Critical"
+    varchar(20) status "Open, Escalated, Resolved"
   }
   batch_events {
     bigint id PK

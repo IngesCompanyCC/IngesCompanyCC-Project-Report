@@ -7,7 +7,7 @@ erDiagram
     varchar(50) name UK "Standard Lab, Enterprise"
     decimal monthly_price "(10,2)"
     decimal annual_price "(10,2)"
-    char(3) currency "USD"
+    char(3) currency "Usd"
     int iot_device_limit
     int user_limit
   }
@@ -15,8 +15,8 @@ erDiagram
     bigint id PK
     bigint organization_id "ref organizations.organizations"
     bigint plan_id FK
-    varchar(10) billing_cycle "MONTHLY, ANNUAL"
-    varchar(20) status "PENDING, ACTIVE, CANCELLED, EXPIRED"
+    varchar(10) billing_cycle "Monthly, Annual"
+    varchar(20) status "Pending, Active, Cancelled, Expired"
     date current_period_start
     date current_period_end
     tinyint(1) auto_renew
@@ -27,7 +27,7 @@ erDiagram
     decimal amount "(10,2)"
     char(3) currency
     varchar(100) gateway_transaction_id UK "Niubiz"
-    varchar(20) status "PENDING, APPROVED, REJECTED"
+    varchar(20) status "Pending, Approved, Rejected"
     datetime processed_at
   }
   plans ||--o{ subscriptions : "subscribed by"
