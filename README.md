@@ -176,6 +176,7 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 | 4.7.2 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: los diagramas de clases incluyen los enums que faltaban (Manufacturing, IoT y Quality); en 4.7 y 4.8 se quitan los restos del informe de Open Source (entidades JPA y naming strategy de Hibernate pasan a Entity Framework Core, y los valores de enums se escriben en PascalCase). |
 | 4.7.3 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos I, IV y V y fuente C4: la documentación del RESTful API pasa de Swagger (Swashbuckle) a Scalar, como en el backend; las notificaciones en tiempo real se registran con SignalR en lugar de STOMP. Retoma el cambio de Scalar de la rama feature/chapter4 (Yarleque Ruiz, Cristina Marcela). |
 | 4.7.4 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos II, IV y V: los diagramas de base de datos guardan los estados en PascalCase, como Entity Framework Core (antes en mayúsculas, como JPA); los enums de los diagramas de clases usan los mismos valores que la base de datos; los títulos 2.4, 4.6.1 y 5.1.3 siguen la redacción del statement del curso. |
+| 4.7.5 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | README y Capítulo V: enlaces a los repositorios con sus nombres actuales (doofplus-website, doofplus-web-application, doofplus-platform y doofplus-report) y nueva URL del Website en GitHub Pages; repositorio de los RESTful Web Services en 5.1.2; títulos de US31 y US32 iguales a los del Capítulo III; referencia de la OMS actualizada; enlace del índice a la sección Compartido de 4.4.1 corregido; se eliminan imágenes que no se usaban. |
 
 ---
 
@@ -185,7 +186,7 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 https://github.com/IngesCompanyCC
 
 **Link del repositorio del Informe:**
-https://github.com/IngesCompanyCC/IngesCompanyCC-Project-Report.git
+https://github.com/IngesCompanyCC/doofplus-report.git
 
 El informe se elabora bajo el enfoque Docs-as-Code en el repositorio del informe, siguiendo GitFlow: cada capítulo se redacta en su rama `feature/chapter<n>` (y el README en `feature/README`), que se integra en `develop` y, para cada entrega, en `main`. Los cinco integrantes participaron en la elaboración del informe. La siguiente tabla resume sus commits en el repositorio hasta la entrega del TB1 (sin contar los commits de merge):
 
@@ -293,7 +294,7 @@ A partir de la retroalimentación del docente sobre el TB1, el equipo revisó el
       - [Segmento 1 – Especialista de Aseguramiento y Control de Calidad (QA/QC)](docs/chapter4.md#segmento-1--especialista-de-aseguramiento-y-control-de-calidad-qaqc)
       - [Segmento 2 – Jefe o Supervisor de Producción Farmacéutica](docs/chapter4.md#segmento-2--jefe-o-supervisor-de-producción-farmacéutica)
     - [4.4.3. Web Applications Mock-ups](docs/chapter4.md#443-web-applications-mock-ups)
-      - [Compartido: elección de entorno, registro de la organización y perfil](docs/chapter4.md#compartido-elección-de-entorno-registro-de-la-organización-y-perfil)
+      - [Compartido: elección de entorno, contacto, registro de la organización y perfil](docs/chapter4.md#compartido-elección-de-entorno-contacto-registro-de-la-organización-y-perfil)
       - [Segmento 1 – Especialista QA/QC](docs/chapter4.md#segmento-1--especialista-qaqc)
       - [Segmento 2 – Jefe o Supervisor de Producción](docs/chapter4.md#segmento-2--jefe-o-supervisor-de-producción)
       - [Administrador del laboratorio](docs/chapter4.md#administrador-del-laboratorio)
