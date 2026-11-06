@@ -174,6 +174,7 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 | 4.7.0 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: wireframes, mock-ups y prototipo del Website calcados del Website actual y exportados desde Figma; formulario "Contact us" en la Web Application con su user goal VI-1 (wireflow y user flow); imágenes de la Web Application actualizadas desde Figma. |
 | 4.7.1 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos III a V: la épica EP01 incluye el formulario de contacto de la Web Application, ajustes de US04 y US45 y de la arquitectura de información del Website. |
 | 4.7.2 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: los diagramas de clases incluyen los enums que faltaban (Manufacturing, IoT y Quality); en 4.7 y 4.8 se quitan los restos del informe de Open Source (entidades JPA y naming strategy de Hibernate pasan a Entity Framework Core, y los valores de enums se escriben en PascalCase). |
+| 4.7.3 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos I, IV y V y fuente C4: la documentación del RESTful API pasa de Swagger (Swashbuckle) a Scalar, como en el backend; las notificaciones en tiempo real se registran con SignalR en lugar de STOMP. Retoma el cambio de Scalar de la rama feature/chapter4 (Yarleque Ruiz, Cristina Marcela). |
 
 ---
 
