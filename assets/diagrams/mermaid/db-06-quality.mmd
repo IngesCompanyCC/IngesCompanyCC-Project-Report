@@ -7,8 +7,8 @@ erDiagram
     bigint id PK
     varchar(30) code UK
     varchar(255) title
-    varchar(30) type "PROTOCOL, SOP, SPECIFICATION"
-    varchar(20) status "DRAFT, IN_REVIEW, APPROVED, OBSOLETE"
+    varchar(30) type "Protocol, Sop, Specification"
+    varchar(20) status "Draft, InReview, Approved, Obsolete"
   }
   document_versions {
     bigint id PK
@@ -23,7 +23,7 @@ erDiagram
     bigint id PK
     bigint raw_material_lot_id UK "ref manufacturing.raw_material_lots"
     varchar(30) sample_code "nullable"
-    varchar(20) status "PENDING, SAMPLED, APPROVED, REJECTED"
+    varchar(20) status "Pending, Sampled, Approved, Rejected"
     bigint decided_by "ref iam.users"
     varchar(500) reason "nullable"
   }
@@ -41,7 +41,7 @@ erDiagram
   batch_reviews {
     bigint id PK
     bigint production_batch_id UK "ref manufacturing.production_batches"
-    varchar(20) status "IN_QUARANTINE, UNDER_EVALUATION, RELEASED, REJECTED"
+    varchar(20) status "InQuarantine, UnderEvaluation, Released, Rejected"
     datetime quarantine_started_at
     varchar(30) sample_code "nullable"
     datetime evaluated_at "nullable"
@@ -56,7 +56,7 @@ erDiagram
     bigint id PK
     bigint batch_review_id FK, UK
     varchar(30) certificate_number UK
-    varchar(10) verdict "RELEASED, REJECTED"
+    varchar(10) verdict "Released, Rejected"
     bigint signature_id "ref iam.electronic_signatures"
     datetime issued_at
   }
@@ -67,8 +67,8 @@ erDiagram
     bigint id PK
     varchar(30) code UK
     bigint production_batch_id "ref manufacturing.production_batches"
-    varchar(10) severity "MINOR, MAJOR, CRITICAL"
-    varchar(20) status "OPEN, UNDER_INVESTIGATION, CLOSED"
+    varchar(10) severity "Minor, Major, Critical"
+    varchar(20) status "Open, UnderInvestigation, Closed"
     text description
     varchar(50) root_cause_method "nullable"
     text root_cause_description "nullable"
@@ -78,31 +78,31 @@ erDiagram
   capa_actions {
     bigint id PK
     bigint deviation_id FK
-    varchar(12) type "CORRECTIVE, PREVENTIVE"
+    varchar(12) type "Corrective, Preventive"
     varchar(500) description
     bigint responsible_id "ref iam.users"
     date due_date
     int progress "0-100"
-    varchar(20) status "OPEN, IMPLEMENTED, OVERDUE, VERIFIED"
+    varchar(20) status "Open, Implemented, Overdue, Verified"
   }
   audits {
     bigint id PK
-    varchar(20) type "INTERNAL, REGULATORY"
+    varchar(20) type "Internal, Regulatory"
     date scheduled_date
-    varchar(20) status "SCHEDULED, IN_PROGRESS, CLOSED"
+    varchar(20) status "Scheduled, InProgress, Closed"
     varchar(500) evidence_package_url "nullable"
   }
   audit_findings {
     bigint id PK
     bigint audit_id FK
-    varchar(20) type "FINDING, OBSERVATION"
+    varchar(20) type "Finding, Observation"
     varchar(500) description
   }
   audit_trail_entries {
     bigint id PK
     varchar(100) entity_type
     varchar(36) entity_id
-    varchar(20) action "CREATED, UPDATED, DELETED, SIGNED"
+    varchar(20) action "Created, Updated, Deleted, Signed"
     json old_value "nullable"
     json new_value "nullable"
     bigint changed_by "ref iam.users"

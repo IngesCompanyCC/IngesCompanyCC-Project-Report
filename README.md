@@ -175,6 +175,7 @@ u20241f733 &nbsp; &nbsp; Zavaleta Gutierrez, Rodolfo Martin
 | 4.7.1 | 02/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos III a V: la épica EP01 incluye el formulario de contacto de la Web Application, ajustes de US04 y US45 y de la arquitectura de información del Website. |
 | 4.7.2 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulo IV: los diagramas de clases incluyen los enums que faltaban (Manufacturing, IoT y Quality); en 4.7 y 4.8 se quitan los restos del informe de Open Source (entidades JPA y naming strategy de Hibernate pasan a Entity Framework Core, y los valores de enums se escriben en PascalCase). |
 | 4.7.3 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos I, IV y V y fuente C4: la documentación del RESTful API pasa de Swagger (Swashbuckle) a Scalar, como en el backend; las notificaciones en tiempo real se registran con SignalR en lugar de STOMP. Retoma el cambio de Scalar de la rama feature/chapter4 (Yarleque Ruiz, Cristina Marcela). |
+| 4.7.4 | 06/11/2026 | Rojas Ambicho, Nestor Daniel | Capítulos II, IV y V: los diagramas de base de datos guardan los estados en PascalCase, como Entity Framework Core (antes en mayúsculas, como JPA); los enums de los diagramas de clases usan los mismos valores que la base de datos; los títulos 2.4, 4.6.1 y 5.1.3 siguen la redacción del statement del curso. |
 
 ---
 
@@ -262,7 +263,7 @@ A partir de la retroalimentación del docente sobre el TB1, el equipo revisó el
     - [2.3.2. User Task Matrix](docs/chapter2.md#232-user-task-matrix)
     - [2.3.3. User Journey Mapping](docs/chapter2.md#233-user-journey-mapping)
     - [2.3.4. Empathy Mapping](docs/chapter2.md#234-empathy-mapping)
-  - [2.4. Big Picture Event Storming](docs/chapter2.md#24-big-picture-event-storming)
+  - [2.4. Big Picture EventStorming](docs/chapter2.md#24-big-picture-eventstorming)
   - [2.5. Ubiquitous Language](docs/chapter2.md#25-ubiquitous-language)
 - [Capítulo III: Requirements Specification](docs/chapter3.md#capítulo-iii-requirements-specification)
   - [3.1. User Stories](docs/chapter3.md#31-user-stories)
@@ -302,7 +303,7 @@ A partir de la retroalimentación del docente sobre el TB1, el equipo revisó el
       - [Segmento 2 – Jefe o Supervisor de Producción](docs/chapter4.md#segmento-2--jefe-o-supervisor-de-producción)
   - [4.5. Web Applications Prototyping](docs/chapter4.md#45-web-applications-prototyping)
   - [4.6. Domain-Driven Software Architecture](docs/chapter4.md#46-domain-driven-software-architecture)
-    - [4.6.1. Design-Level Event Storming](docs/chapter4.md#461-design-level-event-storming)
+    - [4.6.1. Design-Level EventStorming](docs/chapter4.md#461-design-level-eventstorming)
       - [Paso 0: Target design](docs/chapter4.md#paso-0-target-design)
       - [Paso 1: Timelines](docs/chapter4.md#paso-1-timelines)
       - [Paso 2: Commands](docs/chapter4.md#paso-2-commands)
@@ -324,7 +325,7 @@ A partir de la retroalimentación del docente sobre el TB1, el equipo revisó el
   - [5.1. Software Configuration Management](docs/chapter5.md#51-software-configuration-management)
     - [5.1.1. Software Development Environment Configuration](docs/chapter5.md#511-software-development-environment-configuration)
     - [5.1.2. Source Code Management](docs/chapter5.md#512-source-code-management)
-    - [5.1.3. Source Code Style Guide & Coding Conventions](docs/chapter5.md#513-source-code-style-guide--coding-conventions)
+    - [5.1.3. Source Code Style Guide & Conventions](docs/chapter5.md#513-source-code-style-guide--conventions)
     - [5.1.4. Software Deployment Configuration](docs/chapter5.md#514-software-deployment-configuration)
   - [5.2. Landing Page, Services & Applications Implementation](docs/chapter5.md#52-landing-page-services--applications-implementation)
     - [5.2.1. Sprint 1](docs/chapter5.md#521-sprint-1)
