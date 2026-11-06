@@ -14,7 +14,7 @@ A continuación se detallan los productos de software que los miembros del equip
 * **Requirements Management**
     * **Jira Software:** Registro de User Stories y Technical Stories con sus Story Points y criterios de aceptación. (Referencia: https://www.atlassian.com/software/jira)
     * **Gherkin:** Redacción de criterios de aceptación con la estructura Given-When-Then. (Referencia: https://cucumber.io/docs/gherkin/reference)
-    * **Miro:** Elaboración del Big Picture Event Storming y del Design-Level Event Storming. (Referencia: https://miro.com)
+    * **Miro:** Elaboración del Big Picture EventStorming y del Design-Level EventStorming. (Referencia: https://miro.com)
 * **Product UX/UI Design**
     * **Figma:** Elaboración de Wireframes, Mock-ups y Prototypes del Website y la Web Application. (Referencia: https://www.figma.com)
     * **FigJam:** Elaboración de los Wireflows y User Flows de la Web Application. (Referencia: https://www.figma.com/figjam)
@@ -89,7 +89,7 @@ Los mensajes de commit siguen la especificación **Conventional Commits 1.0.0**:
 * **description:** Resumen breve en inglés, en modo imperativo y en minúsculas.
 * **body y footer:** Detalle del cambio y referencias a tareas; los cambios incompatibles se marcan con `BREAKING CHANGE:` o con `!` después del type.
 
-### 5.1.3. Source Code Style Guide & Coding Conventions
+### 5.1.3. Source Code Style Guide & Conventions
 
 Toda la nomenclatura del código fuente (archivos, clases, variables, métodos y comentarios) se escribe en **inglés**, respetando el Ubiquitous Language del dominio de calidad farmacéutica (por ejemplo, `ProductionBatch`, `Deviation`, `CapaAction`). Las convenciones adoptadas por lenguaje son las siguientes:
 
