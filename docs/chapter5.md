@@ -33,10 +33,10 @@ A continuación se detallan los productos de software que los miembros del equip
 * **Software Testing**
     * **Chrome DevTools:** Inspección del diseño responsive y depuración del Website y la Web Application. (Referencia: https://developer.chrome.com/docs/devtools)
     * **json-server:** Fake API para simular los endpoints REST desde la Web Application mientras se implementan los Web Services. (Referencia: https://github.com/typicode/json-server)
-    * **Swagger UI:** Ejecución de pruebas sobre los endpoints documentados de los RESTful Web Services. (Referencia: https://swagger.io/tools/swagger-ui)
+    * **Scalar:** Ejecución de pruebas sobre los endpoints documentados de los RESTful Web Services. (Referencia: https://scalar.com)
 * **Software Documentation**
     * **Markdown en GitHub:** Redacción del informe del proyecto bajo el enfoque Docs-as-Code en el repositorio del informe. (Referencia: https://www.markdownguide.org)
-    * **OpenAPI (Swagger):** Documentación de los RESTful Web Services. (Referencia: https://swagger.io/specification)
+    * **OpenAPI:** Documentación de los RESTful Web Services. (Referencia: https://spec.openapis.org/oas/latest.html)
 * **Software Deployment**
     * **GitHub Pages:** Publicación del Website. (Referencia: https://pages.github.com)
     * **Firebase Hosting:** Publicación de la Frontend Web Application. (Referencia: https://firebase.google.com/docs/hosting)
@@ -119,7 +119,7 @@ A continuación se describen los pasos para desplegar cada producto de la soluci
     1. Crear la base de datos MySQL en Railway y obtener la cadena de conexión y las credenciales.
     2. Crear un Web Service en Render vinculado a la rama `main` del repositorio de Web Services, con el Dockerfile del proyecto ASP.NET Core.
     3. Registrar en Render las variables de entorno de producción (cadena de conexión de la base de datos, secreto JWT, credenciales de la pasarela de pagos Niubiz, API key de SendGrid y API key de los dispositivos de ThingsBoard).
-    4. Render compila y publica el servicio con cada push a `main`; la documentación OpenAPI queda disponible en la ruta `/swagger` del servicio.
+    4. Render compila y publica el servicio con cada push a `main`; la documentación OpenAPI queda disponible en la ruta `/scalar` del servicio.
 
 ## 5.2. Landing Page, Services & Applications Implementation
 

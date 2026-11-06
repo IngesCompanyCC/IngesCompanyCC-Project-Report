@@ -816,7 +816,7 @@
                 "technology": "ASP.NET Core namespace"
               }
             ],
-            "description": "Modular monolith with the six bounded contexts; ASP.NET Core Identity (JWT + TOTP), OpenAPI (Swashbuckle) and real-time notifications (SignalR).",
+            "description": "Modular monolith with the six bounded contexts; JWT + TOTP authentication, OpenAPI with Scalar and real-time notifications (SignalR).",
             "documentation": {},
             "id": "21",
             "name": "RESTful API",
