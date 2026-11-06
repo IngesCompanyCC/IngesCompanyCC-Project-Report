@@ -105,6 +105,18 @@ classDiagram
     Released
     Rejected
   }
+  class DocumentType {
+    <<enumeration>>
+    Sop
+    Specification
+    Protocol
+    Record
+  }
+  class ReleaseVerdict {
+    <<enumeration>>
+    Approved
+    Rejected
+  }
   class IBatchReviewCommandService {
     <<interface>>
     +Handle(StartQuarantineCommand command) Task~BatchReview?~
@@ -119,11 +131,13 @@ classDiagram
   }
   QualityDocument "1" *-- "1..*" DocumentVersion : versions
   QualityDocument --> DocumentStatus : status
+  QualityDocument --> DocumentType : type
   MaterialApproval --> MaterialApprovalStatus : status
   BatchReview "1" *-- "0..*" EvidenceAttachment : evidences
   BatchReview "1" *-- "0..1" ReleaseCertificate : issues
   BatchReview ..> AnalyticalResult : evaluates
   BatchReview --> ReviewStatus : status
+  ReleaseCertificate --> ReleaseVerdict : verdict
   AnalyticalResult *-- SpecificationRange : specification
   IBatchReviewCommandService ..> ExternalIamService : uses
   IBatchReviewCommandService ..> ExternalManufacturingService : uses
@@ -223,6 +237,30 @@ classDiagram
     Finding
     Observation
   }
+  class CapaType {
+    <<enumeration>>
+    Corrective
+    Preventive
+  }
+  class AuditType {
+    <<enumeration>>
+    Internal
+    External
+    Regulatory
+  }
+  class AuditStatus {
+    <<enumeration>>
+    Scheduled
+    InProgress
+    Closed
+  }
+  class AuditAction {
+    <<enumeration>>
+    Create
+    Update
+    Delete
+    Sign
+  }
   class IDeviationCommandService {
     <<interface>>
     +Handle(RegisterDeviationCommand command) Task~Deviation?~
@@ -242,8 +280,12 @@ classDiagram
   Deviation --> Severity : severity
   Deviation --> DeviationStatus : status
   CapaAction --> CapaStatus : status
+  CapaAction --> CapaType : type
   Audit "1" *-- "0..*" AuditFinding : findings
   AuditFinding --> FindingType : type
+  Audit --> AuditType : type
+  Audit --> AuditStatus : status
+  AuditTrailEntry --> AuditAction : action
   IDeviationCommandService ..> INotificationService : uses
   IReportGenerationService ..> AuditTrailEntry : reads
   IReportGenerationService ..> Audit : packages
